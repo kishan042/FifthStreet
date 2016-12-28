@@ -1,0 +1,133 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+     .navigation-bar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2; }
+
+    /* --- Primary Nav
+    Following code to align the icons in Primary nav*/
+
+    //position the nav at the top
+    .mob-primary-nav {
+        padding-top: 20px;
+        height: 100%; }
+
+    li { list-style: none; }
+
+    //width of each individual svg icon except the logo
+    //Final calculation is as follows
+    //4 svg icons at 11% = 44%
+    //logo has a width of 25%, so total is equal to 69%
+    //the rest of the 31% left is divided by 5 to
+    // have 2.5% on each side of the icon.
+    li img{ 
+        width:11%;
+        margin: 0 auto; }
+    //distrubute space left and right of each li
+    ul.primary-options li {
+        display: inline;
+        padding: 0 2.5%; }
+
+    /* --- Secondary Nav
+    Following code to align the icons in secondary nav*/   
+    
+    .mob-secondary-nav{ 
+        width: 100%; 
+        height: 60px; }
+
+    //distrubute space X&Y axis with line-height
+    ul.secondary-options li {
+        display: inline;
+        padding: 0 2%; 
+        line-height: 58px;
+        font-size: 12px;
+        font-weight: 600;}
+    
+    // following two classes create dividers between
+    // all three options
+    ul.secondary-options li::after{
+        content: "|";
+        position: absolute;
+        right: -3px;
+        opacity: 0.3; }   
+
+    ul.secondary-options li:last-child:after{
+        display: none; }   
+
+    //active bar for secondary option
+    .option-active{ border-bottom: 2px $gem solid }
+
+    /* --- Hamburger Menu
+    Following code to style the hamburger menu**/ 
+
+
+    //position the nav outside the viewport
+    nav{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        z-index: 1;
+        background-color: #ebebeb;
+
+        /*FOLLOWING CODE TO SHIFT THE NAV TO THE LEFT & SPEED OF ANIMATION*/
+
+        transform: translate3d(-100vw, 0, 0); /*(X, Y, Z)*/
+        -webkit-transform: translate3d(-100vw, 0, 0);  /*(X, Y, Z)*/
+        -moz-transform: translate3d(-100vw, 0, 0);  /*(X, Y, Z)*/
+
+        transition: transform 0.7s ease;
+        -webkit-transition: -webkit-transform 0.7s ease; 
+        -moz-transition: -webkit-transform 0.7s ease; }
+
+    // This class will be added through JQuery to slide the 
+    // menu in
+    .active-nav nav{
+        transform: translate3d(0, 0, 0); /*(X, Y, Z)*/
+        -webkit-transform: translate3d(0, 0, 0);  /*(X, Y, Z)*/
+        -moz-transform: translate3d(0, 0, 0);  /*(X, Y, Z)*/}
+
+    // code below is for the nav inside the menu hidden
+    nav ul{
+        list-style: none;
+        margin-top: 75px; }
+
+    nav ul li a{
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+        padding: 10px 0px;}
+
+}//End of media query
+
+
+
+
+// Small devices (landscape phones, 544px and up)
+@include media-breakpoint-up(sm)  { 
+
+
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+}//End of media query
