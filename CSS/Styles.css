@@ -3495,8 +3495,9 @@ p, .p-small {
   font-size: 1.4375rem; }
 
 p, .p-light {
-  font-size: 1.125rem;
-  line-height: 28px; }
+  font-size: 1rem;
+  line-height: 28px;
+  font-weight: 300; }
 
 .txt-white {
   color: #fff !important; }
@@ -3609,7 +3610,10 @@ p, .p-light {
   padding-top: 200px; }
 
 /* --------------------------------------------------------
-   Key templates 
+   <-- Key templates -->
+   -------------------------------------------------------- */
+/* --------------------------------------------------------
+   Navbar
    -------------------------------------------------------- */
 /* --- Global styling ---*/
 .desk-navigation-bar {
@@ -3686,7 +3690,6 @@ nav {
   bottom: 0;
   width: 100vw !important;
   z-index: 1;
-  background-color: #ebebeb;
   /*FOLLOWING CODE TO SHIFT THE NAV TO THE LEFT & SPEED OF ANIMATION*/
   transform: translate3d(-100vw, 0, 0);
   /*(X, Y, Z)*/
@@ -3808,6 +3811,42 @@ nav ul li::after {
 @media (min-width: 1200px) {
   .container-compact {
     width: 1140px; } }
+/* --------------------------------------------------------
+   Footer
+   -------------------------------------------------------- */
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.footer-list ul {
+  list-style: none;
+  position: relative; }
+
+.footer-list ul li a {
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  padding: 20px 0px; }
+
+.footer-list ul li::after {
+  content: url("../IMG/icons/right-arrow.svg");
+  width: 13px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  margin-top: -45px; }
+
+@media (min-width: 768px) {
+  .footer-list ul li::after {
+    display: none; }
+
+  .footer-list ul li {
+    display: inline-block;
+    padding: 0 20px !important; } }
 /* --------------------------------------------------------
    Home page modules 
    -------------------------------------------------------- */

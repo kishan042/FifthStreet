@@ -1,0 +1,64 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+    // following classes match the hamburger menu code
+    .footer-list ul{
+        list-style: none;
+        position: relative; }
+
+    .footer-list ul li a{
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        color: $gray-darkest;
+        padding: 20px 0px; }
+
+    // Icons
+    .footer-list ul li::after{
+        content: url('../IMG/icons/right-arrow.svg');
+        width: 13px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        margin-top: -45px; }  
+
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+    // hide arrows
+    .footer-list ul li::after{
+        display: none; } 
+
+    // display options in a row
+    .footer-list ul li{
+        display: inline-block;
+        padding: 0 20px !important; }
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+}//End of media query

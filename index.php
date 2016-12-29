@@ -15,5 +15,5 @@ $img = "IMG/";
 
 
 <?php include 'INC/Header.php'; ?> 
-<?php include 'INC/Navigation.php'; ?> 
+<?php include 'INC/Navbar.php'; ?> 
 <?php include 'INC/Footer.php';?> 
