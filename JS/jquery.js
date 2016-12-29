@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 // START OF TOOGLE HAMBURGER MENU
 
-
 // VARIABLES 
 body = $('body'),
 ToggleNav = body.find('.nav-toggle-btn');
@@ -23,6 +22,18 @@ $(".nav-toggle-btn").click(function(){
 });
 
 
+
+
+
+$("#a").click(function(){
+	$("#a").addClass("hide");
+	$("#b").removeClass("hide");
+});
+
+$("#b").click(function(){
+	$("#b").addClass("hide");
+	$("#a").removeClass("hide");
+});
 
 
 }); //END OF JQUERY

@@ -1,39 +1,46 @@
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-up(xs) { 
 
-     .navigation-bar{
+/* --- Global styling ---*/
+
+    // Hide desktop version of primary, 
+    // secondary nav.
+    .desk-navigation-bar{ display: none;}
+
+    //
+    ul {padding-left: 0px !important;}
+    li { list-style: none; }
+
+/* --- Primary Nav
+    Following code to align the icons in Primary nav*/
+
+    .mob-navigation-bar{
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 2; }
 
-    /* --- Primary Nav
-    Following code to align the icons in Primary nav*/
-
     //position the nav at the top
     .mob-primary-nav {
         padding-top: 20px;
         height: 100%; }
 
-    li { list-style: none; }
+    // Determin the size of each icon
+    // & to center it inside the col
+    .icon img{ 
+        width: 35px; 
+        height: 35px; 
+        display: block; 
+        margin: 0 auto; } 
 
-    //width of each individual svg icon except the logo
-    //Final calculation is as follows
-    //4 svg icons at 11% = 44%
-    //logo has a width of 25%, so total is equal to 69%
-    //the rest of the 31% left is divided by 5 to
-    // have 2.5% on each side of the icon.
-    li img{ 
-        width:11%;
-        margin: 0 auto; }
-    //distrubute space left and right of each li
-    ul.primary-options li {
-        display: inline;
-        padding: 0 2.5%; }
+    // The following code is to switch icons
+    // when the user clicks on the hamburger
+    // the class will added or removed through JS
+    .hide{ display: none !important; }
 
-    /* --- Secondary Nav
-    Following code to align the icons in secondary nav*/   
+/* --- Secondary Nav
+Following code to align the icons in secondary nav*/   
     
     .mob-secondary-nav{ 
         width: 100%; 
@@ -61,16 +68,26 @@
     //active bar for secondary option
     .option-active{ border-bottom: 2px $gem solid }
 
-    /* --- Hamburger Menu
-    Following code to style the hamburger menu**/ 
+/* --- Hamburger Menu
+Following code to style the hamburger menu**/ 
 
+    #h-menu{
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling:touch; 
+        -moz-overflow-scrolling:touch; 
+    }
 
     //position the nav outside the viewport
     nav{
         position: fixed;
         top: 0;
+        left: 0;
+        right: 0;
         bottom: 0;
-        width: 100vw;
+        width: 100vw !important;
         z-index: 1;
         background-color: #ebebeb;
 
@@ -82,7 +99,7 @@
 
         transition: transform 0.7s ease;
         -webkit-transition: -webkit-transform 0.7s ease; 
-        -moz-transition: -webkit-transform 0.7s ease; }
+        -moz-transition: -moz-transform 0.7s ease; }
 
     // This class will be added through JQuery to slide the 
     // menu in
@@ -94,40 +111,159 @@
     // code below is for the nav inside the menu hidden
     nav ul{
         list-style: none;
-        margin-top: 75px; }
+        position: relative; }
 
     nav ul li a{
         text-decoration: none;
         display: block;
-        text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
-        color: #333;
-        padding: 10px 0px;}
+        color: $gray-darkest;
+        padding: 20px 0px; }
+
+    // Icons
+    nav ul li::after{
+        content: url('../IMG/icons/right-arrow.svg');
+        width: 13px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        margin-top: -45px; }  
+
+
 
 }//End of media query
 
 
-
-
-// Small devices (landscape phones, 544px and up)
+// Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm)  { 
 
+/* --- Secondary Nav
+Following code speed up the transition */
+    nav{
+        transition: transform 0.4s ease;
+        -webkit-transition: -webkit-transform 0.4s ease; 
+        -moz-transition: -moz-transform 0.4s ease; }
 
+/* --- Hamburger
+Following code to style the menu*/
+
+    // More space between the primary nav and options
+    #h-menu ul{ margin-top: 150px; }
+
+    // align the options better
+    #h-menu ul li{ padding-left: 60px !important }
+    
+    // align arrows with options
+    nav ul li::after{
+        width: 14px;
+        right: 60px;
+        margin-top: -50px; } 
 
 }//End of media query
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) { 
 
+
+
 }//End of media query
 
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) { 
 
+// Hide mobile first primary, secondary navs 
+// and hamburger menu & make the desktop version
+// visible
+.mob-navigation-bar, #h-menu { display: none; }
+.desk-navigation-bar{ display: block;}
+
+ /* --- Global variable --- */
+
+// variable to keep the spacing between all
+// links in the navigations bars the same
+$spacing: 0 12px;
+
+//Class to be used for extending
+.navigation-link-styling{
+    display: inline;
+    padding: $spacing;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.container-compact{
+    width: 960px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- Primary Nav --- */
+    
+    .desk-primary-nav{ 
+        height: 65px;
+     }
+
+     .desk-main-options ul li {
+        @extend .navigation-link-styling;
+     }
+
+    .desk-main-options ul li a{
+    color: $gray-darkest;
+    }
+
+    .desk-logo img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .desk-additional-options ul li{
+        display: inline;
+        padding: $spacing;
+        width: 10%;
+    }
+
+    .desk-additional-options ul{
+        display: block;
+        margin-right: auto
+    }
+
+    .desk-additional-options ul li img{
+        // width: 11%;
+      width: 32px; } 
+
+
+/* --- Secondary Nav ---*/
+
+     .desk-secondary-nav{
+        text-align: center;
+        background-color: $gray-lightest;
+        height: 50px;
+     }
+
+
+    .desk-secondary-nav ul li {
+            display: inline;
+            padding: 0 18px;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 50px;
+            padding-bottom: 15px;
+         }
+
+    .desk-secondary-nav ul li a {
+            color: $gray-darkest;
+         }
+
+
 }//End of media query
 
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
+
+    .container-compact{
+        width: 1140px;
+    }
 
 }//End of media query
