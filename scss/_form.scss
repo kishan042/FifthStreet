@@ -1,0 +1,107 @@
+/* --------------------------------------------------------
+   Form module
+   -------------------------------------------------------- */
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+// Form
+	form{ width: 100%; }
+	
+	#submit{     
+	//color: $gray-darkest;
+	background-color: $white;
+	border: 2px solid $gray-darkest;
+    border-radius: 100px;
+    padding: 5px 30px;
+    display: block;
+    margin: 0 auto; }
+
+	.btn-default:hover, 
+	.btn-default:active:hover, 
+	.btn-default:active:focus {
+	//border-style: none!important;
+	background-color: $gray-darkest !important;
+	color: $white; }
+
+    .form-group input,
+    .form-group textarea{     
+	
+	background-color: $white;
+	box-shadow: none;
+	border-top: none ;
+	border-left: none ;
+	border-right: none ;
+	border-bottom: 2px solid $gray-darkest;
+	width: 100%;
+    padding: 5px 30px;
+    display: block;
+    margin: 0 auto; }
+
+
+    .form-group textarea{     
+	border: 2px solid $gray-darkest;
+    border-radius: 5px;
+ }
+
+input:focus, 
+textarea:focus, 
+button:focus {
+    outline:0 !important; 
+}
+
+
+
+
+// help taken from below to center the placeholder text
+// http://stackoverflow.com/questions/7381446/center-html-input-text-field-placeholder
+.form-group input::-webkit-input-placeholder,
+.form-group textarea::-webkit-input-placeholder {
+   text-align: center;
+   padding-top: 80px;
+}
+
+.form-group input:-moz-placeholder,
+.form-group textarea:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+.form-group input::-moz-placeholder,
+.form-group textarea::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+.form-group input:-ms-input-placeholder,
+.form-group textarea::-ms-input-placeholder {  
+   text-align: center; 
+}
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+
+
+}//End of media query

@@ -3453,7 +3453,7 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  border-top: 1px solid rgba(0, 0, 0, 0.2); }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h2-alt, .h3, .h3-alt, .h4, .h5, .h6 {
@@ -3925,6 +3925,67 @@ nav ul li::after {
 @media (min-width: 1200px) {
   .container-small {
     width: 50%; } }
+/* --------------------------------------------------------
+   Form module
+   -------------------------------------------------------- */
+form {
+  width: 100%; }
+
+#submit {
+  background-color: #fff;
+  border: 2px solid #1a1a1a;
+  border-radius: 100px;
+  padding: 5px 30px;
+  display: block;
+  margin: 0 auto; }
+
+.btn-default:hover,
+.btn-default:active:hover,
+.btn-default:active:focus {
+  background-color: #1a1a1a !important;
+  color: #fff; }
+
+.form-group input,
+.form-group textarea {
+  background-color: #fff;
+  box-shadow: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #1a1a1a;
+  width: 100%;
+  padding: 5px 30px;
+  display: block;
+  margin: 0 auto; }
+
+.form-group textarea {
+  border: 2px solid #1a1a1a;
+  border-radius: 5px; }
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 0 !important; }
+
+.form-group input::-webkit-input-placeholder,
+.form-group textarea::-webkit-input-placeholder {
+  text-align: center;
+  padding-top: 80px; }
+
+.form-group input:-moz-placeholder,
+.form-group textarea:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center; }
+
+.form-group input::-moz-placeholder,
+.form-group textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center; }
+
+.form-group input:-ms-input-placeholder,
+.form-group textarea::-ms-input-placeholder {
+  text-align: center; }
+
 /* --------------------------------------------------------
    Men | Women | brand individual page modules
    -------------------------------------------------------- */
