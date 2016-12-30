@@ -13,12 +13,8 @@ $(document).ready(function(){
 		// Toggle the class to slide the menu in or out
 		body.toggleClass('active-nav');
 		e.preventDefault();
+		$(".primary-options").toggleClass("test");
 	});//End of function
-
-	// Function to hide secondary nav
-	$(".nav-toggle-btn").click(function(){
-		$(".mob-secondary-nav").toggle(100);
-	});
 
 	// Following two functions
 	// help show and hide the hamburger & cross icons
@@ -34,3 +30,5 @@ $(document).ready(function(){
 
 
 }); //END OF JQUERY
+
+

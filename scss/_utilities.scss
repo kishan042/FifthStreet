@@ -15,6 +15,7 @@
 .bg-gray-light { background-color: $gray-light; }
 .bg-gray-lightest { background-color: $gray-lightest; }
 
+
 /* ------------------ Spacing -------------------- */
 
 .mt-10{ margin-top: 10px; }
@@ -43,3 +44,22 @@
 .pt-100{ padding-top: 100px; }
 .pt-150{ padding-top: 150px; }
 .pt-200{ padding-top: 200px; }
+
+
+/* ------------------ Spacing -------------------- */
+
+.tint-0 { background-color: rgba(0,0,0,.0); }
+.tint-1 { background-color: rgba(0,0,0,.1); }
+.tint-2 { background-color: rgba(0,0,0,.2); }
+.tint-3 { background-color: rgba(0,0,0,.3); }
+.tint-4 { background-color: rgba(0,0,0,.4); }
+.tint-5 { background-color: rgba(0,0,0,.5); }
+.tint-6 { background-color: rgba(0,0,0,.6); }
+.tint-7 { background-color: rgba(0,0,0,.7); }
+.tint-8 { background-color: rgba(0,0,0,.8); }
+.tint-9 { background-color: rgba(0,0,0,.9); }
+.tint-10 { background-color: rgba(0,0,0,1); }
+
+
+
+

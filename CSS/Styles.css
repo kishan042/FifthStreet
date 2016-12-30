@@ -3609,6 +3609,40 @@ p, .p-light {
 .pt-200 {
   padding-top: 200px; }
 
+/* ------------------ Spacing -------------------- */
+.tint-0 {
+  background-color: transparent; }
+
+.tint-1 {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.tint-2 {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.tint-3 {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.tint-4 {
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.tint-5 {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.tint-6 {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.tint-7 {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.tint-8 {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.tint-9 {
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.tint-10 {
+  background-color: black; }
+
 /* --------------------------------------------------------
    <-- Key templates -->
    -------------------------------------------------------- */
@@ -3627,7 +3661,7 @@ li {
 
 /* --- Primary Nav
     Following code to align the icons in Primary nav*/
-.mob-navigation-bar {
+.test {
   position: fixed;
   top: 0;
   left: 0;
@@ -3697,9 +3731,9 @@ nav {
   /*(X, Y, Z)*/
   -moz-transform: translate3d(-100vw, 0, 0);
   /*(X, Y, Z)*/
-  transition: transform 0.7s ease;
-  -webkit-transition: -webkit-transform 0.7s ease;
-  -moz-transition: -moz-transform 0.7s ease; }
+  transition: transform 0.6s ease;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  -moz-transition: -moz-transform 0.6s ease; }
 
 .active-nav nav {
   transform: translate3d(0, 0, 0);
@@ -3814,12 +3848,6 @@ nav ul li::after {
 /* --------------------------------------------------------
    Footer
    -------------------------------------------------------- */
-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0; }
-
 .footer-list ul {
   list-style: none;
   position: relative; }
@@ -3848,8 +3876,55 @@ footer {
     display: inline-block;
     padding: 0 20px !important; } }
 /* --------------------------------------------------------
-   Home page modules 
+   <-- Modules -->
    -------------------------------------------------------- */
+.hero-img, .hero-full, .hero-half, .hero-compact {
+  background-image: url(https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907);
+  size: cover;
+  position: center; }
+
+.hero-full {
+  height: 75vh; }
+
+.hero-half {
+  height: 50vh; }
+
+.hero-compact {
+  height: 50vh; }
+
+.tint {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+@media (min-width: 992px) {
+  .hero-compact {
+    height: 80vh; }
+
+  .hero-full {
+    height: 86vh; } }
+/* --------------------------------------------------------
+   Article module
+   -------------------------------------------------------- */
+.container-small {
+  width: 80%;
+  /*max-width: 100%;*/
+  display: block;
+  margin: 0 auto; }
+
+@media (min-width: 576px) {
+  .container-small {
+    width: 70%; } }
+@media (min-width: 768px) {
+  .container-small {
+    width: 60%; } }
+@media (min-width: 1200px) {
+  .container-small {
+    width: 50%; } }
 /* --------------------------------------------------------
    Men | Women | brand individual page modules
    -------------------------------------------------------- */

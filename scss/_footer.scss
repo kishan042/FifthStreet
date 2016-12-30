@@ -1,13 +1,6 @@
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-up(xs) { 
 
-footer{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
     // following classes match the hamburger menu code
     .footer-list ul{
         list-style: none;

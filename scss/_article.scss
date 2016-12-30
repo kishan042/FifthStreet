@@ -1,0 +1,52 @@
+/* --------------------------------------------------------
+   Article module
+   -------------------------------------------------------- */
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+.container-small{
+	width: 80%;
+    /*max-width: 100%;*/
+    display: block;
+    margin: 0 auto;
+	}
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+.container-small{
+	width: 70%;
+}
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+.container-small{
+	width: 60%;
+}
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+.container-small{
+	width: 50%;
+}
+   
+
+}//End of media query

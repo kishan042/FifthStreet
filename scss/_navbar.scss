@@ -14,7 +14,7 @@
 /* --- Primary Nav
     Following code to align the icons in Primary nav*/
 
-    .mob-navigation-bar{
+    .test{
         position: fixed;
         top: 0;
         left: 0;
@@ -95,9 +95,10 @@ Following code to style the hamburger menu**/
         -webkit-transform: translate3d(-100vw, 0, 0);  /*(X, Y, Z)*/
         -moz-transform: translate3d(-100vw, 0, 0);  /*(X, Y, Z)*/
 
-        transition: transform 0.7s ease;
-        -webkit-transition: -webkit-transform 0.7s ease; 
-        -moz-transition: -moz-transform 0.7s ease; }
+        transition: transform 0.6s ease;
+        -webkit-transition: -webkit-transform 0.6s ease; 
+        -moz-transition: -moz-transform 0.6s ease; 
+    }
 
     // This class will be added through JQuery to slide the 
     // menu in

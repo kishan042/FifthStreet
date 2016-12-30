@@ -1,0 +1,71 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+.hero-img{
+	background-image: url(https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907);
+	size: cover;
+	position: center;
+	// margin-bottom: 50px;
+}
+
+.hero-full {
+height: 75vh;
+@extend .hero-img;
+}
+.hero-half {
+height: 50vh;
+@extend .hero-img;
+}
+
+.hero-compact {
+height: 50vh;
+@extend .hero-img;
+}
+
+.tint{
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+.hero-compact {
+height: 80vh;
+}
+
+.hero-full {
+height: 86vh;
+}
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+   
+
+}//End of media query

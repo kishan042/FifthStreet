@@ -5,12 +5,12 @@
 <footer class="mob-footer bg-gray-light">
     <div class="container">
         <div id="mob-footer-wrapper">
-            <div class="row mx-0 pl-1 pt-1">        
+            <div class="row mx-0 pl-1 pt-20">        
                 <div class="col-xs-12 pl-0">
                     <p class="p-light">
                         <img src="IMG/icons/logo.svg" style="width:70px">
                         <span class="pl-1"> / </span>
-                        <span class="pl-1"><?php echo $Title ?></span>
+                        <span class="pl-1"><?php echo $page ?></span>
                     </p>
                 </div>
             </div> 
