@@ -35,9 +35,17 @@
 // Spacing	
 //include 'INC/Spacing-mt-50.php';
 
+// Product-finder
 include 'INC/Product-finder.php';
 
+// Spacing	
+include 'INC/Spacing-mt-50.php';
+
+// Product-finder
+include 'INC/Feature-intro.php';
+
 ?> 
+
 
 
 
