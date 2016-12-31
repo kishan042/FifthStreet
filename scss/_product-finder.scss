@@ -42,10 +42,13 @@
 	.box h3 {
 		padding-left: 10px;
 		margin-bottom: 0;
+
+		//Hack
+		font-size: 1rem;
 	}
 
 	.box img {
-		width: 26px;
+		width: 13px;
 		margin-right: 10px;      
 	}
 
@@ -88,9 +91,16 @@
 	  	align-items: center;
 	}
 
+	.box h3 {
+		//Hack
+		font-size: 1.125rem;
+	}
+
 	.box img {
 		display: none;    
 	}
+
+
 
 }//End of media query
 
@@ -116,16 +126,41 @@
 	  	justify-content: center;
 	  	align-items: center;
 	}   
+	
+	// Depending on the column hovered
+	// this class will be added to expand the box class
+	// to display the content inside
+	//done through JS
+	.column-expand{
+		width: 75%!important;
+		height: auto !important;
 
-.test{
-		// .column in media query MD has class 
-		// Position: relative
-		position: absolute;
+		// to control the .box background
+		background-color: rgba(0,0,0,.7);
+		padding: 20px!important;
+	}
 
+	// This class is added to the <p>
+	// to make it readable
+	//done through JS
+	.column-description {
+		padding: 5px;
+		border-top: 1px solid $white;
+		border-bottom: 1px solid $white;
+	}
+
+	// The columns not hovered, whill have this class added
+	// so that the the column is not in focus
+	//done through JS
+	.column-focus{
 		width: 100% !important;
 		height: 100% !important;
 
+		// to control the .box background
+		background-color: rgba(0,0,0,.4);
 		border: none;
-}
+	}
+	
+
 
 }//End of media query

@@ -19,9 +19,9 @@
 
 // Hero-full
 		// IMG URL
-		// $url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+		 $url = "https://images.unsplash.com/photo-1476990789491-712b869b91a5?dpr=2&auto=format&w=1500&h=400&q=20&cs=tinysrgb&crop="; 
 		// Amount of tint on image
-		$tint = "tint-10";
+		$tint = "tint-0";
 		// copy for H1
 		$h1 = "ACCESS". '<br>' . "THE UNKNOWN";
 		// copy for h2
@@ -29,7 +29,7 @@
 		// copy for CTA
 		$CTA = "FIND OUT MORE";
 
-		//include 'INC/Hero-full.php';  
+		include 'INC/Hero-full.php';  
 
 
 // Spacing	
