@@ -7,22 +7,6 @@
 
 // Form
 	form{ width: 100%; }
-	
-	#submit{     
-	//color: $gray-darkest;
-	background-color: $white;
-	border: 2px solid $gray-darkest;
-    border-radius: 100px;
-    padding: 5px 30px;
-    display: block;
-    margin: 0 auto; }
-
-	.btn-default:hover, 
-	.btn-default:active:hover, 
-	.btn-default:active:focus {
-	//border-style: none!important;
-	background-color: $gray-darkest !important;
-	color: $white; }
 
     .form-group input,
     .form-group textarea{     

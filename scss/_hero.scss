@@ -1,11 +1,14 @@
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-up(xs) { 
 
+// To allow the down icon to position itself correctly
+.hero-full, .hero-half{
+	position: relative;
+}
+
 .hero-img{
-	background-image: url(https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907);
 	size: cover;
 	position: center;
-	// margin-bottom: 50px;
 }
 
 .hero-full {
@@ -33,6 +36,14 @@ height: 50vh;
 	text-align: center;
 }
 
+// Hero-full module enhancements 
+
+	// Targets the down arrow to be placed at the bottom
+	.hero-full img { 
+		width: 60px;
+		position: absolute;
+		bottom: 25px;
+	}
 
 }//End of media query
 

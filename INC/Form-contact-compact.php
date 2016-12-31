@@ -26,7 +26,7 @@
 			<textarea name="message" rows="8" placeholder="MESSAGE" required></textarea>
 		</div>
 		<div class="col-xs-12 mt-40">
-			<button type="submit" id="submit" class="btn btn-default">Send</button>
+			<button type="submit" class="secondary-btn-small">SEND</button>
 		</div>
 		</form>
 	</div>

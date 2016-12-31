@@ -1,6 +1,7 @@
 
 /* ------------------ Type -------------------- */
 
+
 //
 // Horizontal rules
 //
@@ -43,9 +44,13 @@ h4, .h4 { font-size: $font-size-h4; }
 p, .p-medium { font-size: $font-size-p-medium; }
 p, .p-small { font-size: $font-size-p-small; }
 p, .p-light { font-size: $font-size-p-light;
-			        line-height: 28px;
+              line-height: 28px;
               font-weight: 300;
 }
+
+// Over rides 
+h1, .h1 { line-height: 4rem; }
+
 
 //
 // Heading colour variations
@@ -53,5 +58,40 @@ p, .p-light { font-size: $font-size-p-light;
 
 .txt-white { color: $white!important; }
 .txt-gold { color: $gold!important; }
+
+//
+// Letter spacing
+//
+
+// Create letter spacing inside the hero
+// Used for H1
+.letter-space-large {
+    letter-spacing: 7px;  
+}
+
+
+// Large devices (desktops, less than 1200px)
+@include media-breakpoint-down(lg) { }//End of media query
+
+
+// Medium devices (tablets, less than 992px)
+@include media-breakpoint-down(md) { }//End of media query
+
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(sm) { }//End of media query
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-down(xs) { 
+
+  .h1 { 
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 3px; 
+   }
+}//End of media query
+
+
+
+
 
 

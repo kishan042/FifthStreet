@@ -13,6 +13,8 @@
         <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"> -->
         <!-- My style CSS -->
         <link rel="stylesheet" href="<?php echo $CSSPath ?>">
+        <!-- Prefix generator js -->
+        <script type="text/javascript" href="JS/prefixfree.min.js"></script>
         <!-- Favicon -->
         <link rel="shortcut icon" href="<?php echo $img . "fav-icon.png" ?>" type="image/png">
     </head>

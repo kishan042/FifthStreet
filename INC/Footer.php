@@ -1,7 +1,7 @@
 <!-- Sass file = _footer.scss -->
 
 <!-- Footer -->
-
+<!-- 
 <footer class="mob-footer bg-gray-light">
     <div class="container">
         <div id="mob-footer-wrapper">
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 <!-- GA -->
 <script>
   

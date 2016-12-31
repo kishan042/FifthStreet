@@ -1,0 +1,90 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+
+.product-finder{
+	width: 100%;
+	height: 75vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+	flex: 1;    
+}
+
+.content{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.box{
+	width: 50vw;
+	height: 30px;
+	background-color: red;
+
+	  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box h3 {
+	padding-left: 10px;
+}
+
+.box img {
+width: 13px;
+margin-right: 10px;
+
+        //flex: 1;
+        // display: block;
+        // position: absolute;
+        // right: 20px;
+}
+
+
+.h4 {color:#fff;}
+.tint-10, .tint-5 {width: 100%; height: 100%;}
+
+// .section-men,
+// .section-women,
+// .section-brands,
+// .section-lo {
+	// display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	align-items: center;
+// 	text-align: center;
+// }
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+   
+
+}//End of media query

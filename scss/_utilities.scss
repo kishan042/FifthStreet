@@ -61,5 +61,47 @@
 .tint-10 { background-color: rgba(0,0,0,1); }
 
 
+/* ------------------ CTA's -------------------- */
 
+	.primary-btn-small {     
+	background-color: $white;
+	border: none;
+    border-radius: 100px;
+    padding: 5px 30px;
+    display: block;
+    margin: 0 auto; }
+
+
+    .primary-btn-medium {
+    	@extend .primary-btn-small;
+    	height: 50px;
+    }
+
+	.secondary-btn-small {     
+	@extend .primary-btn-small;
+	border: 2px solid $gray-darkest;
+    }
+
+
+    .secondary-btn-medium {
+    	@extend .secondary-btn-small;
+    	height: 50px;
+    }
+
+	button:hover, 
+	button:active:hover, 
+	button:active:focus {
+	background-color: $gem !important;
+	color: $white; 
+	border: rgba(0,0,0,0) 2px solid;}
+
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-down(xs) { 
+
+button.primary-btn-medium{ 
+    font-size: 14px;
+    height: 40px;
+}
+
+}//End of media query
 

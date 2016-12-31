@@ -22,7 +22,7 @@
 		// Amount of tint on image
 		$tint = "tint-5";
 		// copy for H1
-		$h1 = "Fifth Street";
+		$h1 = "FIFTH STREET";
 
 		include 'INC/Hero-half.php'; 
 

@@ -3499,12 +3499,23 @@ p, .p-light {
   line-height: 28px;
   font-weight: 300; }
 
+h1, .h1 {
+  line-height: 4rem; }
+
 .txt-white {
   color: #fff !important; }
 
 .txt-gold {
   color: #c6b89b !important; }
 
+.letter-space-large {
+  letter-spacing: 7px; }
+
+@media (max-width: 575px) {
+  .h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 3px; } }
 /* ------------------ Colour background -------------------- */
 .bg-white {
   background-color: #fff; }
@@ -3643,6 +3654,35 @@ p, .p-light {
 .tint-10 {
   background-color: black; }
 
+/* ------------------ CTA's -------------------- */
+.primary-btn-small, .primary-btn-medium, .secondary-btn-small, .secondary-btn-medium {
+  background-color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 5px 30px;
+  display: block;
+  margin: 0 auto; }
+
+.primary-btn-medium {
+  height: 50px; }
+
+.secondary-btn-small, .secondary-btn-medium {
+  border: 2px solid #1a1a1a; }
+
+.secondary-btn-medium {
+  height: 50px; }
+
+button:hover,
+button:active:hover,
+button:active:focus {
+  background-color: #48d8d8 !important;
+  color: #fff;
+  border: transparent 2px solid; }
+
+@media (max-width: 575px) {
+  button.primary-btn-medium {
+    font-size: 14px;
+    height: 40px; } }
 /* --------------------------------------------------------
    <-- Key templates -->
    -------------------------------------------------------- */
@@ -3876,10 +3916,12 @@ nav ul li::after {
     display: inline-block;
     padding: 0 20px !important; } }
 /* --------------------------------------------------------
-   <-- Modules -->
+   <-- Individual Modules -->
    -------------------------------------------------------- */
+.hero-full, .hero-half {
+  position: relative; }
+
 .hero-img, .hero-full, .hero-half, .hero-compact {
-  background-image: url(https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907);
   size: cover;
   position: center; }
 
@@ -3901,6 +3943,11 @@ nav ul li::after {
   align-items: center;
   text-align: center; }
 
+.hero-full img {
+  width: 60px;
+  position: absolute;
+  bottom: 25px; }
+
 @media (min-width: 992px) {
   .hero-compact {
     height: 80vh; }
@@ -3908,42 +3955,10 @@ nav ul li::after {
   .hero-full {
     height: 86vh; } }
 /* --------------------------------------------------------
-   Article module
-   -------------------------------------------------------- */
-.container-small {
-  width: 80%;
-  /*max-width: 100%;*/
-  display: block;
-  margin: 0 auto; }
-
-@media (min-width: 576px) {
-  .container-small {
-    width: 70%; } }
-@media (min-width: 768px) {
-  .container-small {
-    width: 60%; } }
-@media (min-width: 1200px) {
-  .container-small {
-    width: 50%; } }
-/* --------------------------------------------------------
    Form module
    -------------------------------------------------------- */
 form {
   width: 100%; }
-
-#submit {
-  background-color: #fff;
-  border: 2px solid #1a1a1a;
-  border-radius: 100px;
-  padding: 5px 30px;
-  display: block;
-  margin: 0 auto; }
-
-.btn-default:hover,
-.btn-default:active:hover,
-.btn-default:active:focus {
-  background-color: #1a1a1a !important;
-  color: #fff; }
 
 .form-group input,
 .form-group textarea {
@@ -3987,6 +4002,45 @@ button:focus {
   text-align: center; }
 
 /* --------------------------------------------------------
+   Home
+   -------------------------------------------------------- */
+.product-finder {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column; }
+
+.column {
+  flex: 1; }
+
+.content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; }
+
+.box {
+  width: 50vw;
+  height: 30px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.box h3 {
+  padding-left: 10px; }
+
+.box img {
+  width: 13px;
+  margin-right: 10px; }
+
+.h4 {
+  color: #fff; }
+
+.tint-10, .tint-5 {
+  width: 100%;
+  height: 100%; }
+
+/* --------------------------------------------------------
    Men | Women | brand individual page modules
    -------------------------------------------------------- */
 /* --------------------------------------------------------
@@ -3995,6 +4049,24 @@ button:focus {
 /* --------------------------------------------------------
    About us page template 
    -------------------------------------------------------- */
+/* --------------------------------------------------------
+   Article module
+   -------------------------------------------------------- */
+.container-small {
+  width: 80%;
+  /*max-width: 100%;*/
+  display: block;
+  margin: 0 auto; }
+
+@media (min-width: 576px) {
+  .container-small {
+    width: 70%; } }
+@media (min-width: 768px) {
+  .container-small {
+    width: 60%; } }
+@media (min-width: 1200px) {
+  .container-small {
+    width: 50%; } }
 /* --------------------------------------------------------
    User profile page template 
    -------------------------------------------------------- */
