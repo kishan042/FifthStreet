@@ -1,63 +1,53 @@
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-up(xs) { 
 
+	.product-finder{
+		width: 100%;
+		// Same height as hero module
+		height: 75vh;
 
-.product-finder{
-	width: 100%;
-	height: 75vh;
+		display: flex;
+		flex-direction: column;
+	}
 
-  display: flex;
-  flex-direction: column;
-}
+	.column {
+		// As the height = 75vh / 4 = ~18.5vh
+		// so the height = 19vh for safari
+		height: 19vh; 
+		flex: 1; 
 
-.column {
-	flex: 1;    
-}
+		background-size: cover;
+		background-position: center;
+	}
 
-.content{
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-}
+	.content{
+		width: 100%; 
+		height: 100%;
 
-.box{
-	width: 50vw;
-	height: 30px;
-	background-color: red;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
 
-	  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+	.box{
+		width: 50vw;
+		height: 40px;
 
-.box h3 {
-	padding-left: 10px;
-}
+		display: flex;
+	  	flex-direction: row;
+	  	justify-content: space-between;
+	  	align-items: center;
+	}
 
-.box img {
-width: 13px;
-margin-right: 10px;
+	.box h3 {
+		padding-left: 10px;
+		margin-bottom: 0;
+	}
 
-        //flex: 1;
-        // display: block;
-        // position: absolute;
-        // right: 20px;
-}
-
-
-.h4 {color:#fff;}
-.tint-10, .tint-5 {width: 100%; height: 100%;}
-
-// .section-men,
-// .section-women,
-// .section-brands,
-// .section-lo {
-	// display: flex;
-// 	flex-direction: column;
-// 	justify-content: center;
-// 	align-items: center;
-// 	text-align: center;
-// }
+	.box img {
+		width: 26px;
+		margin-right: 10px;      
+	}
 
 }//End of media query
 
@@ -71,13 +61,46 @@ margin-right: 10px;
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) { 
 
+	.product-finder{
+		height: 100vh;
+		flex-direction: row;
+	}
 
+	.column {
+		position: relative;
+
+		height: 75vh; 
+		width: 25vw;
+	}
+
+	.content{
+		justify-content: center;
+		align-items: center;
+	}
+
+	.box{
+		width: 16vw;
+		height: 6vw;
+		border: 2px solid $white;
+
+	  	flex-direction: column;
+	  	justify-content: center;
+	  	align-items: center;
+	}
+
+	.box img {
+		display: none;    
+	}
 
 }//End of media query
 
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) { 
 
+	.column {
+		height: 100vh; 
+		width: 25vw;
+	}
 
 
 }//End of media query
@@ -85,6 +108,24 @@ margin-right: 10px;
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
 
-   
+	.box{
+		width: 12vw;
+		height: 5vw;
+
+	  	flex-direction: column;
+	  	justify-content: center;
+	  	align-items: center;
+	}   
+
+.test{
+		// .column in media query MD has class 
+		// Position: relative
+		position: absolute;
+
+		width: 100% !important;
+		height: 100% !important;
+
+		border: none;
+}
 
 }//End of media query

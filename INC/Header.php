@@ -14,7 +14,7 @@
         <!-- My style CSS -->
         <link rel="stylesheet" href="<?php echo $CSSPath ?>">
         <!-- Prefix generator js -->
-        <script type="text/javascript" href="JS/prefixfree.min.js"></script>
+        <script type="text/javascript" src="JS/prefixfree.min.js"></script>
         <!-- Favicon -->
         <link rel="shortcut icon" href="<?php echo $img . "fav-icon.png" ?>" type="image/png">
     </head>
