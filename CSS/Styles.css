@@ -3961,6 +3961,9 @@ nav ul li::after {
 .hero-full img {
   margin-top: 6rem; }
 
+@media (min-width: 768px) {
+  .hero-full {
+    height: 90vh; } }
 @media (min-width: 992px) {
   .hero-compact {
     height: 80vh; }
@@ -4037,8 +4040,8 @@ button:focus {
   align-items: flex-end; }
 
 .box {
-  width: 50vw;
-  height: 40px;
+  width: 40vw;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -4047,19 +4050,23 @@ button:focus {
 .box h3 {
   padding-left: 10px;
   margin-bottom: 0;
-  font-size: 1rem; }
+  font-size: 1rem;
+  display: inline-block; }
 
 .box img {
-  width: 13px;
-  margin-right: 10px; }
+  width: 13px; }
 
+@media (min-width: 576px) {
+  .box {
+    width: 35vw;
+    height: 60px; } }
 @media (min-width: 768px) {
   .product-finder {
-    height: 100vh;
+    height: 50vh;
     flex-direction: row; }
 
   .column {
-    height: 100vh;
+    height: 50vh;
     width: 25vw; }
 
   .content {
@@ -4078,22 +4085,27 @@ button:focus {
     font-size: 1.125rem; }
 
   .box img {
-    display: none; } }
-@media (min-width: 992px) {
-  .column {
-    height: 100vh;
-    width: 25vw; } }
-@media (min-width: 1200px) {
+    display: none; }
+
   .box {
-    width: 12vw;
-    height: 5vw;
+    width: 19vw;
+    height: 7vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+  .sub a {
+    text-decoration: none; }
+
+  .sub {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
 
   .column-expand {
-    width: 75% !important;
-    height: auto !important;
+    width: 100% !important;
+    height: 100% !important;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px !important; }
 
@@ -4107,6 +4119,21 @@ button:focus {
     height: 100% !important;
     background-color: rgba(0, 0, 0, 0.5);
     border: none; } }
+@media (min-width: 992px) {
+  .product-finder {
+    height: 100vh; }
+
+  .column {
+    height: 100vh;
+    width: 25vw; } }
+@media (min-width: 1200px) {
+  .box {
+    width: 12vw;
+    height: 5vw; }
+
+  .column-expand {
+    width: 75% !important;
+    height: auto !important; } }
 ::-webkit-scrollbar {
   display: none; }
 
@@ -4119,7 +4146,7 @@ button:focus {
   margin-top: 20px; }
 
 .class-1 {
-  height: 45vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4150,14 +4177,24 @@ button:focus {
   margin-bottom: 0; }
 
 @media (min-width: 576px) {
-  .width {
-    width: 60%; }
-
   .class-2 {
     width: 2160px; }
 
   .class-2:first-child {
     margin-left: 10vw; } }
+@media (min-width: 768px) {
+  .class-1 {
+    height: 30vh; }
+
+  .class-2 {
+    height: 50vh; }
+
+  .class-1 h2,
+  .class-1 p {
+    width: 60%; }
+
+  .class-1 p:last-child {
+    margin-bottom: 0; } }
 @media (min-width: 992px) {
   .image-container {
     overflow: hidden;
@@ -4165,6 +4202,9 @@ button:focus {
 
   .class-1 {
     height: 100vh; }
+
+  .class-1 h2 {
+    padding-bottom: 48px; }
 
   .width {
     width: 60%; }
@@ -4203,6 +4243,50 @@ button:focus {
     flex-wrap: wrap;
     width: 60vw;
     height: 100vh; } }
+/*------- Compact -------*/
+.txt-block-half {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.img-half {
+  height: 60vh;
+  background-size: cover;
+  background-position: center; }
+
+/*------- Full -------*/
+.txt-block-full {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.img-full {
+  height: 60vh;
+  background-size: cover;
+  background-position: center; }
+
+@media (min-width: 576px) {
+  .txt-block-half h2,
+  .txt-block-half p,
+  .txt-block-full h2,
+  .txt-block-full p {
+    width: 60%; } }
+@media (min-width: 768px) {
+  .txt-block-half,
+  .img-half,
+  .txt-block-full,
+  .img-full {
+    height: 40vh; } }
+@media (min-width: 992px) {
+  .txt-block-half,
+  .img-half,
+  .txt-block-full,
+  .img-full {
+    height: 70vh; } }
 /* --------------------------------------------------------
    Men | Women | brand individual page modules
    -------------------------------------------------------- */

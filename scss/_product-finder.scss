@@ -30,8 +30,8 @@
 	}
 
 	.box{
-		width: 50vw;
-		height: 40px;
+		width: 40vw;
+		height: 50px;
 
 		display: flex;
 	  	flex-direction: row;
@@ -45,11 +45,12 @@
 
 		//Hack
 		font-size: 1rem;
+		display: inline-block;
 	}
 
 	.box img {
 		width: 13px;
-		margin-right: 10px;      
+
 	}
 
 }//End of media query
@@ -58,6 +59,10 @@
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm)  { 
 
+	.box{
+		width: 35vw;
+		height: 60px;
+	}
 
 }//End of media query
 
@@ -65,14 +70,12 @@
 @include media-breakpoint-up(md) { 
 
 	.product-finder{
-		height: 100vh;
+		height: 50vh;
 		flex-direction: row;
 	}
 
 	.column {
-	
-
-		height: 100vh; 
+		height: 50vh; 
 		width: 25vw;
 	}
 
@@ -96,44 +99,38 @@
 		font-size: 1.125rem;
 	}
 
-	.box img {
-		display: none;    
-	}
+	.box img { display: none; }
 
+// Click or hover event classes
 
-
-}//End of media query
-
-// Large devices (desktops, 992px and up)
-@include media-breakpoint-up(lg) { 
-
-	.column {
-		height: 100vh; 
-		width: 25vw;
-	}
-
-
-}//End of media query
-
-// Extra large devices (large desktops, 1200px and up)
-@include media-breakpoint-up(xl) { 
-
+	
 	.box{
-		width: 12vw;
-		height: 5vw;
+		width: 19vw;
+		height: 7vw;
 
 	  	flex-direction: column;
 	  	justify-content: center;
 	  	align-items: center;
-	}   
+	}  
+
+	.sub a { 
+		text-decoration: none;
+		} 
 	
+	.sub {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
 	// Depending on the column hovered
 	// this class will be added to expand the box class
 	// to display the content inside
 	//done through JS
 	.column-expand{
-		width: 75%!important;
-		height: auto !important;
+		width: 100%!important;
+		height: 100% !important;
 
 		// to control the .box background
 		background-color: rgba(0,0,0,.7);
@@ -160,7 +157,43 @@
 		background-color: rgba(0,0,0,.5);
 		border: none;
 	}
-	
 
+
+	
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+	.product-finder { height: 100vh; }
+
+	.column {
+		height: 100vh; 
+		width: 25vw;
+	}
+ 
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+
+// Click or hover event classes
+
+	.box{
+		width: 12vw;
+		height: 5vw;
+	}   
+	
+	// Depending on the column hovered
+	// this class will be added to expand the box class
+	// to display the content inside
+	//done through JS
+	.column-expand{
+		width: 75%!important;
+		height: auto !important;
+	}
 
 }//End of media query

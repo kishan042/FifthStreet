@@ -32,22 +32,35 @@
 		include 'INC/Hero-full.php';  
 
 
+// Product-finder
+		include 'INC/Product-finder.php';
+
+
 // Spacing	
-//include 'INC/Spacing-mt-50.php';
+		// Add a class to hide the seperation
+		$hide = "hidden-xs-down";
+		
+		include 'INC/Spacing-mt-100.php';
+
+
+// Blocks-two-left-compact
+		include 'INC/Blocks-two-left-compact.php';
+
+
+// Blocks-two-right-compact
+		include 'INC/Blocks-two-right-compact.php';
+
 
 // Product-finder
-include 'INC/Product-finder.php';
-
-// Spacing	
-include 'INC/Spacing-mt-50.php';
-
-// Product-finder
-include 'INC/Feature-intro.php';
+		include 'INC/Feature-intro.php';
 
 
-// Spacing	
-//include 'INC/Spacing-mt-100.php';
+// Blocks-two-left
+		include 'INC/Blocks-two-left.php';
 
+
+// Blocks-two-right
+		include 'INC/Blocks-two-right.php';
 
 
 // Footer

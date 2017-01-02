@@ -1,1 +1,1 @@
-<div class="mt-50"> <!--Spacing --> </div>
+<div class="mt-50  <?php echo $hide ?>"> <!--Spacing --> </div>

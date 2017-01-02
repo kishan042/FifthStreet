@@ -35,20 +35,54 @@ $(document).ready(function(){
 	// the rest of the colums will be tinted by adding a 
 	// specific class. Once the mouse is removed, so is the class
 
-	$(".column").mouseover(function(){
-	    $(this).siblings().find(".box").addClass("column-focus");
-	     $(this).find(".hide").removeClass("hide");
-	     $(this).find(".box").addClass("column-expand");
+if ($(window).width() > 767) {
 
-	});
+	$(".block-link").removeAttr("href");
 
-	$(".column").mouseout(function(){
-	    $(this).siblings().find(".box").removeClass("column-focus");
-	     $(this).find(".sub").addClass("hide");
-	     $(this).find(".box").removeClass("column-expand");
+	//$(".product-finder").remove();
+
+    $(".column").bind({
+		click: function() {
+			$(this).siblings().find(".box").addClass("column-focus");
+			$(this).find(".hide").removeClass("hide");
+			$(this).find(".box").addClass("column-expand");
+		},
+		mouseover: function() {
+			$(this).siblings().find(".box").addClass("column-focus");
+			$(this).find(".hide").removeClass("hide");
+			$(this).find(".box").addClass("column-expand");
+		},
+		mouseout: function() {
+			$(this).siblings().find(".box").removeClass("column-focus");
+			$(this).find(".sub").addClass("hide");
+			$(this).find(".box").removeClass("column-expand");
+		}
 	});
+}
 
 
 }); //END OF JQUERY
 
+// $( ".volume" ).bind({
+//   click: function() {
+//     $(".volume").hide();  
+//     $(".volume_mute").show(); 
+//   },
+//   mouseover: function() {
+//     show_volume_bar();
+//   }
+// });
+
+ //      $(".column").mouseover(function(){
+	//     $(this).siblings().find(".box").addClass("column-focus");
+	//      $(this).find(".hide").removeClass("hide");
+	//      $(this).find(".box").addClass("column-expand");
+
+	// });
+
+	// $(".column").mouseout(function(){
+	//     $(this).siblings().find(".box").removeClass("column-focus");
+	//      $(this).find(".sub").addClass("hide");
+	//      $(this).find(".box").removeClass("column-expand");
+	// });
 
