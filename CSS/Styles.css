@@ -3480,13 +3480,15 @@ h2, .h2-alt {
   font-size: 1.875rem; }
 
 h3, .h3 {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-weight: 300; }
 
 h3, .h3-alt {
   font-size: 1.125rem; }
 
 h4, .h4 {
-  font-size: 1rem; }
+  font-size: 1rem;
+  font-weight: 200; }
 
 p, .p-medium {
   font-size: 1.625rem; }
@@ -3499,6 +3501,12 @@ p, .p-light {
   line-height: 28px;
   font-weight: 300; }
 
+.txt-medium {
+  font-weight: 400; }
+
+.txt-light {
+  font-weight: 200; }
+
 h1, .h1 {
   line-height: 4rem; }
 
@@ -3508,8 +3516,15 @@ h1, .h1 {
 .txt-gold {
   color: #c6b89b !important; }
 
+.txt-gray {
+  color: #313131; }
+
 .letter-space-large {
   letter-spacing: 7px; }
+
+.txt-underdline {
+  width: 200px;
+  border-bottom: 2px solid #c6b89b; }
 
 @media (max-width: 575px) {
   .h1 {
@@ -4092,6 +4107,102 @@ button:focus {
     height: 100% !important;
     background-color: rgba(0, 0, 0, 0.5);
     border: none; } }
+::-webkit-scrollbar {
+  display: none; }
+
+.image-container {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  padding-left: 20px;
+  background-color: #f5f6f6;
+  margin-top: 20px; }
+
+.class-1 {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.class-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* Width  = amount of image blocks minus 1 * 100
+   This is to allow the next image block to display in a row*/
+  width: 2100px;
+  height: 80vh; }
+
+.tr {
+  width: 270px;
+  height: auto; }
+
+.tr img {
+  width: 80%;
+  display: block;
+  margin: 0 auto; }
+
+.tr h3,
+.tr h4 {
+  text-align: center;
+  margin-bottom: 0; }
+
+@media (min-width: 576px) {
+  .width {
+    width: 60%; }
+
+  .class-2 {
+    width: 2160px; }
+
+  .class-2:first-child {
+    margin-left: 10vw; } }
+@media (min-width: 992px) {
+  .image-container {
+    overflow: hidden;
+    background-color: #fff; }
+
+  .class-1 {
+    height: 100vh; }
+
+  .width {
+    width: 60%; }
+
+  .class-2:first-child {
+    margin-left: 0; }
+
+  .class-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 65vw;
+    height: 100vh; }
+
+  .tr {
+    width: 23%;
+    height: auto;
+    margin-top: 10px; }
+
+  .tr img {
+    padding: 10px;
+    width: 100%; }
+
+  .tr h3,
+  .tr h4 {
+    margin-bottom: 0;
+    line-height: 1.5rem; } }
+@media (min-width: 1200px) {
+  .class-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 60vw;
+    height: 100vh; } }
 /* --------------------------------------------------------
    Men | Women | brand individual page modules
    -------------------------------------------------------- */

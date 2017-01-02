@@ -1,0 +1,153 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+::-webkit-scrollbar{
+	   display: none; 
+} 
+
+
+
+.image-container{
+	    overflow-x: scroll;
+        -webkit-overflow-scrolling:touch; 
+        -moz-overflow-scrolling:touch;  
+        padding-left: 20px;
+        background-color: $gray-lightest;
+        margin-top: 20px;
+}
+
+.class-1 {
+	height: 45vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.class-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ 
+ /* Width  = amount of image blocks minus 1 * 100
+  This is to allow the next image block to display in a row*/
+  width: 2100px;
+  height: 80vh;
+}
+
+// .class-1 { overflow: hidden;}
+
+.tr {
+  width: 270px;
+  height: auto;
+}
+
+.tr img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.tr h3,
+.tr h4 {
+text-align: center;
+margin-bottom: 0;
+}
+
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+.width{ width:60%;}
+
+.class-2 {
+  width: 2160px;
+
+}
+
+.class-2:first-child {
+  margin-left: 10vw;
+
+}
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+.image-container{
+
+		overflow: hidden;
+         background-color: $white;
+}
+
+.class-1 {
+	height: 100vh;
+
+
+}
+
+.width{ width:60%;}
+
+.class-2:first-child {
+  margin-left: 0;
+
+}
+
+.class-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 65vw;
+  height: 100vh;
+}
+
+.tr {
+  width: 23%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.tr img{
+	padding: 10px;
+	width: 100%;
+}
+
+.tr h3,
+.tr h4{ margin-bottom: 0;
+line-height: 1.5rem;
+}
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+.class-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60vw;
+  height: 100vh;
+}
+
+}//End of media query

@@ -44,22 +44,9 @@ include 'INC/Spacing-mt-50.php';
 // Product-finder
 include 'INC/Feature-intro.php';
 
-?> 
-
-
-
-
-
-
-
-
-
-
-
-<?php 
 
 // Spacing	
-include 'INC/Spacing-mt-100.php';
+//include 'INC/Spacing-mt-100.php';
 
 
 
