@@ -168,3 +168,43 @@ include 'INC/Header.php';
 	</div>
 </div>
 
+
+<hr>
+<!-- Section 5 -->
+<h2 class="my-2 ml-2 mb-3 pb-2 h2"><i>CTA's</i></h2>
+
+<button class="mt-2 primary-btn-medium">
+	Test
+</button>
+<button class="mt-2 primary-btn-small">
+	Test
+</button>
+<button class="mt-2 secondary-btn-medium">
+	Test
+</button>
+<button class="mt-2 secondary-btn-small">
+	Test
+</button>
+<button class="mt-2 tertiary-btn-medium">
+	Test
+</button>
+<button class="mt-2 tertiary-btn-small">
+	Test
+</button>
+				
+
+
+<hr>
+<!-- Section 6 -->
+<h2 class="my-2 ml-2 mb-3 pb-2 h2"><i>Test</i></h2>
+
+
+
+
+
+
+
+
+
+
+

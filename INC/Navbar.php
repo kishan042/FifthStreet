@@ -29,9 +29,12 @@
 		<div class="mob-secondary-nav bg-gray-lightest">
 		<!-- Secondary Nav -->
 			<ul class="secondary-options row mx-0">
-				<li class="col-xs-4 text-xs-center p-medium option-active">TRENDING</li>
-				<li class="col-xs-4 text-xs-center p-medium">OFFERS</li>
-				<li class="col-xs-4 text-xs-center p-medium">WARDROBE</li>
+				<li class="col-xs-4 text-xs-center p-medium 
+				<?php echo $Trending ?> ">TRENDING</li>
+				<li class="col-xs-4 text-xs-center p-medium 
+				<?php echo $Offers?> ">OFFERS</li>
+				<li class="col-xs-4 text-xs-center p-medium
+				<?php echo $Wardrobe ?> ">WARDROBE</li>
 			</ul>
 		</div>
 	</div>
@@ -80,9 +83,12 @@
 		<div class="desk-secondary-nav">
 		<!-- Secondary Nav -->
 			<ul class="mb-0">
-				<li class="text-xs-center p-medium option-active">TRENDING</li>
-				<li class="text-xs-center p-medium">OFFERS</li>
-				<li class="text-xs-center p-medium">WARDROBE</li>
+				<li class="text-xs-center p-medium 
+				<?php echo $Trending ?> ">TRENDING</li>
+				<li class="text-xs-center p-medium
+				<?php echo $Offers?> ">OFFERS</li>
+				<li class="text-xs-center p-medium
+				<?php echo $Wardrobe ?> ">WARDROBE</li>
 			</ul>
 		</div>
 	</div>

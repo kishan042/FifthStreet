@@ -88,12 +88,26 @@
     	height: 50px;
     }
 
+    .tertiary-btn-small {     
+    @extend .primary-btn-small;
+    background: transparent;
+    padding: 5px 20px;
+    border: 1px solid $gray-darkest;
+    }
+
+
+    .tertiary-btn-medium {
+        @extend .tertiary-btn-small;
+        background: transparent;
+        height: 50px;
+    }
+
 	button:hover, 
 	button:active:hover, 
 	button:active:focus {
 	background-color: $gem !important;
 	color: $white; 
-	border: rgba(0,0,0,0) 2px solid;}
+	border: rgba(0,0,0,0) 1px solid;}
 
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-down(xs) { 

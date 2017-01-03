@@ -18,7 +18,7 @@
 						<a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
 						</a>
-						<a href="#">
+						<a href="about-us.php">
 							<h3 class="mt-2 h4 txt-white pr-1">Clothing</h3>
 						</a>
 						<a href="#">
@@ -37,7 +37,7 @@
 			<div class="content">
 				<div class="box tint-5">
 					<h3 class="h3-alt txt-white pr-1">WOMEN</h3>
-					<img src="IMG/icons/arrow-right-whie.svg">
+					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
 						<p class="mt-2 column-description txt-white text-xs-center pr-1">Find everything at your finger tips.</p>
@@ -64,7 +64,7 @@
 			<div class="content">
 				<div class="box tint-5">
 				<h3 class="h3-alt txt-white pr-1">BRANDS</h3>
-					<img src="IMG/icons/arrow-right-whte.svg">
+					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
 						<p class="mt-2 column-description txt-white text-xs-center pr-1">Find everything at your finger tips.</p>
@@ -91,7 +91,7 @@
 			<div class="content">
 				<div class="box tint-5">
 					<h3 class="h3-alt txt-white pr-1">OFFERS</h3>
-					<img src="IMG/icons/arrow-right-whte.svg">
+					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
 						<p class="mt-2 column-description txt-white text-xs-center pr-1">Find everything at your finger tips.</p>

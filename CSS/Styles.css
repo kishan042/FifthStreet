@@ -3448,6 +3448,12 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 /* --------------------------------------------------------
    Custom styles for FIFTH STREET
    -------------------------------------------------------- */
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none; }
+
 /* ------------------ Type -------------------- */
 hr {
   margin-top: 1rem;
@@ -3670,7 +3676,7 @@ h1, .h1 {
   background-color: black; }
 
 /* ------------------ CTA's -------------------- */
-.primary-btn-small, .primary-btn-medium, .secondary-btn-small, .secondary-btn-medium {
+.primary-btn-small, .primary-btn-medium, .secondary-btn-small, .secondary-btn-medium, .tertiary-btn-small, .tertiary-btn-medium {
   background-color: #fff;
   border: none;
   border-radius: 100px;
@@ -3687,12 +3693,21 @@ h1, .h1 {
 .secondary-btn-medium {
   height: 50px; }
 
+.tertiary-btn-small, .tertiary-btn-medium {
+  background: transparent;
+  padding: 5px 20px;
+  border: 1px solid #1a1a1a; }
+
+.tertiary-btn-medium {
+  background: transparent;
+  height: 50px; }
+
 button:hover,
 button:active:hover,
 button:active:focus {
   background-color: #48d8d8 !important;
   color: #fff;
-  border: transparent 2px solid; }
+  border: transparent 1px solid; }
 
 @media (max-width: 575px) {
   button.primary-btn-medium {
@@ -3948,6 +3963,9 @@ nav ul li::after {
 
 .hero-compact {
   height: 50vh; }
+
+.hero-plain {
+  height: 45vh; }
 
 .tint {
   width: 100%;
@@ -4245,7 +4263,7 @@ button:focus {
     height: 100vh; } }
 /*------- Compact -------*/
 .txt-block-half {
-  height: 60vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4258,7 +4276,7 @@ button:focus {
 
 /*------- Full -------*/
 .txt-block-full {
-  height: 60vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
