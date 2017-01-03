@@ -24,7 +24,7 @@
 
 // Hero-plain
 		// copy for H1
-		$h1 = "MY  WARDROBE";
+		$h1 = "WARDROBE";
 
 		include 'INC/Hero-half-plain.php';  
 
@@ -77,7 +77,7 @@
 		// Background colour class for text
 		$BlockBG = "bg-gray-lightest";
 		// Title
-		$BlockTitle = "MY ITEMS & RECEIPTS";
+		$BlockTitle = "MY RECEIPTS";
 		// Copy
 		$BlockText = "View all of the products you have bought and save E-receipts for any purchase you make in-store or online. Return or exchange products at will.";
 		// type 'hide' to remove the button

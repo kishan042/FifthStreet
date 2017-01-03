@@ -3774,7 +3774,7 @@ ul.secondary-options li:last-child:after {
   display: none; }
 
 .option-active {
-  border-bottom: 2px #48d8d8 solid; }
+  border-bottom: 3px #48d8d8 solid; }
 
 /* --- Hamburger Menu
 Following code to style the hamburger menu**/
