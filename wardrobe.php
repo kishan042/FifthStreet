@@ -37,7 +37,7 @@
 
 // Hero-plain
 		// copy for H1
-		$h1 = "WARDROBE";
+		$h1 = "MY WARDROBE";
 
 		include 'INC/Hero-half-plain.php';  
 
@@ -53,7 +53,7 @@
 		// Title
 		$BlockTitle = "MY WISHLIST";
 		// Copy
-		$BlockText = "Wonder across a range of brand collections and save any product which inspires you. Why stop there, you can even go to any physical store, and through a single tap, add products to your wish list.";
+		$BlockText = "Wander across a range of brand collections and save any product which inspires you. Why stop there, you can even go to any physical store, and through a single tap, add products to your wish list.";
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA

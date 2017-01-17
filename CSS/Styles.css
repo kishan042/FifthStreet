@@ -3214,50 +3214,50 @@ tbody.collapse.in {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-.text-xs-left {
+.txt-xs-left {
   text-align: left !important; }
 
-.text-xs-right {
+.txt-xs-right {
   text-align: right !important; }
 
-.text-xs-center {
+.txt-xs-center {
   text-align: center !important; }
 
 @media (min-width: 576px) {
-  .text-sm-left {
+  .txt-sm-left {
     text-align: left !important; }
 
-  .text-sm-right {
+  .txt-sm-right {
     text-align: right !important; }
 
-  .text-sm-center {
+  .txt-sm-center {
     text-align: center !important; } }
 @media (min-width: 768px) {
-  .text-md-left {
+  .txt-md-left {
     text-align: left !important; }
 
-  .text-md-right {
+  .txt-md-right {
     text-align: right !important; }
 
-  .text-md-center {
+  .txt-md-center {
     text-align: center !important; } }
 @media (min-width: 992px) {
-  .text-lg-left {
+  .txt-lg-left {
     text-align: left !important; }
 
-  .text-lg-right {
+  .txt-lg-right {
     text-align: right !important; }
 
-  .text-lg-center {
+  .txt-lg-center {
     text-align: center !important; } }
 @media (min-width: 1200px) {
-  .text-xl-left {
+  .txt-xl-left {
     text-align: left !important; }
 
-  .text-xl-right {
+  .txt-xl-right {
     text-align: right !important; }
 
-  .text-xl-center {
+  .txt-xl-center {
     text-align: center !important; } }
 .text-lowercase {
   text-transform: lowercase !important; }
@@ -3907,6 +3907,9 @@ nav {
 
 .hero-full img {
   margin-top: 6rem; }
+
+.hero-down-arrow {
+  cursor: pointer; }
 
 @media (min-width: 768px) {
   .hero-full {

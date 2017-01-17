@@ -43,7 +43,7 @@
                         </li>  
                     </ul>
                 </div>
-                <div class="text-xs-center py-1 col-md-3">
+                <div class="txt-xs-center py-1 col-md-3">
                     <hr class="hidden-md-up">
                     <p class="p-light pt-10">&copy; <?php echo date("Y"); ?></p>     
                 </div>

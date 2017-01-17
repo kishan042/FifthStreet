@@ -13,7 +13,7 @@
 					<img src="IMG/icons/arrow-right-white.svg">
 										
 					<div class="hide sub">
-						<p class="mt-2 column-description txt-white text-xs-center pr-1">Find everything at your finger tips.</p>
+						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
 						
 						<a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
@@ -40,7 +40,7 @@
 					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
-						<p class="mt-2 column-description txt-white text-xs-center pr-1">Find everything at your finger tips.</p>
+						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
 						
 						<a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
@@ -67,7 +67,7 @@
 					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
-						<p class="mt-2 column-description txt-white text-xs-center pr-1">Find everything at your finger tips.</p>
+						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
 						
 						<a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
@@ -94,7 +94,7 @@
 					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
-						<p class="mt-2 column-description txt-white text-xs-center pr-1">Find everything at your finger tips.</p>
+						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
 						
 						<a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>

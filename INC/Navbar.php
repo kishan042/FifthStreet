@@ -37,19 +37,19 @@
 		<div class="mob-secondary-nav bg-gray-lightest">
 		<!-- Secondary Nav -->
 			<ul class="secondary-options row mx-0">
-				<li class="col-xs-4 text-xs-center p-medium
+				<li class="col-xs-4 txt-xs-center p-medium
 				<?php echo $ActiveTrending ?>">
 					<a href="<?php echo $trending ?>">
 						TRENDING
 					</a>
 				</li>
-				<li class="col-xs-4 text-xs-center p-medium
+				<li class="col-xs-4 txt-xs-center p-medium
 				<?php echo $ActiveOffers ?>">
 					<a href="<?php echo $offers ?>">
 						OFFERS
 					</a>
 				</li>
-				<li class="col-xs-4 text-xs-center p-medium
+				<li class="col-xs-4 txt-xs-center p-medium
 				<?php echo $ActiveWardrobe ?>">
 					<a href="<?php echo $wardrobe ?>">
 						WARDROBE
@@ -95,7 +95,7 @@
 					</ul>
 				</div>
 				<div class="desk-additional-options col-xs-4">
-					<ul class="text-xs-right pt-10">
+					<ul class="txt-xs-right pt-10">
 						<li>
 							<a href="<?php echo $search ?>">
 								<img src="IMG/icons/search.svg">
@@ -118,17 +118,17 @@
 		<div class="desk-secondary-nav">
 		<!-- Secondary Nav -->
 			<ul class="mb-0">
-				<li class="text-xs-center p-medium<?php echo $Trending ?>">
+				<li class="txt-xs-center p-medium<?php echo $Trending ?>">
 					<a href="<?php echo $trending ?>">
 						TRENDING
 					</a>
 				</li>
-				<li class="text-xs-center p-medium <?php echo $Offers?>">
+				<li class="txt-xs-center p-medium <?php echo $Offers?>">
 					<a href="<?php echo $offers ?>">
 						OFFERS
 					</a>
 				</li>
-				<li class="text-xs-center p-medium <?php echo $Wardrobe ?>">
+				<li class="txt-xs-center p-medium <?php echo $Wardrobe ?>">
 					<a href="<?php echo $wardrobe ?>">
 						WARDROBE
 					</a>
