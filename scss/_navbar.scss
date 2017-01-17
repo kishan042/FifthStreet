@@ -14,7 +14,7 @@
 /* --- Primary Nav
     Following code to align the icons in Primary nav*/
 
-    .test{
+    .fixed{
         position: fixed;
         top: 0;
         left: 0;
@@ -46,13 +46,18 @@ Following code to align the icons in secondary nav*/
         width: 100%; 
         height: 60px; }
 
-    //distrubute space X&Y axis with line-height
+    // keep height of ul same as secondary nav
+    .mob-secondary-nav ul {
+        height: 60px;
+        margin-bottom: 0; } 
+
+    //distrubute space X&Y axis with the 2 classes below
     ul.secondary-options li {
         display: inline;
-        padding: 0 2%; 
         line-height: 58px;
         font-size: 12px;
-        font-weight: 600;}
+        font-weight: 600; 
+       }
     
     // following two classes create dividers between
     // all three options
@@ -63,25 +68,24 @@ Following code to align the icons in secondary nav*/
         opacity: 0.3; }   
 
     ul.secondary-options li:last-child:after{
-        display: none; }   
+        display: none; }  
 
     //active bar for secondary option
-    .option-active{ border-bottom: 3px $gem solid }
+    .option-active { border-bottom: 3px $gem solid }
 
 /* --- Hamburger Menu
 Following code to style the hamburger menu**/ 
 
-    #h-menu{
+    #h-menu {
         height: 100%;
         max-height: 100%;
         width: 100%;
         overflow-y: scroll;
         -webkit-overflow-scrolling:touch; 
-        -moz-overflow-scrolling:touch; 
-    }
+        -moz-overflow-scrolling:touch; }
 
     //position the nav outside the viewport
-    nav{
+    nav {
         position: fixed;
         top: 0;
         left: 0;
@@ -89,8 +93,8 @@ Following code to style the hamburger menu**/
         bottom: 0;
         width: 100vw !important;
         z-index: 1;
+        
         /*FOLLOWING CODE TO SHIFT THE NAV TO THE LEFT & SPEED OF ANIMATION*/
-
         transform: translate3d(-100vw, 0, 0); /*(X, Y, Z)*/
         -webkit-transform: translate3d(-100vw, 0, 0);  /*(X, Y, Z)*/
         -moz-transform: translate3d(-100vw, 0, 0);  /*(X, Y, Z)*/
@@ -100,19 +104,19 @@ Following code to style the hamburger menu**/
         -moz-transition: -moz-transform 0.6s ease; 
     }
 
-    // This class will be added through JQuery to slide the 
-    // menu in
-    .active-nav nav{
+    // This class will be added through JQuery to 
+    //slide the menu in
+    .active-nav nav {
         transform: translate3d(0, 0, 0); /*(X, Y, Z)*/
         -webkit-transform: translate3d(0, 0, 0);  /*(X, Y, Z)*/
         -moz-transform: translate3d(0, 0, 0);  /*(X, Y, Z)*/}
 
     // code below is for the nav inside the menu hidden
-    nav ul{
+    #h-menu ul {
         list-style: none;
         position: relative; }
 
-    nav ul li a{
+    #h-menu ul a {
         text-decoration: none;
         display: block;
         font-size: 16px;
@@ -121,13 +125,13 @@ Following code to style the hamburger menu**/
         padding: 20px 0px; }
 
     // Icons
-    nav ul li::after{
+    #h-menu ul li::after{
         content: url('../IMG/icons/arrow-right-black.svg');
         width: 13px;
         display: block;
         position: absolute;
-        right: 20px;
-        margin-top: -45px; }  
+        right: 25px;
+        margin-top: -20px; }  
 
 
 
@@ -151,20 +155,18 @@ Following code to style the menu*/
     #h-menu ul{ margin-top: 150px; }
 
     // align the options better
-    #h-menu ul li{ padding-left: 60px !important }
+    #h-menu ul li{ padding-left: 30% !important }
     
     // align arrows with options
-    nav ul li::after{
+    #h-menu ul li::after{
         width: 14px;
-        right: 60px;
-        margin-top: -50px; } 
+        right: 30%;
+        margin-top: -20px; } 
 
 }//End of media query
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) { 
-
-
 
 }//End of media query
 
@@ -248,13 +250,12 @@ $spacing: 0 12px;
             font-size: 12px;
             font-weight: 600;
             line-height: 50px;
-            padding-bottom: 15px;
+            padding-bottom: 14px;
          }
 
-    .desk-secondary-nav ul li a {
+    .desk-secondary-nav ul a {
             color: $gray-darkest;
          }
-
 
 }//End of media query
 

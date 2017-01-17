@@ -14,10 +14,23 @@
 
 
 // Nav
+		// Links to other pages
+		$home = "index.php";		
+		$men = "#";
+		$women = "#";
+		$brands = "#";
+		$about = "about-us.php";
+		$trending = "#";
+		$offers = "#";
+		$wardrobe = "#";
+		$search = "#";
+		$profile = "#";
+		$basket = "#";
+
 		// Type "option-active" inside, to make option active
-		$Trending = "";
-		$Offers = "";
-		$Wardrobe = "option-active";
+		$ActiveTrending = "";
+		$ActiveOffers = "";
+		$ActiveWardrobe = "option-active";
 
 		include 'INC/Navbar.php'; 
 

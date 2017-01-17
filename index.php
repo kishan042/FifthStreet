@@ -13,26 +13,36 @@
 		include 'INC/Header.php';
 
 
-// Nav
-		// Type "option-active" inside, to make option active
-		$Trending = "";
-		$Offers = "";
-		$Wardrobe = "";
+// Navbar
+		// Links to other pages
+		$home = "#";		
+		$men = "#";
+		$women = "#";
+		$brands = "#";
+		$about = "about-us.php";
+		$trending = "#";
+		$offers = "#";
+		$wardrobe = "wardrobe.php";
+		$search = "#";
+		$profile = "#";
+		$basket = "#";
 
 		include 'INC/Navbar.php'; 
 
 
 // Hero-full
 		// IMG URL
-		 $url = "https://images.unsplash.com/photo-1476990789491-712b869b91a5?dpr=2&auto=format&w=1500&h=400&q=20&cs=tinysrgb&crop="; 
+		 $HeroUrl = "https://images.unsplash.com/photo-1476990789491-712b869b91a5?dpr=2&auto=format&w=1500&h=400&q=20&cs=tinysrgb&crop="; 
 		// Amount of tint on image
 		$tint = "tint-0";
 		// copy for H1
 		$h1 = "ACCESS". '<br>' . "THE UNKNOWN";
 		// copy for h2
 		$description = "Fifth Street is all about bridging online and offline";
-		// copy for CTA
-		$CTA = "FIND OUT MORE";
+		//url for button (CTA)
+		$ButtonUrl = "#";
+		// copy for button (CTA)
+		$ButtonCopy = "FIND OUT MORE";
 
 		include 'INC/Hero-full.php';  
 

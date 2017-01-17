@@ -12,7 +12,19 @@
 		include 'INC/Header.php';
 
 
-// Nav
+// Navbar
+		// Links to other pages
+		$home = "index.php";		
+		$men = "#";
+		$women = "#";
+		$brands = "#";
+		$about = "#";
+		$trending = "#";
+		$offers = "#";
+		$wardrobe = "wardrobe.php";
+		$search = "#";
+		$profile = "#";
+		$basket = "#";
 		include 'INC/Navbar.php'; 
 
 

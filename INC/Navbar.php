@@ -11,44 +11,63 @@
 					<img id="exit-icon"class="nav-toggle-btn hide" src="IMG/icons/cross.svg">
 				</div>
 				<div class="col-xs-6 icon px-0">
-					<img src="IMG/icons/user.svg">
+					<a href="<?php echo $profile ?>">
+						<img src="IMG/icons/user.svg">
+					</a>
 				</div>
 			</div>
 			<div class="col-xs-4 icon">
-				<img src="IMG/icons/logo.svg" style="width:100%">
+				<a href="<?php echo $home ?>">
+					<img src="IMG/icons/logo.svg" style="width:100%">
+				</a>
 			</div>
 			<div class="col-xs-4 row mx-0 px-0">
 				<div class="col-xs-6 icon px-0">
-					<img src="IMG/icons/search.svg">
+					<a href="<?php echo $search ?>">
+						<img src="IMG/icons/search.svg">
+					</a>
 				</div>
 				<div class="col-xs-6 icon px-0">
-					<img src="IMG/icons/basket.svg">
+					<a href="<?php echo $basket ?>">
+						<img src="IMG/icons/basket.svg">
+					</a>
 				</div>
 			</div>
 		</div>
 		<div class="mob-secondary-nav bg-gray-lightest">
 		<!-- Secondary Nav -->
 			<ul class="secondary-options row mx-0">
-				<li class="col-xs-4 text-xs-center p-medium 
-				<?php echo $Trending ?> ">TRENDING</li>
-				<li class="col-xs-4 text-xs-center p-medium 
-				<?php echo $Offers?> ">OFFERS</li>
 				<li class="col-xs-4 text-xs-center p-medium
-				<?php echo $Wardrobe ?> ">WARDROBE</li>
+				<?php echo $ActiveTrending ?>">
+					<a href="<?php echo $trending ?>">
+						TRENDING
+					</a>
+				</li>
+				<li class="col-xs-4 text-xs-center p-medium
+				<?php echo $ActiveOffers ?>">
+					<a href="<?php echo $offers ?>">
+						OFFERS
+					</a>
+				</li>
+				<li class="col-xs-4 text-xs-center p-medium
+				<?php echo $ActiveWardrobe ?>">
+					<a href="<?php echo $wardrobe ?>">
+						WARDROBE
+					</a>
+				 </li>
 			</ul>
 		</div>
 	</div>
-
 	<nav id="h-menu" class="bg-gray-light">
 	<!-- Hamburger menu to be hidden -->  
 		<ul class="mt-100">
-			<li class="pl-1"><a href="#">MEN</a></li>
-			<li class="pl-1"><a href="#">WOMEN</a></li>
-			<li class="pl-1"><a href="#">BRANDS</a></li>
-			<li class="pl-1"><a href="#">TRENDING</a></li>
-			<li class="pl-1"><a href="#">OFFERS</a></li>
-			<li class="pl-1"><a href="#">WARDROBE</a></li>
-			<li class="pl-1"><a href="#">ABOUT US</a></li>
+			<a href="<?php echo $men ?>"><li class="pl-1">MEN</li></a>
+			<a href="<?php echo $women ?>"><li class="pl-1">WOMEN</li></a>
+			<a href="<?php echo $brands ?>"><li class="pl-1">BRANDS</li></a>
+			<a href="<?php echo $trending ?>"><li class="pl-1">TRENDING</li></a>
+			<a href="<?php echo $offers ?>"><li class="pl-1">OFFERS</li></a>
+			<a href="<?php echo $wardrobe ?>"><li class="pl-1">WARDROBE</li></a>
+			<a href="<?php echo $about ?>"><li class="pl-1">ABOUT US</li></a>
 		</ul>
 	</nav>
 
@@ -60,22 +79,38 @@
 			<div class="desk-primary-nav row mx-0 pt-10">
 				<div class="desk-main-options col-xs-4 pt-10 pl-0">
 					<ul>
-						<li><a href="#">MEN</a></li>
-						<li><a href="#">WOMEN</a></li>
-						<li><a href="#">BRANDS</a></li>
-						<li class=""><a href="#">ABOUT US</a></li>
+						<li><a href="<?php echo $men ?>">MEN</a></li>
+						<li><a href="<?php echo $women ?>">WOMEN</a></li>
+						<li><a href="<?php echo $brands ?>">BRANDS</a></li>
+						<li><a href="<?php echo $about ?>">ABOUT US</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-4">
 					<ul>
-						<li class="desk-logo"><img src="IMG/icons/logo.svg" style="width:120px"></li>
+						<li class="desk-logo">
+							<a href="<?php echo $home ?>">
+								<img src="IMG/icons/logo.svg" style="width:120px">
+							</a>
+						</li>
 					</ul>
 				</div>
 				<div class="desk-additional-options col-xs-4">
 					<ul class="text-xs-right pt-10">
-						<li><img src="IMG/icons/search.svg"></li>
-						<li><img src="IMG/icons/user.svg"></li>
-						<li><img src="IMG/icons/basket.svg"></li>
+						<li>
+							<a href="<?php echo $search ?>">
+								<img src="IMG/icons/search.svg">
+							</a>	
+						</li>
+						<li>
+							<a href="<?php echo $profile ?>">
+								<img src="IMG/icons/user.svg">
+							</a>	
+						</li>
+						<li>
+							<a href="<?php echo $basket ?>">
+								<img src="IMG/icons/basket.svg">
+							</a>	
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -83,12 +118,21 @@
 		<div class="desk-secondary-nav">
 		<!-- Secondary Nav -->
 			<ul class="mb-0">
-				<li class="text-xs-center p-medium 
-				<?php echo $Trending ?> ">TRENDING</li>
-				<li class="text-xs-center p-medium
-				<?php echo $Offers?> ">OFFERS</li>
-				<li class="text-xs-center p-medium
-				<?php echo $Wardrobe ?> ">WARDROBE</li>
+				<li class="text-xs-center p-medium<?php echo $Trending ?>">
+					<a href="<?php echo $trending ?>">
+						TRENDING
+					</a>
+				</li>
+				<li class="text-xs-center p-medium <?php echo $Offers?>">
+					<a href="<?php echo $offers ?>">
+						OFFERS
+					</a>
+				</li>
+				<li class="text-xs-center p-medium <?php echo $Wardrobe ?>">
+					<a href="<?php echo $wardrobe ?>">
+						WARDROBE
+					</a>
+				</li>
 			</ul>
 		</div>
 	</div>

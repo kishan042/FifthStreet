@@ -17,12 +17,12 @@
     &:focus { @content }
     @include hover { @content }
   }
-  @else {
-    &:focus,
-    &:hover {
-      @content
-    }
-  }
+  // @else {
+  //   &:focus,
+  //   &:hover {
+  //     @content
+  //   }
+  // }
 }
 
 @mixin plain-hover-focus {

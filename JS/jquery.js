@@ -13,7 +13,7 @@ $(document).ready(function(){
 		// Toggle the class to slide the menu in or out
 		body.toggleClass('active-nav');
 		e.preventDefault();
-		$(".primary-options").toggleClass("test");
+		$(".primary-options").toggleClass("fixed");
 	});//End of function
 
 	// Following two functions
