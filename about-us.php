@@ -40,7 +40,7 @@
 
 
 // Spacing	
-include 'INC/Spacing-mt-50.php';
+include 'INC/Spacing-mt-100.php';
 
 
 // Article heading
@@ -53,14 +53,14 @@ include 'INC/Spacing-mt-50.php';
 
 
 // Article paragraph
-		// 
+
 		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
 
 		include 'INC/Article-paragraph.php';
 
 
 // Spacing	
-include 'INC/Spacing-mt-50.php';
+include 'INC/Spacing-mt-100.php';
 
 
 // Hero-compact
@@ -71,7 +71,7 @@ include 'INC/Spacing-mt-50.php';
 
 
 // Spacing	
-include 'INC/Spacing-mt-50.php';
+include 'INC/Spacing-mt-100.php';
 
 
 // Article heading

@@ -13,7 +13,7 @@
 
 <div class="container-small">
 	<div class="row">
-	<form action="">
+	<form method="post" action="Contact.php">
 	<div class="row mx-0">
 		<div class="col-xs-12 col-sm-6 form-group">
 			<input type="text" name="name" id="inputName" placeholder="FULL NAME" required>
