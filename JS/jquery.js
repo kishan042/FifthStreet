@@ -35,28 +35,28 @@ $(document).ready(function(){
 		// the rest of the colums will be tinted by adding a 
 		// specific class. Once the mouse is removed, so is the class
 
-	if ($(window).width() > 767) {
+		if ($(window).width() > 767) {
 
-		$(".block-link").removeAttr("href");
+			$(".block-link").removeAttr("href");
 
-	    $(".column").bind({
-			click: function() {
-				$(this).siblings().find(".box").addClass("column-focus");
-				$(this).find(".hide").removeClass("hide");
-				$(this).find(".box").addClass("column-expand");
-			},
-			mouseover: function() {
-				$(this).siblings().find(".box").addClass("column-focus");
-				$(this).find(".hide").removeClass("hide");
-				$(this).find(".box").addClass("column-expand");
-			},
-			mouseout: function() {
-				$(this).siblings().find(".box").removeClass("column-focus");
-				$(this).find(".sub").addClass("hide");
-				$(this).find(".box").removeClass("column-expand");
-			}
-		});
-	}
+		    $(".column").bind({
+				click: function() {
+					$(this).siblings().find(".box").addClass("column-focus");
+					$(this).find(".hide").removeClass("hide");
+					$(this).find(".box").addClass("column-expand");
+				},
+				mouseover: function() {
+					$(this).siblings().find(".box").addClass("column-focus");
+					$(this).find(".hide").removeClass("hide");
+					$(this).find(".box").addClass("column-expand");
+				},
+				mouseout: function() {
+					$(this).siblings().find(".box").removeClass("column-focus");
+					$(this).find(".sub").addClass("hide");
+					$(this).find(".box").removeClass("column-expand");
+				}
+			});
+		}
 
 	// HERO-FULL module
 
