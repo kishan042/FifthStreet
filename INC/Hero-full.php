@@ -12,6 +12,6 @@
 		   	    <?php echo $ButtonCopy ?>
 		   	</button>
 	   	</a>
-   	    <img src="IMG/icons/arrow-down-white.svg" style="width:60px;">
+   	    <img class="hero-down-arrow" src="IMG/icons/arrow-down-white.svg" style="width:60px;">
 	</div>
 </div>
