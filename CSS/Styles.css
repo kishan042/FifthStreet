@@ -4069,14 +4069,14 @@ button:focus {
     height: 100% !important;
     background-color: rgba(0, 0, 0, 0.5);
     border: none; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .product-finder {
     height: 100vh; }
 
   .column {
     height: 100vh;
-    width: 25vw; } }
-@media (min-width: 1200px) {
+    width: 25vw; }
+
   .box {
     width: 12vw;
     height: 5vw; }
@@ -4092,7 +4092,6 @@ button:focus {
   -webkit-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;
   padding-left: 20px;
-  background-color: #f5f6f6;
   margin-top: 20px; }
 
 .class-1 {
@@ -4151,7 +4150,7 @@ button:focus {
     background-color: #fff; }
 
   .class-1 {
-    height: 100vh; }
+    height: 50vh; }
 
   .class-1 h2 {
     padding-bottom: 48px; }
@@ -4169,7 +4168,7 @@ button:focus {
     align-items: flex-start;
     flex-wrap: wrap;
     width: 65vw;
-    height: 100vh; }
+    height: 50vh; }
 
   .tr {
     width: 23%;
@@ -4185,6 +4184,9 @@ button:focus {
     margin-bottom: 0;
     line-height: 1.5rem; } }
 @media (min-width: 1200px) {
+  .class-1 {
+    height: 100vh; }
+
   .class-2 {
     display: flex;
     flex-direction: column;
@@ -4231,12 +4233,12 @@ button:focus {
   .txt-block-full,
   .img-full {
     height: 40vh; } }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .txt-block-half,
   .img-half,
   .txt-block-full,
   .img-full {
-    height: 70vh; } }
+    height: 75vh; } }
 /* --------------------------------------------------------
    Men | Women | brand individual page modules
    -------------------------------------------------------- */

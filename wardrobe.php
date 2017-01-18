@@ -1,7 +1,7 @@
 <?php
 // Header
 		// Title tag
-		$Title = "Wardrobe ";
+		$Title = "My Wardrobe ";
 		// Meta description
 		$Description = "Fill Text";
 

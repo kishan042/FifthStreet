@@ -1,7 +1,7 @@
 <?php
 // Header
 		// Title tag
-		$Title = "Fifth Street ";
+		$Title = "Home ";
 		// Meta description
 		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
 
@@ -91,8 +91,15 @@
 		include 'INC/Blocks-two-right-compact.php';
 
 
-// Product-finder
+// Feature-intro
 		include 'INC/Feature-intro.php';
+
+
+// Spacing	
+		// Add a class to hide the seperation
+		$hide = "hidden-md-up";
+		
+		include 'INC/Spacing-mt-100.php';
 
 
 // Blocks-two-left

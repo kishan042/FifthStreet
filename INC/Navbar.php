@@ -118,17 +118,20 @@
 		<div class="desk-secondary-nav">
 		<!-- Secondary Nav -->
 			<ul class="mb-0">
-				<li class="txt-xs-center p-medium<?php echo $Trending ?>">
+				<li class="txt-xs-center p-medium
+				<?php echo $ActiveTrending ?>">
 					<a href="<?php echo $trending ?>">
 						TRENDING
 					</a>
 				</li>
-				<li class="txt-xs-center p-medium <?php echo $Offers?>">
+				<li class="txt-xs-center p-medium 
+				<?php echo $ActiveOffers?>">
 					<a href="<?php echo $offers ?>">
 						OFFERS
 					</a>
 				</li>
-				<li class="txt-xs-center p-medium <?php echo $Wardrobe ?>">
+				<li class="txt-xs-center p-medium 
+				<?php echo $ActiveWardrobe ?>">
 					<a href="<?php echo $wardrobe ?>">
 						WARDROBE
 					</a>

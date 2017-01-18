@@ -10,7 +10,7 @@
         -webkit-overflow-scrolling:touch; 
         -moz-overflow-scrolling:touch;  
         padding-left: 20px;
-        background-color: $gray-lightest;
+        //background-color: $gray-lightest;
         margin-top: 20px;
 }
 
@@ -99,9 +99,7 @@ margin-bottom: 0;
 }
 
 .class-1 {
-	height: 100vh;
-
-
+	height: 50vh;
 }
 
 .class-1 h2 { padding-bottom: 48px;}
@@ -120,7 +118,7 @@ margin-bottom: 0;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 65vw;
-  height: 100vh;
+  height: 50vh;
 }
 
 .tr {
@@ -144,6 +142,8 @@ line-height: 1.5rem;
 
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
+
+.class-1 { height: 100vh; }
 
 .class-2 {
   display: flex;

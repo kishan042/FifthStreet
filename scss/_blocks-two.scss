@@ -67,10 +67,7 @@
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) { 
 
-	.txt-block-half,
-	.img-half, 
-	.txt-block-full,
-	.img-full { height: 70vh; }
+
 
 
 }//End of media query
@@ -78,6 +75,9 @@
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
 
-   
+   	.txt-block-half,
+	.img-half, 
+	.txt-block-full,
+	.img-full { height: 75vh; }
 
 }//End of media query

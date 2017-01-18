@@ -1,7 +1,7 @@
 <?php
 // Header
 		// Title tag
-		$Title = "About Fifth Street ";
+		$Title = "About us ";
 		// Meta description
 		$Description = "Fill text";
 		// CSS path
@@ -34,7 +34,7 @@
 		// Amount of tint on image
 		$tint = "tint-5";
 		// copy for H1
-		$h1 = "FIFTH STREET";
+		$h1 = "ABOUT US";
 
 		include 'INC/Hero-half.php'; 
 
@@ -104,7 +104,7 @@ include 'INC/Spacing-mt-100.php';
 
 // Footer
 		// page tag
-		$page = "About";
+		$page = "About us";
 
 		include 'INC/Footer.php'; 
 
