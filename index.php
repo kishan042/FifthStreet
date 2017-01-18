@@ -40,7 +40,7 @@
 		// copy for h2
 		$description = "Fifth Street is all about bridging online and offline";
 		//url for button (CTA)
-		$ButtonUrl = "#";
+		$ButtonUrl = "about-us.php";
 		// copy for button (CTA)
 		$ButtonCopy = "FIND OUT MORE";
 
