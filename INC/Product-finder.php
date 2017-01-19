@@ -40,7 +40,7 @@
 					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
-						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
+						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Grab your necessities in an instant.</p>
 						
 						<a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
@@ -67,19 +67,21 @@
 					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
-						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
+						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Discover brands tailored to your needs.</p>
 						
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
+							<h3 class="mt-2 h4 txt-white pr-1">
+								Top Brands
+							</h3>
 						</a>
-						<a href="#">
+					<!-- 	<a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Clothing</h3>
 						</a>
 						<a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Footwear</h3>
 						</a>
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Accessories</h3>	
+							<h3 class="mt-2 h4 txt-white pr-1">Accessories</h3>	 -->
 						</a>
 					</div>
 				</div>
@@ -94,20 +96,23 @@
 					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
-						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
+						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Take your pick anytime.</p>
 						
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
+							<h3 class="mt-2 h4 txt-white pr-1">Top offers
+							</h3>
 						</a>
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Clothing</h3>
+							<h3 class="mt-2 h4 txt-white pr-1">25% of all top
+							</h3>
 						</a>
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Footwear</h3>
+							<h3 class="mt-2 h4 txt-white pr-1">Exclusive
+							</h3>
 						</a>
-						<a href="#">
+						<!-- <a href="#">
 							<h3 class="mt-2 h4 txt-white pr-1">Accessories</h3>	
-						</a>
+						</a> -->
 					</div>
 				</div>
 			</div>

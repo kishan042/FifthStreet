@@ -5,7 +5,7 @@
 <article class="container-small">
 
 	<h2 class="txt-xs-center">Contact Form</h2>
-	<p class="txt-xs-center">Feel free to contact Fifth Street for any assistance.</p>	
+	<p class="txt-xs-center"><!-- Feel free to contact Fifth Street for any assistance. --></p>	
 </article>
 
 <div class="mt-50"> <!--Spacing --> </div>

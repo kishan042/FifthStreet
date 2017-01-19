@@ -59,10 +59,7 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="JS/jquery.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-    });// End of document ready  
-</script>
+<?php include 'INC/GA.php' ?>
 </body>
 
 
