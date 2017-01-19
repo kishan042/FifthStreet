@@ -51,15 +51,8 @@
         </div>
     </div>
 </footer>
-<!-- GA -->
-<script>
-  
-  <!-- Place GA script here -->
-
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="JS/jquery.js"></script>
-<?php include 'INC/GA.php' ?>
 </body>
 
 
