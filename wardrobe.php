@@ -116,6 +116,9 @@
 		// page tag
 		$page = "Wardrobe";
 
+		// JS path
+		$JSPath = "JS/jquery.js";
+
 		include 'INC/Footer.php'; 
 
 ?> 

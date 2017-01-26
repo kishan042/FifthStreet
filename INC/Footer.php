@@ -9,8 +9,10 @@
                 <div class="col-xs-12 pl-0">
                     <p class="p-light">
                         <a href="<?php echo $home ?>">
-                            <img src="IMG/icons/logo.svg" style="width:70px">
+                            <img src="<?php echo $img ?>icons/logo.svg" style="width:70px">
                         </a>
+                        <span class="pl-1"> / </span>
+                        <span class="pl-1"><?php echo $page ?></span>
                         <span class="pl-1"> / </span>
                         <span class="pl-1"><?php echo $page ?></span>
                     </p>
@@ -52,7 +54,7 @@
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="JS/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $JSPath ?>"></script>
 </body>
 
 

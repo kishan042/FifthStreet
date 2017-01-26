@@ -145,6 +145,9 @@ if (mail($to, $subject, $message, $headers)) {
 		// page tag
 		$page = "Contact form";
 
+		// JS path
+		$JSPath = "JS/jquery.js";
+
 		include 'INC/Footer.php'; 
 
     

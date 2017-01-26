@@ -143,6 +143,9 @@
 		// page tag
 		$page = "Home";
 
+		// JS path
+		$JSPath = "JS/jquery.js";
+
 		include 'INC/Footer.php'; 
 
 ?> 

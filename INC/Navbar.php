@@ -7,29 +7,29 @@
 		<!-- Primary Nav -->
 			<div class="col-xs-4 row mx-0 px-0">
 				<div class="col-xs-6 icon px-0">
-					<img id="menu-icon" class="nav-toggle-btn" src="IMG/icons/hamburger.svg">
-					<img id="exit-icon"class="nav-toggle-btn hide" src="IMG/icons/cross.svg">
+					<img id="menu-icon" class="nav-toggle-btn" src="<?php echo $img ?>icons/hamburger.svg">
+					<img id="exit-icon"class="nav-toggle-btn hide" src="<?php echo $img ?>icons/cross.svg">
 				</div>
 				<div class="col-xs-6 icon px-0">
 					<a href="<?php echo $profile ?>">
-						<img src="IMG/icons/user.svg">
+						<img src="<?php echo $img ?>icons/user.svg">
 					</a>
 				</div>
 			</div>
 			<div class="col-xs-4 icon">
 				<a href="<?php echo $home ?>">
-					<img src="IMG/icons/logo.svg" style="width:100%">
+					<img src="<?php echo $img ?>icons/logo.svg" style="width:100%">
 				</a>
 			</div>
 			<div class="col-xs-4 row mx-0 px-0">
 				<div class="col-xs-6 icon px-0">
 					<a href="<?php echo $search ?>">
-						<img src="IMG/icons/search.svg">
+						<img src="<?php echo $img ?>icons/search.svg">
 					</a>
 				</div>
 				<div class="col-xs-6 icon px-0">
 					<a href="<?php echo $basket ?>">
-						<img src="IMG/icons/basket.svg">
+						<img src="<?php echo $img ?>icons/basket.svg">
 					</a>
 				</div>
 			</div>
@@ -89,7 +89,7 @@
 					<ul>
 						<li class="desk-logo">
 							<a href="<?php echo $home ?>">
-								<img src="IMG/icons/logo.svg" style="width:120px">
+								<img src="<?php echo $img ?>icons/logo.svg" style="width:120px">
 							</a>
 						</li>
 					</ul>
@@ -98,17 +98,17 @@
 					<ul class="txt-xs-right pt-10">
 						<li>
 							<a href="<?php echo $search ?>">
-								<img src="IMG/icons/search.svg">
+								<img src="<?php echo $img ?>icons/search.svg">
 							</a>	
 						</li>
 						<li>
 							<a href="<?php echo $profile ?>">
-								<img src="IMG/icons/user.svg">
+								<img src="<?php echo $img ?>icons/user.svg">
 							</a>	
 						</li>
 						<li>
 							<a href="<?php echo $basket ?>">
-								<img src="IMG/icons/basket.svg">
+								<img src="<?php echo $img ?>icons/basket.svg">
 							</a>	
 						</li>
 					</ul>

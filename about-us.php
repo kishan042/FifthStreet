@@ -127,6 +127,9 @@ include 'INC/Spacing-mt-100.php';
 		// page tag
 		$page = "About us";
 
+		// JS path
+		$JSPath = "JS/jquery.js";
+
 		include 'INC/Footer.php'; 
 
 ?> 
