@@ -22,7 +22,7 @@
 		$women = "#";
 		$brands = "#";
 		$about = "../about-us.php";
-		$trending = "#";
+		$trending = "../trending.php";
 		$offers = "#";
 		$wardrobe = "../wardrobe.php";
 		$search = "#";

@@ -27,6 +27,12 @@
 		$profile = "#";
 		$basket = "#";
 
+
+		// Type "option-active" inside, to make option active
+		$ActiveTrending = "option-active";
+		$ActiveOffers = "";
+		$ActiveWardrobe = "";		
+
 		include 'INC/Navbar.php'; 
 
 
