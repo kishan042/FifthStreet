@@ -57,7 +57,7 @@
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = "#";
+		$BlockLink = "wardrobe/receipts.php";
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
@@ -77,7 +77,7 @@
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = "#";
+		$BlockLink = "wardrobe/souvenirs.php";
 		// CTA copy
 		$BlockCTA = "See Souvenirs";
 		// Image URL
@@ -96,7 +96,7 @@
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = "#";
+		$BlockLink = "wardrobe/wishlist.php";
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL

@@ -38,17 +38,9 @@
 		// Amount of tint on image
 		$tint = "tint-5";
 		// copy for H1
-		$h1 = "My Items and Reciepts";
+		$h1 = "MY RECIEPTS";
 
-		include '../INC/Hero-half.php';  
-
-
-
-// Spacing	
-		// Add a class to hide the seperation
-		$hide = "";
-		
-		include '../INC/Spacing-mt-100.php';
+		include '../INC/Hero-half-plain.php';  
 
 ?>
 

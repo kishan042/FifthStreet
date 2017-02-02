@@ -1,7 +1,7 @@
 <?php
 // Header
 		// Title tag
-		$Title = "My Receipts";
+		$Title = "My Souvenirs";
 
 		// Meta description
 		$Description = "Fill text";
@@ -38,17 +38,9 @@
 		// Amount of tint on image
 		$tint = "tint-5";
 		// copy for H1
-		$h1 = "TRENDING";
+		$h1 = "SOUVENIRS";
 
-		include '../INC/Hero-half.php';  
-
-
-
-// Spacing	
-		// Add a class to hide the seperation
-		$hide = "";
-		
-		include '../INC/Spacing-mt-100.php';
+		include '../INC/Hero-half-plain.php';  
 
 ?>
 
