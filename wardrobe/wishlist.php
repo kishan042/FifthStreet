@@ -176,9 +176,15 @@
 		include '../INC/Spacing-mt-100.php';
 
 
-// Footer
-		// page tag
-		$page = "Trending";
+/// Footer
+		// If current pages does not exist then add the 
+		$hide = " ";
+
+		// Bread crunb for the previous page 
+		$PreviousPage = "Wardrobe";
+
+		// Bread crumbs for the current page
+		$CurrentPage = "Wishlist";
 
 		// JS path
 		$JSPath = "../JS/jquery.js";

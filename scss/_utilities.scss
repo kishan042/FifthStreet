@@ -46,7 +46,7 @@
 .pt-200{ padding-top: 200px; }
 
 
-/* ------------------ Spacing -------------------- */
+/* ------------------ Tints -------------------- */
 
 .tint-0 { background-color: rgba(0,0,0,.0); }
 .tint-1 { background-color: rgba(0,0,0,.1); }
@@ -110,12 +110,12 @@
 	border: rgba(0,0,0,0) 1px solid;}
 
 // Extra small devices (portrait phones, less than 544px)
-@include media-breakpoint-down(xs) { 
+    @include media-breakpoint-down(xs) { 
 
-button.primary-btn-medium{ 
-    font-size: 14px;
-    height: 40px;
-}
+    button.primary-btn-medium{ 
+        font-size: 14px;
+        height: 40px;
+    }
 
 }//End of media query
 

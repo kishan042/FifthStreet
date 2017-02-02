@@ -11,10 +11,14 @@
                         <a href="<?php echo $home ?>">
                             <img src="<?php echo $img ?>icons/logo.svg" style="width:70px">
                         </a>
+                        <span class="pl-1 <?php echo $hide ?>"> / </span>
+                            <a class="<?php echo $hide ?>" href="../wardrobe.php">
+                                <span class="pl-1"><?php echo 
+                                    $PreviousPage ?>
+                                </span>
+                            </a>
                         <span class="pl-1"> / </span>
-                        <span class="pl-1"><?php echo $page ?></span>
-                        <span class="pl-1"> / </span>
-                        <span class="pl-1"><?php echo $page ?></span>
+                        <a href="#"><span class="pl-1"><?php echo $CurrentPage ?></span></a>
                     </p>
                 </div>
             </div> 

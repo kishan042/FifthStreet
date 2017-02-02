@@ -57,7 +57,7 @@
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = "wardrobe/receipts.php";
+		$BlockLink = "wardrobe/wishlist.php";
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
@@ -96,7 +96,7 @@
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = "wardrobe/wishlist.php";
+		$BlockLink = "wardrobe/receipts.php";
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
@@ -113,8 +113,14 @@
 
 
 // Footer
-		// page tag
-		$page = "Wardrobe";
+		// If current pages does not exist then add the 
+		$hide = "hidden-xs-up";
+
+		// Bread crunb for the previous page 
+		$PreviousPage = "";
+
+		// Bread crumbs for the current page
+		$CurrentPage = "Wardrobe";
 
 		// JS path
 		$JSPath = "JS/jquery.js";

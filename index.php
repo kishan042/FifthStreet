@@ -140,8 +140,15 @@
 
 
 // Footer
-		// page tag
-		$page = "Home";
+
+		// If current pages does not exist then add the 
+		$hide = "hidden-xs-up";
+
+		// Bread crunb for the previous page 
+		$PreviousPage = "";
+
+		// Bread crumbs for the current page
+		$CurrentPage = "Home";
 
 		// JS path
 		$JSPath = "JS/jquery.js";

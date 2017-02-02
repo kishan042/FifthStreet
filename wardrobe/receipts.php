@@ -177,8 +177,14 @@
 
 
 // Footer
-		// page tag
-		$page = "Trending";
+		// If current pages does not exist then add the 
+		$hide = " ";
+
+		// Bread crunb for the previous page 
+		$PreviousPage = "Wardrobe";
+
+		// Bread crumbs for the current page
+		$CurrentPage = "Reciepts";		
 
 		// JS path
 		$JSPath = "../JS/jquery.js";
