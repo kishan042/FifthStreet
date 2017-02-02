@@ -20,10 +20,10 @@
 		$home = "../index.php";		
 		$men = "#";
 		$women = "#";
-		$brands = "#";
+		$brands = "../brands.php";
 		$about = "../about-us.php";
 		$trending = "../trending.php";
-		$offers = "#";
+		$offers = "../offers.php";
 		$wardrobe = "../wardrobe.php";
 		$search = "#";
 		$profile = "#";

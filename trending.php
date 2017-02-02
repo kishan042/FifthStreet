@@ -18,10 +18,10 @@
 		$home = "index.php";		
 		$men = "#";
 		$women = "#";
-		$brands = "#";
+		$brands = "brands.php";
 		$about = "about-us.php";
 		$trending = "#";
-		$offers = "#";
+		$offers = "offers.php";
 		$wardrobe = "wardrobe.php";
 		$search = "#";
 		$profile = "#";

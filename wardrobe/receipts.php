@@ -20,10 +20,10 @@
 		$home = "../index.php";		
 		$men = "#";
 		$women = "#";
-		$brands = "#";
+		$brands = "../brands.php";
 		$about = "../about-us.php";
 		$trending = "../trending.php";
-		$offers = "#";
+		$offers = "../offers.php";
 		$wardrobe = "../wardrobe.php";
 		$search = "#";
 		$profile = "#";
@@ -33,10 +33,6 @@
 
 
 // Hero-half
-		//IMG URL
-		$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
-		// Amount of tint on image
-		$tint = "tint-5";
 		// copy for H1
 		$h1 = "MY RECIEPTS";
 
