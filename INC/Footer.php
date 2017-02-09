@@ -8,7 +8,7 @@
             <div class="row mx-0 pl-1 pt-20">        
                 <div class="col-xs-12 pl-0">
                     <p class="p-light">
-                        <a href="<?php echo $home ?>">
+                        <a href="<?php echo BASE_URL ?>">
                             <img src="<?php echo $img ?>icons/logo.svg" style="width:70px">
                         </a>
                         <span class="pl-1 <?php echo $hide ?>"> / </span>

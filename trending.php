@@ -5,15 +5,17 @@ include_once 'INC/Config.php';
 // Header
 		// Title tag
 		$Title = "Trending ";
+		
 		// Meta description
 		$Description = "Fill text";
 
 		// CSS path
-		$CSSPath = "CSS/Styles.css";
+		$CSSPath = BASE_URL . "CSS/Styles.css";
+		
 		// Image source
-		$img = "IMG/";
+		$img = BASE_URL . "IMG/";
 
-		include 'INC/Header.php';
+		include (ROOT_PATH . 'INC/Header.php');
 
 
 // Navbar
@@ -22,7 +24,7 @@ include_once 'INC/Config.php';
 		$women = "#";
 		$brands = "brands.php";
 		$about = "about-us.php";
-		$trending = "#";
+		$trending = "trending.php";
 		$offers = "offers.php";
 		$wardrobe = "wardrobe.php";
 		$search = "#";
@@ -35,7 +37,7 @@ include_once 'INC/Config.php';
 		$ActiveOffers = "";
 		$ActiveWardrobe = "";		
 
-		include 'INC/Navbar.php'; 
+		include (ROOT_PATH . 'INC/Navbar.php');
 
 
 // Hero-half
@@ -46,7 +48,7 @@ include_once 'INC/Config.php';
 		// copy for H1
 		$h1 = "TRENDING";
 
-		include 'INC/Hero-half.php';  
+		include (ROOT_PATH . 'INC/Hero-half.php');
 
 
 
@@ -54,7 +56,7 @@ include_once 'INC/Config.php';
 		// Add a class to hide the seperation
 		$hide = "";
 		
-		include 'INC/Spacing-mt-100.php';
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
 
@@ -187,16 +189,23 @@ include_once 'INC/Config.php';
 		// Add a class to hide the seperation
 		$hide = "";
 		
-		include 'INC/Spacing-mt-100.php';
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Footer
-		// page tag
-		$page = "Trending";
+		// If current pages does not exist then add the 
+		$hide = "hidden-xs-up";
+
+		// Bread crunb for the previous page 
+		$PreviousPage = "";
+
+		// Bread crumbs for the current page
+		$CurrentPage = "Trending";
+		
 
 		// JS path
-		$JSPath = "JS/jquery.js";
+		$JSPath = BASE_URL . "JS/jquery.js";
 
-		include 'INC/Footer.php'; 
+		include (ROOT_PATH . 'INC/Footer.php');
 
 ?> 
