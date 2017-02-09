@@ -1,4 +1,7 @@
 <?php
+// Config file
+include_once 'INC/Config.php';
+
 // Header
 		// Title tag
 		$Title = "Home ";
@@ -11,11 +14,10 @@
 		$img = "IMG/";
 
 		include 'INC/Header.php';
-
+;
 
 // Navbar
-		// Links to other pages
-		$home = "#";		
+		// Links to other pages	
 		$men = "#";
 		$women = "#";
 		$brands = "brands.php";
@@ -27,8 +29,7 @@
 		$profile = "#";
 		$basket = "#";
 
-		include 'INC/Navbar.php'; 
-
+		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 // Hero-full
 		// IMG URL

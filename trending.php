@@ -1,4 +1,7 @@
 <?php
+// Config file
+include_once 'INC/Config.php';
+
 // Header
 		// Title tag
 		$Title = "Trending ";

@@ -1,4 +1,7 @@
 <?php
+// Config file
+include_once '../INC/Config.php';
+
 // Header
 		// Title tag
 		$Title = "My Receipts";
@@ -17,7 +20,6 @@
 
 // Navbar
 		// Links to other pages
-		$home = "../index.php";		
 		$men = "#";
 		$women = "#";
 		$brands = "../brands.php";

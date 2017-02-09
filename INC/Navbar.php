@@ -17,7 +17,7 @@
 				</div>
 			</div>
 			<div class="col-xs-4 icon">
-				<a href="<?php echo $home ?>">
+				<a href="<?php echo BASE_URL ?>">
 					<img src="<?php echo $img ?>icons/logo.svg" style="width:100%">
 				</a>
 			</div>
@@ -88,7 +88,7 @@
 				<div class="col-xs-4">
 					<ul>
 						<li class="desk-logo">
-							<a href="<?php echo $home ?>">
+							<a href="<?php echo BASE_URL ?>">
 								<img src="<?php echo $img ?>icons/logo.svg" style="width:120px">
 							</a>
 						</li>
