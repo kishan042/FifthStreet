@@ -5,15 +5,17 @@ include_once 'INC/Config.php';
 // Header
 		// Title tag
 		$Title = "My Wardrobe ";
+		
 		// Meta description
 		$Description = "Fill Text";
 
 		// CSS path
-		$CSSPath = "CSS/Styles.css";
+		$CSSPath = BASE_URL . "CSS/Styles.css";
+		
 		// Image source
-		$img = "IMG/";
+		$img = BASE_URL . "IMG/";
 
-		include 'INC/Header.php';
+		include (ROOT_PATH . 'INC/Header.php');
 
 
 // Nav
@@ -22,9 +24,9 @@ include_once 'INC/Config.php';
 		$women = "#";
 		$brands = "brands.php";
 		$about = "about-us.php";
-		$trending = "#";
-		$offers = "#";
-		$wardrobe = "#";
+		$trending = "trending.php";
+		$offers = "offers.php";
+		$wardrobe = "wardrobe.php";
 		$search = "#";
 		$profile = "#";
 		$basket = "#";
@@ -34,18 +36,18 @@ include_once 'INC/Config.php';
 		$ActiveOffers = "";
 		$ActiveWardrobe = "option-active";
 
-		include 'INC/Navbar.php'; 
+		include (ROOT_PATH . 'INC/Navbar.php');
 
 
 // Hero-plain
 		// copy for H1
 		$h1 = "MY WARDROBE";
 
-		include 'INC/Hero-half-plain.php';  
+		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
 
 // Spacing	
-		//include 'INC/Spacing-mt-100.php';
+		//include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 
@@ -65,7 +67,7 @@ include_once 'INC/Config.php';
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
 
-		include 'INC/Blocks-two-left-compact.php';
+		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
 
 
@@ -85,7 +87,7 @@ include_once 'INC/Config.php';
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
 
-		include 'INC/Blocks-two-right-compact.php';
+		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
 
 // Blocks-two-left-compact
@@ -104,14 +106,14 @@ include_once 'INC/Config.php';
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
 
-		include 'INC/Blocks-two-left-compact.php';
+		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
 
 // Spacing	
 		// Add a class to hide the seperation
 		$hide = "hidden-xs-down";
 
-		include 'INC/Spacing-mt-100.php';
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Footer
@@ -125,8 +127,8 @@ include_once 'INC/Config.php';
 		$CurrentPage = "Wardrobe";
 
 		// JS path
-		$JSPath = "JS/jquery.js";
+		$JSPath = BASE_URL . "JS/jquery.js";
 
-		include 'INC/Footer.php'; 
+		include (ROOT_PATH . 'INC/Footer.php');
 
 ?> 

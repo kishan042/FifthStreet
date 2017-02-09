@@ -9,11 +9,12 @@ include_once 'INC/Config.php';
 		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
 
 		// CSS path
-		$CSSPath = "CSS/Styles.css";
+		$CSSPath = BASE_URL . "CSS/Styles.css";
+		
 		// Image source
-		$img = "IMG/";
+		$img = BASE_URL . "IMG/";
 
-		include 'INC/Header.php';
+		include (ROOT_PATH . 'INC/Header.php');
 ;
 
 // Navbar
@@ -45,18 +46,18 @@ include_once 'INC/Config.php';
 		// copy for button (CTA)
 		$ButtonCopy = "FIND OUT MORE";
 
-		include 'INC/Hero-full.php';  
+		include (ROOT_PATH . 'INC/Hero-full.php');  
 
 
 // Product-finder
-		include 'INC/Product-finder.php';
+		include (ROOT_PATH . 'INC/Product-finder.php');
 
 
 // Spacing	
 		// Add a class to hide the seperation
 		$hide = "hidden-xs-down";
 		
-		include 'INC/Spacing-mt-100.php';
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Blocks-two-left-compact
@@ -74,7 +75,7 @@ include_once 'INC/Config.php';
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
 
-		include 'INC/Blocks-two-left-compact.php';
+		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
 
 // Blocks-two-right-compact
@@ -89,18 +90,18 @@ include_once 'INC/Config.php';
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
 
-		include 'INC/Blocks-two-right-compact.php';
+		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
 
 // Feature-intro
-		include 'INC/Feature-intro.php';
+		include (ROOT_PATH . 'INC/Feature-intro.php');
 
 
 // Spacing	
 		// Add a class to hide the seperation
 		$hide = "hidden-md-up";
 		
-		include 'INC/Spacing-mt-100.php';
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Blocks-two-left
@@ -118,7 +119,7 @@ include_once 'INC/Config.php';
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
 
-		include 'INC/Blocks-two-left.php';
+		include (ROOT_PATH . 'INC/Blocks-two-left.php');
 
 
 // Blocks-two-right
@@ -137,7 +138,7 @@ include_once 'INC/Config.php';
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
 
-		include 'INC/Blocks-two-right.php';
+		include (ROOT_PATH . 'INC/Blocks-two-right.php');
 
 
 // Footer
@@ -152,8 +153,8 @@ include_once 'INC/Config.php';
 		$CurrentPage = "Home";
 
 		// JS path
-		$JSPath = "JS/jquery.js";
+		$JSPath = BASE_URL . "JS/jquery.js";
 
-		include 'INC/Footer.php'; 
+		include (ROOT_PATH . 'INC/Footer.php'); 
 
 ?> 

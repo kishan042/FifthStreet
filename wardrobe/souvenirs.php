@@ -10,12 +10,12 @@ include_once '../INC/Config.php';
 		$Description = "Fill text";
 
 		// CSS path
-		$CSSPath = "../CSS/Styles.css";
+		$CSSPath = BASE_URL . "CSS/Styles.css";
 
 		// Image source
-		$img = "../IMG/";
+		$img = BASE_URL . "IMG/";
 
-		include '../INC/Header.php';
+		include (ROOT_PATH . 'INC/Header.php');
 
 
 // Navbar
@@ -31,7 +31,7 @@ include_once '../INC/Config.php';
 		$profile = "#";
 		$basket = "#";
 
-		include '../INC/Navbar.php'; 
+		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 
 // Hero-half
@@ -42,7 +42,7 @@ include_once '../INC/Config.php';
 		// copy for H1
 		$h1 = "SOUVENIRS";
 
-		include '../INC/Hero-half-plain.php';  
+		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
 ?>
 
@@ -175,7 +175,7 @@ include_once '../INC/Config.php';
 		// Add a class to hide the seperation
 		$hide = "";
 		
-		include '../INC/Spacing-mt-100.php';
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Footer
@@ -189,8 +189,8 @@ include_once '../INC/Config.php';
 		$CurrentPage = "Souvenirs";
 
 		// JS path
-		$JSPath = "../JS/jquery.js";
+		$JSPath = BASE_URL . "JS/jquery.js";
 
-		include '../INC/Footer.php'; 
+		include (ROOT_PATH . 'INC/Footer.php');
 
 ?> 

@@ -1,16 +1,20 @@
 <?php
+// Config file
+include_once 'INC/Config.php';
+
 // Header
 		// Title tag
 		$Title = "Offers ";
+		
 		// Meta description
 		$Description = "Fill text";
 
-		// CSS path
-		$CSSPath = "CSS/Styles.css";
+		$CSSPath = BASE_URL . "CSS/Styles.css";
+		
 		// Image source
-		$img = "IMG/";
+		$img = BASE_URL . "IMG/";
 
-		include 'INC/Header.php';
+		include (ROOT_PATH . 'INC/Header.php');
 
 
 // Navbar
@@ -26,20 +30,20 @@
 		$profile = "#";
 		$basket = "#";
 
-		include 'INC/Navbar.php'; 
+		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 
 // Hero-half-plain
 		// copy for H1
 		$h1 = "TODAY'S TOP BRANDS";
 
-		include 'INC/Hero-half-plain.php';  
+		include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
 // Article paragraph
 
 		// $copy = "All of the latests offers in one place to explore!";
 
-		// include 'INC/Article-paragraph.php';
+		// include (ROOT_PATH . 'INC/Article-paragraph.php');
 
 
 ?>
@@ -105,7 +109,7 @@
 		// Add a class to hide the seperation
 		$hide = "";
 		
-		include 'INC/Spacing-mt-100.php';
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Footer
@@ -119,8 +123,8 @@
 		$CurrentPage = "Offers";		
 
 		// JS path
-		$JSPath = "JS/jquery.js";
+		$JSPath = BASE_URL . "JS/jquery.js";
 
-		include 'INC/Footer.php'; 
+		include (ROOT_PATH . 'INC/Footer.php'); 
 
 ?> 
