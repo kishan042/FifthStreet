@@ -1,4 +1,7 @@
 <?php
+// Config file
+include_once 'INC/Config.php';
+
 // Header
 		// Title tag
 		$Title = "Offers ";
@@ -14,8 +17,7 @@
 
 
 // Navbar
-		// Links to other pages
-		$home = "index.php";		
+		// Links to other pages	
 		$men = "#";
 		$women = "#";
 		$brands = "brands.php";

@@ -14,8 +14,7 @@
 
 
 // Navbar
-		// Links to other pages
-		$home = "index.php";		
+		// Links to other pages	
 		$men = "#";
 		$women = "#";
 		$brands = "#";
