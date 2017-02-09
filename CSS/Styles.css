@@ -3567,7 +3567,7 @@ h1, .h1 {
 .pt-200 {
   padding-top: 200px; }
 
-/* ------------------ Tints -------------------- */
+/* ------------------ Background Image Tints -------------------- */
 .tint-0 {
   background-color: transparent; }
 
@@ -3600,6 +3600,10 @@ h1, .h1 {
 
 .tint-10 {
   background-color: black; }
+
+/* ------------------ Containers  -------------------- */
+.container-small {
+  width: 500px; }
 
 /* ------------------ CTA's -------------------- */
 .primary-btn-small, .primary-btn-medium, .secondary-btn-small, .secondary-btn-medium, .tertiary-btn-small, .tertiary-btn-medium {
@@ -3896,7 +3900,7 @@ nav {
 .hero-plain {
   height: 45vh; }
 
-.tint {
+.tint, .hero-plain {
   width: 100%;
   height: 100%;
   display: flex;
@@ -3911,15 +3915,26 @@ nav {
 .hero-down-arrow {
   cursor: pointer; }
 
+.hero-plain {
+  width: 100%;
+  height: 100vmin;
+  text-align: center; }
+
 @media (min-width: 768px) {
   .hero-full {
-    height: 90vh; } }
+    height: 90vh; }
+
+  .hero-plain {
+    height: 40vmin; } }
 @media (min-width: 992px) {
   .hero-compact {
     height: 80vh; }
 
   .hero-full {
-    height: 86vh; } }
+    height: 86vh; }
+
+  .hero-plain {
+    height: 50vmin; } }
 /* --------------------------------------------------------
    Form module
    -------------------------------------------------------- */

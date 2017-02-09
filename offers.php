@@ -28,7 +28,7 @@ include_once 'INC/Config.php';
 		$offers = "offers.php";
 		$wardrobe = "wardrobe.php";
 		$search = "#";
-		$profile = "#";
+		$profile = "Profile.php";
 		$basket = "#";
 
 		// Type "option-active" inside, to make option active
