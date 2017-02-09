@@ -18,6 +18,7 @@ include_once 'INC/Config.php';
 
 // Navbar
 		// Links to other pages	
+		$home - "";
 		$men = "#";
 		$women = "#";
 		$brands = "brands.php";
