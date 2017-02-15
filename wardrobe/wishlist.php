@@ -20,16 +20,16 @@ include_once '../INC/Config.php';
 
 // Navbar
 		// Links to other pages	
-		$men = "#";
-		$women = "#";
-		$brands = "../brands.php";
-		$about = "../about-us.php";
-		$trending = "../trending.php";
-		$offers = "../offers.php";
-		$wardrobe = "../wardrobe.php";
-		$search = "#";
-		$profile = "../Profile.php";
-		$basket = "#";
+		$men =  BASE_URL . MEN;
+		$women = BASE_URL . WOMEN;
+		$brands = BASE_URL . BRANDS;
+		$about = BASE_URL . ABOUT;
+		$trending = BASE_URL . TRENDING;
+		$offers = BASE_URL . OFFERS;
+		$wardrobe = BASE_URL . WARDROBE;
+		$search = BASE_URL . SEARCH;
+		$profile = BASE_URL . PROFILE;
+		$basket = BASE_URL . BASKET;
 
 		// Type "option-active" inside, to make option active
 		$ActiveTrending = "";

@@ -30,16 +30,16 @@ if (mail($to, $subject, $message, $headers)) {
 
 // Navbar
 		// Links to other pages		
-		$men = "#";
-		$women = "#";
-		$brands = "#";
-		$about = "about-us.php";
-		$trending = "#";
-		$offers = "#";
-		$wardrobe = "wardrobe.php";
-		$search = "#";
-		$profile = "#";
-		$basket = "#";
+		$men = MEN; 
+		$women = WOMEN; 
+		$brands = BRANDS; 
+		$about = ABOUT; 
+		$trending = TRENDING; 
+		$offers = OFFERS; 
+		$wardrobe = WARDROBE; 
+		$search = SEARCH; 
+		$profile = PROFILE; 
+		$basket = BASKET; 
 		include 'INC/Navbar.php'; 
 
 

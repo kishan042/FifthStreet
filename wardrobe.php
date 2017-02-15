@@ -18,18 +18,18 @@ include_once 'INC/Config.php';
 		include (ROOT_PATH . 'INC/Header.php');
 
 
-// Nav
+// Navbar
 		// Links to other pages	
-		$men = "#";
-		$women = "#";
-		$brands = "brands.php";
-		$about = "about-us.php";
-		$trending = "trending.php";
-		$offers = "offers.php";
-		$wardrobe = "wardrobe.php";
-		$search = "#";
-		$profile = "Profile.php";
-		$basket = "#";
+		$men = MEN; 
+		$women = WOMEN; 
+		$brands = BRANDS; 
+		$about = ABOUT; 
+		$trending = TRENDING; 
+		$offers = OFFERS; 
+		$wardrobe = "#"; 
+		$search = SEARCH; 
+		$profile = PROFILE; 
+		$basket = BASKET; 
 
 		// Type "option-active" inside, to make option active
 		$ActiveTrending = "";

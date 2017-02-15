@@ -20,16 +20,16 @@ include_once 'INC/Config.php';
 
 // Navbar
 		// Links to other pages		
-		$men = "#";
-		$women = "#";
-		$brands = "brands.php";
-		$about = "#";
-		$trending = "trending.php";
-		$offers = "offers.php";
-		$wardrobe = "wardrobe.php";
-		$search = "#";
-		$profile = "Profile.php";
-		$basket = "#";
+		$men = MEN; 
+		$women = WOMEN; 
+		$brands = BRANDS; 
+		$about = "#"; 
+		$trending = TRENDING; 
+		$offers = OFFERS; 
+		$wardrobe = WARDROBE; 
+		$search = SEARCH; 
+		$profile = PROFILE; 
+		$basket = BASKET; 
 		include (ROOT_PATH . 'INC/Navbar.php');
 
 
