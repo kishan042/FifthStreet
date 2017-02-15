@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Please enter username and password"
-AuthUserFile /home/kishan42/Staging/.htstaging
-require valid-user
