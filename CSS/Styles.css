@@ -3981,12 +3981,12 @@ button:focus {
    -------------------------------------------------------- */
 .product-finder {
   width: 100%;
-  height: 100vh;
+  height: 175vmin;
   display: flex;
   flex-direction: column; }
 
 .column {
-  height: 25vh;
+  height: 45vmin;
   flex: 1;
   background-size: cover;
   background-position: center; }
@@ -4021,11 +4021,11 @@ button:focus {
     height: 60px; } }
 @media (min-width: 768px) {
   .product-finder {
-    height: 50vh;
+    height: 70vmin;
     flex-direction: row; }
 
   .column {
-    height: 50vh;
+    height: 75vmin;
     width: 25vw; }
 
   .content {
@@ -4080,10 +4080,10 @@ button:focus {
     border: none; } }
 @media (min-width: 1200px) {
   .product-finder {
-    height: 100vh; }
+    height: 100vmin; }
 
   .column {
-    height: 100vh;
+    height: 100vmin;
     width: 25vw; }
 
   .box {
@@ -4100,17 +4100,16 @@ button:focus {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;
-  padding-left: 20px;
-  margin-top: 20px; }
+  padding-left: 20px; }
 
-.class-1 {
-  height: 60vh;
+.feature-txt-block {
+  height: 100vmin;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
-.class-2 {
+.feature {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -4118,85 +4117,85 @@ button:focus {
   /* Width  = amount of image blocks minus 1 * 100
    This is to allow the next image block to display in a row*/
   width: 2100px;
-  height: 80vh; }
+  height: 125vmin; }
 
-.tr {
+.feature-product-block {
   width: 270px;
   height: auto; }
 
-.tr img {
+.feature-product-block img {
   width: 80%;
   display: block;
   margin: 0 auto; }
 
-.tr h3,
-.tr h4 {
+.feature-product-block h3,
+.feature-product-block h4 {
   text-align: center;
   margin-bottom: 0; }
 
 @media (min-width: 576px) {
-  .class-2 {
+  .feature {
     width: 2160px; }
 
-  .class-2:first-child {
+  .feature:first-child {
     margin-left: 10vw; } }
 @media (min-width: 768px) {
-  .class-1 {
-    height: 30vh; }
+  .feature-txt-block {
+    height: 40vmin; }
 
-  .class-2 {
+  .feature {
     height: 50vh; }
 
-  .class-1 h2,
-  .class-1 p {
+  .feature-txt-block h2,
+  .feature-txt-block p {
     width: 60%; }
 
-  .class-1 p:last-child {
+  .feature-txt-block p:last-child {
     margin-bottom: 0; } }
 @media (min-width: 992px) {
   .image-container {
     overflow: hidden;
     background-color: #fff; }
 
-  .class-1 {
-    height: 50vh; }
+  .feature-txt-block {
+    height: 80vmin; }
 
-  .class-1 h2 {
+  .feature-txt-block h2 {
     padding-bottom: 48px; }
 
   .width {
     width: 60%; }
 
-  .class-2:first-child {
+  .feature:first-child {
     margin-left: 0; }
 
-  .class-2 {
+  .feature {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 65vw;
-    height: 50vh; }
+    height: 80vmin; }
 
-  .tr {
+  .feature-product-block {
     width: 23%;
     height: auto;
     margin-top: 10px; }
 
-  .tr img {
+  .feature-product-block img {
     padding: 10px;
     width: 100%; }
 
-  .tr h3,
-  .tr h4 {
+  .feature-product-block h3,
+  .feature-product-block h4 {
     margin-bottom: 0;
     line-height: 1.5rem; } }
 @media (min-width: 1200px) {
-  .class-1 {
+  .feature-txt-block {
     height: 100vh; }
 
-  .class-2 {
+  .feature {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4206,27 +4205,27 @@ button:focus {
     height: 100vh; } }
 /*------- Compact -------*/
 .txt-block-half {
-  height: 70vh;
+  height: 100vmin;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
 .img-half {
-  height: 60vh;
+  height: 100vmin;
   background-size: cover;
   background-position: center; }
 
 /*------- Full -------*/
 .txt-block-full {
-  height: 70vh;
+  height: 100vmin;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
 .img-full {
-  height: 60vh;
+  height: 100vmin;
   background-size: cover;
   background-position: center; }
 
@@ -4235,19 +4234,31 @@ button:focus {
   .txt-block-half p,
   .txt-block-full h2,
   .txt-block-full p {
-    width: 60%; } }
+    width: 90%; } }
 @media (min-width: 768px) {
   .txt-block-half,
   .img-half,
   .txt-block-full,
   .img-full {
-    height: 40vh; } }
+    height: 50vmin; } }
+@media (min-width: 992px) {
+  .txt-block-half,
+  .img-half,
+  .txt-block-full,
+  .img-full {
+    height: 60vmin; }
+
+  .txt-block-half h2,
+  .txt-block-half p,
+  .txt-block-full h2,
+  .txt-block-full p {
+    width: 70%; } }
 @media (min-width: 1200px) {
   .txt-block-half,
   .img-half,
   .txt-block-full,
   .img-full {
-    height: 75vh; } }
+    height: 70vmin; } }
 /* --------------------------------------------------------
    Men | Women | brand individual page modules
    -------------------------------------------------------- */

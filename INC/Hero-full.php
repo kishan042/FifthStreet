@@ -1,7 +1,6 @@
 <!-- Sass file = _hero.scss -->
 
 <!-- Hero-full -->
-
 <div class="hero-full" style="background-image: url(
 <?php echo $HeroUrl ?> );">
 	<div class="hero-content <?php echo $tint ?>">

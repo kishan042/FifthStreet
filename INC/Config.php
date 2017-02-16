@@ -17,5 +17,12 @@ define("SEARCH","search.php");
 define("PROFILE","Profile.php");
 define("BASKET","basket.php");
 
+
+// Details to Connect to the database 
+define("DB_HOST", "localhost");
+define("DB_NAME", "shirts4mike");
+define("DB_PORT", "8889"); // default 3306
+define("DB_USER", "root");
+define("DB_PASS", "root");
 ?>
 

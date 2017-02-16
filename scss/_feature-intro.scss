@@ -11,11 +11,11 @@
         -moz-overflow-scrolling:touch;  
         padding-left: 20px;
         //background-color: $gray-lightest;
-        margin-top: 20px;
+        //margin-top: 20px;
 }
 
-.class-1 {
-	height: 60vh;
+.feature-txt-block {
+	height: 100vmin;
 
 	display: flex;
 	flex-direction: column;
@@ -25,7 +25,7 @@
 
 
 
-.class-2 {
+.feature {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,24 +34,24 @@
  /* Width  = amount of image blocks minus 1 * 100
   This is to allow the next image block to display in a row*/
   width: 2100px;
-  height: 80vh;
+  height: 125vmin;
 }
 
-// .class-1 { overflow: hidden;}
+// .feature-txt-block { overflow: hidden;}
 
-.tr {
+.feature-product-block {
   width: 270px;
   height: auto;
 }
 
-.tr img{
+.feature-product-block img{
     width: 80%;
     display: block;
     margin: 0 auto;
 }
 
-.tr h3,
-.tr h4 {
+.feature-product-block h3,
+.feature-product-block h4 {
 text-align: center;
 margin-bottom: 0;
 }
@@ -65,12 +65,12 @@ margin-bottom: 0;
 
 
 
-.class-2 {
+.feature {
   width: 2160px;
 
 }
 
-.class-2:first-child {
+.feature:first-child {
   margin-left: 10vw;
 
 }
@@ -80,12 +80,12 @@ margin-bottom: 0;
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) { 
 
-.class-1 { height: 30vh;}
-.class-2 { height: 50vh;}
+.feature-txt-block { height: 40vmin;}
+.feature { height: 50vh;}
 
-.class-1 h2,
-.class-1 p { width: 60%; }
-.class-1 p:last-child { margin-bottom: 0; }
+.feature-txt-block h2,
+.feature-txt-block p { width: 60%; }
+.feature-txt-block p:last-child { margin-bottom: 0; }
 
 }//End of media query
 
@@ -98,42 +98,42 @@ margin-bottom: 0;
          background-color: $white;
 }
 
-.class-1 {
-	height: 50vh;
+.feature-txt-block {
+	height: 80vmin;
 }
 
-.class-1 h2 { padding-bottom: 48px;}
+.feature-txt-block h2 { padding-bottom: 48px;}
 
 .width{ width:60%;}
 
-.class-2:first-child {
+.feature:first-child {
   margin-left: 0;
 
 }
 
-.class-2 {
+.feature {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   width: 65vw;
-  height: 50vh;
+  height: 80vmin;
 }
 
-.tr {
+.feature-product-block {
   width: 23%;
   height: auto;
   margin-top: 10px;
 }
 
-.tr img{
+.feature-product-block img{
 	padding: 10px;
 	width: 100%;
 }
 
-.tr h3,
-.tr h4{ margin-bottom: 0;
+.feature-product-block h3,
+.feature-product-block h4{ margin-bottom: 0;
 line-height: 1.5rem;
 }
 
@@ -143,9 +143,9 @@ line-height: 1.5rem;
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
 
-.class-1 { height: 100vh; }
+.feature-txt-block { height: 100vh; }
 
-.class-2 {
+.feature {
   display: flex;
   flex-direction: column;
   justify-content: center;
