@@ -33,14 +33,14 @@ include_once 'INC/Config.php';
 		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 
-// Hero-Plain
+// Hero-half-plain
 		// copy for H1
 		$h1 = "MY PROFILE";
 
-		//Copy for Hero
+		//Copy for description
 		$description = "No barriers between the physical and digital world anymore. For Android usevrs, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
 
-		include (ROOT_PATH . 'INC/Hero-plain.php'); 
+		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
 
 

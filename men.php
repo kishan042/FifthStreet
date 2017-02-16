@@ -31,9 +31,11 @@ include_once 'INC/Config.php';
 
 		include (ROOT_PATH . 'INC/Navbar.php'); 
 
-// Hero-plain
+// Hero-half-plain
 		// copy for H1
 		$h1 = "FOR MEN";
+		//Copy for description
+		$description = "";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 

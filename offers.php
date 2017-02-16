@@ -42,15 +42,10 @@ include_once 'INC/Config.php';
 // Hero-half-plain
 		// copy for H1
 		$h1 = "TODAY'S OFFERS";
+		//Copy for description
+		$description = "";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php');  
-
-// Article paragraph
-
-		// $copy = "All of the latests offers in one place to explore!";
-
-		// include 'INC/Article-paragraph.php';
-
 
 ?>
 

@@ -3881,26 +3881,11 @@ nav {
 /* --------------------------------------------------------
    <-- Individual Modules -->
    -------------------------------------------------------- */
-.hero-full, .hero-half {
-  position: relative; }
-
 .hero-img, .hero-full, .hero-half, .hero-compact {
   background-size: cover;
   background-position: center; }
 
-.hero-full {
-  height: 75vh; }
-
-.hero-half {
-  height: 50vh; }
-
-.hero-compact {
-  height: 50vh; }
-
-.hero-plain {
-  height: 45vh; }
-
-.tint, .hero-plain {
+.hero-content, .hero-half-plain {
   width: 100%;
   height: 100%;
   display: flex;
@@ -3909,32 +3894,41 @@ nav {
   align-items: center;
   text-align: center; }
 
+.hero-full {
+  height: 144vmin; }
+
+.hero-half {
+  height: 70vmin; }
+
+.hero-half-plain {
+  width: 100%;
+  height: 100vmin;
+  text-align: center; }
+
+.hero-compact {
+  height: 70vmin; }
+
 .hero-full img {
   margin-top: 6rem; }
 
 .hero-down-arrow {
   cursor: pointer; }
 
-.hero-plain {
-  width: 100%;
-  height: 100vmin;
-  text-align: center; }
-
 @media (min-width: 768px) {
   .hero-full {
-    height: 90vh; }
+    height: 116vmin; }
 
-  .hero-plain {
-    height: 40vmin; } }
+  .hero-half, .hero-half-plain {
+    height: 35vmin; } }
 @media (min-width: 992px) {
-  .hero-compact {
-    height: 80vh; }
-
   .hero-full {
-    height: 86vh; }
+    height: 86vmin; }
 
-  .hero-plain {
-    height: 50vmin; } }
+  .hero-half, .hero-half-plain {
+    height: 50vmin; }
+
+  .hero-compact {
+    height: 80vh; } }
 /* --------------------------------------------------------
    Form module
    -------------------------------------------------------- */

@@ -1,36 +1,14 @@
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-up(xs) { 
 
-// To allow the down icon to position itself correctly
-.hero-full, .hero-half{
-	position: relative;
-}
-
+// Hero bg image to be extended
 .hero-img{
 	background-size: cover;
 	background-position: center;
 }
 
-.hero-full {
-height: 75vh;
-@extend .hero-img;
-}
-
-.hero-half {
-height: 50vh;
-@extend .hero-img;
-}
-
-.hero-compact {
-height: 50vh;
-@extend .hero-img;
-}
-
-.hero-plain{
-height: 45vh;
-}
-
-.tint{
+// Alignment of the copy & contents inside the hero
+.hero-content{
 	width: 100%;
 	height: 100%;
 
@@ -41,6 +19,33 @@ height: 45vh;
 	text-align: center;
 }
 
+// Fullbleed Hero
+.hero-full {
+	height: 144vmin;
+	@extend .hero-img;
+}
+
+// Halfbleed hero
+.hero-half {
+	height: 70vmin;
+	@extend .hero-img;
+}
+
+// Halfbleed hero without a bg image
+.hero-half-plain {
+	@extend .hero-content;
+
+	width: 100%;
+	height: 100vmin;
+	text-align: center;
+}
+
+// Plain hero image with compact width - used in about-us.php
+.hero-compact {
+	height: 70vmin;
+	@extend .hero-img;
+}
+
 // Hero-full module enhancements 
 
 	// Targets the down arrow to be placed at the bottom
@@ -49,53 +54,35 @@ height: 45vh;
 	}
 
 	// Change cursor 
-
 	.hero-down-arrow { cursor: pointer; }
-
-
-// Hero-half-plain enhancement
-
-	.hero-plain {
-		@extend .tint;
-
-		width: 100%;
-		height: 100vmin;
-		text-align: center;
-	}
-
 
 }//End of media query
 
 
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm)  { 
-
-
 }//End of media query
 
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) { 
 
-	.hero-full { height: 90vh; }
+.hero-full { height: 116vmin; }
 
-	.hero-plain { height: 40vmin; }
+.hero-half, .hero-half-plain { height: 35vmin; }
 
 }//End of media query
 
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) { 
 
-	.hero-compact { height: 80vh; }
+.hero-full { height: 86vmin; }
 
-	.hero-full { height: 86vh; }
+.hero-half, .hero-half-plain { height: 50vmin; }
 
-	.hero-plain { height: 50vmin; }
+.hero-compact { height: 80vh; }
 
 }//End of media query
 
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
-
-   
-
 }//End of media query
