@@ -32,18 +32,24 @@ include_once 'INC/Config.php';
 		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 
-// Footer
+// Model - DB
 
-		// If current pages does not exist then add the 
-		$hide = "hidden-xs-up";
+		include (ROOT_PATH . 'INC/databse/model.php');
+        $recent = get_products_all();
+?>
 
-		// Bread crunb for the previous page 
-		$PreviousPage = "";
+<div class="section shirts page">
+	<div class="wrapper">
+		<h1>Mike&rsquo;s Full Catalog of Shirts</h1>
+			<ul class="products">
+			<?php
+				foreach($recent as $product) {
+					include(ROOT_PATH . "INC/database/product-list.php");
+				}
+			?>
+			</ul>
+	</div>
+</div> 
 
-		// Bread crumbs for the current page
-		$CurrentPage = "My basket";
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
 
-		include (ROOT_PATH . 'INC/Footer.php'); 

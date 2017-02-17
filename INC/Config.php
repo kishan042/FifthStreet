@@ -17,7 +17,6 @@ define("SEARCH","search.php");
 define("PROFILE","Profile.php");
 define("BASKET","basket.php");
 
-
 // Details to Connect to the database 
 define("DB_HOST", "localhost");
 define("DB_NAME", "shirts4mike");

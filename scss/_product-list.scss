@@ -1,0 +1,54 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+
+	ul.products li {
+
+	  -webkit-column-break-inside: avoid;
+	  page-break-inside: avoid;
+	  break-inside: avoid;
+	      margin: 0 5px;
+	}
+
+	 .products {
+	  -webkit-columns: 140px;
+	  -moz-columns: 140px;
+	  columns: 140px;
+	  -webkit-column-gap: 10px;
+	  -moz-column-gap: 10px;
+	  column-gap: 10px;  
+	}
+
+	ul.products img { 
+	// margin-left: auto;
+	// margin-right: auto;
+	// text-align: center;
+	// vertical-align: middle;
+	}
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+
+}//End of media query
