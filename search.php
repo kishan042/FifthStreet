@@ -18,18 +18,30 @@ include_once 'INC/Config.php';
 		include (ROOT_PATH . 'INC/Header.php');
 
 
-// Connect to the database
-require (ROOT_PATH . 'INC/database/db-connection.php');
+// Navbar
+		// Links to other pages	
+		$men = MEN; 
+		$women = WOMEN; 
+		$brands = BRANDS; 
+		$about = ABOUT; 
+		$trending = TRENDING; 
+		$offers = "#"; 
+		$wardrobe = WARDROBE; 
+		$search = SEARCH; 
+		$profile = PROFILE; 
+		$basket = BASKET; 
+
+		// Type "option-active" inside, to make option active
+		$ActiveTrending = "";
+		$ActiveOffers = "";
+		$ActiveWardrobe = "";
+
+		include (ROOT_PATH . 'INC/Navbar.php'); 
+
+// Spacing  
+        // Add a class to hide the seperation
+        $hide = "hidden-md-up";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
-// Try catch block to create a qury to the products table
-try {
-	$results = $db->query("SELECT name, price, img, sku, paypal From products ORDER BY sku ASC"); 
-} catch (Exception $e) { // catch exception if query fails and then exit
-	echo "Data could not be retrived from database.";
-	exit;
-}
-echo "<pre>";
-var_dump($results->fetchALL(PDO::FETCH_ASSOC));
-echo "</pre>";
-?>
