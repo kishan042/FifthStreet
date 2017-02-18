@@ -48,7 +48,7 @@ h4, .h4 { font-size: $font-size-h4;
 
 p, .p-medium { font-size: $font-size-p-medium; }
 p, .p-small { font-size: $font-size-p-small; }
-p, .p-light { font-size: $font-size-p-light;
+p, .p-light, { font-size: $font-size-p-light;
               line-height: 28px;
               font-weight: 300;
 }
@@ -105,28 +105,54 @@ h1, .h1 { line-height: 4rem; }
   border-bottom: 2px solid $gold;
 }
 
-// Large devices (desktops, less than 1200px)
-@include media-breakpoint-down(lg) { }//End of media query
-
-
-// Medium devices (tablets, less than 992px)
-@include media-breakpoint-down(md) { }//End of media query
-
-// Small devices (landscape phones, less than 768px)
-@include media-breakpoint-down(sm) { }//End of media query
 
 // Extra small devices (portrait phones, less than 544px)
-@include media-breakpoint-down(xs) { 
+@include media-breakpoint-up(xs) { 
 
   .h1 { 
     font-size: 2rem;
     line-height: 3rem;
     letter-spacing: 3px; 
    }
+
+   // Product list and block styles
+
+    .product-title,
+    .brand-title { 
+      font-size: 0.7rem;
+      font-weight: 400;
+      line-height: 1rem;
+      margin: 5px 0 0 5px;
+      //margin-bottom: 0px;
+    }
+
+    .brand-title { font-weight: 200; }
+
 }//End of media query
 
 
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) { }//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+  .product-title, 
+  .brand-title { 
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+
+}//End of media query
 
 
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
 
+  .product-title, 
+  .brand-title { 
+    //font-size: 0.9rem;
+    margin-top: 10px;
+  }
 
+}//End of media query

@@ -63,76 +63,66 @@ $recent = get_all_products();
         include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
-<style>
-  /*  
-    .products {
-  -webkit-columns: 400px;
-  -moz-columns: 400px;
-  columns: 400px;
-  -webkit-column-gap: 2em;
-  -moz-column-gap: 2em;
-  column-gap: 2em;  
-}
-
-ul.products li {
-  list-style: none;
-  background: white;
-  padding: 1em;
-  margin-bottom: 1px;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;*/
-}
-</style>
 
 
-
-
-
-<ul class="products">
-    <li>
-        <a href="#">
-            <img class="img-fluid" src="https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?q=0" alt="">
-            <p>View Details</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <img class="img-fluid" src="IMG/shirts/shirt-102.jpg" alt="">
-            <p>View Details</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <img class="img-fluid" src="http://placehold.it/250x450" alt="">
-            <p>View Details</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <img class="img-fluid" src="IMG/shirts/shirt-101.jpg" alt="">
-            <p>View Details</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <img class="img-fluid" src="IMG/shirts/shirt-105.jpg" alt="">
-            <p>View Details</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <img class="img-fluid" src="http://placehold.it/250x250" alt="">
-            <p>View Details</p>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <img class="img-fluid" src="http://placehold.it/250x200" alt="">
-            <p>View Details</p>
-        </a>
-    </li>
-</ul>
+<div class="container">
+    <ul class="products">
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?q=0" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="IMG/shirts/shirt-102.jpg" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="http://placehold.it/250x450" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="IMG/shirts/shirt-101.jpg" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="IMG/shirts/shirt-105.jpg" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="http://placehold.it/250x250" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="http://placehold.it/250x200" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <?php
+            foreach(array_reverse($recent) as $product) {
+                include(ROOT_PATH . "INC/DB/product-block.php");
+            }
+        ?>
+    </ul>
+</div>
 
 
 <?php

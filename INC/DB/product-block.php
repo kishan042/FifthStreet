@@ -8,17 +8,11 @@
  */
 
 ?><li>
-        <a href="<?php echo BASE_URL; ?>shirts/shirt/<?php echo $product["sku"]; ?>/">
-            <img src="<?php echo BASE_URL . $product["img"]; ?>" alt="<?php echo $product["name"]; ?>">
-            <p>View Details</p>
+        <a href="<?php echo BASE_URL; ?>/product/#<?php echo $product["sku"]; ?>/">
+            <img class=img-fluid src="<?php echo BASE_URL . $product["img"]; ?>" alt="<?php echo $product["name"]; ?>">
+            <h2 class="product-title">Product title</h2>
+            <h3 class="brand-title">Brand title</h3>
         </a>
     </li>
 
 
-    <!--                 <ul class="products">
-                    <?php
-                        //foreach(array_reverse($recent) as $product) {
-                            //include(ROOT_PATH . "INC/DB/product-block.php");
-                        }
-                    ?>
-                </ul> -->

@@ -2,6 +2,10 @@
 // Config file
 include_once '../INC/Config.php';
 
+// DB - Model
+include(ROOT_PATH . "INC/DB/model.php");
+$recent = get_all_products();
+
 // Header
 		// Title tag
 		$Title = "My Wishlist";
@@ -40,137 +44,83 @@ include_once '../INC/Config.php';
 
 
 // Hero-half
-		//IMG URL
-		$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
-		// Amount of tint on image
-		$tint = "tint-5";
-		// copy for H1
-		$h1 = "MY WISHLIST";
+        //IMG URL
+        //$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+        // Amount of tint on image
+        $tint = "tint-10";
+        // copy for H1
+        $h1 = "MY WISHLIST";
 
-		include (ROOT_PATH . 'INC/Hero-half-plain.php');
+        include (ROOT_PATH . 'INC/Hero-half.php');
+
+
+
+// Spacing  
+        // Add a class to hide the seperation
+        $hide = "";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
 
-
-<style>
-/*	.col-xs-3 { padding: 0!important; }
-	.col-lg-3 { width: 400px !important;}*/
-	h2, h3 { width: 100%!important;  }
-	.product-block { width: 250px!important; }
-</style>
-
 <div class="container">
-	<div class="row">
-		<div class="col-xs-3"> <!-- start of first column -->
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x250" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x350" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x250" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x350" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-		</div> <!-- End of first column -->
-		<div class="col-xs-3"> <!-- start of first column -->
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x450" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x350" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x250" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x350" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-		</div> <!-- End of first column -->
-		<div class="col-xs-3"> <!-- start of first column -->
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x250" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x350" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x450" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-		</div> <!-- End of first column -->
-		<div class="col-xs-3"> <!-- start of first column -->
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x450" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x450" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<img src="http://placehold.it/250x250" alt="">
-				<div class="product-block">
-					<h2 class="h3">Product title</h2>
-					<h3 class="h4">Brand</h3>
-				</div>
-			</div>
-		</div> <!-- End of first column -->
-	</div>
+    <ul class="products">
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?q=0" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="../IMG/shirts/shirt-102.jpg" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="http://placehold.it/250x450" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="../IMG/shirts/shirt-101.jpg" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="../IMG/shirts/shirt-105.jpg" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="http://placehold.it/250x250" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class="img-fluid" src="http://placehold.it/250x200" alt="">
+                <h2 class="product-title">Product title</h2>
+                <h3 class="brand-title">Brand title</h3>
+            </a>
+        </li>
+        <?php
+            foreach(array_reverse($recent) as $product) {
+                include(ROOT_PATH . "INC/DB/product-block.php");
+            }
+        ?>
+    </ul>
 </div>
-
-
 
 
 
@@ -191,7 +141,7 @@ include_once '../INC/Config.php';
 		$PreviousPage = "Wardrobe";
 
 		// Bread crumbs for the current page
-		$CurrentPage = "Wishlist";
+		$CurrentPage = "My Wishlist";
 
 		// JS path
 		$JSPath = BASE_URL . "JS/jquery.js";

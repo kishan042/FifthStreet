@@ -40,10 +40,11 @@ include_once 'INC/Config.php';
 
 
 // Hero-half-plain
-		// Copy for H1
+		// copy for H1
 		$h1 = "MY WARDROBE";
+
 		//Copy for description
-		$description = "";
+		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 

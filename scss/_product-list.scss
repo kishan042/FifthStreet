@@ -1,30 +1,35 @@
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-up(xs) { 
 
-
+	// Divide the amount of products in columns
+	 .products {
+	  -webkit-columns: 140px;
+	  -moz-columns: 140px;
+	  columns: 140px;
+	  // the gap between the columns 
+	  -webkit-column-gap: 10px;
+	  -moz-column-gap: 10px;
+	  column-gap: 10px;  
+	}
+	
+	// Column-break-inside allows you to create a pinterest type 
+	// of look and feel. Through the margin 
+	// space between different product blocks can be changed
 	ul.products li {
 
 	  -webkit-column-break-inside: avoid;
 	  page-break-inside: avoid;
 	  break-inside: avoid;
-	      margin: 0 5px;
+	  margin: 25px 5px 15px 5px;
+	}
+	
+	// However, if all blocks are required to be 
+	// the same square shape, add .block class
+	// to the ul tag
+	ul.block li:first-child {
+	margin-top: 0px!important;
 	}
 
-	 .products {
-	  -webkit-columns: 140px;
-	  -moz-columns: 140px;
-	  columns: 140px;
-	  -webkit-column-gap: 10px;
-	  -moz-column-gap: 10px;
-	  column-gap: 10px;  
-	}
-
-	ul.products img { 
-	// margin-left: auto;
-	// margin-right: auto;
-	// text-align: center;
-	// vertical-align: middle;
-	}
 }//End of media query
 
 
@@ -37,6 +42,14 @@
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) { 
 
+	 .products {
+	  -webkit-columns: 170px;
+	  -moz-columns: 170px;
+	  columns: 170px;
+	  -webkit-column-gap: 10px;
+	  -moz-column-gap: 10px;
+	  column-gap: 10px;  
+	}
 
 
 }//End of media query
@@ -44,11 +57,27 @@
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) { 
 
+	 .products {
+	  -webkit-columns: 180px;
+	  -moz-columns: 180px;
+	  columns: 180px;
+	  -webkit-column-gap: 10px;
+	  -moz-column-gap: 10px;
+	  column-gap: 10px;  
+	}
 
 }//End of media query
 
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
 
+	 .products {
+	  -webkit-columns: 250px;
+	  -moz-columns: 250px;
+	  columns: 250px;
+	  -webkit-column-gap: 10px;
+	  -moz-column-gap: 10px;
+	  column-gap: 10px;  
+	}
 
 }//End of media query
