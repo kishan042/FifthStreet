@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(~0);
 // Config file
 include_once 'INC/Config.php';
 
@@ -34,22 +36,22 @@ include_once 'INC/Config.php';
 
 // Model - DB
 
-		include (ROOT_PATH . 'INC/databse/model.php');
-        $recent = get_products_all();
+		include (ROOT_PATH . 'INC/DB/model.php');
+        $recent = get_products_recent();
 ?>
 
-<div class="section shirts page">
-	<div class="wrapper">
-		<h1>Mike&rsquo;s Full Catalog of Shirts</h1>
-			<ul class="products">
-			<?php
-				foreach($recent as $product) {
-					include(ROOT_PATH . "INC/database/product-list.php");
-				}
-			?>
-			</ul>
-	</div>
-</div> 
+
+                <h2>Mike&rsquo;s Latest Shirts</h2>
+                
+                <ul class="products block">
+                    <?php
+                        foreach(array_reverse($recent) as $product) {
+                            include(ROOT_PATH . "INC/DB/product-block.php");
+                        }
+                    ?>
+                </ul>
+
+
 
 
 

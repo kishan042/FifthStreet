@@ -5,10 +5,13 @@ error_reporting(~0);
 // Config file
 	require_once("../INC/Config.php");
 
+	include (ROOT_PATH . 'INC/DB/model.php');
+    $recent = get_products_recent();
+
 
 // Header
         // Title tag
-        $Title = "Trending ";
+        $Title = "Search ";
         
         // Meta description
         $Description = "Fill text";
@@ -47,7 +50,7 @@ error_reporting(~0);
         // copy for H1
         $h1 = "SEARCH";
 
-        include (ROOT_PATH . 'INC/Hero-half.php');
+        //include (ROOT_PATH . 'INC/Hero-half.php');
 
 
 
@@ -75,20 +78,35 @@ if (isset($_GET["s"])) {
 	if ($search_term != "") {
 		require_once(ROOT_PATH . "INC/DB/model.php");
 		$products = get_products_search($search_term);
+	} else {
+		//include (ROOT_PATH . 'INC/DB/model.php');
+        $recent = get_products_recent();
 	}
 }
 ?>
 
-			<h1>Search</h1>
+<h1>Search</h1>
 
-			<form method="get" action="./">
-				<?php // pre-populate the current search term in the search box; ?>
-				<?php // if a search hasn't been performed, then that search term ?>
-				<?php // will be blank and the box will look empty ?>
-				<input type="text" name="s" value="<?php echo htmlspecialchars($search_term); ?>">
-				<input type="submit" value="Go">
-			</form>
+<form method="get" action="./">
+	<?php // pre-populate the current search term in the search box; ?>
+	<?php // if a search hasn't been performed, then that search term ?>
+	<?php // will be blank and the box will look empty ?>
+	<div class="row">
+		<div class="col-lg-5">
+			<div class="input-group">
+				<input type="text" class="form-control" name="s" value="<?php echo htmlspecialchars($search_term); ?>">
+				<span class="input-group-btn">
+				
+					<input class="btn btn-secondary" type="submit" value="Go">
+				
+				</span>
+			</div>
+		</div>
+	</div>
+</form> 
+
 <div class="container">
+						
 	
 
 			<?php // if a search has been performed ... ?>
@@ -112,3 +130,21 @@ if (isset($_GET["s"])) {
 			<?php endif; ?>
 
 </div>
+
+
+			<?php if ($search_term === "") : ?>
+				<div class="container">
+					<h2>Mike&rsquo;s Latest Shirts</h2>
+
+					<ul class="products block">
+					    <?php
+					        foreach(array_reverse($recent) as $product) {
+					            include(ROOT_PATH . "INC/DB/product-block.php");
+					        }
+					    ?>
+					</ul>
+				</div>
+			<?php endif; ?>
+
+
+
