@@ -2,7 +2,7 @@
 
 <!-- Mobile Navigation bar -->
 
-	<div class="mob-navigation-bar">
+	<div class="mob-navigation-bar <?php echo $search_override ?>">
 		<div class="primary-options row pt-20 mx-0 pb-2 bg-white">
 		<!-- Primary Nav -->
 			<div class="col-xs-4 row mx-0 px-0">

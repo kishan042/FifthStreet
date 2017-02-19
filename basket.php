@@ -51,6 +51,35 @@ include_once 'INC/Config.php';
                     ?>
                 </ul>
 
+<style>
+	#search-icon {
+		padding: 5px;
+	    width: 60px;
+    height: 60px;
+		background: url(IMG/icons/search.svg) no-repeat;
+			background-size: cover;
+	background-position: center;
+	background-origin: content-box;
+	}
+</style>
+
+
+<form method="get" action="./">
+	<?php // pre-populate the current search term in the search box; ?>
+	<?php // if a search hasn't been performed, then that search term ?>
+	<?php // will be blank and the box will look empty ?>
+	<div class="row">
+		<div class="col-lg-5">
+			<div class="input-group">
+				<input type="text" class="form-control" name="s" value="">
+				<span class="input-group-btn">
+					<button id="search-icon" class="btn btn-secondary" type="submit" value="">
+				
+				</span>
+			</div>
+		</div>
+	</div>
+</form> 
 
 
 

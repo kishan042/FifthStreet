@@ -5,8 +5,31 @@ error_reporting(~0);
 // Config file
 	require_once("../INC/Config.php");
 
-	include (ROOT_PATH . 'INC/DB/model.php');
+// DB - Model
+	require_once(ROOT_PATH . 'INC/DB/model.php');
+	// Call function to get the 4 recent products in the database
     $recent = get_products_recent();
+
+/* This file contains instructions for three different states of the form:
+ *   - Displaying the initial search form
+ *   - Handling a form submission and ...
+ *       - ... displaying the results if matches are found.
+ *       - ... displaying a "no results found" message if necessary.
+ */
+
+// if a non-blank search term is specified in
+// the query string, perform a search
+$search_term = "";
+if (isset($_GET["s"])) {
+	$search_term = trim($_GET["s"]);
+	if ($search_term != "") {
+		require_once(ROOT_PATH . "INC/DB/model.php");
+		$products = get_products_search($search_term);
+	} else {
+		//include (ROOT_PATH . 'INC/DB/model.php');
+        $recent = get_products_recent();
+	}
+}
 
 
 // Header
@@ -39,19 +62,21 @@ error_reporting(~0);
         $basket = "../" . BASKET; 
      
 
+		// Hide navbar.php tablet devices and down
+		$search_override = "hidden-sm-down";
+
         include (ROOT_PATH . 'INC/Navbar.php');
 
 
-// Hero-half
+// Hero-half-search
         //IMG URL
-        //$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+        $url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
         // Amount of tint on image
-        $tint = "tint-10";
+        $tint = "tint-5";
         // copy for H1
         $h1 = "SEARCH";
 
-        //include (ROOT_PATH . 'INC/Hero-half.php');
-
+        include (ROOT_PATH . 'INC/Hero-half-search.php');
 
 
 // Spacing  
@@ -63,47 +88,9 @@ error_reporting(~0);
 
 
 
-/* This file contains instructions for three different states of the form:
- *   - Displaying the initial search form
- *   - Handling a form submission and ...
- *       - ... displaying the results if matches are found.
- *       - ... displaying a "no results found" message if necessary.
- */
 
-// if a non-blank search term is specified in
-// the query string, perform a search
-$search_term = "";
-if (isset($_GET["s"])) {
-	$search_term = trim($_GET["s"]);
-	if ($search_term != "") {
-		require_once(ROOT_PATH . "INC/DB/model.php");
-		$products = get_products_search($search_term);
-	} else {
-		//include (ROOT_PATH . 'INC/DB/model.php');
-        $recent = get_products_recent();
-	}
-}
 ?>
 
-<h1>Search</h1>
-
-<form method="get" action="./">
-	<?php // pre-populate the current search term in the search box; ?>
-	<?php // if a search hasn't been performed, then that search term ?>
-	<?php // will be blank and the box will look empty ?>
-	<div class="row">
-		<div class="col-lg-5">
-			<div class="input-group">
-				<input type="text" class="form-control" name="s" value="<?php echo htmlspecialchars($search_term); ?>">
-				<span class="input-group-btn">
-				
-					<input class="btn btn-secondary" type="submit" value="Go">
-				
-				</span>
-			</div>
-		</div>
-	</div>
-</form> 
 
 <div class="container">
 						
@@ -147,4 +134,28 @@ if (isset($_GET["s"])) {
 			<?php endif; ?>
 
 
+<?php
+// Spacing  
+        // Add a class to hide the seperation
+        $hide = "";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
+
+// Footer
+        // If current pages does not exist then add the 
+        $hide = "hidden-xs-up";
+
+        // Bread crunb for the previous page 
+        $PreviousPage = "";
+
+        // Bread crumbs for the current page
+        $CurrentPage = "Search";
+        
+
+        // JS path
+        $JSPath = BASE_URL . "JS/jquery.js";
+
+        include (ROOT_PATH . 'INC/Footer.php');
+
+?> 

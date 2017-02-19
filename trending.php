@@ -1,10 +1,11 @@
 <?php
 // Config file
-include_once 'INC/Config.php';
+    include_once 'INC/Config.php';
 
 // DB - Model
-include(ROOT_PATH . "INC/DB/model.php");
-$recent = get_all_products();
+    include(ROOT_PATH . "INC/DB/model.php");
+    // Call function to get the latest / trending products
+    $recent = get_all_products();
 
 // Header
         // Title tag
