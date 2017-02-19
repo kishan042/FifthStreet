@@ -13,8 +13,8 @@ define("ABOUT","about-us.php");
 define("TRENDING","trending.php");
 define("OFFERS","offers.php");
 define("WARDROBE","wardrobe.php");
-define("SEARCH","search.php");
-define("PROFILE","Profile.php");
+define("SEARCH","search/");
+define("PROFILE","profile.php");
 define("BASKET","basket.php");
 
 // Details to Connect to the database 

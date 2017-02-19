@@ -1,25 +1,27 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(~0);
+// a $product will only be set if an ID is specified in the query
+// string and it corresponds to a real product. If no product is
+// set, then redirect to the shirts listing page; otherwise, continue
+// on and display the Shirt Details page for that $product
+if (empty($_GET["id"])) {
+	header("Location: http://localhost:8888/_Github/FifthStreet/trending.php" );
+	exit();
+}
 
-
+// Config file
 	require_once("INC/Config.php");
+
+// DB - Model
 	require_once(ROOT_PATH . "INC/DB/model.php");
+
 
 // if an ID is specified in the query string, use it
 if (isset($_GET["id"])) {
 	$product_id = intval($_GET["id"]);
 	$product = get_product_single($product_id);
-}
-
-// a $product will only be set and not false if an ID is specified in the query
-// string and it corresponds to a real product. If no product is
-// set, then redirect to the shirts listing page; otherwise, continue
-// on and display the Shirt Details page for that $product
-// if (empty($product)) {
-// 	//header("Location: / ");
-// 	exit();
-// }
+} 
 
 
 // Header
@@ -78,6 +80,27 @@ if (isset($_GET["id"])) {
 <h2>Price = £<?php echo $product["price"] ?></h2>
 <img src="<?php echo BASE_URL . $product["img"] ?>" alt="<?php echo $product["name"] ?>">
 
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="<?php echo $product["paypal"]; ?>">
+	<input type="hidden" name="item_name" value="<?php echo $product["name"]; ?>">
+	<table>
+	<tr>
+		<th>
+			<input type="hidden" name="on0" value="Size">
+			<label for="os0">Size</label>
+		</th>
+		<td>
+			<select name="os0" id="os0">
+				<?php foreach($product["sizes"] as $size) { ?>
+				<option value="<?php echo $size; ?>"><?php echo $size; ?> </option>
+				<?php } ?>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<input type="submit" value="Add to Cart" name="submit">
+</form>
 
 <?php
 // Spacing  
