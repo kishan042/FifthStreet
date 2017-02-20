@@ -27,14 +27,10 @@
 // Weight and italics
 
 .font-weight-normal  { font-weight: normal; }
-.font-weight-bold    { font-weight: bold; }
+.txt-bold    { font-weight: bold; }
 .font-italic         { font-style: italic; }
 
 // Contextual colors
-
-.text-white {
-  color: #fff !important;
-}
 
 @include text-emphasis-variant('.text-muted', $text-muted);
 

@@ -4,7 +4,7 @@ include_once 'INC/Config.php';
 
 // Header
 		// Title tag
-		$Title = "Home ";
+		$Title = "Women ";
 		// Meta description
 		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
 

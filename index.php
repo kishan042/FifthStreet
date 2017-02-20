@@ -33,9 +33,9 @@ include_once 'INC/Config.php';
 
 // Hero-full
 		// IMG URL
-		 $HeroUrl = "https://images.unsplash.com/photo-1476990789491-712b869b91a5?dpr=2&auto=format&w=1500&h=400&q=20&cs=tinysrgb&crop="; 
+		 $HeroUrl = "https://images.unsplash.com/photo-1475867668546-5d9fdf35638a?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=";
 		// Amount of tint on image
-		$tint = "tint-0";
+		$tint = "tint-2";
 		// copy for H1
 		$h1 = "ACCESS". '<br>' . "THE UNKNOWN";
 		// copy for h2
@@ -60,7 +60,7 @@ include_once 'INC/Config.php';
 
 
 // Blocks-two-left-compact
-		$BlockBG = "";
+		$BlockBG = "bg-gray-lightest";
 		// Title
 		$BlockTitle = "NFC compatibility";
 		// Copy

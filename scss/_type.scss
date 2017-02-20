@@ -105,6 +105,12 @@ h1, .h1 { line-height: 4rem; }
   border-bottom: 2px solid $gold;
 }
 
+//
+// Text shadow for H1 on images
+//
+
+.txt-shadow { text-shadow: 2px 2px #000; }
+
 
 // Extra small devices (portrait phones, less than 544px)
 @include media-breakpoint-up(xs) { 

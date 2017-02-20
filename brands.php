@@ -4,7 +4,7 @@ include_once 'INC/Config.php';
 
 // Header
 		// Title tag
-		$Title = "Offers ";
+		$Title = "Brands ";
 		
 		// Meta description
 		$Description = "Fill text";
@@ -127,7 +127,7 @@ include_once 'INC/Config.php';
 		$PreviousPage = " ";
 
 		// Bread crumbs for the current page
-		$CurrentPage = "Offers";		
+		$CurrentPage = "Brands";		
 
 		// JS path
 		$JSPath = BASE_URL . "JS/jquery.js";

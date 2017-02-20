@@ -4,7 +4,7 @@ include_once 'INC/Config.php';
 
 // Header
 		// Title tag
-		$Title = "Home ";
+		$Title = "My Profile ";
 		// Meta description
 		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
 
@@ -78,7 +78,7 @@ include_once 'INC/Config.php';
 		$PreviousPage = "";
 
 		// Bread crumbs for the current page
-		$CurrentPage = "Home";
+		$CurrentPage = "My Profile";
 
 		// JS path
 		$JSPath = BASE_URL . "JS/jquery.js";

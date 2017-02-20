@@ -10,27 +10,6 @@ error_reporting(~0);
 	// Call function to get the 4 recent products in the database
     $recent = get_products_recent();
 
-/* This file contains instructions for three different states of the form:
- *   - Displaying the initial search form
- *   - Handling a form submission and ...
- *       - ... displaying the results if matches are found.
- *       - ... displaying a "no results found" message if necessary.
- */
-
-// if a non-blank search term is specified in
-// the query string, perform a search
-$search_term = "";
-if (isset($_GET["s"])) {
-	$search_term = trim($_GET["s"]);
-	if ($search_term != "") {
-		require_once(ROOT_PATH . "INC/DB/model.php");
-		$products = get_products_search($search_term);
-	} else {
-		//include (ROOT_PATH . 'INC/DB/model.php');
-        $recent = get_products_recent();
-	}
-}
-
 
 // Header
         // Title tag
@@ -70,71 +49,28 @@ if (isset($_GET["s"])) {
 
 // Hero-half-search
         //IMG URL
-        $url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+        $url = "https://images.unsplash.com/photo-1441986300917-64674bd600d8?dpr=2&auto=format&fit=crop&w=767&h=512&q=80&cs=tinysrgb&crop="; 
         // Amount of tint on image
-        $tint = "tint-5";
+        $tint = "tint-4";
         // copy for H1
-        $h1 = "SEARCH";
+        $h1 = "FIND | SAVE | BUY";
 
         include (ROOT_PATH . 'INC/Hero-half-search.php');
 
 
 // Spacing  
-        // Add a class to hide the seperation
+        // Add a class to hide the seperation 
         $hide = "";
         
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+        include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+
+// Search-results
+        // Display the results from the search query
+        include (ROOT_PATH . 'INC/Search-results.php');
 
 
 
-
-
-?>
-
-
-<div class="container">
-						
-	
-
-			<?php // if a search has been performed ... ?>
-			<?php if ($search_term != "") : ?>
-
-				<?php // if there are products found that match the search term, display them; ?>
-				<?php // otherwise, display a message that none were found ?>
-
-				<?php if (!empty($products)) : ?>
-					<ul class="products block">
-						<?php
-							foreach ($products as $product) {
-	                            include(ROOT_PATH . "INC/DB/product-block.php");
-							}
-						?>
-					</ul>
-				<?php else: ?>
-					<p>No products were found matching that search term.</p>
-				<?php endif; ?>
-
-			<?php endif; ?>
-
-</div>
-
-
-			<?php if ($search_term === "") : ?>
-				<div class="container">
-					<h2>Mike&rsquo;s Latest Shirts</h2>
-
-					<ul class="products block">
-					    <?php
-					        foreach(array_reverse($recent) as $product) {
-					            include(ROOT_PATH . "INC/DB/product-block.php");
-					        }
-					    ?>
-					</ul>
-				</div>
-			<?php endif; ?>
-
-
-<?php
 // Spacing  
         // Add a class to hide the seperation
         $hide = "";
