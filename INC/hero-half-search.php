@@ -30,9 +30,14 @@
 			<div class="row hero-content">
 				<div class="mob-search-bar-width col-xs-12">
 					<div class="input-group">
-						<input type="text" id="mob-search-bar" class="form-control" name="s" value="<?php echo htmlspecialchars($search_term); ?>" autofocus>
 						<span class="input-group-btn">
-							<button id="mob-search-icon" class="btn btn-secondary" type="submit" value="">		
+							<div id="mob-search-cross-icon" class="btn btn-secondary" onclick="goBack()">
+							</div>	
+						</span>
+						<input type="text" id="mob-search-bar" class="form-control" name="s" value="<?php echo htmlspecialchars($search_term); ?>" autofocus placeholder="SEARCH... "/>
+						<span class="input-group-btn">
+							<button id="mob-search-icon" class="btn btn-secondary">
+							</button>	
 						</span>
 					</div>
 				</div>
@@ -50,7 +55,7 @@
 			<div class="row hero-content">
 				<div class="col-md-7 col-lg-5">
 					<div class="input-group">
-						<input type="text" id="search-bar" class="form-control" name="s" value="<?php echo htmlspecialchars($search_term); ?>" placeholder="SEARCH TO FIND | SAVE | BUY ">
+						<input type="text" id="search-bar" class="form-control" name="s" value="<?php echo htmlspecialchars($search_term); ?>" autofocus placeholder="SEARCH TO FIND | SAVE | BUY "/>
 						<span class="input-group-btn">
 							<button id="search-icon" class="btn btn-secondary" type="submit" value="">		
 						</span>
@@ -60,3 +65,9 @@
 		</form> 
 	</div>
 </div>
+
+<script>
+	function goBack() {
+    window.history.back();
+}
+</script>

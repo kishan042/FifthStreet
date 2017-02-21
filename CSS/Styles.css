@@ -3947,7 +3947,7 @@ nav {
   border: none !important;
   border-bottom: 1px rgba(0, 0, 0, 0.3) solid !important; }
 
-#mob-search-icon {
+#mob-search-cross-icon, #mob-search-icon {
   padding: 10px;
   width: 50px;
   height: 49px;
@@ -3957,9 +3957,18 @@ nav {
   background-origin: content-box;
   background-color: #fff !important;
   border: none;
-  border-left: 1px rgba(0, 0, 0, 0.3) solid;
+  border-right: 1px rgba(0, 0, 0, 0.3) solid;
   border-bottom: 1px rgba(0, 0, 0, 0.3) solid;
   margin-top: 1px; }
+
+#mob-search-icon {
+  padding: 10px;
+  background: url(../IMG/icons/search.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  border-left: 1px rgba(0, 0, 0, 0.3) solid;
+  border-right: none !important; }
 
 @media (min-width: 768px) {
   .hero-full {

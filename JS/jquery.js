@@ -69,6 +69,4 @@ $(document).ready(function(){
         });
         // End of animation function
 
-
-
 }); //END OF JQUERY

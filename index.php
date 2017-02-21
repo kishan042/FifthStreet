@@ -33,9 +33,9 @@ include_once 'INC/Config.php';
 
 // Hero-full
 		// IMG URL
-		 $HeroUrl = "https://images.unsplash.com/photo-1475867668546-5d9fdf35638a?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=";
+		 $HeroUrl = "https://images.unsplash.com/photo-1475403614135-5f1aa0eb5015?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
 		// Amount of tint on image
-		$tint = "tint-2";
+		$tint = "tint-0";
 		// copy for H1
 		$h1 = "ACCESS". '<br>' . "THE UNKNOWN";
 		// copy for h2
