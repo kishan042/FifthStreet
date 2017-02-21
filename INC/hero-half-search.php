@@ -24,15 +24,17 @@
 
 
 <!-- Mobile layout -->
-<div class="mob-search hero-half-search">
+<div class="mob-search hero-half-search" onload="load()">
 	<div class="hero-content">
 		<form method="get" action="./">
 			<div class="row hero-content">
 				<div class="mob-search-bar-width col-xs-12">
 					<div class="input-group">
 						<span class="input-group-btn">
-							<div id="mob-search-cross-icon" class="btn btn-secondary" onclick="goBack()">
+						 <a id="mob-search-cross-url" href="">
+							<div id="mob-search-cross-icon" class="btn btn-secondary">
 							</div>	
+						</a>
 						</span>
 						<input type="text" id="mob-search-bar" class="form-control" name="s" value="<?php echo htmlspecialchars($search_term); ?>" autofocus placeholder="SEARCH... "/>
 						<span class="input-group-btn">

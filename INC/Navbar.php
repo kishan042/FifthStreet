@@ -23,7 +23,7 @@
 			</div>
 			<div class="col-xs-4 row mx-0 px-0">
 				<div class="col-xs-6 icon px-0">
-					<a href="<?php echo $search ?>">
+					<a id="search-id" href="<?php echo BASE_URL . $search ?>">
 						<img src="<?php echo $img ?>icons/search.svg">
 					</a>
 				</div>

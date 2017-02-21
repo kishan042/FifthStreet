@@ -3957,6 +3957,7 @@ nav {
   background-origin: content-box;
   background-color: #fff !important;
   border: none;
+  border-radius: 0px;
   border-right: 1px rgba(0, 0, 0, 0.3) solid;
   border-bottom: 1px rgba(0, 0, 0, 0.3) solid;
   margin-top: 1px; }
@@ -3967,7 +3968,6 @@ nav {
   background-size: cover;
   background-position: center;
   background-origin: content-box;
-  border-left: 1px rgba(0, 0, 0, 0.3) solid;
   border-right: none !important; }
 
 @media (min-width: 768px) {

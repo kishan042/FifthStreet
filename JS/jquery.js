@@ -1,3 +1,23 @@
+$(window).load(function() {
+
+// This function captures the current page of the search icon
+// That URL is then stored in local storage 
+// If a url is stored then it will target the cross icon and set its href as the variable captured
+// The item does not need to be removed from local storage
+
+		$("#search-id").click(function(){
+			var search = window.location.href;
+			localStorage.setItem('url', search);
+		});
+
+		var storedValue = localStorage.getItem('url');
+		if (storedValue) {
+			$('#mob-search-cross-url').attr('href', storedValue);
+		}
+
+}); // End of onLoad function
+
+
 $(document).ready(function(){
 
 	// HAMBURGER MENU
@@ -68,5 +88,13 @@ $(document).ready(function(){
             $('html, body').animate({scrollTop: $height}, 600);
         });
         // End of animation function
+
+
+     // SEARCH module
+
+       function save() {
+	    var search = document.getElementById('search-id').href;
+	    localStorage.setItem('url', search);
+	  }  
 
 }); //END OF JQUERY

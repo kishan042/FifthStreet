@@ -90,6 +90,7 @@
 		// Extra styling
 		background-color: #fff!important;
 		border: none;
+		border-radius: 0px;
 		border-right: 1px rgba(0,0,0,0.3) solid;
 		border-bottom: 1px rgba(0,0,0,0.3) solid;
 		margin-top: 1px;
@@ -103,7 +104,6 @@
 		background-position: center;
 		// Allow the padding for parent to be applied to the image
 		background-origin: content-box;
-		border-left: 1px rgba(0,0,0,0.3) solid;
 		border-right: none!important;
 	}
 }//End of media query
