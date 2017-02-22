@@ -1,10 +1,12 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(~0);
 // Config file
 include_once '../INC/Config.php';
 
 // DB - Model
 include(ROOT_PATH . "INC/DB/model.php");
-$recent = get_all_products();
+
 
 // Header
 		// Title tag
@@ -63,89 +65,78 @@ $recent = get_all_products();
 
 ?>
 
-<div class="container">
-    <ul class="products">
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?q=0" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="../IMG/shirts/shirt-102.jpg" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/250x450" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="../IMG/shirts/shirt-101.jpg" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="../IMG/shirts/shirt-105.jpg" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/250x250" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/250x200" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <?php
-            foreach(array_reverse($recent) as $product) {
-                include(ROOT_PATH . "INC/DB/product-block.php");
-            }
-        ?>
-    </ul>
-</div>
 
-
+<h2> Client example </h2>
+  <h3>Output: </h3>
+  <div id="output">this element will be accessed by jquery and this text replaced</div>
 
 <?php
 
-// Spacing	
-		// Add a class to hide the seperation
-		$hide = "";
-		
-		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+// Spacing  
+        // Add a class to hide the seperation
+        $hide = "";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 /// Footer
-		// If current pages does not exist then add the 
-		$hide = " ";
+        // If current pages does not exist then add the 
+        $hide = " ";
 
-		// Bread crunb for the previous page 
-		$PreviousPage = "Wardrobe";
+        // Bread crunb for the previous page 
+        $PreviousPage = "Wardrobe";
 
-		// Bread crumbs for the current page
-		$CurrentPage = "My Wishlist";
+        // Bread crumbs for the current page
+        $CurrentPage = "My Wishlist";
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
+        // JS path
+        $JSPath = BASE_URL . "JS/jquery.js";
 
-		include (ROOT_PATH . 'INC/Footer.php');
+        include (ROOT_PATH . 'INC/Footer.php');
 
 ?> 
+
+  <script>
+
+    var data = [];
+    // var searches = localStorage.getItem('recentSearches');
+    //   if (searches) {
+    //     searches = JSON.parse(searches);
+    //     console.log(searches);
+    //     if (searches.length == 0) {
+    //         data = searches[0];
+    //         console.log(data);
+    //     } else if(searches > 0){
+    //     //     for (var item = 0; item != searches.length; item++) {
+    //     //     data.push({ item : searches[item]});
+    //     // } 
+    // }
+        
+    //   console.log(data);
+    // }
+
+    
+    //-----------------------------------------------------------------------
+    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
+    //-----------------------------------------------------------------------
+    // $.ajax({                                      
+    //   url: 'test3.php',
+    //   type: 'post',                     
+    //   data: {'key': data},                    
+    //   dataType: 'json',                    
+    //   success: function(data)          
+    //   {
+    //     console.log(data);
+    //   } 
+    // });
+  
+
+  </script>
+
+
+
+
+
+
+
+

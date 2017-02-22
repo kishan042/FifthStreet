@@ -32,55 +32,102 @@ include_once 'INC/Config.php';
 		$basket = "#"; 
 
 		include (ROOT_PATH . 'INC/Navbar.php'); 
-
-
-// Model - DB
-
-		include (ROOT_PATH . 'INC/DB/model.php');
-        $recent = get_products_recent();
 ?>
 
-
-                <h2>Mike&rsquo;s Latest Shirts</h2>
-                
-                <ul class="products block">
-                    <?php
-                        foreach(array_reverse($recent) as $product) {
-                            include(ROOT_PATH . "INC/DB/product-block.php");
-                        }
-                    ?>
-                </ul>
-
 <style>
-	#search-icon {
-		padding: 5px;
-	    width: 60px;
-    height: 60px;
-		background: url(IMG/icons/search.svg) no-repeat;
-			background-size: cover;
-	background-position: center;
-	background-origin: content-box;
-	}
+	.style { 
+		display: inline-block;
+		margin: 25px;
+	 }
 </style>
 
+<li class="style">
+<p>102</p>
+<button class="wishlist" id="102">+</button>
+</li>
 
-<form method="get" action="./">
-	<?php // pre-populate the current search term in the search box; ?>
-	<?php // if a search hasn't been performed, then that search term ?>
-	<?php // will be blank and the box will look empty ?>
-	<div class="row">
-		<div class="col-lg-5">
-			<div class="input-group">
-				<input type="text" class="form-control" name="s" value="">
-				<span class="input-group-btn">
-					<button id="search-icon" class="btn btn-secondary" type="submit" value="">
-				
-				</span>
-			</div>
-		</div>
-	</div>
-</form> 
+<li class="style">
+<p>118</p>
+<button class="wishlist" id="118">+</button>
+</li>
 
 
+
+<?php
+
+// Spacing  
+        // Add a class to hide the seperation
+        $hide = "";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+
+
+// Footer
+        // If current pages does not exist then add the 
+        $hide = "hidden-xs-up";
+
+        // Bread crunb for the previous page 
+        $PreviousPage = "";
+
+        // Bread crumbs for the current page
+        $CurrentPage = "Trending";
+        
+
+        // JS path
+        $JSPath = BASE_URL . "JS/jquery.js";
+
+        include (ROOT_PATH . 'INC/Footer.php');
+
+?> 
+
+
+
+<script>
+'use strict';
+// Test for local storage
+function supportsLocalStorage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch(e){
+    return false;
+  }
+}
+
+    // Retrieve searches from Local Storage, return an array
+    function getRecentSearches() {
+      var searches = localStorage.getItem('recentSearches');
+      if (searches) {
+        return JSON.parse(searches);
+      }
+      return [];
+    }
+
+        // Validate and save strings to store of past searches
+    function saveSearchString(str) {
+      var searches = getRecentSearches();
+      if (searches.indexOf(str) > -1 || !str) {
+        return false;
+      }
+      searches.push(str);
+      localStorage.setItem('recentSearches', JSON.stringify(searches));
+      return true;
+    }
+
+ 
+
+
+      if (supportsLocalStorage) {
+
+        // Set event handlers
+        $(".wishlist").click(function(){
+			var searchString = $(this).attr('id');
+			if (saveSearchString(searchString)) {
+			
+			}	
+		});
+
+
+      } // End of supports local storage function
+</script>
 
 
