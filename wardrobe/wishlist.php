@@ -127,9 +127,24 @@ include(ROOT_PATH . "INC/DB/model.php");
       dataType: 'json',                    
       success: function(data)          
       {
-        console.log(data);
+        //console.log(data);
+        sortData(data);
       } 
     });
+
+    function sortData(data){
+        //console.log('running sort function');
+        //console.log(data);
+        for(var index = 0; index != data.length; index++){
+            var item = data[index];
+            var productId = item['id'];
+            var image = item['image'];
+            var name = item['name'];
+            console.log([productId, image, name]);
+            var html = "<li>" + name + "</li>";
+            $('#output').append(html);
+        }
+    };
   
 
   </script>
