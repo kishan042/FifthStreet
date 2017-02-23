@@ -42,7 +42,7 @@ include(ROOT_PATH . "INC/DB/model.php");
 		$ActiveOffers = "";
 		$ActiveWardrobe = "option-active";
 
-		include (ROOT_PATH . 'INC/Navbar.php'); 
+		//include (ROOT_PATH . 'INC/Navbar.php'); 
 
 
 // Hero-half
@@ -53,7 +53,7 @@ include(ROOT_PATH . "INC/DB/model.php");
         // copy for H1
         $h1 = "MY WISHLIST";
 
-        include (ROOT_PATH . 'INC/Hero-half.php');
+        //include (ROOT_PATH . 'INC/Hero-half.php');
 
 
 
@@ -99,36 +99,37 @@ include(ROOT_PATH . "INC/DB/model.php");
   <script>
 
     var data = [];
-    // var searches = localStorage.getItem('recentSearches');
-    //   if (searches) {
-    //     searches = JSON.parse(searches);
-    //     console.log(searches);
-    //     if (searches.length == 0) {
-    //         data = searches[0];
-    //         console.log(data);
-    //     } else if(searches > 0){
-    //     //     for (var item = 0; item != searches.length; item++) {
-    //     //     data.push({ item : searches[item]});
-    //     // } 
-    // }
-        
-    //   console.log(data);
-    // }
+    var searches = localStorage.getItem('recentSearches');
+      if (searches) {
+        searches = JSON.parse(searches);
+        for (var item = 0; item != searches.length; item++) {
+            data.push({ item : searches[item]});
+        } 
+        // if (searches.length == 0) {
+        //     data = searches[0];
+        //     console.log(data);
+        // } else if(searches > 0){
+
+        // }
+        //     for (var item = 0; item != searches.length; item++) {
+        //     data.push({ item : searches[item]});
+        // } 
+    }
 
     
     //-----------------------------------------------------------------------
     // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
     //-----------------------------------------------------------------------
-    // $.ajax({                                      
-    //   url: 'test3.php',
-    //   type: 'post',                     
-    //   data: {'key': data},                    
-    //   dataType: 'json',                    
-    //   success: function(data)          
-    //   {
-    //     console.log(data);
-    //   } 
-    // });
+    $.ajax({                                      
+      url: 'test3.php',
+      type: 'post',                     
+      data: {'key': data},                    
+      dataType: 'json',                    
+      success: function(data)          
+      {
+        console.log(data);
+      } 
+    });
   
 
   </script>
