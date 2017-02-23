@@ -68,7 +68,7 @@ include(ROOT_PATH . "INC/DB/model.php");
 
 <h2> Client example </h2>
   <h3>Output: </h3>
-  <div id="output">this element will be accessed by jquery and this text replaced</div>
+  <div id="output"><p id="rid">this element will be accessed by jquery and this text replaced</p></div>
 
 <?php
 
@@ -97,23 +97,19 @@ include(ROOT_PATH . "INC/DB/model.php");
 ?> 
 
   <script>
-
+   // define an empty array 
     var data = [];
+    // collect ids from local storage
     var searches = localStorage.getItem('recentSearches');
+     // If searches exists iterate results
       if (searches) {
+        // format ids collected into json array 
         searches = JSON.parse(searches);
+        // Pushes each id into the data array 
         for (var item = 0; item != searches.length; item++) {
+            // set the key name as 'item'
             data.push({ item : searches[item]});
         } 
-        // if (searches.length == 0) {
-        //     data = searches[0];
-        //     console.log(data);
-        // } else if(searches > 0){
-
-        // }
-        //     for (var item = 0; item != searches.length; item++) {
-        //     data.push({ item : searches[item]});
-        // } 
     }
 
     
@@ -123,27 +119,33 @@ include(ROOT_PATH . "INC/DB/model.php");
     $.ajax({                                      
       url: 'test3.php',
       type: 'post',                     
-      data: {'key': data},                    
+      data: {'key': data},                    // get data array and send through Ajax
       dataType: 'json',                    
-      success: function(data)          
+      success: function(data)                   // data returned from php db        
       {
-        //console.log(data);
+        // put data collected into function "sortData"
         sortData(data);
       } 
     });
 
     function sortData(data){
-        //console.log('running sort function');
-        //console.log(data);
-        for(var index = 0; index != data.length; index++){
-            var item = data[index];
-            var productId = item['id'];
-            var image = item['image'];
-            var name = item['name'];
-            console.log([productId, image, name]);
-            var html = "<li>" + name + "</li>";
-            $('#output').append(html);
+        if (data.length > 0) {
+            $('#rid').hide();
+            // Loop over each row in the JSON data sent back
+            for(var index = 0; index != data.length; index++){
+                var item = data[index];
+                var productId = item['id'];
+                var image = item['image'];
+                var name = item['name'];
+                console.log([productId, image, name]);
+                var html = "<li>" + name + "</li>";
+                $('#output').append(html);
+            }
+        } else {
+            $('#rid').show();
         }
+        
+
     };
   
 
