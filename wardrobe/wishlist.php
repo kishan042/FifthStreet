@@ -5,7 +5,9 @@ error_reporting(~0);
 include_once '../INC/Config.php';
 
 // DB - Model
-include(ROOT_PATH . "INC/DB/model.php");
+    include(ROOT_PATH . "INC/DB/model.php");
+    // Call function to get the latest / trending products
+    $recent = get_products_recent();
 
 
 // Header
@@ -42,33 +44,32 @@ include(ROOT_PATH . "INC/DB/model.php");
 		$ActiveOffers = "";
 		$ActiveWardrobe = "option-active";
 
-		//include (ROOT_PATH . 'INC/Navbar.php'); 
+		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 
-// Hero-half
-        //IMG URL
-        //$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
-        // Amount of tint on image
-        $tint = "tint-10";
+// Hero-half-plain
         // copy for H1
         $h1 = "MY WISHLIST";
 
-        //include (ROOT_PATH . 'INC/Hero-half.php');
+        //Copy for description
+        $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
+        include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
-
-// Spacing  
-        // Add a class to hide the seperation
-        $hide = "";
-        
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
 
 
-<h2> Client example </h2>
-  <h3>Output: </h3>
-  <div id="output"><p id="rid">this element will be accessed by jquery and this text replaced</p></div>
+
+
+  <div><p class="rid">this element will be accessed by jquery and this text replaced</p></div>
+
+<div class="container">
+    <ul id="output" class="products block">
+
+    </ul>
+</div>
+
 
 <?php
 
@@ -114,7 +115,7 @@ include(ROOT_PATH . "INC/DB/model.php");
 
     
     //-----------------------------------------------------------------------
-    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
+    //  AJAX request 
     //-----------------------------------------------------------------------
     $.ajax({                                      
       url: 'test3.php',
@@ -130,27 +131,46 @@ include(ROOT_PATH . "INC/DB/model.php");
 
     function sortData(data){
         if (data.length > 0) {
-            $('#rid').hide();
+            $('.rid').hide();
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){
                 var item = data[index];
                 var productId = item['id'];
                 var image = item['image'];
                 var name = item['name'];
-                console.log([productId, image, name]);
-                var html = "<li>" + name + "</li>";
-                $('#output').append(html);
+                //console.log([productId, image, name]);
+
+
+                 li = document.createElement('li');
+                 a  = document.createElement('a');
+                img = document.createElement('img');
+                h2  = document.createElement('h2');
+                h3  = document.createElement('h3');
+
+
+                $('#output').append(li);
+                 li.append(a);
+                a.href = "<?php echo BASE_URL; ?>product.php/?id=" + productId;
+                a.append(img);
+                img.setAttribute("class", "img-fluid");
+                img.setAttribute("src", "<?php echo BASE_URL ?>" + image);
+               img.setAttribute("alt", name );
+                a.append(h2);
+                h2.setAttribute("class", "product-title");
+                h2.innerHTML = name;
+                a.append(h3);
+                h3.setAttribute("class", "brand-title");
+                h3.innerHTML = "Brand title";
+
+
             }
         } else {
-            $('#rid').show();
-        }
+            $('.rid').show();
+        } // End of else statement
         
 
-    };
-  
-
+    }; // End of function
   </script>
-
 
 
 

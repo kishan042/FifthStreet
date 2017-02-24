@@ -51,6 +51,16 @@ include_once 'INC/Config.php';
 <button class="wishlist" id="118">+</button>
 </li>
 
+<li class="style">
+<p>102</p>
+<button class="wishlist-remove" id="102">-</button>
+</li>
+
+<li class="style">
+<p>118</p>
+<button class="wishlist-remove" id="118">-</button>
+</li>
+
 
 
 <?php
@@ -113,7 +123,20 @@ function supportsLocalStorage() {
       return true;
     }
 
- 
+    // Remove product Id from local storage
+    function removeItem(id) {
+      var index = -1;
+      var obj = JSON.parse(localStorage.getItem('recentSearches')); //fetch cart from storage
+      //var items = obj; //get the products
+        for (var i = 0; i < obj.length; i++) { //loop over the collection
+          if (obj[i].id === id) { //see if ids match
+            obj.splice(i, 1); //remove item from array
+            break; //exit loop
+          }
+        }
+        localStorage.setItem('recentSearches', JSON.stringify(obj)); //set item back into storage
+        }
+
 
 
       if (supportsLocalStorage) {
@@ -125,6 +148,38 @@ function supportsLocalStorage() {
 			
 			}	
 		});
+
+
+        $(".wishlist-remove").click(function(){
+        var id = $(this).attr('id');
+        var index = -1;
+        var obj = JSON.parse(localStorage.getItem('recentSearches')); //fetch cart from storage
+      //var items = obj; //get the products
+        for (var i = -1; i < obj.length; i++) { //loop over the collection
+          console.log(obj.length);
+          if (obj[i] === id) { //see if ids match
+            obj.splice(i, 1); //remove item from array
+            break; //exit loop
+          }
+        }
+        localStorage.setItem('recentSearches', JSON.stringify(obj)); //set item back into storage
+        });
+       
+
+
+   //      $(".wishlist-remove").click(function(){
+   //    var searchString = $(this).attr('id');
+   //    var json = JSON.parse(localStorage['recentSearches']);
+   //    for (var i=0; i != json.length; i++) {
+   //      console.log(i);
+   //    if (json[i].id == searchString) {
+   //      console.log(json[i].id);
+   //      console.log(searchString);
+   //    // json.splice(i,1);
+   //    // localStorage['recentSearches'] = JSON.stringify(json);
+   //    }
+   // }
+    // });
 
 
       } // End of supports local storage function
