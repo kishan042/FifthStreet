@@ -93,15 +93,15 @@ include_once 'INC/Config.php';
 
 
 <script>
-'use strict';
-// Test for local storage
-function supportsLocalStorage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch(e){
-    return false;
-  }
-}
+    'use strict';
+    // Test for local storage
+    function supportsLocalStorage() {
+      try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+      } catch(e){
+        return false;
+      }
+    }
 
     // Retrieve searches from Local Storage, return an array
     function getRecentSearches() {
@@ -112,7 +112,7 @@ function supportsLocalStorage() {
       return [];
     }
 
-        // Validate and save strings to store of past searches
+    // Validate and save strings to store of past searches
     function saveSearchString(str) {
       var searches = getRecentSearches();
       if (searches.indexOf(str) > -1 || !str) {
@@ -123,32 +123,19 @@ function supportsLocalStorage() {
       return true;
     }
 
-    // Remove product Id from local storage
-    function removeItem(id) {
-      var index = -1;
-      var obj = JSON.parse(localStorage.getItem('recentSearches')); //fetch cart from storage
-      //var items = obj; //get the products
-        for (var i = 0; i < obj.length; i++) { //loop over the collection
-          if (obj[i].id === id) { //see if ids match
-            obj.splice(i, 1); //remove item from array
-            break; //exit loop
-          }
-        }
-        localStorage.setItem('recentSearches', JSON.stringify(obj)); //set item back into storage
-        }
-
-
 
       if (supportsLocalStorage) {
 
         // Set event handlers
         $(".wishlist").click(function(){
-			var searchString = $(this).attr('id');
-			if (saveSearchString(searchString)) {
-			
-			}	
-		});
+  			var searchString = $(this).attr('id');
+  			saveSearchString(searchString);
+    		});
 
+
+        // Reference to how I removed individual product Ids from the
+        // local storage array
+        // http://stackoverflow.com/questions/39725221/remove-an-item-from-an-array-inside-a-local-storage-object-with-javascript
 
         $(".wishlist-remove").click(function(){
         var id = $(this).attr('id');
@@ -156,7 +143,7 @@ function supportsLocalStorage() {
         var obj = JSON.parse(localStorage.getItem('recentSearches')); //fetch cart from storage
       //var items = obj; //get the products
         for (var i = -1; i < obj.length; i++) { //loop over the collection
-          console.log(obj.length);
+          //console.log(obj.length);
           if (obj[i] === id) { //see if ids match
             obj.splice(i, 1); //remove item from array
             break; //exit loop
@@ -164,22 +151,6 @@ function supportsLocalStorage() {
         }
         localStorage.setItem('recentSearches', JSON.stringify(obj)); //set item back into storage
         });
-       
-
-
-   //      $(".wishlist-remove").click(function(){
-   //    var searchString = $(this).attr('id');
-   //    var json = JSON.parse(localStorage['recentSearches']);
-   //    for (var i=0; i != json.length; i++) {
-   //      console.log(i);
-   //    if (json[i].id == searchString) {
-   //      console.log(json[i].id);
-   //      console.log(searchString);
-   //    // json.splice(i,1);
-   //    // localStorage['recentSearches'] = JSON.stringify(json);
-   //    }
-   // }
-    // });
 
 
       } // End of supports local storage function

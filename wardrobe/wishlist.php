@@ -60,9 +60,17 @@ include_once '../INC/Config.php';
 ?>
 
 
+<div class="container rid">
+<!--     <h2 class="txt-xs-center mb-3">Start adding</h2> -->
+    <ul class="products block">
+        <?php
+            foreach(array_reverse($recent) as $product) {
+                include(ROOT_PATH . "INC/DB/product-block.php");
+            }
+        ?>
+    </ul>
+</div>
 
-
-  <div><p class="rid">this element will be accessed by jquery and this text replaced</p></div>
 
 <div class="container">
     <ul id="output" class="products block">
