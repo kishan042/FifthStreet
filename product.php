@@ -1,6 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(~0);
+
 // a $product will only be set if an ID is specified in the query
 // string and it corresponds to a real product. If no product is
 // set, then redirect to the shirts listing page; otherwise, continue
@@ -11,7 +12,7 @@ if (empty($_GET["id"])) {
 }
 
 // Config file
-	require_once("INC/Config.php");
+	//require_once("INC/Config.php");
 
 // DB - Model
 	require_once(ROOT_PATH . "INC/DB/model.php");
@@ -20,7 +21,7 @@ if (empty($_GET["id"])) {
 // if an ID is specified in the query string, use it
 if (isset($_GET["id"])) {
 	$product_id = intval($_GET["id"]);
-	$product = get_product_single($product_id);
+	$product = get_single_product($product_id);
 } 
 
 

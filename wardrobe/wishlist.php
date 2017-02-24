@@ -7,7 +7,7 @@ include_once '../INC/Config.php';
 // DB - Model
     include(ROOT_PATH . "INC/DB/model.php");
     // Call function to get the latest / trending products
-    $recent = get_products_recent();
+    $recent = get_recent_products();
 
 
 // Header
@@ -64,7 +64,7 @@ include_once '../INC/Config.php';
 <!--     <h2 class="txt-xs-center mb-3">Start adding</h2> -->
     <ul class="products block">
         <?php
-            foreach(array_reverse($recent) as $product) {
+            foreach($recent as $product) {
                 include(ROOT_PATH . "INC/DB/product-block.php");
             }
         ?>
@@ -105,11 +105,23 @@ include_once '../INC/Config.php';
 
 ?> 
 
-  <script>
+<?php
+
+// The following script tag focuses on collecting the product ids collected
+// in local storage.
+//The 
+
+    //-----------------------------------------------------------------------
+    //  AJAX request - 
+    //-----------------------------------------------------------------------
+
+?>
+
+<script>
    // define an empty array 
     var data = [];
     // collect ids from local storage
-    var searches = localStorage.getItem('recentSearches');
+    var searches = localStorage.getItem('wishlist');
      // If searches exists iterate results
       if (searches) {
         // format ids collected into json array 
@@ -123,22 +135,29 @@ include_once '../INC/Config.php';
 
     
     //-----------------------------------------------------------------------
-    //  AJAX request 
+    //  AJAX request  
     //-----------------------------------------------------------------------
+
     $.ajax({                                      
-      url: 'test3.php',
+      url: 'Ajax-wishlist.php',
       type: 'post',                     
-      data: {'key': data},                    // get data array and send through Ajax
+      data: {'key': data},  // get data array and send through Ajax
       dataType: 'json',                    
-      success: function(data)                   // data returned from php db        
+      success: function(data)  // data returned from php db        
       {
-        // put data collected into function "sortData"
+        // put data collected into function "sortData" below
         sortData(data);
       } 
-    });
+    }); 
+
+    //-----------------------------------------------------------------------
+    //  sortDara function to append the data from the Ajax request
+    //-----------------------------------------------------------------------
 
     function sortData(data){
         if (data.length > 0) {
+            // Add the class .rid to those elements to hide
+            // if data is successfully retrieved and outputed
             $('.rid').hide();
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){
@@ -157,12 +176,12 @@ include_once '../INC/Config.php';
 
 
                 $('#output').append(li);
-                 li.append(a);
+                li.append(a);
                 a.href = "<?php echo BASE_URL; ?>product.php/?id=" + productId;
                 a.append(img);
                 img.setAttribute("class", "img-fluid");
                 img.setAttribute("src", "<?php echo BASE_URL ?>" + image);
-               img.setAttribute("alt", name );
+                img.setAttribute("alt", name );
                 a.append(h2);
                 h2.setAttribute("class", "product-title");
                 h2.innerHTML = name;
@@ -171,14 +190,15 @@ include_once '../INC/Config.php';
                 h3.innerHTML = "Brand title";
 
 
-            }
+            } // End of FOR loop
         } else {
+            // those with the .rid classs will only show if product ids have 
+            // not been added to the wishist
             $('.rid').show();
         } // End of else statement
         
-
-    }; // End of function
-  </script>
+    }; // End of function sortData
+</script>
 
 
 

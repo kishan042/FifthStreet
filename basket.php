@@ -43,22 +43,22 @@ include_once 'INC/Config.php';
 
 <li class="style">
 <p>102</p>
-<button class="wishlist" id="102">+</button>
+<button class="add-to-wishlist" id="102">+</button>
 </li>
 
 <li class="style">
 <p>118</p>
-<button class="wishlist" id="118">+</button>
+<button class="add-to-wishlist" id="118">+</button>
 </li>
 
 <li class="style">
 <p>102</p>
-<button class="wishlist-remove" id="102">-</button>
+<button class="remove-from-wishlist" id="102">-</button>
 </li>
 
 <li class="style">
 <p>118</p>
-<button class="wishlist-remove" id="118">-</button>
+<button class="remove-from-wishlist" id="118">-</button>
 </li>
 
 
@@ -90,7 +90,7 @@ include_once 'INC/Config.php';
 
 ?> 
 
-
+<!-- 
 
 <script>
     'use strict';
@@ -155,5 +155,5 @@ include_once 'INC/Config.php';
 
       } // End of supports local storage function
 </script>
-
+ -->
 

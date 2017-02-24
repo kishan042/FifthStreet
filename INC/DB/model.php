@@ -1,41 +1,15 @@
 <?php
 
 /*
- * Returns the four most recent products, using the order of the elements in the array
- * @return   array           a list of the last four products in the array;
-                             the most recent product is the last one in the array
+ * Returns products from the DB depending on the term that may have been searched.
+ * In hero-half-search module, the search tearm is appended to the url 
+ * /?s=shirt -> s is the "name" set in the input tag for security purposes
+ * The term is then stripped and the function is called as follows
+ * $products = get_products_search($search_term);
+ * $search_term is then passed as $s and if queried to the database
+ * $products is then used in a foreach statement to append the results
  */
-function get_products_recent() {
 
-    require (ROOT_PATH . "INC/DB/db-connection.php");
-
-    // Try catch block to create a qury to the products table
-    try {
-        $results = $db->query("
-            SELECT name, price, img, sku, paypal 
-            FROM products 
-            ORDER BY sku DESC 
-            LIMIT 4"); 
-
-    } catch (Exception $e) { // catch exception if query fails and then exit
-        echo "Data could not be retrived from database.";
-        exit;
-    }
-
-    // // Following code to view the query in an array format
-    $recent = $results->fetchAll(PDO::FETCH_ASSOC);
-
-    $recent = array_reverse($recent);
-
-    // returns the items from the database
-    return $recent;
-}
-
-/*
- * looks for a search term in the product names
- * @param    string    $s    the search term
- * @return   array           a list of the products that contain the search term in their name
- */
 function get_products_search($s) {
 
     require (ROOT_PATH . "INC/DB/db-connection.php");
@@ -59,40 +33,14 @@ function get_products_search($s) {
     return $search_match;
 }
 
-/*
- * Counts the total number of products
- * @return   int             the total number of products
- */
-function get_products_count() {
-    return count(get_products_all());
-}
 
 /*
- * Returns a specified subset of products, based on the values received,
- * using the order of the elements in the array .
- * @param    int             the position of the first product in the requested subset 
- * @param    int             the position of the last product in the requested subset 
- * @return   array           the list of products that correspond to the start and end positions
+ * Returns the all products from the DB.
+ * Call this function after the model.php has been included.
+ * $all_products = get_all_products(); 
+ * $all_products is then used in a foreach statement to append the results
  */
-function get_products_subset($positionStart, $positionEnd) {
-    $subset = array();
-    $all = get_products_all();
 
-    $position = 0;
-    foreach($all as $product) {
-        $position += 1;
-        if ($position >= $positionStart && $position <= $positionEnd) {
-            $subset[] = $product;
-        }
-    }
-    return $subset;
-}
-
-/*
- * Returns the full list of products. This function contains the full list of products,
- * and the other model functions first call this function.
- * @return   array           the full list of products
- */
 function get_all_products() {
 
 // Request DB connection
@@ -108,8 +56,11 @@ function get_all_products() {
         exit;
     }
 
-    // Store the arrary into a variable
+    // Fetch and store the data into a PDO object
     $products = $results->fetchAll(PDO::FETCH_ASSOC);
+
+    // Reverse the order of the array, to get the latest products at the top
+    $products = array_reverse($products);
 
     // returns the items from the database
     return $products;
@@ -117,24 +68,56 @@ function get_all_products() {
 } // End of function
 
 
+/*
+ * Returns the recent products from the DB.
+ * In this case, I have limited the amount of products by 4.
+ * Call this function after the model.php has been included.
+ * $recent = get_products_recent(); 
+ */
+
+function get_recent_products() {
+
+    // Connect to the database
+    require (ROOT_PATH . "INC/DB/db-connection.php");
+
+    // Try catch block to create a query to the products table
+    try {
+        $results = $db->query("
+            SELECT name, price, img, sku, paypal 
+            FROM products 
+            ORDER BY sku DESC 
+            LIMIT 4"); 
+
+    } catch (Exception $e) { // catch exception if query fails and then exit
+        echo "Data could not be retrived from database.";
+        exit;
+    }
+
+    // Fetch the data in a PDO object
+    $recent = $results->fetchAll(PDO::FETCH_ASSOC);
+
+    // returns the items from the database
+    return $recent;
+}
 
 
 /*
- * Returns an array of product information for the product that matches the sku;
- * returns a boolean false if no product matches the sku
- * @param    int      $sku     the sku
- * @return   mixed    array    list of product information for the one matching product
- *                    bool     false if no product matches
+ * Returns all information about a particular product from the DB 
+ * All products have an id appended at the end of the url
+ * /?id=101 
+ * The id is then stripped and the function is called as follows
+ * $product = get_single_product($product_id);
+ * $product is then passed as $id below and if queried to the database
+ * $products is then used in a foreach statement to append the results
  */
 
-
-function get_product_single($sku) {
+function get_single_product($id) {
 
     require (ROOT_PATH . "INC/DB/db-connection.php");
 
     try {
         $results = $db->prepare("SELECT name, price, img, sku, paypal FROM products WHERE sku = ?");
-        $results->bindParam(1,$sku);
+        $results->bindParam(1,$id);
         $results->execute();
     } catch (Exception $e) {
         echo "Data could not be retrieved from the database.";
@@ -142,7 +125,8 @@ function get_product_single($sku) {
     }
 
     $product = $results->fetch(PDO::FETCH_ASSOC);
-    
+
+    // Use inner join to get the sizes of individual products    
     if ($product === false) return $product;
 
     $product["sizes"] = array();
@@ -154,7 +138,7 @@ function get_product_single($sku) {
             INNER JOIN sizes s ON ps.size_id = s.id
             WHERE product_sku = ?
             ORDER BY `order`");
-        $results->bindParam(1,$sku);
+        $results->bindParam(1,$id);
         $results->execute();
     } catch (Exception $e) {
         echo "Data could not be retrieved from the database.";
