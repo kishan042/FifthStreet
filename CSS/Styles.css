@@ -4395,11 +4395,19 @@ ul.products li {
 ul.block li:first-child {
   margin-top: 0px !important; }
 
+@media (min-width: 576px) {
+  .products {
+    -webkit-columns: 200px;
+    -moz-columns: 200px;
+    columns: 200px;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px; } }
 @media (min-width: 768px) {
   .products {
-    -webkit-columns: 170px;
-    -moz-columns: 170px;
-    columns: 170px;
+    -webkit-columns: 160px;
+    -moz-columns: 160px;
+    columns: 160px;
     -webkit-column-gap: 10px;
     -moz-column-gap: 10px;
     column-gap: 10px; } }

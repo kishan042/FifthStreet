@@ -18,11 +18,11 @@ if (empty($_GET["id"])) {
 	require_once(ROOT_PATH . "INC/DB/model.php");
 
 
-// if an ID is specified in the query string, use it
-if (isset($_GET["id"])) {
-	$product_id = intval($_GET["id"]);
-	$product = get_single_product($product_id);
-} 
+        // if an ID is specified in the query string, use it
+        if (isset($_GET["id"])) {
+        	$product_id = intval($_GET["id"]);
+        	$product = get_single_product($product_id);
+        } 
 
 
 // Header

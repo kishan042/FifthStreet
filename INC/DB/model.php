@@ -155,4 +155,37 @@ function get_single_product($id) {
     return $product;
 }
 
-?>
+
+
+/*
+ * Returns the recent products from the DB.
+ * The code is set so that you can enter any interger in the
+ * function below, and the amount of recent products will be displayed
+ * Call this function after the model.php has been included.
+ * $recent = get_products_recent(4); 
+ */
+
+function get_default_souvenirs() {
+
+    // Connect to the database
+    require (ROOT_PATH . "INC/DB/db-connection.php");
+
+    // Try catch block to create a query to the products table
+    try {
+        $results = $db->query("
+            SELECT name, price, img, sku, paypal 
+            FROM products 
+            ORDER BY sku ASC 
+            LIMIT 4"); 
+        error_log("not working", true);
+    } catch (Exception $e) { // catch exception if query fails and then exit
+        echo "Data could not be retrived from database.";
+        exit;
+    }
+
+    // Fetch the data in a PDO object
+    $default_souvenirs = $results->fetchAll(PDO::FETCH_ASSOC);
+
+    // returns the items from the database
+    return $default_souvenirs;
+}

@@ -61,7 +61,15 @@ include_once 'INC/Config.php';
 <button class="remove-from-wishlist" id="118">-</button>
 </li>
 
+<li class="style">
+<p>Men</p>
+<button class="add-souvenir" id="118">+ Souvenir +</button>
+</li>
 
+<li class="style">
+<p>Men</p>
+<button class="remove-souvenir" id="118">- Souvenir -</button>
+</li>
 
 <?php
 
@@ -89,71 +97,3 @@ include_once 'INC/Config.php';
         include (ROOT_PATH . 'INC/Footer.php');
 
 ?> 
-
-<!-- 
-
-<script>
-    'use strict';
-    // Test for local storage
-    function supportsLocalStorage() {
-      try {
-        return 'localStorage' in window && window['localStorage'] !== null;
-      } catch(e){
-        return false;
-      }
-    }
-
-    // Retrieve searches from Local Storage, return an array
-    function getRecentSearches() {
-      var searches = localStorage.getItem('recentSearches');
-      if (searches) {
-        return JSON.parse(searches);
-      }
-      return [];
-    }
-
-    // Validate and save strings to store of past searches
-    function saveSearchString(str) {
-      var searches = getRecentSearches();
-      if (searches.indexOf(str) > -1 || !str) {
-        return false;
-      }
-      searches.push(str);
-      localStorage.setItem('recentSearches', JSON.stringify(searches));
-      return true;
-    }
-
-
-      if (supportsLocalStorage) {
-
-        // Set event handlers
-        $(".wishlist").click(function(){
-  			var searchString = $(this).attr('id');
-  			saveSearchString(searchString);
-    		});
-
-
-        // Reference to how I removed individual product Ids from the
-        // local storage array
-        // http://stackoverflow.com/questions/39725221/remove-an-item-from-an-array-inside-a-local-storage-object-with-javascript
-
-        $(".wishlist-remove").click(function(){
-        var id = $(this).attr('id');
-        var index = -1;
-        var obj = JSON.parse(localStorage.getItem('recentSearches')); //fetch cart from storage
-      //var items = obj; //get the products
-        for (var i = -1; i < obj.length; i++) { //loop over the collection
-          //console.log(obj.length);
-          if (obj[i] === id) { //see if ids match
-            obj.splice(i, 1); //remove item from array
-            break; //exit loop
-          }
-        }
-        localStorage.setItem('recentSearches', JSON.stringify(obj)); //set item back into storage
-        });
-
-
-      } // End of supports local storage function
-</script>
- -->
-

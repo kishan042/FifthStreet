@@ -214,10 +214,3 @@ include_once '../INC/Config.php';
         
     }; // End of function sortData
 </script>
-
-
-
-
-
-
-
