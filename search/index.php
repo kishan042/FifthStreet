@@ -7,8 +7,8 @@ error_reporting(~0);
 
 // DB - Model
 	require_once(ROOT_PATH . 'INC/DB/model.php');
-	// Call function to get the 4 recent products in the database
-    $recent = get_recent_products();
+	// Function to get the 4 recent products in the database
+    $recent = get_recent_products(4);
 
 
 // Header

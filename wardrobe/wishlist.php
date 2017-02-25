@@ -6,8 +6,8 @@ include_once '../INC/Config.php';
 
 // DB - Model
     include(ROOT_PATH . "INC/DB/model.php");
-    // Call function to get the latest / trending products
-    $recent = get_recent_products();
+    // Function to get the 8 recent products in the database
+    $recent = get_recent_products(8);
 
 
 // Header
@@ -60,8 +60,22 @@ include_once '../INC/Config.php';
 ?>
 
 
-<div class="container rid">
-<!--     <h2 class="txt-xs-center mb-3">Start adding</h2> -->
+<div class="container">
+    <ul id="output" class="products block">
+
+    </ul>
+</div>
+<?php 
+// Spacing  
+        // Add a class to hide the seperation when the wishlist
+        // is empty
+        $hide = "rid";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+?>
+
+<div class="container">     
+    <h2 class="txt-xs-center my-3 rid">Latest product&rsquo;s</h2>
     <ul class="products block">
         <?php
             foreach($recent as $product) {
@@ -72,11 +86,7 @@ include_once '../INC/Config.php';
 </div>
 
 
-<div class="container">
-    <ul id="output" class="products block">
 
-    </ul>
-</div>
 
 
 <?php
@@ -88,7 +98,7 @@ include_once '../INC/Config.php';
         include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
-/// Footer
+// Footer
         // If current pages does not exist then add the 
         $hide = " ";
 
@@ -112,7 +122,7 @@ include_once '../INC/Config.php';
 //The 
 
     //-----------------------------------------------------------------------
-    //  AJAX request - 
+    //  AJAX request 
     //-----------------------------------------------------------------------
 
 ?>
@@ -155,10 +165,19 @@ include_once '../INC/Config.php';
     //-----------------------------------------------------------------------
 
     function sortData(data){
-        if (data.length > 0) {
+        if (!data.length > 0) {
+            // If NO data is from the database then do the following:
+
+            // Those with the .rid classs will only show if product ids have not been added to the wishist
+            $('.rid').hide();
+
+        } else {
+            // If data IS from the database then do the following:
+
             // Add the class .rid to those elements to hide
             // if data is successfully retrieved and outputed
-            $('.rid').hide();
+            $('.rid').show();
+
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){
                 var item = data[index];
@@ -189,12 +208,8 @@ include_once '../INC/Config.php';
                 h3.setAttribute("class", "brand-title");
                 h3.innerHTML = "Brand title";
 
-
             } // End of FOR loop
-        } else {
-            // those with the .rid classs will only show if product ids have 
-            // not been added to the wishist
-            $('.rid').show();
+
         } // End of else statement
         
     }; // End of function sortData

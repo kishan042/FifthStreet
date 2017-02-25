@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(~0);
 
 /*
  * Returns products from the DB depending on the term that may have been searched.
@@ -70,12 +72,13 @@ function get_all_products() {
 
 /*
  * Returns the recent products from the DB.
- * In this case, I have limited the amount of products by 4.
+ * The code is set so that you can enter any interger in the
+ * function below, and the amount of recent products will be displayed
  * Call this function after the model.php has been included.
- * $recent = get_products_recent(); 
+ * $recent = get_products_recent(4); 
  */
 
-function get_recent_products() {
+function get_recent_products($amount) {
 
     // Connect to the database
     require (ROOT_PATH . "INC/DB/db-connection.php");
@@ -86,8 +89,8 @@ function get_recent_products() {
             SELECT name, price, img, sku, paypal 
             FROM products 
             ORDER BY sku DESC 
-            LIMIT 4"); 
-
+            LIMIT $amount"); 
+        error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from database.";
         exit;

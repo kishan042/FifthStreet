@@ -84,3 +84,10 @@
 	.img-full { height: 70vmin; }
 
 }//End of media query
+
+@media screen and (min-width: 1600px) {
+
+   	.txt-block-half,
+	.img-half { height: 45vmin; }
+    
+}//End of media query

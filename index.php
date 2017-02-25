@@ -37,7 +37,7 @@ include_once 'INC/Config.php';
 		// Amount of tint on image
 		$tint = "tint-0";
 		// copy for H1
-		$h1 = "ACCESS". '<br>' . "THE UNKNOWN";
+		$h1 = "FULL ACCESS";
 		// copy for h2
 		$description = "Fifth Street is all about bridging online and offline";
 		//url for button (CTA)
@@ -54,7 +54,7 @@ include_once 'INC/Config.php';
 
 // Spacing	
 		// Add a class to hide the seperation
-		$hide = "hidden-xs-down";
+		$hide = " ";
 		
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 

@@ -4018,7 +4018,7 @@ nav {
     padding: 10px; } }
 @media (min-width: 992px) {
   .hero-full {
-    height: 86vmin; }
+    height: 92vmin; }
 
   .hero-half,
   .hero-half-plain,
@@ -4026,7 +4026,15 @@ nav {
     height: 50vmin; }
 
   .hero-compact {
-    height: 80vh; } }
+    height: 50vmin; } }
+@media (min-width: 1200px) {
+  .hero-half,
+  .hero-half-plain,
+  .hero-half-search {
+    height: 40vmin; } }
+@media screen and (min-width: 1600px) {
+  .hero-half-plain {
+    height: 30vmin; } }
 /* --------------------------------------------------------
    Form module
    -------------------------------------------------------- */
@@ -4360,6 +4368,10 @@ button:focus {
   .txt-block-full,
   .img-full {
     height: 70vmin; } }
+@media screen and (min-width: 1600px) {
+  .txt-block-half,
+  .img-half {
+    height: 45vmin; } }
 /* --------------------------------------------------------
    Men | Women | brand individual page modules
    -------------------------------------------------------- */

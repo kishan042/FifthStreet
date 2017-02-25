@@ -12,7 +12,7 @@ if (empty($_GET["id"])) {
 }
 
 // Config file
-	//require_once("INC/Config.php");
+	require_once("INC/Config.php");
 
 // DB - Model
 	require_once(ROOT_PATH . "INC/DB/model.php");
