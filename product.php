@@ -203,7 +203,7 @@ error_reporting(~0);
 </div>
 
 
-<?php include (ROOT_PATH . 'INC/Spacing-mt-100.php'); ?>
+<?php include (ROOT_PATH . 'INC/Spacing-mt-50.php'); ?>
 
 
 <!-- <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -228,12 +228,18 @@ error_reporting(~0);
 	<input type="submit" value="Add to Cart" name="submit">
 </form> -->
 
+<div class="container">
+        <div id="disqus_thread"></div>
+</div>
+
+
+
 <?php
 // Spacing  
         // Add a class to hide the seperation
         $hide = "";
         
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+        include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
 // Footer

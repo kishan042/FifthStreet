@@ -61,7 +61,17 @@
 <script type="text/javascript" src="<?php echo $JSPath ?>"></script>
 <?php include (ROOT_PATH . 'JS/wishlist-local-storage.php'); ?>
 <?php include (ROOT_PATH . 'JS/souvenirs-local-storage.php'); ?>
+<script>
+var disqus_config = function () {
+this.page.url = 'http://thefifthstreet.com/';  
+this.page.identifier = <?php echo $product["sku"] ?>;
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//fifthstreet-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
 </body>
-
-
-       
