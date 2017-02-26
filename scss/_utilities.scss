@@ -66,6 +66,14 @@
 .container-small { width: 500px; }
 
 
+/* ------------------ Image position  -------------------- */
+
+.img-center { 
+    display: block;
+    margin: 0 auto;
+}
+
+
 
 /* ------------------ CTA's -------------------- */
 
@@ -113,7 +121,9 @@
 	button:active:focus {
 	background-color: $gem !important;
 	color: $white; 
-	border: rgba(0,0,0,0) 1px solid;}
+	border: rgba(72, 216, 216, 1) 1px solid;
+    cursor: pointer;
+    }
 
 // Extra small devices (portrait phones, less than 544px)
     @include media-breakpoint-down(xs) { 

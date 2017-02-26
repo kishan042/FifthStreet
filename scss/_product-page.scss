@@ -1,0 +1,237 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+
+	//
+	// 3 CTA's - Add | Visit brand site | basket
+	//
+
+
+
+	// Add to wishlist CTA
+	.circle-btn-add {
+	        padding: 10px;
+	        width: 50px;
+	        height: 50px;
+	        margin-right: 5px;
+
+	        // For add icon
+	        background: url(../IMG/icons/add-black.svg) no-repeat;
+	        background-size: cover;
+	        background-position: center;
+	        // Allow the padding for parent to be applied to the image
+	        background-origin: content-box;
+
+	        // Extra styling
+	        border: 1px solid $black;
+	        border-radius: 25px;
+	}
+
+	// Add to basket CTA
+	.circle-btn-basket {
+	        padding: 11px;
+	        width: 50px;
+	        height: 50px;
+
+	        // For search icon
+	        background: url(../IMG/icons/basket-black.svg) no-repeat;
+	        background-size: cover;
+	        background-position: center;
+	        // Allow the padding for parent to be applied to the image
+	        background-origin: content-box;
+
+	        // Extra styling
+	        border: 1px solid $black;
+	        border-radius: 25px;
+	}
+
+
+	// Vist brand site CTS
+	.btn-brand-cta { height: 45px; }
+
+	.tertiary-btn-flex-center{
+	        display: flex;
+	        align-items: center;
+	}
+
+
+	// Hover states for all three CTA's
+
+	.circle-btn-add:hover, 
+	.circle-btn-basket:hover, 
+	.circle-btn-add:focus, 
+	.circle-btn-basket:focus {
+			color: $white;
+			background-color: $gem !important;
+			border: rgba(0,0,0,0) 1px solid;
+	}
+
+	// Add to wishlist CTA
+	.circle-btn-add:hover {
+	        padding: 10px;
+	        width: 50px;
+	        height: 50px;
+	        margin-right: 5px;
+
+	        // For add icon
+	        background: url(../IMG/icons/add-white.svg) no-repeat;
+	        background-size: cover;
+	        background-position: center;
+	        // Allow the padding for parent to be applied to the image
+	        background-origin: content-box;
+
+	        // Extra styling
+	        border: none!important;
+	        border-radius: 25px;
+	}
+
+	// Add to basket CTA
+	.circle-btn-basket:hover {
+	        padding: 11px;
+	        width: 50px;
+	        height: 50px;
+
+	        // For search icon
+	        background: url(../IMG/icons/basket-white.svg) no-repeat;
+	        background-size: cover;
+	        background-position: center;
+	        // Allow the padding for parent to be applied to the image
+	        background-origin: content-box;
+
+	        // Extra styling
+	        border: none!important;
+	        border-radius: 25px;
+	}
+
+	//
+	// Colour dots
+	//
+
+	ul.colours-flex-center {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	}
+
+	ul.colours-flex-center  li{
+	        width: 30px;
+	        height: 30px;
+	        border-radius: 25px;
+	        margin: 10px 15px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+	}
+
+	.colour-active { border: 5px solid #D9DBDC }
+
+
+	//
+	// Product sizes - shoe sizes
+	//
+
+	ul.size-flex-center {
+	    display: flex;
+	    align-items: center;
+	    justify-content: flex-start;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	}
+
+	ul.size-flex-center li{
+	        width: 30px;
+	        height: 30px;
+	        border: 1px solid #000;
+	        border-radius: 5px;
+	        margin: 10px 15px;
+	        padding: 20px;
+
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+	}
+
+
+	//
+	// Selection of Men or Women sizes
+	//
+
+
+	.gender-selected { 
+	        background-color: #48d8d8;
+	        color: #fff;         
+	 }
+
+	 .gender-not-selected { 
+	        border: 1px solid #000;      
+	 }
+
+
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+
+	.primary-colour-set { display: none!important}
+	.secondary-colour-set { display: block!important}
+
+	ul.size-flex-center{  justify-content: flex-start; }
+
+	ul.size-flex-center li{
+		    margin-left: 0px !important;
+			margin-right: 15px;
+	}
+
+	.gender-selection { padding-left: 0px!important; }
+
+	.desk-product-details {
+		    display: flex;
+		    justify-content: center;
+		    flex-direction: column;
+		
+	}
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+	.primary-colour-set { display: block!important}
+	.secondary-colour-set { display: none!important}
+
+	ul.colours-flex-center {
+
+		    display: flex;
+		    justify-content: flex-start;
+	}
+
+	ul.colours-flex-center li {
+			margin-left: 0px!important;
+			margin-right: 20px;
+			
+	}
+   
+
+}//End of media query

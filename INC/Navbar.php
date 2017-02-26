@@ -29,7 +29,7 @@
 				</div>
 				<div class="col-xs-6 icon px-0">
 					<a href="<?php echo $basket ?>">
-						<img src="<?php echo $img ?>icons/basket.svg">
+						<img src="<?php echo $img ?>icons/basket-black.svg">
 					</a>
 				</div>
 			</div>
@@ -108,7 +108,7 @@
 						</li>
 						<li>
 							<a href="<?php echo $basket ?>">
-								<img src="<?php echo $img ?>icons/basket.svg">
+								<img src="<?php echo $img ?>icons/basket-black.svg">
 							</a>	
 						</li>
 					</ul>

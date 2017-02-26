@@ -3448,6 +3448,9 @@ h1, .h1 {
 .txt-gray {
   color: #313131; }
 
+.txt-gem {
+  color: #48d8d8; }
+
 .letter-space-large {
   letter-spacing: 7px; }
 
@@ -3624,6 +3627,11 @@ h1, .h1 {
 .container-small {
   width: 500px; }
 
+/* ------------------ Image position  -------------------- */
+.img-center {
+  display: block;
+  margin: 0 auto; }
+
 /* ------------------ CTA's -------------------- */
 .primary-btn-small, .primary-btn-medium, .secondary-btn-small, .secondary-btn-medium, .tertiary-btn-small, .tertiary-btn-medium {
   background-color: #fff;
@@ -3656,7 +3664,8 @@ button:active:hover,
 button:active:focus {
   background-color: #48d8d8 !important;
   color: #fff;
-  border: transparent 1px solid; }
+  border: #48d8d8 1px solid;
+  cursor: pointer; }
 
 @media (max-width: 575px) {
   button.primary-btn-medium {
@@ -4430,6 +4439,150 @@ ul.block li:first-child {
 /* --------------------------------------------------------
    Product page template 
    -------------------------------------------------------- */
+.circle-btn-add {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  background: url(../IMG/icons/add-black.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  border: 1px solid #000;
+  border-radius: 25px; }
+
+.circle-btn-basket {
+  padding: 11px;
+  width: 50px;
+  height: 50px;
+  background: url(../IMG/icons/basket-black.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  border: 1px solid #000;
+  border-radius: 25px; }
+
+.btn-brand-cta {
+  height: 45px; }
+
+.tertiary-btn-flex-center {
+  display: flex;
+  align-items: center; }
+
+.circle-btn-add:hover,
+.circle-btn-basket:hover,
+.circle-btn-add:focus,
+.circle-btn-basket:focus {
+  color: #fff;
+  background-color: #48d8d8 !important;
+  border: transparent 1px solid; }
+
+.circle-btn-add:hover {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  background: url(../IMG/icons/add-white.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  border: none !important;
+  border-radius: 25px; }
+
+.circle-btn-basket:hover {
+  padding: 11px;
+  width: 50px;
+  height: 50px;
+  background: url(../IMG/icons/basket-white.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  border: none !important;
+  border-radius: 25px; }
+
+ul.colours-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+ul.colours-flex-center li {
+  width: 30px;
+  height: 30px;
+  border-radius: 25px;
+  margin: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.colour-active {
+  border: 5px solid #D9DBDC; }
+
+ul.size-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+ul.size-flex-center li {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 10px 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.gender-selected {
+  background-color: #48d8d8;
+  color: #fff; }
+
+.gender-not-selected {
+  border: 1px solid #000; }
+
+@media (min-width: 768px) {
+  .primary-colour-set {
+    display: none !important; }
+
+  .secondary-colour-set {
+    display: block !important; }
+
+  ul.size-flex-center {
+    justify-content: flex-start; }
+
+  ul.size-flex-center li {
+    margin-left: 0px !important;
+    margin-right: 15px; }
+
+  .gender-selection {
+    padding-left: 0px !important; }
+
+  .desk-product-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; } }
+@media (min-width: 1200px) {
+  .primary-colour-set {
+    display: block !important; }
+
+  .secondary-colour-set {
+    display: none !important; }
+
+  ul.colours-flex-center {
+    display: flex;
+    justify-content: flex-start; }
+
+  ul.colours-flex-center li {
+    margin-left: 0px !important;
+    margin-right: 20px; } }
 /* --------------------------------------------------------
    About us page template 
    -------------------------------------------------------- */
