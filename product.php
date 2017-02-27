@@ -43,16 +43,16 @@ error_reporting(~0);
 
 // Navbar
         // Links to other pages 
-        $men = MEN; 
-        $women = WOMEN; 
-        $brands = BRANDS; 
-        $about = ABOUT; 
-        $trending = TRENDING; 
-        $offers = OFFERS; 
-        $wardrobe = WARDROBE; 
-        $search = SEARCH; 
-        $profile = PROFILE; 
-        $basket = BASKET;     
+        $men = BASE_URL . MEN; 
+        $women = BASE_URL . WOMEN; 
+        $brands = BASE_URL . BRANDS; 
+        $about = BASE_URL . ABOUT; 
+        $trending = BASE_URL . TRENDING; 
+        $offers = BASE_URL . OFFERS; 
+        $wardrobe = BASE_URL . WARDROBE; 
+        $search = BASE_URL . SEARCH; 
+        $profile = BASE_URL . PROFILE; 
+        $basket = BASE_URL . BASKET;     
 
         include (ROOT_PATH . 'INC/Navbar.php');
 
@@ -62,20 +62,34 @@ error_reporting(~0);
         $hide = "hidden-sm-down";
         
         include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+        $img_1 = "/_Github/FifthStreet/img/shirts/shirt-115.jpg";
+        $img_2 = "/_Github/FifthStreet/img/shirts/shirt-125.jpg";
+        $img_3 = "/_Github/FifthStreet/img/shirts/shirt-116.jpg";
 ?>
 
+<style>
+     .active-img {display: block!important;}
+</style>
 
 <div class="row mt-30">
         <!-- Product image block -->
         <div class="col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6">
-                <img class="img-fluid img-center" src="<?php echo BASE_URL . $product["img"] ?>" 
+                <!-- <img class="img-fluid img-center" src="<?php echo BASE_URL . $product["img"] ?>" 
+                alt="<?php echo $product["name"] ?>"> -->
+            
+                <img value="img-1" class="img-fluid img-center product-img" src="/_Github/FifthStreet/img/shirts/shirt-115.jpg" 
                 alt="<?php echo $product["name"] ?>">
+              <!--   <img value="img-2" class="hide img-fluid img-center product-img" src="/_Github/FifthStreet/img/shirts/shirt-125.jpg" 
+                alt="<?php echo $product["name"] ?>">
+                <img value="img-3" class="hide img-fluid img-center product-img" src="/_Github/FifthStreet/img/shirts/shirt-116.jpg" 
+                alt="<?php echo $product["name"] ?>"> -->
 
                 <div class="mt-30 secondary-colour-set hide">
                         <ul class="colours-flex-center mt-20">
-                                <li class="product-colour colour-active " style="background-color: purple;"></li>
-                                <li class="product-colour" style="background-color: deepskyblue;"></li>
-                                <li class="product-colour" style="background-color: darkcyan;"></li>
+                                <li value="img-1" class="product-colour colour-active " style="background-color: purple;"></li>
+                                <li value="img-2" class="product-colour" style="background-color: deepskyblue;"></li>
+                                <li value="img-3" class="product-colour" style="background-color: darkcyan;"></li>
                         </ul>
                 </div>
         </div>
@@ -107,9 +121,9 @@ error_reporting(~0);
                 <div class="mt-30 primary-colour-set">
                         <h2 class="h3 hidden-lg-up">Colours</h2>
                         <ul class="colours-flex-center mt-20">
-                                <li class="product-colour colour-active " style="background-color: purple;"></li>
-                                <li class="product-colour" style="background-color: deepskyblue;"></li>
-                                <li class="product-colour" style="background-color: darkcyan;"></li>
+                                <li value="img-1" class="product-colour colour-active " style="background-color: purple;"></li>
+                                <li value="img-2" class="product-colour" style="background-color: deepskyblue;"></li>
+                                <li value="img-3" class="product-colour" style="background-color: darkcyan;"></li>
                         </ul>
                 </div>
 
@@ -146,7 +160,7 @@ error_reporting(~0);
                                 <li class="product-size">10</li>
                         </ul>
                 </div>
-                <div class="mt-10 hide">
+                <div class="mt-10">
                         <h2 class="h3 hidden-md-up">Sizes</h2>
                         <div class="row mt-20">
                                 <div class="col-xs-6 txt-xs-center gender-selection">
@@ -167,17 +181,17 @@ error_reporting(~0);
                 <!-- Set of 3 CTA's -->
                 <div class="row mt-50">
                         <div class="col-xs-2 px-0">
-                        <a href="#">
-                                <div class="circle-btn-add"></div>
-                        </a>
+                                <div id="<?php echo $product["sku"] ?>" 
+                                class="add-to-wishlist circle-btn-add"></div>
+
+                                <div id="<?php echo $product["sku"] ?>" 
+                                class="remove-from-wishlist circle-btn-remove hide"></div>
                         </div>
                         <div class="col-xs-8 px-0">
                                <a class="tertiary-btn-flex-center" href="#"><button class="tertiary-btn-small btn-brand-cta">Buy from brand</button></a>
                         </div>
                         <div class="col-xs-2 px-0">
-                                <a href="#">
                                         <div class="circle-btn-basket"></div>   
-                                </a>
                         </div>
                 </div>
         </div> 
@@ -257,6 +271,14 @@ error_reporting(~0);
         $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
-
 ?> 
+<script>
+        var added = localStorage.getItem('added');
+        $(".circle-btn-add").addClass(added);
+        $(".circle-btn-remove").removeClass(added);
 
+        var removed = localStorage.getItem('removed');
+        $(".circle-btn-remove").addClass(removed); 
+         $(".circle-btn-add").removeClass(removed);
+
+</script>

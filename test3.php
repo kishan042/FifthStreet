@@ -33,7 +33,7 @@ include_once 'INC/Config.php';
 
 		include (ROOT_PATH . 'INC/Navbar.php'); 
 ?>
-<!-- 
+
 <style>
 	.style { 
 		display: inline-block;
@@ -70,7 +70,7 @@ include_once 'INC/Config.php';
 <p>Men</p>
 <button class="remove-souvenir" id="118">- Souvenir -</button>
 </li>
- -->
+
 <?php
 
 // Spacing  

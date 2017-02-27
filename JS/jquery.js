@@ -15,6 +15,28 @@ $(window).load(function() {
 			$('#mob-search-cross-url').attr('href', storedValue);
 		}
 
+
+// Reference to how I removed individual product Ids from the
+// local storage array
+// http://stackoverflow.com/questions/39725221/remove-an-item-from-an-array-inside-a-local-storage-object-with-javascript
+
+		var id = $(".add-to-wishlist").attr('id');
+		var index = -1;
+		var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from storage
+
+		for (var i = -1; i < obj.length; i++) { //loop over the collection
+		//console.log(obj.length);
+		if (obj[i] === id) { //see if ids match
+			var hide = "hide";
+			localStorage.setItem('added', hide); 
+			localStorage.setItem('removed', '');
+		} else {
+			var hide = "hide";
+			localStorage.setItem('removed', hide); 
+			localStorage.setItem('added', '');
+		}
+		}// End of for loop
+
 }); // End of onLoad function
 
 
@@ -90,11 +112,40 @@ $(document).ready(function(){
         // End of animation function
 
 
-     // SEARCH module
+    // PRODUCT TEMPLATE
 
-       function save() {
-	    var search = document.getElementById('search-id').href;
-	    localStorage.setItem('url', search);
-	  }  
+    	// When the user clicks on a colour variation 
+    	// this function runs to show the correct image 
+    	// according to what the user has picked.
+
+		$(".product-colour").click(function(){
+			
+
+			$(this).siblings().removeClass("colour-active");
+			$(this).addClass("colour-active");
+
+		});
+
 
 }); //END OF JQUERY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

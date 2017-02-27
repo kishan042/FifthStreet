@@ -194,7 +194,7 @@ include_once '../INC/Config.php';
                 h3  = document.createElement('h3');
 
 
-                $('#output').append(li);
+                $('#output').prepend(li);
                 li.append(a);
                 a.href = "<?php echo BASE_URL; ?>product.php/?id=" + productId;
                 a.append(img);

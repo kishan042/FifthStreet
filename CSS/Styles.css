@@ -4451,6 +4451,18 @@ ul.block li:first-child {
   border: 1px solid #000;
   border-radius: 25px; }
 
+.circle-btn-remove {
+  padding: 13px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  background: url(../IMG/icons/remove-black.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  border: 1px solid #000;
+  border-radius: 25px; }
+
 .circle-btn-basket {
   padding: 11px;
   width: 50px;
@@ -4470,6 +4482,7 @@ ul.block li:first-child {
   align-items: center; }
 
 .circle-btn-add:hover,
+.circle-btn-remove:hover,
 .circle-btn-basket:hover,
 .circle-btn-add:focus,
 .circle-btn-basket:focus {
@@ -4483,6 +4496,18 @@ ul.block li:first-child {
   height: 50px;
   margin-right: 5px;
   background: url(../IMG/icons/add-white.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  border: none !important;
+  border-radius: 25px; }
+
+.circle-btn-remove:hover {
+  padding: 14px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  background: url(../IMG/icons/remove-white.svg) no-repeat;
   background-size: cover;
   background-position: center;
   background-origin: content-box;

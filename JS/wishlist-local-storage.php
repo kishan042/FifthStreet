@@ -1,9 +1,5 @@
 
 <script>
-// 
-// 
-// EXPLAINATION 
-
 
     // Go into strict mode to prevent any bugs
     'use strict';
@@ -84,6 +80,53 @@
           localStorage.setItem('wishlist', JSON.stringify(obj)); //set item back into storage
           });
 
+
+          // When the user clicks on a colour variation 
+          // this function runs to show the correct image 
+          // according to what the user has picked.
+
+          $(".circle-btn-add").click(function(){
+            $(this).toggleClass( "hide" );
+            $(".circle-btn-remove").toggleClass( "hide" );
+          });
+          
+          $(".circle-btn-remove").click(function(){
+            $(this).toggleClass( "hide" );
+            $(".circle-btn-add").toggleClass( "hide" );
+          });
+
       } // End of supports local storage function
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
