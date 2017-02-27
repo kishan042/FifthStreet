@@ -1,4 +1,4 @@
-<!-- Sass file = _blocks-two.scss -->
+<!-- Sass file = _blocks-three-and-four.scss -->
 
 <!-- Blocks-two-compact-extend -->
 
@@ -34,11 +34,11 @@
 		</div>
 		<div class="col-md-8 col-lg-8 col-xl-8">
 			<div class="row py-3 flex-center">
-			    <div id="product-img" class="col-md-3 col-lg-3" style="background-image: url(<?php echo $BlockIMG_1 ?>)">
+			    <div class="product-img col-md-3 col-lg-3" style="background-image: url(<?php echo $BlockIMG_1 ?>)">
 			    </div>
-			    <div id="product-img" class="col-md-3 col-lg-3" style="background-image: url(<?php echo $BlockIMG_2 ?>)">
+			    <div class="product-img col-md-3 col-lg-3" style="background-image: url(<?php echo $BlockIMG_2 ?>)">
 			    </div>
-			    <div id="product-img" class="col-md-3 col-lg-3" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+			    <div class="product-img col-md-3 col-lg-3" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
 			    </div>
 			</div>
 		</div>

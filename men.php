@@ -71,6 +71,9 @@ include_once 'INC/Config.php';
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 
+include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+include (ROOT_PATH . 'INC/Blocks-three.php');
 
 ?>
 
@@ -87,46 +90,42 @@ include_once 'INC/Config.php';
 	</div>
 </div> -->
 
-<style>
-	
-	.flex-col-center {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column
-	}
 
-	#product-img-2 {
-		width: 100%;
-		height: 300px;
-		background-size: cover;
-		background-position: center;
-	}
-
-</style>
-
-<div class="container-fluid bg-gray-lightest">
-	<h2 class="txt-xs-center pt-30">Latests Footwear</h2>
-	<div class="container">
-		<div class="row py-3">
-			<div class="col-md-4 flex-col-center">
-			    <div id="product-img-2" class="" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
-			    </div>
-			    <h2 class="h3-alt">Product title<?php echo $product; ?></h2>
-			    <p class="txt-xs-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat officiis maxime eveniet ut</p>
+<div class="container-fluid">
+	<h2 class="txt-xs-center pt-40">Accessories</h2>
+	<div class="container overflow-hidden">
+		<div class="row flex-no-wrap py-3">
+			<div class="col-md-3 flex-col-4-center">
+			    <a href="#">
+					<div class="product-img-2" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+					</div>
+					<h2 class="h3-alt">Product title<?php echo $product; ?></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
+			    </a>
 			</div>
-			<div class="col-md-4 flex-col-center">
-			    <div id="product-img-2" class="" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
-			    </div>
-			    <h2 class="h3-alt">Product title<?php echo $product; ?></h2>
-			    <p class="txt-xs-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
+			<div class="col-md-3 flex-col-4-center">
+			    <a href="#">
+					<div class="product-img-2" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+					</div>
+					<h2 class="h3-alt">Product title<?php echo $product; ?></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
+			    </a>
 			</div>
-			<div class="col-md-4 flex-col-center">
-			    <div id="product-img-2" class="" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
-			    </div>
-			    <h2 class="h3-alt">Product title<?php echo $product; ?></h2>
-			    <p class="txt-xs-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
+			<div class="col-md-3 flex-col-4-center">
+			    <a href="#">
+					<div class="product-img-2" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+					</div>
+					<h2 class="h3-alt">Product title<?php echo $product; ?></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
+			    </a>
+			</div>
+			<div class="col-md-3 flex-col-4-center">
+			    <a href="#">
+					<div class="product-img-2" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+					</div>
+					<h2 class="h3-alt">Product title<?php echo $product; ?></h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
+			    </a>
 			</div>
 		</div>
 	</div>

@@ -75,6 +75,9 @@ include_once 'INC/Config.php';
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 
+include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+include (ROOT_PATH . 'INC/Blocks-three.php');
 
 ?>
 
