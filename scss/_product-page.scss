@@ -171,7 +171,7 @@
 
 
 	//
-	// Product sizes - shoe sizes
+	// Product sizes - tops & shoe sizes
 	//
 
 	ul.size-flex-center {
@@ -183,20 +183,25 @@
 	}
 
 	ul.size-flex-center li{
-	        width: 30px;
-	        height: 30px;
-	        border: 1px solid #000;
-	        border-radius: 5px;
-	        margin: 10px 15px;
-	        padding: 20px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        margin: 10px 15px;
+        padding: 20px;
 
-		    display: flex;
-		    align-items: center;
-		    justify-content: center;
-		    flex-direction: row;
-		    flex-wrap: wrap;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-direction: row;
 	}
 
+	ul.size-flex-center li:hover,
+	.size-active { 
+		color: $white;
+		border: 1px solid $gold!important;
+		background-color: $gold;	
+	}
 
 	//
 	// Selection of Men or Women sizes
@@ -205,11 +210,13 @@
 
 	.gender-selected { 
 	        background-color: #48d8d8;
-	        color: #fff;         
+	        color: #fff;    
+	        border: none!important;     
 	 }
 
-	 .gender-not-selected { 
-	        border: 1px solid #000;      
+	 .gender-option { 
+	        border: 1px solid #000; 
+	        cursor: pointer;     
 	 }
 
 

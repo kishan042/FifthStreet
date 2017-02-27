@@ -4563,15 +4563,22 @@ ul.size-flex-center li {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap; }
+  flex-direction: row; }
+
+ul.size-flex-center li:hover,
+.size-active {
+  color: #fff;
+  border: 1px solid #c6b89b !important;
+  background-color: #c6b89b; }
 
 .gender-selected {
   background-color: #48d8d8;
-  color: #fff; }
+  color: #fff;
+  border: none !important; }
 
-.gender-not-selected {
-  border: 1px solid #000; }
+.gender-option {
+  border: 1px solid #000;
+  cursor: pointer; }
 
 @media (min-width: 768px) {
   .primary-colour-set {

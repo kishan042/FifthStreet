@@ -20,6 +20,10 @@ $(window).load(function() {
 // local storage array
 // http://stackoverflow.com/questions/39725221/remove-an-item-from-an-array-inside-a-local-storage-object-with-javascript
 
+// The following code checks if the product id has been added to the wishlist.
+// depending on the answer the states of the CTA will be set in localStorage
+// so when the user opens the browser, the CTA's are displayed correctly. 
+
 		var id = $(".add-to-wishlist").attr('id');
 		var index = -1;
 		var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from storage
@@ -112,20 +116,40 @@ $(document).ready(function(){
         // End of animation function
 
 
-    // PRODUCT TEMPLATE
+    // PRODUCT PAGE
+    // hide and show active states for CTAs
 
-    	// When the user clicks on a colour variation 
-    	// this function runs to show the correct image 
-    	// according to what the user has picked.
-
+    	// Colour selection
 		$(".product-colour").click(function(){
-			
-
 			$(this).siblings().removeClass("colour-active");
 			$(this).addClass("colour-active");
-
 		});
 
+		// Gender selection
+		$(".gender-option").click(function(){
+			$(".gender-option").removeClass("gender-selected");
+			$(this).addClass("gender-selected");
+		});
+
+		//Size selection
+		$(".product-size").click(function(){
+			$(this).siblings().removeClass("size-active");
+			$(this).addClass("size-active");
+		});
+
+		// If user clicks on add to wishlist CTA
+		// hide the CTA & show remove CTA
+		$(".circle-btn-add").click(function(){
+			$(this).toggleClass( "hide" );
+			$(".circle-btn-remove").toggleClass( "hide" );
+		});
+
+		// If user clicks on remove from wishlist CTA
+		// hide the CTA & show add CTA
+		$(".circle-btn-remove").click(function(){
+			$(this).toggleClass( "hide" );
+			$(".circle-btn-add").toggleClass( "hide" );
+		});
 
 }); //END OF JQUERY
 
