@@ -2,7 +2,7 @@
 
 <!-- Blocks-two-compact-extend -->
 
-<div class="container mt-50 hidden-md-up">
+<div class="container mt-20 hidden-md-up">
 	<div class="row">
 		<div class="col-xs-12 col-md-6 <?php echo $BlockBG?>">
 			<div class="txt-block-half">

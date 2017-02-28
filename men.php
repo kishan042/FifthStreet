@@ -51,7 +51,7 @@ include_once 'INC/Config.php';
 // Blocks-two-compact-extend
 
 		// Background colour class for text
-		$BlockBG = "bg-gray-lightest";
+		$BlockBG = "bg-white";
 		// Title
 		$BlockTitle = "FOR MEN";
 		// Copy
@@ -61,7 +61,7 @@ include_once 'INC/Config.php';
 		// Link for CTA
 		$BlockLink = "wardrobe.php";
 		// CTA copy
-		$BlockCTA = "View Items";
+		$BlockCTA = "View all items";
 		// Image 1 URL 
 		$BlockIMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
 		// Image 2 URL 
@@ -71,9 +71,11 @@ include_once 'INC/Config.php';
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 
+$hide = "hidden-sm-down";
+
 include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-include (ROOT_PATH . 'INC/Blocks-three.php');
+include (ROOT_PATH . 'INC/Blocks-grid.php');
 
 ?>
 
@@ -91,45 +93,104 @@ include (ROOT_PATH . 'INC/Blocks-three.php');
 </div> -->
 
 
-<div class="container-fluid">
-	<h2 class="txt-xs-center pt-40">Accessories</h2>
-	<div class="container overflow-hidden">
-		<div class="row flex-no-wrap py-3">
-			<div class="col-md-3 flex-col-4-center">
-			    <a href="#">
-					<div class="product-img-2" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+<style>
+	/*	.flex-grid-space {
+		display: flex;
+		justify-content: space-around;
+		}
+
+		.grid-center-img { height: 516px!important; }
+		
+		.grid-img {
+			width: 100%;
+			height: 250px;
+			background-size: cover;
+			background-position: center;
+		}*/
+
+</style>
+<!-- 
+<div class="hidden-sm-down">
+	<div class="container-fluid">
+		<h2 class="txt-xs-center">Latest Clothing</h2>
+		<div class="container px-0 mt-50">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="col-md-12 px-0">
+					    <a href="#">
+							<div class="grid-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+							</div>
+
+					    </a>
 					</div>
-					<h2 class="h3-alt">Product title<?php echo $product; ?></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
+					<div class="col-md-12 px-0 pt-1">
+					    <a href="#">
+							<div class="grid-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+							</div>
+
+					    </a>
+					</div>
+				</div>
+				<div class="col-md-6 px-0">
+					<div class="col-md-12 px-0">
+					    <a href="#">
+							<div class="grid-img grid-center-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+							</div>
+
+					    </a>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="col-md-12 px-0">
+					    <a href="#">
+							<div class="grid-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+							</div>
+
+					    </a>
+					</div>
+					<div class="col-md-12 px-0 pt-1">
+					    <a href="#">
+							<div class="grid-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+							</div>
+
+					    </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container px-0 pt-1">
+		<div class="row flex-grid-space">
+			<div class="col-md-3 px-">
+			    <a href="#">
+					<div class="grid-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+					</div>
 			    </a>
 			</div>
-			<div class="col-md-3 flex-col-4-center">
+			<div class="col-md-3 pl-0 pr-0">
 			    <a href="#">
-					<div class="product-img-2" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+					<div class="grid-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
 					</div>
-					<h2 class="h3-alt">Product title<?php echo $product; ?></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
 			    </a>
 			</div>
-			<div class="col-md-3 flex-col-4-center">
+			<div class="col-md-3 pr-0">
 			    <a href="#">
-					<div class="product-img-2" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+					<div class="grid-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
 					</div>
-					<h2 class="h3-alt">Product title<?php echo $product; ?></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
 			    </a>
 			</div>
-			<div class="col-md-3 flex-col-4-center">
+			<div class="col-md-3 px-">
 			    <a href="#">
-					<div class="product-img-2" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
+					<div class="grid-img" style="background-image: url(<?php echo $BlockIMG_3 ?>)">
 					</div>
-					<h2 class="h3-alt">Product title<?php echo $product; ?></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam, voluptas. Velit qu</p>
 			    </a>
 			</div>
 		</div>
 	</div>
 </div>
+ -->
+				
+
 
 
 
@@ -137,11 +198,19 @@ include (ROOT_PATH . 'INC/Blocks-three.php');
 
 
 <?php 
+
+$hide = "hidden-sm-down";
+
+include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+
+include (ROOT_PATH . 'INC/Blocks-three.php');
+
+include (ROOT_PATH . 'INC/Blocks-four.php');
 // Spacing	
 		// Add a class to hide the seperation
 		//$hide = "hidden-xs-down";
 
-		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		//include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 
