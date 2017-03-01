@@ -61,17 +61,69 @@
 <script type="text/javascript" src="<?php echo $JSPath ?>"></script>
 <?php include (ROOT_PATH . 'JS/wishlist-local-storage.php'); ?>
 <?php include (ROOT_PATH . 'JS/souvenirs-local-storage.php'); ?>
+<?php include (ROOT_PATH . 'JS/simpleCart.min.php'); ?>
 <script>
-var disqus_config = function () {
-this.page.url = 'http://thefifthstreet.com/';  
-this.page.identifier = <?php echo $product["sku"] ?>;
-};
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = '//fifthstreet-1.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+// If the user is using a device larger then tablet
+// show the product name column
+if ($(window).width() > 767) {
+  simpleCart({  
+                // chechout method
+                checkout: {
+                    type: "PayPal",
+                    email: "user@FifthStreet.com"
+                },
+                // Currency
+                currency: "GBP",
+                // Layout of the cart div or table
+                cartStyle: "table",
+                // Cart columns 
+                cartColumns: [
+
+                     //{view:'image' , attr:'thumb', label: false},
+                    { view: function(item, column){
+                      return"<img src='"+item.get('image')+"'>";
+                    },
+                     attr: 'image' },
+                    {attr: "name",         label: "Product"},
+                    {view: "currency",     attr: "total", label: "Price"},
+                    {view: "increment",    label: "Inc", text: "Add"},
+                    {attr: "quantity",     label: "Qty"},
+                    {view: "decrement",    label: "Dec", text: "Remove"}
+                ]
+            });
+} else {
+// If the user is using a mobile device
+// remove the product name column
+      simpleCart({  
+                // chechout method
+                checkout: {
+                    type: "PayPal",
+                    email: "user@FifthStreet.com"
+                },
+                // Currency
+                currency: "GBP" ,
+                // Layout of the cart div or table
+                cartStyle: "table",
+                // Cart columns 
+                cartColumns: [
+
+                     //{view:'image' , attr:'thumb', label: false},
+                    { view: function(item, column){
+                      return"<img class='img-fluid' src='"+item.get('image')+"'>";
+                    },
+                     attr: 'image' },
+                    {view: "currency", attr: "total", label: "Price"},
+                    {attr: "quantity",     label: "Qty"},
+                    {view: "increment",    label: "Inc", text: "Add"},
+                    {view: "decrement",    label: "Dec", text: "Remove"}
+                ]
+            });
+
+
+
+
+
+}
 </script>
 </body>
