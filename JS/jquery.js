@@ -151,6 +151,7 @@ $(document).ready(function(){
 			$(".circle-btn-add").toggleClass( "hide" );
 		});
 
+
 }); //END OF JQUERY
 
 

@@ -1,0 +1,110 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+// The following classes allow the layout of the cart to be displayed 
+// with the image at the top, qty / product name / price on the second row.
+// The thrid row only has a add or remove button.
+
+	.headerRow {
+		display: none;
+	}
+
+	/* Give each row to wrap on to the next line*/
+	td { display: inline-block; 
+		padding: 0 10%;
+	}
+
+	/*Center the cart */
+	.simpleCart_items {
+		display: flex;
+	    align-items: flex-start;
+	    justify-content: flex-start;
+	}
+
+	/*Set the width of the cart*/
+	table {
+		width: 100%;
+	}
+
+	td.item-name,
+	td.item-total,
+	td.item-quantity {
+		display: inline-block;
+		width: 25%;
+	}
+
+	td.item-name,
+	td.item-total {
+		width: 50%;
+		padding: 0;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+
+
+
+	td.item-increment,
+	td.item-quantity,
+	td.item-decrement { 
+		width: 40%;
+		text-align: center;
+	}
+
+	td.item-quantity {
+		width: 20%;
+	}
+
+// Spacing between elements 
+	td.item-image {
+		margin-top: 50px;
+		margin-bottom: 15px;
+	}
+
+
+// Button style 
+
+	td.item-increment a,      
+	td.item-decrement a {     
+		background: transparent;
+		border: 1px solid $gray-darkest;
+	    border-radius: 100px;
+        padding: 6px 10px;
+	    margin: 0 auto; 
+	    text-align: center;
+	}
+
+	td.item-quantity { margin-top: 0;}
+
+	// td.item-increment { margin-left: 5%; }
+	// td.item-decrement { margin-left: 20%; }
+
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+   
+
+}//End of media query

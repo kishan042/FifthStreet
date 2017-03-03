@@ -72,10 +72,10 @@ error_reporting(~0);
      .active-img {display: block!important;}
 </style>
 
-<div class="row mt-30">
+<div class="row mt-30 simpleCart_shelfItem">
         <!-- Product image block -->
         <div class="col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6">
-                <img class="img-fluid img-center" src="<?php echo BASE_URL . $product["img"] ?>" 
+                <img class="img-fluid img-center item_image" src="<?php echo BASE_URL . $product["img"] ?>" 
                 alt="<?php echo $product["name"] ?>">
 
                 <div class="mt-30 secondary-colour-set hide">
@@ -89,13 +89,13 @@ error_reporting(~0);
         <!-- Product details block -->
         <div class="col-xs-12 col-md-5 col-lg-4 offset-lg-1 offset-xl-0 col-xl-3 desk-product-details">
                 <!-- Product title -->
-                <h1 class="h2-alt txt-xs-center txt-md-left txt-black mt-20">
+                <h1 class="h2-alt txt-xs-center txt-md-left txt-black mt-20 item_name">
                         <?php echo $product["name"] ?>
                 </h1>  
                 <!-- Price & Brand name -->
                 <div class="row mt-10">
                         <div class="col-xs-4 px-0">
-                               <h2 class="h3-alt txt-xs-center txt-md-left">£<?php echo $product["price"]?></h2>
+                               <h2 class="h3-alt txt-xs-center txt-md-left item_price">£<?php echo $product["price"]?></h2>
                         </div>
                         <div class="col-xs-4 col-md-2 px-0">
                                 <h3 class="txt-xs-center txt-md-left">|</h3>
@@ -184,7 +184,7 @@ error_reporting(~0);
                                <a class="tertiary-btn-flex-center" href="#"><button class="tertiary-btn-small btn-brand-cta">Buy from brand</button></a>
                         </div>
                         <div class="col-xs-2 px-0">
-                                        <div class="circle-btn-basket"></div>   
+                                        <div class="circle-btn-basket item_add" href="javascript:;"></div>   
                         </div>
                 </div>
         </div> 

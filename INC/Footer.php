@@ -113,10 +113,11 @@ if ($(window).width() > 767) {
                       return"<img class='img-fluid' src='"+item.get('image')+"'>";
                     },
                      attr: 'image' },
+                    {attr: "name",         label: "Product"},
                     {view: "currency", attr: "total", label: "Price"},
-                    {attr: "quantity",     label: "Qty"},
-                    {view: "increment",    label: "Inc", text: "Add"},
-                    {view: "decrement",    label: "Dec", text: "Remove"}
+                    {view: "decrement",    label: "Dec", text: "- 1"},
+                    {attr: "quantity",     label: "false", text:"Qty"},
+                    {view: "increment",    label: "Inc", text: "+ 1"},
                 ]
             });
 
