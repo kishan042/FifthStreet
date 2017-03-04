@@ -61,7 +61,8 @@
 <script type="text/javascript" src="<?php echo $JSPath ?>"></script>
 <?php include (ROOT_PATH . 'JS/wishlist-local-storage.php'); ?>
 <?php include (ROOT_PATH . 'JS/souvenirs-local-storage.php'); ?>
-<?php include (ROOT_PATH . 'JS/simpleCart.min.php'); ?>
+<!-- <?php //include (ROOT_PATH . 'JS/simpleCart.min.php'); ?> -->
+<?php include (ROOT_PATH . 'JS/simpleCart.php'); ?>
 <script>
 
 // If the user is using a device larger then tablet
@@ -76,20 +77,20 @@ if ($(window).width() > 767) {
                 // Currency
                 currency: "GBP",
                 // Layout of the cart div or table
-                cartStyle: "table",
+                cartStyle: "div",
                 // Cart columns 
                 cartColumns: [
 
                      //{view:'image' , attr:'thumb', label: false},
                     { view: function(item, column){
-                      return"<img src='"+item.get('image')+"'>";
+                      return"<img class='img-fluid' src='"+item.get('image')+"'>";
                     },
                      attr: 'image' },
                     {attr: "name",         label: "Product"},
-                    {view: "currency",     attr: "total", label: "Price"},
-                    {view: "increment",    label: "Inc", text: "Add"},
+                    {view: "increment",    label: "Inc", text: "+ 1"},
                     {attr: "quantity",     label: "Qty"},
-                    {view: "decrement",    label: "Dec", text: "Remove"}
+                    {view: "decrement",    label: "Dec", text: "-  1"},
+                    {view: "currency",     attr: "total", label: "Price"},
                 ]
             });
 } else {
@@ -104,7 +105,7 @@ if ($(window).width() > 767) {
                 // Currency
                 currency: "GBP" ,
                 // Layout of the cart div or table
-                cartStyle: "table",
+                cartStyle: "div",
                 // Cart columns 
                 cartColumns: [
 
@@ -115,16 +116,11 @@ if ($(window).width() > 767) {
                      attr: 'image' },
                     {attr: "name",         label: "Product"},
                     {view: "currency", attr: "total", label: "Price"},
-                    {view: "decrement",    label: "Dec", text: "- 1"},
-                    {attr: "quantity",     label: "false", text:"Qty"},
                     {view: "increment",    label: "Inc", text: "+ 1"},
+                    {attr: "quantity",     label: "false", text:"Qty"},
+                    {view: "decrement",    label: "Dec", text: "- 1"},
                 ]
             });
-
-
-
-
-
 }
 </script>
 </body>

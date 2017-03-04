@@ -4,6 +4,11 @@ error_reporting(~0);
 // Config file
 include_once 'INC/Config.php';
 
+// DB - Model
+    include(ROOT_PATH . "INC/DB/model.php");
+    // Function to get the 4 recent products in the database
+    $recent = get_recent_products(4);
+
 // Header
 		// Title tag
 		$Title = "My Basket ";
@@ -32,125 +37,43 @@ include_once 'INC/Config.php';
 		$basket = "#"; 
 
 		include (ROOT_PATH . 'INC/Navbar.php'); 
+
+// Hero-half-plain
+		// copy for H1
+		$h1 = "MY BASKET";
+
+		//Copy for description
+		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+
+		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 ?>
 
-<style>
-
-/*.headerRow {
-	display: none;
-}*/
-
-/* Give each row to wrap on to the next line*/
-/*td { display: inline-block; 
-	padding: 0 10%;
-}
-*/
-/*Center the cart */
-/*.simpleCart_items {
-	display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}*/
-
-/*Set the width of the cart*/
-/*table {
-	width: 100%;
-}
-
-td.item-name,
-td.item-total,
-td.item-quantity {
-	display: inline-block;
-	width: 25%;
-}
-
-td.item-name {
-	width: 50%;
-	padding: 0;
-	text-align: center;
-}
-
-td.item-quantity { padding: 0; }
-
-td.item-increment,
-td.item-decrement { 
-	width: 50%;
-	margin-top: 10px;
-	text-align: center;
-}
-
-td.item-image {
-	margin-bottom: 15px;
-}*/
-
-
-td.item-image,
-td.item-name,
-td.item-total,
-td.item-quantity,
-td.item-increment,
-td.item-decrement,
-
-
-</style>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-	        <div class="simpleCart_items"></div>
+<div class="container items-added">
+	        <div class="simpleCart_items"></div> 
+        	<div class="row checkout bg-gray-lightest">
+				<div class="sub-total col-md-9 col-lg-10 txt-xs-center txt-md-left">
+					<h3>Sub total : <span class="simpleCart_grandTotal"></span></h3>
+				</div>
+				<div class="col-md-1">
+					<button class="tertiary-btn-small simpleCart_checkout checkout-btn" type="button"  href="javascript:;" value="Checkout">
+					CHECKOUT</button>
+				</div>
+			</div>
 </div>
 
-
-
-
-
-
-
-
-<!-- <div class="item mt-200">
-<div class="simpleCart_shelfItem">
-                                 <h2 class="item_name">Purple PHP Shirt</h2>
-                                  <img alt="image" src="IMG/shirts/shirt-101.jpg" class="item_image img-fluid"/>
-                                   
-                                 <p><span class="item_price">£3.99</span>
-                                 <input class="item_add" type="button"  href="javascript:;" value="Order Now" ></p>
-                                 <span class="item_size product-size">Size:6</span>                  
+<div class="container">     
+    <h2 class="txt-xs-center my-3 rid">Latest product&rsquo;s</h2>
+    <ul class="products block">
+        <?php
+            foreach($recent as $product) {
+                include(ROOT_PATH . "INC/DB/product-block.php");
+            }
+        ?>
+    </ul>
 </div>
-</div>
-
-
-
-
-
-<div class="item mt-200">
-<div class="simpleCart_shelfItem">
-                                 <h2 class="item_name">RED CSS Shirt</h2>
-                                  <img alt="image" src="IMG/shirts/shirt-118.jpg" class="item_image img-fluid"/>
-                                   
-                                 <p><span class="item_price">£3.99</span>
-                                 <input class="item_add" type="button"  href="javascript:;" value="Order Now" ></p>
-                                 <span class="item_size product-size">Size:6</span>
-
-                                 
-</div>
-</div>
-
- -->
 
 <?php
 
@@ -169,12 +92,11 @@ td.item-decrement,
         $PreviousPage = "";
 
         // Bread crumbs for the current page
-        $CurrentPage = "Trending";
+        $CurrentPage = "My basket";
         
 
         // JS path
         $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
-
 ?>

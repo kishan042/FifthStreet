@@ -83,35 +83,3 @@
       } // End of supports local storage function
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

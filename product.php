@@ -74,7 +74,7 @@ error_reporting(~0);
 
 <div class="row mt-30 simpleCart_shelfItem">
         <!-- Product image block -->
-        <div class="col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6">
+        <div class="col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6 bg-gray-lightest mr-2">
                 <img class="img-fluid img-center item_image" src="<?php echo BASE_URL . $product["img"] ?>" 
                 alt="<?php echo $product["name"] ?>">
 
