@@ -14,52 +14,7 @@ $(window).load(function() {
 		if (storedValue) {
 			$('#mob-search-cross-url').attr('href', storedValue);
 		}
-
-
-// Reference to how I removed individual product Ids from the
-// local storage array
-// http://stackoverflow.com/questions/39725221/remove-an-item-from-an-array-inside-a-local-storage-object-with-javascript
-
-// The following code checks if the product id has been added to the wishlist.
-// depending on the answer the states of the CTA will be set in localStorage
-// so when the user opens the browser, the CTA's are displayed correctly. 
-
-		var id = $(".add-to-wishlist").attr('id');
-		var index = -1;
-		var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from storage
-
-		for (var i = -1; i < obj.length; i++) { //loop over the collection
-		//console.log(obj.length);
-		if (obj[i] === id) { //see if ids match
-			var hide = "hide";
-			localStorage.setItem('added', hide); 
-			localStorage.setItem('removed', '');
-		} else {
-			var hide = "hide";
-			localStorage.setItem('removed', hide); 
-			localStorage.setItem('added', '');
-		}
-		}// End of for loop
-
-// The following code is based on the code above
-// Since the product page is based on a dynamic variable from the URL
-// if the user has previously added a product to the wishlist then
-// for a new product page, the add to wishlist CTA will be shown.
-
-        // check localStorage to see if the product has been added before
-        var added = localStorage.getItem('added');
-        console.log(added);
-        // If so then the remove from wishlist CTA will be displayed
-        $(".circle-btn-add").addClass(added);
-        $(".circle-btn-remove").removeClass(added);
-
-        // Check if the removed variable is set in localStorage
-        // where the product has not been added or removed
-        var removed = localStorage.getItem('removed');
-        // if so then the add to wishlist CTA will be displayed
-        $(".circle-btn-remove").addClass(removed); 
-        $(".circle-btn-add").removeClass(removed);
-
+		
 }); // End of onLoad function
 
 
@@ -136,13 +91,40 @@ $(document).ready(function(){
 
 
     // PRODUCT PAGE
-    // hide and show active states for CTAs
+
 
     	// Colour selection
+	    // used the following link to help achieve this effect of 
+	    // changinh the images based on product id
 		$(".product-colour").click(function(){
+			// remove active state of all other colours
 			$(this).siblings().removeClass("colour-active");
+			// add active state to the colour clicked on
 			$(this).addClass("colour-active");
+
+			//get the value of the colour clicked on
+			var new_Color = $(this).attr("value");
+			// get the current image id value
+			// set as the id
+			var current_Img_Id = $(".item_image").attr('id')
+			// target the image source
+			// replace the current image id part of the image - shirt-111
+			// with the new color value, and store it
+			var new_Img = $(".item_image").attr('src').replace(current_Img_Id , new_Color);
+
+			// change the image source with new id
+			$(".item_image").attr('src', new_Img);
+			// update the image tags id value
+			$(".item_image").attr("id",new_Color);
+
 		});
+
+
+
+
+
+
+
 
 		// Gender selection
 		$(".gender-option").click(function(){

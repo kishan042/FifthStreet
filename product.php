@@ -75,14 +75,16 @@ error_reporting(~0);
 <div class="row mt-30 simpleCart_shelfItem">
         <!-- Product image block -->
         <div class="col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6 bg-gray-lightest mr-2">
-                <img class="img-fluid img-center item_image" src="<?php echo BASE_URL . $product["img"] ?>" 
+                <img id="<?php echo $product["sku"] ?>" 
+                class="img-fluid img-center item_image" 
+                src="<?php echo BASE_URL . $product["img"] ?>" 
                 alt="<?php echo $product["name"] ?>">
 
                 <div class="mt-30 secondary-colour-set hide">
                         <ul class="colours-flex-center mt-20">
-                                <li value="img-1" class="product-colour colour-active " style="background-color: purple;"></li>
-                                <li value="img-2" class="product-colour" style="background-color: deepskyblue;"></li>
-                                <li value="img-3" class="product-colour" style="background-color: darkcyan;"></li>
+                                <li value="115" class="product-colour colour-active " style="background-color: purple;"></li>
+                                <li value="103" class="product-colour" style="background-color: deepskyblue;"></li>
+                                <li value="104" class="product-colour" style="background-color: darkcyan;"></li>
                         </ul>
                 </div>
         </div>
@@ -101,7 +103,7 @@ error_reporting(~0);
                                 <h3 class="txt-xs-center txt-md-left">|</h3>
                         </div>
                         <div class="col-xs-4 px-0">
-                                <h2 class="h3-alt txt-xs-center txt-md-left">By Brand</h2>
+                                <a href="#"><h2 class="h3-alt txt-xs-center txt-md-left">By Brand</h2></a>
                         </div>      
                 </div>
                 <div class="hidden-lg-up mt-30">
@@ -114,9 +116,9 @@ error_reporting(~0);
                 <div class="mt-30 primary-colour-set">
                         <h2 class="h3 hidden-lg-up">Colours</h2>
                         <ul class="colours-flex-center mt-20">
-                                <li value="img-1" class="product-colour colour-active " style="background-color: purple;"></li>
-                                <li value="img-2" class="product-colour" style="background-color: deepskyblue;"></li>
-                                <li value="img-3" class="product-colour" style="background-color: darkcyan;"></li>
+                                <li value="115" class="product-colour colour-active " style="background-color: purple;"></li>
+                                <li value="103" class="product-colour" style="background-color: deepskyblue;"></li>
+                                <li value="104" class="product-colour" style="background-color: darkcyan;"></li>
                         </ul>
                 </div>
 
@@ -239,8 +241,6 @@ error_reporting(~0);
         <div id="disqus_thread"></div>
 </div>
 
-
-
 <?php
 // Spacing  
         // Add a class to hide the seperation
@@ -264,21 +264,52 @@ error_reporting(~0);
         $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
+
+        // ID from the php get function - $product_id 
 ?> 
 <script>
-// The following code is for the comments section
-// This code should not be added with the rest of the javascript
-// as the code will create an error
-// as it is dependent on the product id prodived in the url
-var disqus_config = function () {
-this.page.url = 'http://thefifthstreet.com/';  
-this.page.identifier = <?php echo $product["sku"] ?>;
-};
+    $(window).load(function() {
+        // get the current ID from the url, and store in a variable
+        var product_id = <?php echo $product_id; ?>;
+        
+        // The following code checks if the product id collected has been added to the wishlist LS.
+        // If id matches, then the remove from wishlist CTA is displayed
+        // loop is exited.
+        // Else, by default the add to wishlist is displayed
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = '//fifthstreet-1.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+                var id = product_id;
+                var index = -1;
+                var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from local storage
+                console.log(obj);
+                for (var i = -1; i < obj.length; i++) { //loop over the collection
+                console.log(obj.length);
+                    if (obj[i] == id) { //see if ids match
+                        console.log("true");
+                        $(".circle-btn-add").addClass("hide");
+                        $(".circle-btn-remove").removeClass("hide");
+                        break; //exit loop
+                    } else {
+                        console.log("false");
+                        $(".circle-btn-add").removeClass("hide");
+                        $(".circle-btn-remove").addClass("hide");
+                    }
+                }// End of for loop
+
+    }); // End of onLoad function
+
+    // The following code is for the comments section
+    // This code should not be added with the rest of the javascript
+    // as the code will create an error
+    // as it is dependent on the product id prodived in the url
+    var disqus_config = function () {
+    this.page.url = 'http://thefifthstreet.com/';  
+    this.page.identifier = <?php echo $product["sku"] ?>;
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//fifthstreet-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
 </script>
