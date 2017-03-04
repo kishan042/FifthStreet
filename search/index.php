@@ -51,7 +51,7 @@ error_reporting(~0);
         //IMG URL
         $url = "https://images.unsplash.com/photo-1441986300917-64674bd600d8?dpr=2&auto=format&fit=crop&w=767&h=512&q=80&cs=tinysrgb&crop="; 
         // Amount of tint on image
-        $tint = "tint-4";
+        $tint = "tint-3";
         // copy for H1
         $h1 = "FIND | SAVE | BUY";
 

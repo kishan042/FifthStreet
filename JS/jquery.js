@@ -41,6 +41,25 @@ $(window).load(function() {
 		}
 		}// End of for loop
 
+// The following code is based on the code above
+// Since the product page is based on a dynamic variable from the URL
+// if the user has previously added a product to the wishlist then
+// for a new product page, the add to wishlist CTA will be shown.
+
+        // check localStorage to see if the product has been added before
+        var added = localStorage.getItem('added');
+        console.log(added);
+        // If so then the remove from wishlist CTA will be displayed
+        $(".circle-btn-add").addClass(added);
+        $(".circle-btn-remove").removeClass(added);
+
+        // Check if the removed variable is set in localStorage
+        // where the product has not been added or removed
+        var removed = localStorage.getItem('removed');
+        // if so then the add to wishlist CTA will be displayed
+        $(".circle-btn-remove").addClass(removed); 
+        $(".circle-btn-add").removeClass(removed);
+
 }); // End of onLoad function
 
 

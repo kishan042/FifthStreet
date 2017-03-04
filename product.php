@@ -266,26 +266,10 @@ error_reporting(~0);
         include (ROOT_PATH . 'INC/Footer.php');
 ?> 
 <script>
-// The following code is based on the wishlist-local-storage.js
-// Since the product page is based on a dynamic variable from the URL
-// if the user has previously added a product to the wishlist then
-// for a new product page, the add to wishlist CTA will be shown.
-
-        // check localStorage to see if the product has been added before
-        var added = localStorage.getItem('added');
-        // If so then the remove from wishlist CTA will be displayed
-        $(".circle-btn-add").addClass(added);
-        $(".circle-btn-remove").removeClass(added);
-
-        // Check if the removed variable is set in localStorage
-        // where the product has not been added or removed
-        var removed = localStorage.getItem('removed');
-        // if so then the add to wishlist CTA will be displayed
-        $(".circle-btn-remove").addClass(removed); 
-        $(".circle-btn-add").removeClass(removed);
-
-</script>
-<script>
+// The following code is for the comments section
+// This code should not be added with the rest of the javascript
+// as the code will create an error
+// as it is dependent on the product id prodived in the url
 var disqus_config = function () {
 this.page.url = 'http://thefifthstreet.com/';  
 this.page.identifier = <?php echo $product["sku"] ?>;
