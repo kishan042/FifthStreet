@@ -13,8 +13,6 @@
 	// 3 CTA's - Add | Visit brand site | basket
 	//
 
-
-
 	// Add to wishlist CTA
 	.circle-btn-add {
 	        padding: 10px;
@@ -140,7 +138,7 @@
 	ul.size-flex-center {
 	    display: flex;
 	    align-items: center;
-	    justify-content: flex-start;
+	    justify-content: center;
 	    flex-direction: row;
 	    flex-wrap: wrap;
 	}
@@ -190,7 +188,6 @@
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm)  { 
 
-
 }//End of media query
 
 // Medium devices (tablets, 768px and up)
@@ -212,7 +209,6 @@
 		    display: flex;
 		    justify-content: center;
 		    flex-direction: column;
-		
 	}
 
 }//End of media query

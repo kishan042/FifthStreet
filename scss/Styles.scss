@@ -124,7 +124,7 @@
 @import "form";
 
 /* --------------------------------------------------------
-   Home
+   Home page modules
    -------------------------------------------------------- */
 
 @import "product-finder";
@@ -139,19 +139,20 @@
 @import "blocks-three-and-four";
 
 /* --------------------------------------------------------
-   Trending | Wardrobe 
+   Trending | Wardrobe page modules
    -------------------------------------------------------- */
 
 @import "product-list";
 
 /* --------------------------------------------------------
-   Product page template 
+   Product page template and modules
    -------------------------------------------------------- */
 
 @import "product-page";
+@import "notification";
 
 /* --------------------------------------------------------
-   About us page template 
+   About us page template and modules
    -------------------------------------------------------- */
 
 @import "article";

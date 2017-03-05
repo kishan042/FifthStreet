@@ -8,7 +8,7 @@
 			<div class="col-xs-4 row mx-0 px-0">
 				<div class="col-xs-6 icon px-0">
 					<img id="menu-icon" class="nav-toggle-btn" src="<?php echo $img ?>icons/hamburger.svg">
-					<img id="exit-icon"class="nav-toggle-btn hide" src="<?php echo $img ?>icons/cross.svg">
+					<img id="exit-icon" class="nav-toggle-btn hide" src="<?php echo $img ?>icons/cross.svg">
 				</div>
 				<div class="col-xs-6 icon px-0">
 					<a href="<?php echo $profile ?>">

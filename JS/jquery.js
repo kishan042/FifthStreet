@@ -146,6 +146,17 @@ $(document).ready(function(){
 		$(".circle-btn-add").click(function(){
 			$(this).toggleClass( "hide" );
 			$(".circle-btn-remove").toggleClass( "hide" );
+
+			var notif = $(".notif-added-to-wishlist");
+
+			$(notif).fadeIn(1000)
+                    .delay(3500)
+                    .fadeOut(1300);
+		});
+
+		$("#notif-wishlist-exit").click(function(){
+
+			$(".notif-added-to-wishlist").hide();
 		});
 
 		// If user clicks on remove from wishlist CTA

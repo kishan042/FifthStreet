@@ -56,6 +56,10 @@ error_reporting(~0);
 
         include (ROOT_PATH . 'INC/Navbar.php');
 
+// Notification
+
+        include (ROOT_PATH . 'INC/Notification.php');
+
 
 // Spacing  
         // Add a class to hide the seperation
@@ -120,7 +124,7 @@ error_reporting(~0);
                         </ul>
                 </div>
 
-                <div class="mt-10">
+                <div class="mt-10 hide">
                         <h2 class="h3 hidden-md-up">Sizes</h2>
                         <div class="row mt-20">
                                 <div class="col-xs-6 txt-xs-center gender-selection">
@@ -278,16 +282,16 @@ error_reporting(~0);
                 var id = product_id;
                 var index = -1;
                 var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from local storage
-                console.log(obj);
+                //console.log(obj);
                 for (var i = -1; i < obj.length; i++) { //loop over the collection
-                console.log(obj.length);
+                //console.log(obj.length);
                     if (obj[i] == id) { //see if ids match
-                        console.log("true");
+                        //console.log("true");
                         $(".circle-btn-add").addClass("hide");
                         $(".circle-btn-remove").removeClass("hide");
                         break; //exit loop
                     } else {
-                        console.log("false");
+                        //console.log("false");
                         $(".circle-btn-add").removeClass("hide");
                         $(".circle-btn-remove").addClass("hide");
                     }
