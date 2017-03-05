@@ -2,6 +2,13 @@
 @include media-breakpoint-up(xs) { 
 
 
+	.product-img-block {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
 	//
 	// 3 CTA's - Add | Visit brand site | basket
 	//
@@ -11,12 +18,13 @@
 	// Add to wishlist CTA
 	.circle-btn-add {
 	        padding: 10px;
+	        padding-top: 14px;
 	        width: 50px;
 	        height: 50px;
 	        margin-right: 5px;
 
 	        // For add icon
-	        background: url(../IMG/icons/add-black.svg) no-repeat;
+	        background: url(../IMG/icons/heart-add-black.svg) no-repeat;
 	        background-size: cover;
 	        background-position: center;
 	        // Allow the padding for parent to be applied to the image
@@ -25,25 +33,29 @@
 	        // Extra styling
 	        border: 1px solid $black;
 	        border-radius: 25px;
+	        cursor: pointer;
 	}
 	
 	// Remove from wishlist CTA
 	.circle-btn-remove {
 	        padding: 13px;
+	        padding-top: 16px;
 	        width: 50px;
 	        height: 50px;
 	        margin-right: 5px;
 
 	        // For add icon
-	        background: url(../IMG/icons/remove-black.svg) no-repeat;
+	        background: url(../IMG/icons/heart-add-full-white.svg) no-repeat;
 	        background-size: cover;
 	        background-position: center;
 	        // Allow the padding for parent to be applied to the image
 	        background-origin: content-box;
 
 	        // Extra styling
-	        border: 1px solid $black;
+	        border: 1px solid $gold;
+	        background-color: $gold-light !important;
 	        border-radius: 25px;
+	        cursor: pointer;
 	}
 
 	// Add to basket CTA
@@ -62,68 +74,9 @@
 	        // Extra styling
 	        border: 1px solid $black;
 	        border-radius: 25px;
+	        cursor: pointer;
 	}
-
-
-	// Vist brand site CTS
-	.btn-brand-cta { height: 45px; }
-
-	.tertiary-btn-flex-center{
-	        display: flex;
-	        align-items: center;
-	}
-
-
-	// Hover states for all three CTA's
-
-	.circle-btn-add:hover,
-	.circle-btn-remove:hover, 
-	.circle-btn-basket:hover, 
-	.circle-btn-add:focus, 
-	.circle-btn-basket:focus {
-			color: $white;
-			background-color: $gem !important;
-			border: rgba(0,0,0,0) 1px solid;
-	}
-
-	// Add to wishlist CTA
-	.circle-btn-add:hover {
-	        padding: 10px;
-	        width: 50px;
-	        height: 50px;
-	        margin-right: 5px;
-
-	        // For add icon
-	        background: url(../IMG/icons/add-white.svg) no-repeat;
-	        background-size: cover;
-	        background-position: center;
-	        // Allow the padding for parent to be applied to the image
-	        background-origin: content-box;
-
-	        // Extra styling
-	        border: none!important;
-	        border-radius: 25px;
-	}
-
-	// Remove from wishlist CTA
-	.circle-btn-remove:hover {
-	        padding: 14px;
-	        width: 50px;
-	        height: 50px;
-	        margin-right: 5px;
-
-	        // For add icon
-	        background: url(../IMG/icons/remove-white.svg) no-repeat;
-	        background-size: cover;
-	        background-position: center;
-	        // Allow the padding for parent to be applied to the image
-	        background-origin: content-box;
-
-	        // Extra styling
-	        border: none!important;
-	        border-radius: 25px;
-	}
-
+	
 	// Add to basket CTA
 	.circle-btn-basket:hover {
 	        padding: 11px;
@@ -138,8 +91,18 @@
 	        background-origin: content-box;
 
 	        // Extra styling
-	        border: none!important;
+	        border: 1px solid $gem;
+	        background-color: $gem !important;
 	        border-radius: 25px;
+	        cursor: pointer;
+	}
+
+	// Vist brand site CTS
+	.btn-brand-cta { height: 45px; }
+
+	.tertiary-btn-flex-center{
+	        display: flex;
+	        align-items: center;
 	}
 
 	//
@@ -200,7 +163,7 @@
 	.size-active { 
 		color: $white;
 		border: 1px solid $gold!important;
-		background-color: $gold;	
+		background-color: $gold-light;	
 	}
 
 	//

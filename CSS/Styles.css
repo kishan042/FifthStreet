@@ -3746,6 +3746,9 @@ h1, .h1 {
 .bg-black {
   background-color: #000; }
 
+.bg-gray {
+  background-color: #d9dbdc; }
+
 .bg-gem {
   background-color: #48d8d8; }
 
@@ -3755,20 +3758,23 @@ h1, .h1 {
 .bg-gold {
   background-color: #c6b89b; }
 
-.bg-gray {
-  background-color: #d9dbdc; }
+.bg-gold-light {
+  background-color: #e6d7b8; }
 
-.bg-gray-dark {
-  background-color: #313131; }
-
-.bg-gray-darkest {
-  background-color: #1a1a1a; }
+.bg-gold-lightest {
+  background-color: #e8dcc4; }
 
 .bg-gray-light {
   background-color: #ebecec; }
 
 .bg-gray-lightest {
   background-color: #f5f6f6; }
+
+.bg-gray-dark {
+  background-color: #313131; }
+
+.bg-gray-darkest {
+  background-color: #1a1a1a; }
 
 /* ------------------ Spacing -------------------- */
 .mt-10 {
@@ -4764,29 +4770,40 @@ ul.block li:first-child {
 /* --------------------------------------------------------
    Product page template 
    -------------------------------------------------------- */
+.product-img-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
 .circle-btn-add {
   padding: 10px;
+  padding-top: 14px;
   width: 50px;
   height: 50px;
   margin-right: 5px;
-  background: url(../IMG/icons/add-black.svg) no-repeat;
+  background: url(../IMG/icons/heart-add-black.svg) no-repeat;
   background-size: cover;
   background-position: center;
   background-origin: content-box;
   border: 1px solid #000;
-  border-radius: 25px; }
+  border-radius: 25px;
+  cursor: pointer; }
 
 .circle-btn-remove {
   padding: 13px;
+  padding-top: 16px;
   width: 50px;
   height: 50px;
   margin-right: 5px;
-  background: url(../IMG/icons/remove-black.svg) no-repeat;
+  background: url(../IMG/icons/heart-add-full-white.svg) no-repeat;
   background-size: cover;
   background-position: center;
   background-origin: content-box;
-  border: 1px solid #000;
-  border-radius: 25px; }
+  border: 1px solid #c6b89b;
+  background-color: #e6d7b8 !important;
+  border-radius: 25px;
+  cursor: pointer; }
 
 .circle-btn-basket {
   padding: 11px;
@@ -4797,47 +4814,8 @@ ul.block li:first-child {
   background-position: center;
   background-origin: content-box;
   border: 1px solid #000;
-  border-radius: 25px; }
-
-.btn-brand-cta {
-  height: 45px; }
-
-.tertiary-btn-flex-center {
-  display: flex;
-  align-items: center; }
-
-.circle-btn-add:hover,
-.circle-btn-remove:hover,
-.circle-btn-basket:hover,
-.circle-btn-add:focus,
-.circle-btn-basket:focus {
-  color: #fff;
-  background-color: #48d8d8 !important;
-  border: transparent 1px solid; }
-
-.circle-btn-add:hover {
-  padding: 10px;
-  width: 50px;
-  height: 50px;
-  margin-right: 5px;
-  background: url(../IMG/icons/add-white.svg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-origin: content-box;
-  border: none !important;
-  border-radius: 25px; }
-
-.circle-btn-remove:hover {
-  padding: 14px;
-  width: 50px;
-  height: 50px;
-  margin-right: 5px;
-  background: url(../IMG/icons/remove-white.svg) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-origin: content-box;
-  border: none !important;
-  border-radius: 25px; }
+  border-radius: 25px;
+  cursor: pointer; }
 
 .circle-btn-basket:hover {
   padding: 11px;
@@ -4847,8 +4825,17 @@ ul.block li:first-child {
   background-size: cover;
   background-position: center;
   background-origin: content-box;
-  border: none !important;
-  border-radius: 25px; }
+  border: 1px solid #48d8d8;
+  background-color: #48d8d8 !important;
+  border-radius: 25px;
+  cursor: pointer; }
+
+.btn-brand-cta {
+  height: 45px; }
+
+.tertiary-btn-flex-center {
+  display: flex;
+  align-items: center; }
 
 ul.colours-flex-center {
   display: flex;
@@ -4894,7 +4881,7 @@ ul.size-flex-center li:hover,
 .size-active {
   color: #fff;
   border: 1px solid #c6b89b !important;
-  background-color: #c6b89b; }
+  background-color: #e6d7b8; }
 
 .gender-selected {
   background-color: #48d8d8;

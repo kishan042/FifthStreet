@@ -68,17 +68,15 @@ error_reporting(~0);
         $img_3 = "/_Github/FifthStreet/img/shirts/shirt-116.jpg";
 ?>
 
-<style>
-     .active-img {display: block!important;}
-</style>
-
 <div class="row mt-30 simpleCart_shelfItem">
         <!-- Product image block -->
-        <div class="col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6 bg-gray-lightest mr-2">
-                <img id="<?php echo $product["sku"] ?>" 
-                class="img-fluid img-center item_image" 
-                src="<?php echo BASE_URL . $product["img"] ?>" 
-                alt="<?php echo $product["name"] ?>">
+        <div class="product-img-block col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6 mr-2">
+                <div class="p-2 bg-gray-lightest">
+                    <img id="<?php echo $product["sku"] ?>" 
+                        class="img-fluid img-center item_image" 
+                        src="<?php echo BASE_URL . $product["img"] ?>" 
+                        alt="<?php echo $product["name"] ?>">
+                </div>
 
                 <div class="mt-30 secondary-colour-set hide">
                         <ul class="colours-flex-center mt-20">
@@ -106,8 +104,8 @@ error_reporting(~0);
                                 <a href="#"><h2 class="h3-alt txt-xs-center txt-md-left">By Brand</h2></a>
                         </div>      
                 </div>
-                <div class="hidden-lg-up mt-30">
-                        <h2 class="h3 hidden-lg-up">Stock</h2>
+                <div class="hidden-md-up mt-30">
+                        <h2 class="h3">Stock</h2>
                         <ul class="mt-20">
                                 <h2 class="h3-alt txt-gem">5 available in-store</h2>
                                 <h2 class="h4">10 available online</h2>
@@ -126,13 +124,13 @@ error_reporting(~0);
                         <h2 class="h3 hidden-md-up">Sizes</h2>
                         <div class="row mt-20">
                                 <div class="col-xs-6 txt-xs-center gender-selection">
-                                        <h3 class="gender-option gender-selected">Men</h3>
+                                        <h3 id="men-shoes" class="gender-option gender-selected">Men</h3>
                                 </div>
                                 <div class="col-xs-6 txt-xs-center gender-selection">
-                                        <h3 class="gender-option">Women</h3>  
+                                        <h3 id="women-shoes" class="gender-option">Women</h3>  
                                 </div>
                         </div>
-                        <ul class="men size-flex-center">
+                        <ul class="men-shoe-sizes size-flex-center">
                                 <li class="product-size">6</li>
                                 <li class="product-size">7</li>
                                 <li class="product-size">8</li>
@@ -143,7 +141,7 @@ error_reporting(~0);
                                 <li class="product-size">14</li>
                                 <li class="product-size">15</li>
                         </ul>
-                        <ul class="women hide size-flex-center">
+                        <ul class="women-shoe-sizes hide size-flex-center">
                                 <li class="product-size">2</li>
                                 <li class="product-size">3</li>
                                 <li class="product-size">4</li>
@@ -186,7 +184,7 @@ error_reporting(~0);
                                <a class="tertiary-btn-flex-center" href="#"><button class="tertiary-btn-small btn-brand-cta">Buy from brand</button></a>
                         </div>
                         <div class="col-xs-2 px-0">
-                                        <div class="circle-btn-basket item_add" href="javascript:;"></div>   
+                             <div class="circle-btn-basket item_add" href="javascript:;"></div> 
                         </div>
                 </div>
         </div> 
@@ -204,7 +202,7 @@ error_reporting(~0);
                         <div class="col-xs-12 col-md-6">
                                 <hr class="mt-40 hidden-md-up">
                                 <h2 class="mt-50 txt-xs-center">Ratings</h2>
-                                <h3 class="h1 txt-gold txt-xs-center">4 / 5</h3>
+                                <h3 class="h1 txt-gem txt-xs-center">4 / 5</h3>
                                 <hr class="mt-40 hidden-md-up">
                         </div>
                 </div>

@@ -14,7 +14,7 @@ $(window).load(function() {
 		if (storedValue) {
 			$('#mob-search-cross-url').attr('href', storedValue);
 		}
-		
+
 }); // End of onLoad function
 
 
@@ -119,22 +119,25 @@ $(document).ready(function(){
 
 		});
 
-
-
-
-
-
-
-
 		// Gender selection
 		$(".gender-option").click(function(){
 			$(".gender-option").removeClass("gender-selected");
 			$(this).addClass("gender-selected");
+
+			var id = $(this).attr("id");
+
+			if (id == "men-shoes") {
+				$(".men-shoe-sizes").removeClass("hide");
+				$(".women-shoe-sizes").addClass("hide");
+			} else if (id == "women-shoes") {
+				$(".women-shoe-sizes").removeClass("hide");
+				$(".men-shoe-sizes").addClass("hide");
+			}
 		});
 
 		//Size selection
 		$(".product-size").click(function(){
-			$(this).siblings().removeClass("size-active");
+			$(".product-size").removeClass("size-active");
 			$(this).addClass("size-active");
 		});
 
@@ -152,26 +155,4 @@ $(document).ready(function(){
 			$(".circle-btn-add").toggleClass( "hide" );
 		});
 
-
 }); //END OF JQUERY
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -120,7 +120,7 @@ if ($(window).width() > 767) {
                     {attr: "quantity",     label: "false", text:"Qty"},
                     {view: "decrement",    label: "Dec", text: "- 1"},
                 ]
-            });
+      });
 }
 </script>
 </body>
