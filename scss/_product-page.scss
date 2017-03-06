@@ -168,7 +168,6 @@
 	// Selection of Men or Women sizes
 	//
 
-
 	.gender-selected { 
 	        background-color: #48d8d8;
 	        color: #fff;    
@@ -177,10 +176,10 @@
 
 	 .gender-option { 
 	        border: 1px solid #000; 
-	        cursor: pointer;     
+	        cursor: pointer;   
+	        //font-size: 1rem;
+	        font-weight: 400;  
 	 }
-
-
 
 }//End of media query
 

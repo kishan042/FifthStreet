@@ -58,7 +58,9 @@ error_reporting(~0);
 
 // Notification
 
-        include (ROOT_PATH . 'INC/Notification.php');
+        include (ROOT_PATH . 'INC/Notification-wishlist-add.php');
+        include (ROOT_PATH . 'INC/Notification-wishlist-remove.php');
+        include (ROOT_PATH . 'INC/Notification-basket-add.php');
 
 
 // Spacing  
@@ -83,7 +85,7 @@ error_reporting(~0);
                 </div>
 
                 <div class="mt-30 secondary-colour-set hide">
-                        <ul class="colours-flex-center mt-20">
+                        <ul class="colours-flex-center">
                                 <li value="115" class="product-colour colour-active " style="background-color: purple;"></li>
                                 <li value="103" class="product-colour" style="background-color: deepskyblue;"></li>
                                 <li value="104" class="product-colour" style="background-color: darkcyan;"></li>
@@ -117,7 +119,7 @@ error_reporting(~0);
                 </div>
                 <div class="mt-30 primary-colour-set">
                         <h2 class="h3 hidden-lg-up">Colours</h2>
-                        <ul class="colours-flex-center mt-20">
+                        <ul class="colours-flex-center">
                                 <li value="115" class="product-colour colour-active " style="background-color: purple;"></li>
                                 <li value="103" class="product-colour" style="background-color: deepskyblue;"></li>
                                 <li value="104" class="product-colour" style="background-color: darkcyan;"></li>
@@ -185,7 +187,7 @@ error_reporting(~0);
                                 class="remove-from-wishlist circle-btn-remove hide"></div>
                         </div>
                         <div class="col-xs-8 px-0">
-                               <a class="tertiary-btn-flex-center" href="#"><button class="tertiary-btn-small btn-brand-cta">Buy from brand</button></a>
+                               <a class="tertiary-btn-flex-center" href="#"><button class="h3-alt tertiary-btn-small btn-brand-cta">Buy from brand</button></a>
                         </div>
                         <div class="col-xs-2 px-0">
                              <div class="circle-btn-basket item_add" href="javascript:;"></div> 

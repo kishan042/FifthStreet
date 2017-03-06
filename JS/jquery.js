@@ -146,24 +146,45 @@ $(document).ready(function(){
 		$(".circle-btn-add").click(function(){
 			$(this).toggleClass( "hide" );
 			$(".circle-btn-remove").toggleClass( "hide" );
-
+			// Capture the add to wishlist notification 
 			var notif = $(".notif-added-to-wishlist");
-
+			// Fade in then wait 3 seconds then fade out
 			$(notif).fadeIn(1000)
                     .delay(3500)
                     .fadeOut(1300);
 		});
 
-		$("#notif-wishlist-exit").click(function(){
-
-			$(".notif-added-to-wishlist").hide();
-		});
 
 		// If user clicks on remove from wishlist CTA
 		// hide the CTA & show add CTA
 		$(".circle-btn-remove").click(function(){
 			$(this).toggleClass( "hide" );
 			$(".circle-btn-add").toggleClass( "hide" );
+			// Capture the remove from wishlist notification 
+			var notif = $(".notif-removed-from-wishlist");
+			// Fade in then wait 3 seconds then fade out
+			$(notif).fadeIn(1000)
+                    .delay(3500)
+                    .fadeOut(1300);
+		});
+
+		// If user clicks on add to basket CTA
+		$(".circle-btn-basket").click(function(){
+			// Capture the added to basket notification 
+			var notif = $(".notif-added-to-basket");
+			// Fade in then wait 3 seconds then fade out
+			$(notif).fadeIn(1000)
+                    .delay(3500)
+                    .fadeOut(1300);
+		});
+
+		// For all notifications
+		// If user clicks on cross icon
+		// then hide the notification
+		$(".notif-wishlist-exit").click(function(){
+			$(".notif-added-to-wishlist").hide();
+			$(".notif-removed-from-wishlist").hide();
+			$(".notif-added-to-basket").hide();
 		});
 
 }); //END OF JQUERY
