@@ -5,7 +5,9 @@ error_reporting(~0);
 include_once '../INC/Config.php';
 
 // DB - Model
-include(ROOT_PATH . "INC/DB/model.php");
+    include(ROOT_PATH . "INC/DB/model.php");
+    // Function to get the 8 recent products in the database
+    $recent = get_recent_products(8);
 
 
 // Header
@@ -42,33 +44,50 @@ include(ROOT_PATH . "INC/DB/model.php");
 		$ActiveOffers = "";
 		$ActiveWardrobe = "option-active";
 
-		//include (ROOT_PATH . 'INC/Navbar.php'); 
+		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 
-// Hero-half
-        //IMG URL
-        //$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
-        // Amount of tint on image
-        $tint = "tint-10";
+// Hero-half-plain
         // copy for H1
         $h1 = "MY WISHLIST";
 
-        //include (ROOT_PATH . 'INC/Hero-half.php');
+        //Copy for description
+        $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
+        include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
-
-// Spacing  
-        // Add a class to hide the seperation
-        $hide = "";
-        
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
 
 
-<h2> Client example </h2>
-  <h3>Output: </h3>
-  <div id="output">this element will be accessed by jquery and this text replaced</div>
+<div class="container">
+    <ul id="output" class="products block">
+
+    </ul>
+</div>
+<?php 
+// Spacing  
+        // Add a class to hide the seperation when the wishlist
+        // is empty
+        $hide = "rid";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+?>
+
+<div class="container">     
+    <h2 class="txt-xs-center my-3 rid">Latest product&rsquo;s</h2>
+    <ul class="products block">
+        <?php
+            foreach($recent as $product) {
+                include(ROOT_PATH . "INC/DB/product-block.php");
+            }
+        ?>
+    </ul>
+</div>
+
+
+
+
 
 <?php
 
@@ -79,7 +98,7 @@ include(ROOT_PATH . "INC/DB/model.php");
         include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
-/// Footer
+// Footer
         // If current pages does not exist then add the 
         $hide = " ";
 
@@ -96,48 +115,102 @@ include(ROOT_PATH . "INC/DB/model.php");
 
 ?> 
 
-  <script>
+<?php
 
+// The following script tag focuses on collecting the product ids collected
+// in local storage.
+//The 
+
+    //-----------------------------------------------------------------------
+    //  AJAX request 
+    //-----------------------------------------------------------------------
+
+?>
+
+<script>
+   // define an empty array 
     var data = [];
-    var searches = localStorage.getItem('recentSearches');
+    // collect ids from local storage
+    var searches = localStorage.getItem('wishlist');
+     // If searches exists iterate results
       if (searches) {
+        // format ids collected into json array 
         searches = JSON.parse(searches);
+        // Pushes each id into the data array 
         for (var item = 0; item != searches.length; item++) {
+            // set the key name as 'item'
             data.push({ item : searches[item]});
         } 
-        // if (searches.length == 0) {
-        //     data = searches[0];
-        //     console.log(data);
-        // } else if(searches > 0){
-
-        // }
-        //     for (var item = 0; item != searches.length; item++) {
-        //     data.push({ item : searches[item]});
-        // } 
     }
 
     
     //-----------------------------------------------------------------------
-    // 2) Send a http request with AJAX http://api.jquery.com/jQuery.ajax/
+    //  AJAX request  
     //-----------------------------------------------------------------------
+
     $.ajax({                                      
-      url: 'test3.php',
+      url: 'Ajax-wishlist.php',
       type: 'post',                     
-      data: {'key': data},                    
+      data: {'key': data},  // get data array and send through Ajax
       dataType: 'json',                    
-      success: function(data)          
+      success: function(data)  // data returned from php db        
       {
-        console.log(data);
+        // put data collected into function "sortData" below
+        sortData(data);
       } 
-    });
-  
+    }); 
 
-  </script>
+    //-----------------------------------------------------------------------
+    //  sortDara function to append the data from the Ajax request
+    //-----------------------------------------------------------------------
+
+    function sortData(data){
+        if (!data.length > 0) {
+            // If NO data is from the database then do the following:
+
+            // Those with the .rid classs will only show if product ids have not been added to the wishist
+            $('.rid').hide();
+
+        } else {
+            // If data IS from the database then do the following:
+
+            // Add the class .rid to those elements to hide
+            // if data is successfully retrieved and outputed
+            $('.rid').show();
+
+            // Loop over each row in the JSON data sent back
+            for(var index = 0; index != data.length; index++){
+                var item = data[index];
+                var productId = item['id'];
+                var image = item['image'];
+                var name = item['name'];
+                //console.log([productId, image, name]);
 
 
+                 li = document.createElement('li');
+                 a  = document.createElement('a');
+                img = document.createElement('img');
+                h2  = document.createElement('h2');
+                h3  = document.createElement('h3');
 
 
+                $('#output').prepend(li);
+                li.append(a);
+                a.href = "<?php echo BASE_URL; ?>product.php/?id=" + productId;
+                a.append(img);
+                img.setAttribute("class", "img-fluid");
+                img.setAttribute("src", "<?php echo BASE_URL ?>" + image);
+                img.setAttribute("alt", name );
+                a.append(h2);
+                h2.setAttribute("class", "product-title");
+                h2.innerHTML = name;
+                a.append(h3);
+                h3.setAttribute("class", "brand-title");
+                h3.innerHTML = "Brand title";
 
+            } // End of FOR loop
 
-
-
+        } // End of else statement
+        
+    }; // End of function sortData
+</script>

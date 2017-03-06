@@ -46,7 +46,7 @@
 
                 <ul class="products block">
                     <?php
-                        foreach(array_reverse($recent) as $product) {
+                        foreach($recent as $product) {
                             include(ROOT_PATH . "INC/DB/product-block.php");
                         }
                     ?>

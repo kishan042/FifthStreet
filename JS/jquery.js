@@ -90,11 +90,101 @@ $(document).ready(function(){
         // End of animation function
 
 
-     // SEARCH module
+    // PRODUCT PAGE
 
-       function save() {
-	    var search = document.getElementById('search-id').href;
-	    localStorage.setItem('url', search);
-	  }  
+
+    	// Colour selection
+	    // used the following link to help achieve this effect of 
+	    // changinh the images based on product id
+		$(".product-colour").click(function(){
+			// remove active state of all other colours
+			$(this).siblings().removeClass("colour-active");
+			// add active state to the colour clicked on
+			$(this).addClass("colour-active");
+
+			//get the value of the colour clicked on
+			var new_Color = $(this).attr("value");
+			// get the current image id value
+			// set as the id
+			var current_Img_Id = $(".item_image").attr('id')
+			// target the image source
+			// replace the current image id part of the image - shirt-111
+			// with the new color value, and store it
+			var new_Img = $(".item_image").attr('src').replace(current_Img_Id , new_Color);
+
+			// change the image source with new id
+			$(".item_image").attr('src', new_Img);
+			// update the image tags id value
+			$(".item_image").attr("id",new_Color);
+
+		});
+
+		// Gender selection
+		$(".gender-option").click(function(){
+			$(".gender-option").removeClass("gender-selected");
+			$(this).addClass("gender-selected");
+
+			var id = $(this).attr("id");
+
+			if (id == "men-shoes") {
+				$(".men-shoe-sizes").removeClass("hide");
+				$(".women-shoe-sizes").addClass("hide");
+			} else if (id == "women-shoes") {
+				$(".women-shoe-sizes").removeClass("hide");
+				$(".men-shoe-sizes").addClass("hide");
+			}
+		});
+
+		//Size selection
+		$(".product-size").click(function(){
+			$(".product-size").removeClass("size-active");
+			$(this).addClass("size-active");
+		});
+
+		// If user clicks on add to wishlist CTA
+		// hide the CTA & show remove CTA
+		$(".circle-btn-add").click(function(){
+			$(this).toggleClass( "hide" );
+			$(".circle-btn-remove").toggleClass( "hide" );
+			// Capture the add to wishlist notification 
+			var notif = $(".notif-added-to-wishlist");
+			// Fade in then wait 3 seconds then fade out
+			$(notif).fadeIn(1000)
+                    .delay(3500)
+                    .fadeOut(1300);
+		});
+
+
+		// If user clicks on remove from wishlist CTA
+		// hide the CTA & show add CTA
+		$(".circle-btn-remove").click(function(){
+			$(this).toggleClass( "hide" );
+			$(".circle-btn-add").toggleClass( "hide" );
+			// Capture the remove from wishlist notification 
+			var notif = $(".notif-removed-from-wishlist");
+			// Fade in then wait 3 seconds then fade out
+			$(notif).fadeIn(1000)
+                    .delay(3500)
+                    .fadeOut(1300);
+		});
+
+		// If user clicks on add to basket CTA
+		$(".circle-btn-basket").click(function(){
+			// Capture the added to basket notification 
+			var notif = $(".notif-added-to-basket");
+			// Fade in then wait 3 seconds then fade out
+			$(notif).fadeIn(1000)
+                    .delay(3500)
+                    .fadeOut(1300);
+		});
+
+		// For all notifications
+		// If user clicks on cross icon
+		// then hide the notification
+		$(".notif-wishlist-exit").click(function(){
+			$(".notif-added-to-wishlist").hide();
+			$(".notif-removed-from-wishlist").hide();
+			$(".notif-added-to-basket").hide();
+		});
 
 }); //END OF JQUERY

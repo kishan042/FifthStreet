@@ -5,7 +5,7 @@
 // DB - Model
     include(ROOT_PATH . "INC/DB/model.php");
     // Call function to get the latest / trending products
-    $recent = get_all_products();
+    $all_products = get_all_products();
 
 // Header
         // Title tag
@@ -67,58 +67,9 @@
 
 
 <div class="container">
-    <ul class="products">
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1481824429379-07aa5e5b0739?q=0" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="IMG/shirts/shirt-102.jpg" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/250x450" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="IMG/shirts/shirt-101.jpg" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="IMG/shirts/shirt-105.jpg" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/250x250" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="http://placehold.it/250x200" alt="">
-                <h2 class="product-title">Product title</h2>
-                <h3 class="brand-title">Brand title</h3>
-            </a>
-        </li>
+    <ul class="products block">
         <?php
-            foreach(array_reverse($recent) as $product) {
+            foreach($all_products as $product) {
                 include(ROOT_PATH . "INC/DB/product-block.php");
             }
         ?>

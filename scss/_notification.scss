@@ -1,0 +1,112 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+	
+	.notif-block {
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		background-color: rgba(26,26,26,0.96);
+		box-shadow: 5px 4px 10px rgba(230, 215, 182, 1);
+		display: flex;
+	    align-items: center;
+	}
+
+	.notif-block { height: 100vh; }
+	.notif-message { height: 80vh; }
+
+	.notif-img,
+	.notif-txt-block,
+	.notif-cta-block,
+	.row.notif-message  {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.container.notif-message { padding-top: 50px; }
+
+	.notif-txt-block { 
+		flex-direction: column; 
+		align-items: center;
+	}
+
+	.notif-txt-block p { text-align: center;}
+
+	.notif-cta-block {
+		display: flex;
+		justify-content: center;
+	}
+
+	.notif-img-block {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		overflow: hidden;
+		padding: 15px;
+		background-color: #f8f8f8;
+	}
+
+	.notif-cta-block button { border: 1px solid $gold-light; }
+
+	.notif-cta-block button:hover { 
+		border: 1px solid #48d8d8!important;
+		color: #fff!important;
+	}
+
+	.notif-cross-icon { 
+		position: fixed;
+		top: 15px;
+		right: 20px;
+		z-index: 2;
+		width: 35px;
+		height: 35px;
+		cursor: pointer;
+	 }
+
+
+// Notifications to be hidden before hand
+	// add to wishlist
+	.notif-added-to-wishlist,
+	.notif-removed-from-wishlist,
+	.notif-added-to-basket { display: none; }
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+	.container.notif-message { padding-top: 0px; }
+
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+	.notif-block,
+	.notif-message { height: 250px; }
+
+	.notif-txt-block p { text-align: left;}
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+   .notif-cta-block {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+   .notif-cta-block {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+}//End of media query

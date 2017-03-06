@@ -1,0 +1,183 @@
+// Extra small devices (portrait phones, less than 544px)
+@include media-breakpoint-up(xs) { 
+
+// The following classes allow the layout of the cart to be displayed 
+// with the image at the top, qty / product name / price on the second row.
+// The thrid row only has a add or remove button.
+
+	.headerRow {
+		display: none;
+	}
+
+	.itemRow { padding-bottom: 20px; }
+	
+
+	.SC-table { 
+		background-color: $gray-lightest; 
+		width: 100%;
+	}
+
+	.item-name,
+	.item-total,
+	.item-increment,
+	.item-decrement,
+	.item-quantity,
+	.item-increment a,      
+	.item-decrement a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.item-name { justify-content: center; }
+
+	// Button style 
+
+	.item-increment a,      
+	.item-decrement a {   
+		width: 55px;
+		height: 55px;  
+		background: transparent;
+		border: 1px solid $gray-darkest;
+	    border-radius: 100px;
+	}
+
+	.item-increment a:hover,      
+	.item-decrement a:hover {    
+		background-color: $gem;
+		border: 1px solid $gem;
+	    color: $white;
+	}
+
+	.item-decrement a:hover {    
+		background-color: $ruby;
+		border-color: $ruby;
+	}
+
+	
+	// Hack - simpleCart JS does not apply col-md-2 class on .item-decrement
+	.item-decrement { 
+		flex: 0 0 33.33333%;
+		max-width: 33.33333%; 
+	}
+
+	// Spacing between CTA's and name | price
+
+	.item-image,
+	.item-name,
+	.item-total,
+	.item-increment,
+	.item-decrement,
+	.item-quantity { margin: 15px 0; }
+
+	// Checkout section 
+
+	.checkout {
+		padding: 30px 5px;
+		border-top: 1px solid $gray;
+	}
+
+	.simpleCart_grandTotal { font-weight: 400;}
+
+}//End of media query
+
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm)  { 
+
+	.headerRow { 
+		display: block;
+		display: flex;
+		padding: 30px 0;
+	}
+
+	.headerRow.item-name {
+		justify-content: flex-start;
+	}
+	
+	.itemRow {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: 20px 5px;
+		border-top: 1px solid $gray;
+	}
+
+	.item-name,
+	.item-total,
+	.item-increment,
+	.item-decrement,
+	.item-quantity,
+	.item-increment a,      
+	.item-decrement a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.item-name { justify-content: center; }
+
+	// Button style 
+
+	.item-increment a,      
+	.item-decrement a {   
+		width: 55px;
+		height: 55px;  
+		background: transparent;
+		border: 1px solid $gray-darkest;
+	    border-radius: 100px;
+	}
+
+	.item-increment a:hover,      
+	.item-decrement a:hover {    
+		background-color: $gem;
+		border: 1px solid $gem;
+	    color: $white;
+	}
+
+	.item-decrement a:hover {    
+		background-color: $ruby;
+		border-color: $ruby;
+	}
+
+	// Hack - simpleCart JS does not apply col-md-2 class on .item-total - Desktop
+	// Hack - simpleCart JS override for changes made on mobile (item-decrement)
+	.item-total,
+	.item-decrement { 
+		flex: 0 0 16.66667%;
+		max-width: 16.66667%;
+	}
+	
+	
+	.SC-table { 
+		background-color: $gray-lightest; 
+		width: 100%;
+	}
+
+	.headings { 
+		font-weight: 600;
+		font-size: 1rem;
+	}
+	
+}//End of media query
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+
+
+}//End of media query
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) { 
+
+
+
+}//End of media query
+
+// Extra large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) { 
+
+   
+
+}//End of media query

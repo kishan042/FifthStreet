@@ -175,16 +175,28 @@
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) { 
 
-	.hero-full { height: 86vmin; }
+	.hero-full { height: 92vmin; }
 
 	.hero-half, 
 	.hero-half-plain,
 	.hero-half-search { height: 50vmin; }
 
-	.hero-compact { height: 80vh; }
+	.hero-compact { height: 50vmin; }
 
 }//End of media query
 
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
+
+	.hero-half, 
+	.hero-half-plain,
+	.hero-half-search { height: 40vmin; }
+
+}//End of media query
+
+@media screen and (min-width: 1600px) {
+
+
+	.hero-half-plain { height: 30vmin; }
+    
 }//End of media query

@@ -4,6 +4,11 @@ error_reporting(~0);
 // Config file
 include_once 'INC/Config.php';
 
+// DB - Model
+    include(ROOT_PATH . "INC/DB/model.php");
+    // Function to get the 4 recent products in the database
+    $recent = get_recent_products(4);
+
 // Header
 		// Title tag
 		$Title = "My Basket ";
@@ -32,26 +37,46 @@ include_once 'INC/Config.php';
 		$basket = "#"; 
 
 		include (ROOT_PATH . 'INC/Navbar.php'); 
+
+// Hero-half-plain
+		// copy for H1
+		$h1 = "MY BASKET";
+
+		//Copy for description
+		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+
+		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 ?>
 
-<style>
-	.style { 
-		display: inline-block;
-		margin: 25px;
-	 }
-</style>
-
-<li class="style">
-<p>102</p>
-<button class="wishlist" id="102">+</button>
-</li>
-
-<li class="style">
-<p>118</p>
-<button class="wishlist" id="118">+</button>
-</li>
 
 
+
+<div class="container items-added">
+	        <div class="simpleCart_items"></div> 
+        	<div class="row checkout bg-gray-lightest">
+				<div class="sub-total col-md-9 col-lg-10 txt-xs-center txt-md-left">
+					<h3>Sub total : <span class="simpleCart_grandTotal"></span></h3>
+				</div>
+				<div class="col-md-1">
+					<button class="tertiary-btn-small simpleCart_checkout checkout-btn" 
+							type="button"  
+							href="javascript:;" 
+							value="Checkout">
+					CHECKOUT</button>
+				</div>
+			</div>
+</div>
+
+<div class="container">     
+    <h2 class="txt-xs-center my-3 rid">Latest product&rsquo;s</h2>
+    <ul class="products block">
+        <?php
+            foreach($recent as $product) {
+                include(ROOT_PATH . "INC/DB/product-block.php");
+            }
+        ?>
+    </ul>
+</div>
 
 <?php
 
@@ -70,64 +95,11 @@ include_once 'INC/Config.php';
         $PreviousPage = "";
 
         // Bread crumbs for the current page
-        $CurrentPage = "Trending";
+        $CurrentPage = "My basket";
         
 
         // JS path
         $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
-
-?> 
-
-
-
-<script>
-'use strict';
-// Test for local storage
-function supportsLocalStorage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch(e){
-    return false;
-  }
-}
-
-    // Retrieve searches from Local Storage, return an array
-    function getRecentSearches() {
-      var searches = localStorage.getItem('recentSearches');
-      if (searches) {
-        return JSON.parse(searches);
-      }
-      return [];
-    }
-
-        // Validate and save strings to store of past searches
-    function saveSearchString(str) {
-      var searches = getRecentSearches();
-      if (searches.indexOf(str) > -1 || !str) {
-        return false;
-      }
-      searches.push(str);
-      localStorage.setItem('recentSearches', JSON.stringify(searches));
-      return true;
-    }
-
- 
-
-
-      if (supportsLocalStorage) {
-
-        // Set event handlers
-        $(".wishlist").click(function(){
-			var searchString = $(this).attr('id');
-			if (saveSearchString(searchString)) {
-			
-			}	
-		});
-
-
-      } // End of supports local storage function
-</script>
-
-
+?>

@@ -8,7 +8,7 @@
 			<div class="col-xs-4 row mx-0 px-0">
 				<div class="col-xs-6 icon px-0">
 					<img id="menu-icon" class="nav-toggle-btn" src="<?php echo $img ?>icons/hamburger.svg">
-					<img id="exit-icon"class="nav-toggle-btn hide" src="<?php echo $img ?>icons/cross.svg">
+					<img id="exit-icon" class="nav-toggle-btn hide" src="<?php echo $img ?>icons/cross.svg">
 				</div>
 				<div class="col-xs-6 icon px-0">
 					<a href="<?php echo $profile ?>">
@@ -23,13 +23,13 @@
 			</div>
 			<div class="col-xs-4 row mx-0 px-0">
 				<div class="col-xs-6 icon px-0">
-					<a id="search-id" href="<?php echo BASE_URL . $search ?>">
+					<a id="search-id" href="<?php echo $search ?>">
 						<img src="<?php echo $img ?>icons/search.svg">
 					</a>
 				</div>
 				<div class="col-xs-6 icon px-0">
 					<a href="<?php echo $basket ?>">
-						<img src="<?php echo $img ?>icons/basket.svg">
+						<img src="<?php echo $img ?>icons/basket-black.svg">
 					</a>
 				</div>
 			</div>
@@ -108,7 +108,7 @@
 						</li>
 						<li>
 							<a href="<?php echo $basket ?>">
-								<img src="<?php echo $img ?>icons/basket.svg">
+								<img src="<?php echo $img ?>icons/basket-black.svg">
 							</a>	
 						</li>
 					</ul>

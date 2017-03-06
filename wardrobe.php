@@ -44,13 +44,16 @@ include_once 'INC/Config.php';
 		$h1 = "MY WARDROBE";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
 
 // Spacing	
-		//include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		// Add a class to hide the seperation
+		$hide = "hidden-sm-up";
+
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
 
@@ -60,7 +63,7 @@ include_once 'INC/Config.php';
 		// Title
 		$BlockTitle = "MY WISHLIST";
 		// Copy
-		$BlockText = "Wander across a range of brand collections and save any product which inspires you. Why stop there, you can even go to any physical store, and through a single tap, add products to your wish list.";
+		$BlockText = "Wander across a range of brand collections and save any product which inspires you. Why stop there, you can even go to any physical store.";
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
@@ -112,7 +115,13 @@ include_once 'INC/Config.php';
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
 
-// Spacing	
+// Spacing - For mobile	
+		// Add a class to hide the seperation
+		$hide = "hidden-sm-up";
+
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+// Spacing	- For tablet and up
 		// Add a class to hide the seperation
 		$hide = "hidden-xs-down";
 

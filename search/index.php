@@ -7,8 +7,8 @@ error_reporting(~0);
 
 // DB - Model
 	require_once(ROOT_PATH . 'INC/DB/model.php');
-	// Call function to get the 4 recent products in the database
-    $recent = get_products_recent();
+	// Function to get the 4 recent products in the database
+    $recent = get_recent_products(4);
 
 
 // Header
@@ -51,7 +51,7 @@ error_reporting(~0);
         //IMG URL
         $url = "https://images.unsplash.com/photo-1441986300917-64674bd600d8?dpr=2&auto=format&fit=crop&w=767&h=512&q=80&cs=tinysrgb&crop="; 
         // Amount of tint on image
-        $tint = "tint-4";
+        $tint = "tint-3";
         // copy for H1
         $h1 = "FIND | SAVE | BUY";
 

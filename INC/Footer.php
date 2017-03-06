@@ -59,7 +59,68 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $JSPath ?>"></script>
+<?php include (ROOT_PATH . 'JS/wishlist-local-storage.php'); ?>
+<?php include (ROOT_PATH . 'JS/souvenirs-local-storage.php'); ?>
+<!-- <?php //include (ROOT_PATH . 'JS/simpleCart.min.php'); ?> -->
+<?php include (ROOT_PATH . 'JS/simpleCart.php'); ?>
+<script>
+
+// If the user is using a device larger then tablet
+// show the product name column
+if ($(window).width() > 767) {
+  simpleCart({  
+                // chechout method
+                checkout: {
+                    type: "PayPal",
+                    email: "user@FifthStreet.com"
+                },
+                // Currency
+                currency: "GBP",
+                // Layout of the cart div or table
+                cartStyle: "div",
+                // Cart columns 
+                cartColumns: [
+
+                     //{view:'image' , attr:'thumb', label: false},
+                    { view: function(item, column){
+                      return"<img class='img-fluid' src='"+item.get('image')+"'>";
+                    },
+                     attr: 'image' },
+                    {attr: "name",         label: "Product"},
+                    {view: "increment",    label: "Inc", text: "+ 1"},
+                    {attr: "quantity",     label: "Qty"},
+                    {view: "decrement",    label: "Dec", text: "-  1"},
+                    {view: "currency",     attr: "total", label: "Price"},
+                ]
+            });
+} else {
+// If the user is using a mobile device
+// remove the product name column
+      simpleCart({  
+                // chechout method
+                checkout: {
+                    type: "PayPal",
+                    email: "user@FifthStreet.com"
+                },
+                // Currency
+                currency: "GBP" ,
+                // Layout of the cart div or table
+                cartStyle: "div",
+                // Cart columns 
+                cartColumns: [
+
+                     //{view:'image' , attr:'thumb', label: false},
+                    { view: function(item, column){
+                      return"<img class='img-fluid' src='"+item.get('image')+"'>";
+                    },
+                     attr: 'image' },
+                    {attr: "name",         label: "Product"},
+                    {view: "currency", attr: "total", label: "Price"},
+                    {view: "increment",    label: "Inc", text: "+ 1"},
+                    {attr: "quantity",     label: "false", text:"Qty"},
+                    {view: "decrement",    label: "Dec", text: "- 1"},
+                ]
+      });
+}
+</script>
 </body>
-
-
-       
