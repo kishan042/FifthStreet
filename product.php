@@ -110,14 +110,14 @@ error_reporting(~0);
                                 <a href="#"><h2 class="h3-alt txt-xs-center txt-md-left">By Brand</h2></a>
                         </div>      
                 </div>
-                <div class="hidden-md-up mt-30">
+                <div class="hidden-md-up mt-20">
                         <h2 class="h3">Stock</h2>
                         <ul class="mt-20">
                                 <h2 class="h3-alt txt-gem">5 available in-store</h2>
                                 <h2 class="h4">10 available online</h2>
                         </ul>
                 </div>
-                <div class="mt-30 primary-colour-set">
+                <div class="mt-50 primary-colour-set">
                         <h2 class="h3 hidden-lg-up">Colours</h2>
                         <ul class="colours-flex-center">
                                 <li value="115" class="product-colour colour-active " style="background-color: purple;"></li>
@@ -128,7 +128,7 @@ error_reporting(~0);
 
                 <div class="mt-10 hide">
                         <h2 class="h3 hidden-md-up">Sizes</h2>
-                        <div class="row mt-20">
+                        <div class="row">
                                 <div class="col-xs-6 txt-xs-center gender-selection">
                                         <h3 id="men-shoes" class="gender-option gender-selected">Men</h3>
                                 </div>
@@ -161,7 +161,7 @@ error_reporting(~0);
                 </div>
                 <div class="mt-10">
                         <h2 class="h3 hidden-md-up">Sizes</h2>
-                        <div class="row mt-20">
+                        <div class="row">
                                 <div class="col-xs-6 txt-xs-center gender-selection">
                                         <h3 class="gender-option gender-selected">Men</h3>
                                 </div>

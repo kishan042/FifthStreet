@@ -5,7 +5,7 @@
 <div class="row mx-0">
 	<div class="col-xs-12 col-md-6 <?php echo $BlockBG?>">
 		<div class="txt-block-full">
-			<h2 class="txt-gold txt-xs-center"><?php echo $BlockTitle ?></h2>
+			<h2 class="txt-xs-center"><?php echo $BlockTitle ?></h2>
 			<p class="mt-40 mb-0"><?php echo $BlockText ?></p>
 			<a href="<?php echo $BlockLink ?>">
 				<button class="mt-2 tertiary-btn-small <?php echo $hideCTA ?> ">

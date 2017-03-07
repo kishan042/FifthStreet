@@ -19,7 +19,6 @@
 	        padding-top: 14px;
 	        width: 50px;
 	        height: 50px;
-	        margin-right: 5px;
 
 	        // For add icon
 	        background: url(../IMG/icons/heart-add-black.svg) no-repeat;
@@ -40,7 +39,6 @@
 	        padding-top: 16px;
 	        width: 50px;
 	        height: 50px;
-	        margin-right: 5px;
 
 	        // For add icon
 	        background: url(../IMG/icons/heart-add-full-white.svg) no-repeat;
@@ -61,6 +59,7 @@
 	        padding: 11px;
 	        width: 50px;
 	        height: 50px;
+	        margin-left: 5px;
 
 	        // For search icon
 	        background: url(../IMG/icons/basket-black.svg) no-repeat;
@@ -176,6 +175,7 @@
 
 	 .gender-option { 
 	        border: 1px solid #000; 
+	        border-radius: 5px;
 	        cursor: pointer;   
 	        font-weight: 400;  
 	 }

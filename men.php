@@ -41,12 +41,6 @@ include_once 'INC/Config.php';
 
         include (ROOT_PATH . 'INC/Hero-half.php');
 
-// Spacing	
-		// Add a class to hide the seperation
-		//$hide = "hidden-xs-down";
-
-		//include (ROOT_PATH . 'INC/Spacing-mt-50.php');
-
 
 // Blocks-two-compact-extend
 
