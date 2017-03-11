@@ -1,6 +1,6 @@
 <?php
 // Config file
-include_once 'INC/Config.php';
+include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
@@ -38,28 +38,52 @@ include_once 'INC/Config.php';
 		$h1 = "MY PROFILE";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$description = "No need to sign-up for accessing our three ultimate experiences.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
+
+// Blocks-three
+		// Image URL
+		$BlockIMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+
+		include (ROOT_PATH . 'INC/Blocks-three.php');
+
+// Spacing	
+		// Add a class to hide the seperation
+		$hide = "";
+
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Blocks-two-left-compact
 		$BlockBG = "bg-gray-lightest";
 		// Title
-		$BlockTitle = "NFC compatibility";
+		$BlockTitle = "COMING SOON";
 		// Copy
-		$BlockText = "No barriers between the physical and digital world anymore. For Android usevrs, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$BlockText = "Request early access to sync your different devices, so you never lose your wishlist & souvenirs, across mobile, tablet and desktop.";
 		// type 'hide' to remove the button
-		$hideCTA = "hide";
+		$hideCTA = " ";
 		// Link for CTA
 		$BlockLink = "#";
 		// CTA copy
-		$BlockCTA = "View Items";
+		$BlockCTA = "PRE-REGISTER";
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
+
+
+// Spacing	
+		// Add a class to hide the seperation
+		$hide = " ";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+
+
+
+// Contact form
+		include (ROOT_PATH . 'INC/Form-contact-compact.php'); 
 
 
 // Spacing	

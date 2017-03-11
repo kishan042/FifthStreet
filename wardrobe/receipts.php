@@ -1,6 +1,6 @@
 <?php
 // Config file
-include_once '../INC/Config.php';
+include_once '../INC/DB/Config.php';
 
 // DB - Model
 include(ROOT_PATH . "INC/DB/model.php");

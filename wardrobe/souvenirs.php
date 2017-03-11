@@ -1,6 +1,6 @@
 <?php
 // Config file
-		include_once '../INC/Config.php';
+		include_once '../INC/DB/Config.php';
 
 // DB - Model
 		include(ROOT_PATH . "INC/DB/model.php");
@@ -31,6 +31,7 @@
         // if an ID is specified in the query string, use it
         if (isset($_GET["sou"])) {
         	$souvenir_id = intval($_GET["sou"]);
+          // use PHP variable in a Javascript function
         	echo "<script>validate_Souvenir_Id('".$souvenir_id."')</script>";
         } 
 

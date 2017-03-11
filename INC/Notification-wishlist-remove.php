@@ -20,8 +20,8 @@
                  </div>
 			</div>
 			<div class="col-md-4 col-lg-3 col-xl-3 notif-cta-block">
-				<a class="tertiary-btn-flex-center" href="<?php echo $wardrobe ?>">
-					<button class="h4 tertiary-btn-small btn-brand-cta txt-gold-light">View wardrobe</button>
+				<a class="tertiary-btn-flex-center" href="<?php echo BASE_URL; ?>wardrobe/wishlist.php">
+					<button class="h4 tertiary-btn-small btn-brand-cta txt-gold-light">View Wishlist</button>
 				</a>
 			</div>
 		</div>

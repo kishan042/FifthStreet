@@ -76,6 +76,8 @@ p, .p-light, { font-size: $font-size-p-light;
 // Over rides 
 h1, .h1 { line-height: 4rem; }
 
+.hero-half-plain h1 { line-height: 3.25rem; }
+
 
 //
 // Heading colour variations
@@ -100,19 +102,12 @@ h1, .h1 { line-height: 4rem; }
 }
 
 //
-// Underline for H3 titles
-//
-
-.txt-underdline {
-  width: 200px;
-  border-bottom: 2px solid $gold;
-}
-
-//
 // Text shadow for H1 on images
 //
 
-.txt-shadow { text-shadow: 2px 2px #000; }
+.txt-shadow-1 { text-shadow: 0px 1px 1px #000;}
+
+.txt-shadow-2 { text-shadow: 0px 2px 2px #000; }
 
 
 // Extra small devices (portrait phones, less than 544px)

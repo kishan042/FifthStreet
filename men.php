@@ -1,6 +1,6 @@
 <?php
 // Config file
-include_once 'INC/Config.php';
+include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
@@ -78,12 +78,6 @@ include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 include (ROOT_PATH . 'INC/Blocks-three.php');
 
 include (ROOT_PATH . 'INC/Blocks-four.php');
-// Spacing	
-		// Add a class to hide the seperation
-		//$hide = "hidden-xs-down";
-
-		//include (ROOT_PATH . 'INC/Spacing-mt-100.php');
-
 
 
 // Footer

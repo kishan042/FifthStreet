@@ -1,6 +1,6 @@
 <?php
 // Config file
-include_once 'INC/Config.php';
+include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag

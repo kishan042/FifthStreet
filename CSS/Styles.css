@@ -3693,6 +3693,9 @@ p, .p-light {
 h1, .h1 {
   line-height: 4rem; }
 
+.hero-half-plain h1 {
+  line-height: 3.25rem; }
+
 .txt-white {
   color: #fff !important; }
 
@@ -3714,12 +3717,11 @@ h1, .h1 {
 .letter-space-large {
   letter-spacing: 7px; }
 
-.txt-underdline {
-  width: 200px;
-  border-bottom: 2px solid #c6b89b; }
+.txt-shadow-1 {
+  text-shadow: 0px 1px 1px #000; }
 
-.txt-shadow {
-  text-shadow: 2px 2px #000; }
+.txt-shadow-2 {
+  text-shadow: 0px 2px 2px #000; }
 
 .h1 {
   font-size: 2rem;
@@ -4787,6 +4789,7 @@ ul.block li:first-child {
   padding-top: 14px;
   width: 50px;
   height: 50px;
+  margin-right: 5px;
   background: url(../IMG/icons/heart-add-black.svg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -4800,6 +4803,7 @@ ul.block li:first-child {
   padding-top: 16px;
   width: 50px;
   height: 50px;
+  margin-right: 5px;
   background: url(../IMG/icons/heart-add-full-white.svg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -4813,7 +4817,6 @@ ul.block li:first-child {
   padding: 11px;
   width: 50px;
   height: 50px;
-  margin-left: 5px;
   background: url(../IMG/icons/basket-black.svg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -4895,7 +4898,6 @@ ul.size-flex-center li:hover,
 
 .gender-option {
   border: 1px solid #000;
-  border-radius: 5px;
   cursor: pointer;
   font-weight: 400; }
 

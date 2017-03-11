@@ -16,7 +16,7 @@
 	<form method="post" action="Contact.php">
 	<div class="row mx-0">
 		<div class="col-xs-12 col-sm-6 form-group">
-			<input type="text" name="name" id="inputName" placeholder="FULL NAME" required>
+			<input type="text" name="name" id="inputName" placeholder="FULL NAME" pattern="([A-z0-9À-ž]){2,}" required>
 		</div>
 		<div class="col-xs-12 col-sm-6 form-group">
 			<input type="email" name="email" id="inputEmail" placeholder="EMAIL ADDRESS" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>

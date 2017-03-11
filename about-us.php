@@ -1,6 +1,6 @@
 <?php
 // Config file
-include_once 'INC/Config.php';
+		include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
@@ -35,9 +35,9 @@ include_once 'INC/Config.php';
 
 // Hero-half
 		//IMG URL
-		$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+		$url = "https://images.unsplash.com/photo-1463062511209-f7aa591fa72f?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="; 
 		// Amount of tint on image
-		$tint = "tint-5";
+		$tint = "tint-1";
 		// copy for H1
 		$h1 = "ABOUT US";
 
@@ -45,7 +45,7 @@ include_once 'INC/Config.php';
 
 
 // Spacing	
-include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Article heading
@@ -70,7 +70,7 @@ include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 // Hero-compact
 		//IMG URL
-		$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+		$url = "https://images.unsplash.com/photo-1486092573896-31a373bf1aad?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 

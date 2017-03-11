@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(~0);
 // Config file
-include_once 'INC/Config.php';
+include_once 'INC/DB/Config.php';
 
 // DB - Model
     include(ROOT_PATH . "INC/DB/model.php");

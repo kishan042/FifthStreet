@@ -7,21 +7,21 @@ error_reporting(~0);
         // set, then redirect to the shirts listing page; otherwise, continue
         // on and display the Shirt Details page for that $product
         if (empty($_GET["id"])) {
-        	header("Location: http://localhost:8888/_Github/FifthStreet/trending.php" );
-        	exit();
+            header("Location: http://localhost:8888/_Github/FifthStreet/trending.php" );
+            exit();
         }
 
 // Config file
-	require_once("INC/Config.php");
+    require_once("INC/Config.php");
 
 // DB - Model
-	require_once(ROOT_PATH . "INC/DB/model.php");
+    require_once(ROOT_PATH . "INC/DB/model.php");
 
 
         // if an ID is specified in the query string, use it
         if (isset($_GET["id"])) {
-        	$product_id = intval($_GET["id"]);
-        	$product = get_single_product($product_id);
+            $product_id = intval($_GET["id"]);
+            $product = get_single_product($product_id);
         } 
 
 
@@ -110,14 +110,14 @@ error_reporting(~0);
                                 <a href="#"><h2 class="h3-alt txt-xs-center txt-md-left">By Brand</h2></a>
                         </div>      
                 </div>
-                <div class="hidden-md-up mt-20">
+                <div class="hidden-md-up mt-30">
                         <h2 class="h3">Stock</h2>
                         <ul class="mt-20">
                                 <h2 class="h3-alt txt-gem">5 available in-store</h2>
                                 <h2 class="h4">10 available online</h2>
                         </ul>
                 </div>
-                <div class="mt-50 primary-colour-set">
+                <div class="mt-30 primary-colour-set">
                         <h2 class="h3 hidden-lg-up">Colours</h2>
                         <ul class="colours-flex-center">
                                 <li value="115" class="product-colour colour-active " style="background-color: purple;"></li>
@@ -128,7 +128,7 @@ error_reporting(~0);
 
                 <div class="mt-10 hide">
                         <h2 class="h3 hidden-md-up">Sizes</h2>
-                        <div class="row">
+                        <div class="row mt-20">
                                 <div class="col-xs-6 txt-xs-center gender-selection">
                                         <h3 id="men-shoes" class="gender-option gender-selected">Men</h3>
                                 </div>
@@ -161,7 +161,7 @@ error_reporting(~0);
                 </div>
                 <div class="mt-10">
                         <h2 class="h3 hidden-md-up">Sizes</h2>
-                        <div class="row">
+                        <div class="row mt-20">
                                 <div class="col-xs-6 txt-xs-center gender-selection">
                                         <h3 class="gender-option gender-selected">Men</h3>
                                 </div>
@@ -220,25 +220,25 @@ error_reporting(~0);
 
 
 <!-- <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-	<input type="hidden" name="cmd" value="_s-xclick">
-	<input type="hidden" name="hosted_button_id" value="<?php echo $product["paypal"]; ?>">
-	<input type="hidden" name="item_name" value="<?php echo $product["name"]; ?>">
-	<table>
-	<tr>
-		<th>
-			<input type="hidden" name="on0" value="Size">
-			<label for="os0">Size</label>
-		</th>
-		<td>
-			<select name="os0" id="os0">
-				<?php foreach($product["sizes"] as $size) { ?>
-				<option value="<?php echo $size; ?>"><?php echo $size; ?> </option>
-				<?php } ?>
-			</select>
-		</td>
-	</tr>
-	</table>
-	<input type="submit" value="Add to Cart" name="submit">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="<?php echo $product["paypal"]; ?>">
+    <input type="hidden" name="item_name" value="<?php echo $product["name"]; ?>">
+    <table>
+    <tr>
+        <th>
+            <input type="hidden" name="on0" value="Size">
+            <label for="os0">Size</label>
+        </th>
+        <td>
+            <select name="os0" id="os0">
+                <?php foreach($product["sizes"] as $size) { ?>
+                <option value="<?php echo $size; ?>"><?php echo $size; ?> </option>
+                <?php } ?>
+            </select>
+        </td>
+    </tr>
+    </table>
+    <input type="submit" value="Add to Cart" name="submit">
 </form> -->
 
 <div class="container">

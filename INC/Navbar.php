@@ -3,7 +3,7 @@
 <!-- Mobile Navigation bar -->
 
 	<div class="mob-navigation-bar <?php echo $search_override ?>">
-		<div class="primary-options row pt-20 mx-0 pb-2 bg-white">
+		<div class="primary-options row py-1 mx-0 bg-white">
 		<!-- Primary Nav -->
 			<div class="col-xs-4 row mx-0 px-0">
 				<div class="col-xs-6 icon px-0">
@@ -18,7 +18,7 @@
 			</div>
 			<div class="col-xs-4 icon">
 				<a href="<?php echo BASE_URL ?>">
-					<img src="<?php echo $img ?>icons/logo.svg" style="width:100%">
+					<img src="<?php echo $img ?>icons/logo.svg" style="width:100%; height: 40px;">
 				</a>
 			</div>
 			<div class="col-xs-4 row mx-0 px-0">

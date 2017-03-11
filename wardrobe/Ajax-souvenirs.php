@@ -2,11 +2,14 @@
 ini_set('display_errors', 1);
 error_reporting(~0);
 
+// Config file
+include_once '../INC/DB/Config.php';
+
 
 // empty object
 $object = [];
 // connect to db
-$db = mysqli_connect("localhost","root","root","shirts4mike", "8889");
+$db = mysqli_connect( DB_HOST,DB_USER,DB_PASS,DB_NAME, DB_PORT);
 
 // Check connection
 if (mysqli_connect_errno()){
