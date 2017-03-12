@@ -132,8 +132,8 @@ include_once '../INC/DB/Config.php';
     var data = [];
     // collect ids from local storage
     var searches = localStorage.getItem('wishlist');
-     // If searches exists iterate results
-      if (searches) {
+    // If searches exists iterate results
+    if (searches) {
         // format ids collected into json array 
         searches = JSON.parse(searches);
         // Pushes each id into the data array 
@@ -142,7 +142,6 @@ include_once '../INC/DB/Config.php';
             data.push({ item : searches[item]});
         } 
     }
-
     
     //-----------------------------------------------------------------------
     //  AJAX request  

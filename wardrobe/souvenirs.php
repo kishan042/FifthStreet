@@ -5,36 +5,6 @@
 // DB - Model
 		include(ROOT_PATH . "INC/DB/model.php");
 		$default_souvenirs = get_default_souvenirs();
-?>
-<script>
-    // Retrieve searches from Local Storage, return an array
-    function get_souvenirs_LS() {
-      var searches = localStorage.getItem('souvenirs');
-      if (searches) {
-        return JSON.parse(searches);
-      }
-      return [];
-    }
-
-    // Validate and save strings to store of past searches
-    function validate_Souvenir_Id(str) {
-      var searches = get_souvenirs_LS();
-      if (searches.indexOf(str) > -1 || !str) {
-        return false;
-      }
-      searches.push(str);
-      localStorage.setItem('souvenirs', JSON.stringify(searches));
-      return true;
-    }
-</script>
-<?php
-        // if an ID is specified in the query string, use it
-        if (isset($_GET["sou"])) {
-        	$souvenir_id = intval($_GET["sou"]);
-          // use PHP variable in a Javascript function
-        	echo "<script>validate_Souvenir_Id('".$souvenir_id."')</script>";
-        } 
-
 
 // Header
 		// Title tag
@@ -125,22 +95,21 @@
 
 		include (ROOT_PATH . 'INC/Footer.php');
 
-?> 
 
-
-<?php
-
-// The following script tag focuses on collecting the product ids collected
-// in local storage.
-//The 
-
-    //-----------------------------------------------------------------------
-    //  AJAX request 
-    //-----------------------------------------------------------------------
+    // if an ID is specified in the query string, use it
+    if (isset($_GET["sou"])) {
+      $souvenir_id = intval($_GET["sou"]);
+      // use PHP variable in a Javascript function
+      echo "<script>validate_Souvenir_Id('".$souvenir_id."')</script>";
+    } 
 
 ?>
-
 <script>
+// The following script tag focuses on collecting the product ids 
+// collected in local storage and sending it to the database 
+// through AJAX
+
+
    // define an empty array 
     var data = [];
     // collect ids from local storage
