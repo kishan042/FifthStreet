@@ -79,7 +79,7 @@ include_once 'INC/DB/Config.php';
 		$Block_Grid_Title = "Latest Clothing";
 
 	// Image 1 URL 
-		$Block_Grid_IMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Block_Grid_IMG_1 = $img . "men/Men-hat-white.jpg";
 		// Image 1 product title
 		$product_Title_1 = "Product Title";
 		// Image 1 product description
@@ -87,7 +87,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 2 URL 
-		$Block_Grid_IMG_2 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		$Block_Grid_IMG_2 = $img . "men/Men-shirt-3.png";
 		// Image 1 product title
 		$product_Title_2 = "Product Title";
 		// Image 1 product description
@@ -95,7 +95,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 3 URL 
-		$Block_Grid_IMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Block_Grid_IMG_3 = "https://images.pexels.com/photos/3572/fashion-man-wristwatch-model.jpg?w=940&h=650&auto=compress&cs=tinysrgb";
 		// Image 1 product title
 		$product_Title_3 = "Product Title";
 		// Image 1 product description
@@ -103,7 +103,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 4 URL 
-		$Block_Grid_IMG_4 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		$Block_Grid_IMG_4 = $img . "men/Men-blue-tie.jpeg";
 		// Image 1 product title
 		$product_Title_4 = "Product Title";
 		// Image 1 product description
@@ -111,7 +111,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 5 URL 
-		$Block_Grid_IMG_5 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Block_Grid_IMG_5 = $img . "men/test.jpg";
 		// Image 1 product title
 		$product_Title_5 = "Product Title";
 		// Image 1 product description
@@ -119,7 +119,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 6 URL 
-		$Block_Grid_IMG_6 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Block_Grid_IMG_6 = $img . "men/Men-glasses-2.jpeg";
 		// Image 1 product title
 		$product_Title_6 = "Product Title";
 		// Image 1 product description
@@ -127,7 +127,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 7 URL 
-		$Block_Grid_IMG_7 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		$Block_Grid_IMG_7 = $img . "men/Men-shirt-1.png";
 		// Image 1 product title
 		$product_Title_7 = "Product Title";
 		// Image 1 product description
@@ -135,7 +135,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 8 URL 
-		$Block_Grid_IMG_8 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		$Block_Grid_IMG_8 = $img . "men/Men-shirt-2.png";
 		// Image 1 product title
 		$product_Title_8 = "Product Title";
 		// Image 1 product description
@@ -143,7 +143,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 9 URL 
-		$Block_Grid_IMG_9 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Block_Grid_IMG_9 = $img . "men/Men-bag.jpeg";
 		// Image 1 product title
 		$product_Title_9 = "Product Title";
 		// Image 1 product description
@@ -167,7 +167,7 @@ include_once 'INC/DB/Config.php';
 		$Blocks_3_Title = "Latest Footwear";
 
 	// Image 1 URL 
-		$Blocks_3_IMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Blocks_3_IMG_1 = $img . "men/Men-hat-grey.jpg";
 		// Image 1 product title
 		$Blocks_3_Product_Title_1 = "Product Title";
 		// Image 1 product description
@@ -175,7 +175,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 2 URL 
-		$Blocks_3_IMG_2 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		$Blocks_3_IMG_2 = $img . "men/Men-hat-grey.jpg";
 		// Image 1 product title
 		$Blocks_3_Product_Title_2 = "Product Title";
 		// Image 1 product description
@@ -183,7 +183,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 3 URL 
-		$Blocks_3_IMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Blocks_3_IMG_3 = $img . "men/Men-hat-grey.jpg";
 		// Image 1 product title
 		$Blocks_3_Product_Title_3 = "Product Title";
 		// Image 1 product description
@@ -193,13 +193,20 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Blocks-three.php');
 
 
+// Spacing	
+		// Add a class to hide the seperation
+		$hide = "hidden-sm-down";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+
 
 // Blocks-four grid
 		// Title
-		$Blocks_4_Title = "Latest Footwear";
+		$Blocks_4_Title = "Latest Accessories";
 
 	// Image 1 URL 
-		$Blocks_4_IMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Blocks_4_IMG_1 = $img . "men/Men-hat-grey.jpg";
 		// Image 1 product title
 		$Blocks_4_Product_Title_1 = "Product Title";
 		// Image 1 product description
@@ -207,7 +214,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 2 URL 
-		$Blocks_4_IMG_2 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		$Blocks_4_IMG_2 = $img . "men/Men-glasses-1.jpeg";
 		// Image 1 product title
 		$Blocks_4_Product_Title_2 = "Product Title";
 		// Image 1 product description
@@ -215,7 +222,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 3 URL 
-		$Blocks_4_IMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Blocks_4_IMG_3 = $img . "men/Men-red-gloves.jpeg";
 		// Image 1 product title
 		$Blocks_4_Product_Title_3 = "Product Title";
 		// Image 1 product description
@@ -223,7 +230,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 4 URL 
-		$Blocks_4_IMG_4 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		$Blocks_4_IMG_4 = $img . "men/Men-bag.jpeg";
 		// Image 1 product title
 		$Blocks_4_Product_Title_4 = "Product Title";
 		// Image 1 product description

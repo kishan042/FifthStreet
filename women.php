@@ -194,7 +194,7 @@ include_once 'INC/DB/Config.php';
 
 // Blocks-four grid
 		// Title
-		$Blocks_4_Title = "Latest Footwear";
+		$Blocks_4_Title = "Latest Accessories";
 
 	// Image 1 URL 
 		$Blocks_4_IMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
