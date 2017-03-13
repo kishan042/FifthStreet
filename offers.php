@@ -50,7 +50,7 @@ include_once 'INC/DB/Config.php';
 		$h1 = "TODAY'S OFFERS";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$description = "Explore our selection of top offers for Men and Women in one location, from over 20 brands alone.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 

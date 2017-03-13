@@ -47,9 +47,9 @@
 
 // Hero-half
         //IMG URL
-        //$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+        $url = $img . "lifestyle/trending-hero-shirt-shoes.jpg"; 
         // Amount of tint on image
-        $tint = "tint-10";
+        $tint = "tint-5";
         // copy for H1
         $h1 = "TRENDING";
 

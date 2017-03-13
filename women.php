@@ -33,11 +33,7 @@ include_once 'INC/DB/Config.php';
 
 // Hero-half
         //IMG URL
-        $url = "https://images.unsplash.com/photo-1418833893919-fa9c83e8d69e?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop="; 
-
-        $url = "https://images.unsplash.com/photo-1457459588520-2ae325c92c09?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="; 
-
-        $url = "https://images.unsplash.com/photo-1440332013745-3a1357afa90c?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop="; 
+        $url = "https://images.unsplash.com/photo-1483181957632-8bda974cbc91?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="; 
         // Amount of tint on image
         $tint = "tint-1";
         // copy for H1
@@ -47,7 +43,6 @@ include_once 'INC/DB/Config.php';
 
 
 // Blocks-two-compact-extend
-
 		// Background colour class for text
 		$BlockBG = "bg-white";
 		// Title
@@ -69,19 +64,171 @@ include_once 'INC/DB/Config.php';
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 
-$hide = "hidden-sm-down";
 
-include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+// Spacing	
+		// Add a class to hide the seperation
+		$hide = "hidden-sm-down";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-include (ROOT_PATH . 'INC/Blocks-grid.php');
 
-$hide = "hidden-sm-down";
+// Blocks grid
+		// Title
+		$Block_Grid_Title = "Latest Clothing";
 
-include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+	// Image 1 URL 
+		$Block_Grid_IMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$product_Title_1 = "Product Title";
+		// Image 1 product description
+		$product_description_1 = "orem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
 
-include (ROOT_PATH . 'INC/Blocks-three.php');
+
+	// Image 2 URL 
+		$Block_Grid_IMG_2 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		// Image 1 product title
+		$product_Title_2 = "Product Title";
+		// Image 1 product description
+		$product_description_2 = "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 3 URL 
+		$Block_Grid_IMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$product_Title_3 = "Product Title";
+		// Image 1 product description
+		$product_description_3 = "orem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 4 URL 
+		$Block_Grid_IMG_4 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		// Image 1 product title
+		$product_Title_4 = "Product Title";
+		// Image 1 product description
+		$product_description_4 = "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 5 URL 
+		$Block_Grid_IMG_5 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$product_Title_5 = "Product Title";
+		// Image 1 product description
+		$product_description_5 = "orem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 6 URL 
+		$Block_Grid_IMG_6 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$product_Title_6 = "Product Title";
+		// Image 1 product description
+		$product_description_6 = "orem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 7 URL 
+		$Block_Grid_IMG_7 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		// Image 1 product title
+		$product_Title_7 = "Product Title";
+		// Image 1 product description
+		$product_description_7 = "orem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 8 URL 
+		$Block_Grid_IMG_8 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		// Image 1 product title
+		$product_Title_8 = "Product Title";
+		// Image 1 product description
+		$product_description_8 = "orem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 9 URL 
+		$Block_Grid_IMG_9 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$product_Title_9 = "Product Title";
+		// Image 1 product description
+		$product_description_9 = "orem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+		include (ROOT_PATH . 'INC/Blocks-grid.php');
+
+
+
+// Spacing	
+		// Add a class to hide the seperation
+		$hide = "hidden-sm-down";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+
+
+
+// Blocks-three grid
+		// Title
+		$Blocks_3_Title = "Latest Footwear";
+
+	// Image 1 URL 
+		$Blocks_3_IMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$Blocks_3_Product_Title_1 = "Product Title";
+		// Image 1 product description
+		$Blocks_3_Description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 2 URL 
+		$Blocks_3_IMG_2 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		// Image 1 product title
+		$Blocks_3_Product_Title_2 = "Product Title";
+		// Image 1 product description
+		$Blocks_3_Description_2 = "orem ipsum dolor sit amet, consectetur adipisicinag elit. Cupiditate, numquam.";
+
+
+	// Image 3 URL 
+		$Blocks_3_IMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$Blocks_3_Product_Title_3 = "Product Title";
+		// Image 1 product description
+		$Blocks_3_Description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+		include (ROOT_PATH . 'INC/Blocks-three.php');
+
+
+
+// Blocks-four grid
+		// Title
+		$Blocks_4_Title = "Latest Footwear";
+
+	// Image 1 URL 
+		$Blocks_4_IMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$Blocks_4_Product_Title_1 = "Product Title";
+		// Image 1 product description
+		$Blocks_4_Description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 2 URL 
+		$Blocks_4_IMG_2 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		// Image 1 product title
+		$Blocks_4_Product_Title_2 = "Product Title";
+		// Image 1 product description
+		$Blocks_4_Description_2 = "orem ipsum dolor sit amet, consectetur adipisicinag elit. Cupiditate, numquam.";
+
+
+	// Image 3 URL 
+		$Blocks_4_IMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$Blocks_4_Product_Title_3 = "Product Title";
+		// Image 1 product description
+		$Blocks_4_Description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 4 URL 
+		$Blocks_4_IMG_4 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&1";
+		// Image 1 product title
+		$Blocks_4_Product_Title_4 = "Product Title";
+		// Image 1 product description
+		$Blocks_4_Description_4 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
 
 include (ROOT_PATH . 'INC/Blocks-four.php');
+
 
 // Footer
 

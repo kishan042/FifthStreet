@@ -46,7 +46,7 @@ include_once 'INC/DB/Config.php';
 		$h1 = "TOP BRANDS";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$description = "Discover new brands every day, who are offering the best products without compromising on the quality.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
