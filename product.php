@@ -12,10 +12,10 @@ error_reporting(~0);
         }
 
 // Config file
-        require_once("INC/Config.php");
+        require_once ("INC/DB/Config.php");
 
 // DB - Model
-        require_once(ROOT_PATH . "INC/DB/model.php");
+        require_once (ROOT_PATH . "INC/DB/model.php");
         // if an ID is specified in the query string, use it
         if (isset($_GET["id"])) {
             $product_id = intval($_GET["id"]);
@@ -176,10 +176,10 @@ error_reporting(~0);
                 <!-- Set of 3 CTA's -->
                 <div class="row mt-50">
                         <div class="col-xs-2 px-0">
-                                <div id="<?php echo $product["sku"] ?>" 
+                                <div id="<?php echo $product["product_id"] ?>" 
                                 class="add-to-wishlist circle-btn-add"></div>
 
-                                <div id="<?php echo $product["sku"] ?>" 
+                                <div id="<?php echo $product["product_id"] ?>" 
                                 class="remove-from-wishlist circle-btn-remove hide"></div>
                         </div>
                         <div class="col-xs-8 px-0">

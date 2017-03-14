@@ -57,8 +57,6 @@ $query = http_build_query($data, 'id');
 </a> 
 
 
-
-
 <?php
 	
 // Spacing	
@@ -97,53 +95,3 @@ $query = http_build_query($data, 'id');
 
 	    }
 	}
-
-
-
-
-?>
-
-<script>
-    // collect ids from local storage
-    var email = localStorage.getItem('wishlist');
-
-    console.log(email);
-</script>
-<?php
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

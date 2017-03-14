@@ -75,7 +75,7 @@ error_reporting(~0);
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = BASE_URL . "wardrobe.php";
+		$BlockLink = BASE_URL . "brands/catalogue.php?Branid=" . $brand_id;
 		// CTA copy
 		$BlockCTA = "View all items";
 		// Image 1 URL 
@@ -97,7 +97,7 @@ error_reporting(~0);
 
 // Blocks grid
 		// Title
-		$Block_Grid_Title = "Latest Clothing From " . $brand["brand_name"];
+		$Block_Grid_Title = "Latest Clothing From";
 
 	// Image 1 URL 
 		$Block_Grid_IMG_1 = $img . "men/Men-hat-white.jpg";
@@ -185,7 +185,7 @@ error_reporting(~0);
 
 // Blocks-three grid
 		// Title
-		$Blocks_3_Title = "Latest Footwear From " . $brand["brand_name"];
+		$Blocks_3_Title = "Latest Footwear From";
 
 	// Image 1 URL 
 		$Blocks_3_IMG_1 = $img . "men/Men-hat-grey.jpg";
@@ -224,7 +224,7 @@ error_reporting(~0);
 
 // Blocks-four grid
 		// Title
-		$Blocks_4_Title = "Latest Accessories From " . $brand["brand_name"];
+		$Blocks_4_Title = "Latest Accessories From";
 
 	// Image 1 URL 
 		$Blocks_4_IMG_1 = $img . "men/Men-hat-grey.jpg";

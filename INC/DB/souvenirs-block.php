@@ -8,10 +8,10 @@
  */
 
 ?><li>
-    <a href="<?php echo BASE_URL; ?>product.php/?id=<?php echo $default["sku"]; ?>">
-        <img class="img-fluid" src="<?php echo BASE_URL . $default["img"]; ?>" alt="<?php echo $default["name"]; ?>">
-        <h2 class="product-title"><?php echo $default["name"]; ?></h2>
-        <h3 class="brand-title">Brand title</h3>
-    </a>
- </li>
+        <a href="<?php echo BASE_URL; ?>product.php/?id=<?php echo $souvenir["product_id"]; ?>">
+            <img class="img-fluid" src="<?php echo BASE_URL . $souvenir["image"]; ?>" alt="<?php echo $souvenir["alt"]; ?>">
+            <h2 class="product-title"><?php echo $souvenir["product_name"]; ?></h2>
+            <h3 class="brand-title">by <?php echo $souvenir["brand_name"]; ?></h3>
+        </a>
+    </li>
 

@@ -58,7 +58,7 @@
 <div class="container">
     <ul id="output" class="products block">
         <?php
-            foreach($default_souvenirs as $default) {
+            foreach($default_souvenirs as $souvenir) {
                 include(ROOT_PATH . "INC/DB/souvenirs-block.php");
             }
         ?>

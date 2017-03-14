@@ -1,4 +1,13 @@
 <?php
+        // a $product will only be set if an ID is specified in the query
+        // string and it corresponds to a real product. If no product is
+        // set, then redirect to the shirts listing page; otherwise, continue
+        // on and display the Shirt Details page for that $product
+        if (empty($_GET["Offid"])) {
+            header("Location: http://localhost:8888/_Github/FifthStreet/offers.php" );
+            exit();
+        }
+
 // Config file
     include_once '../INC/DB/Config.php';
 
@@ -6,16 +15,18 @@
     include(ROOT_PATH . "INC/DB/model.php");
     // Call function to get the latest / trending products
      if (isset($_GET["Offid"])) {
-        $offer_id = intval($_GET["Offid"]);
-        $Offer_ID = get_single_offers($offer_id);
+        $Offer_id = intval($_GET["Offid"]);
+        $Offer_ID = get_single_offer($Offer_id);
+        $Offer_info = get_single_offer_info($Offer_id);
     } 
+    
 
 // Header
         // Title tag
-        $Title = "Trending ";
+        $Title = $Offer_info["offer_name"];
         
         // Meta description
-        $Description = "Fill text";
+        $Description = $Offer_info["offer_name"];
 
         // CSS path
         $CSSPath = BASE_URL . "CSS/Styles.css";
@@ -54,7 +65,7 @@
         // Amount of tint on image
         $tint = "tint-5";
         // copy for H1
-        $h1 = "OFFERS";
+        $h1 = $Offer_info["offer_name"];
 
         include (ROOT_PATH . 'INC/Hero-half.php');
 
@@ -87,13 +98,13 @@
 
 // Footer
         // If current pages does not exist then add the 
-        $hide = "hidden-xs-up";
+        $hide = " ";
 
         // Bread crunb for the previous page 
-        $PreviousPage = "";
+        $PreviousPage = " Offers";
 
         // Bread crumbs for the current page
-        $CurrentPage = "Trending";
+        $CurrentPage = $Offer_info["offer_name"];
         
 
         // JS path

@@ -3440,13 +3440,13 @@ tbody.collapse.in {
   left: 0;
   z-index: 1030; }
 
-.text-justify {
+.txt-justify {
   text-align: justify !important; }
 
-.text-nowrap {
+.txt-nowrap {
   white-space: nowrap !important; }
 
-.text-truncate {
+.txt-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -3505,13 +3505,13 @@ tbody.collapse.in {
 
   .txt-xxl-center {
     text-align: center !important; } }
-.text-lowercase {
+.txt-lowercase {
   text-transform: lowercase !important; }
 
-.text-uppercase {
+.txt-uppercase {
   text-transform: uppercase !important; }
 
-.text-capitalize {
+.txt-capitalize {
   text-transform: capitalize !important; }
 
 .font-weight-normal {

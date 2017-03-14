@@ -5,7 +5,7 @@ error_reporting(~0);
 function get_all_offers() {
 
     // Connect to the database
-    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+    require (ROOT_PATH . "INC/DB/db-connection.php");
 
     // Try catch block to create a query to the products table
     try {
@@ -25,16 +25,15 @@ function get_all_offers() {
     return $recent;
 }
 
-function get_single_offers($amount){
+function get_single_offer($id){
 
     // Connect to the database
-    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+    require (ROOT_PATH . "INC/DB/db-connection.php");
 
     // Try catch block to create a query to the products table
     try {
-        $results = $db->prepare("SELECT product_name, product_id, image, alt, brand_name From Products WHERE offer_id = ?
- "); 
-        $results->bindParam(1,$amount);
+        $results = $db->prepare("SELECT product_name, product_id, image, alt, brand_name From Products WHERE offer_id = ? "); 
+        $results->bindParam(1,$id);
         $results->execute();
         error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit
@@ -50,10 +49,32 @@ function get_single_offers($amount){
 }
 
 
+function get_single_offer_info($id) {
+
+    require (ROOT_PATH . "INC/DB/db-connection.php");
+
+    try {
+        $results = $db->prepare("
+            SELECT *
+            FROM Offers 
+            WHERE offer_id = ?");
+        $results->bindParam(1,$id);
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $product = $results->fetch(PDO::FETCH_ASSOC);
+
+    return $product;
+}
+
+
 function get_all_brands() {
 
     // Connect to the database
-    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+    require (ROOT_PATH . "INC/DB/db-connection.php");
 
     // Try catch block to create a query to the products table
     try {
@@ -76,7 +97,7 @@ function get_all_brands() {
 
 function get_single_brand($id) {
 
-    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+    require (ROOT_PATH . "INC/DB/db-connection.php");
 
     try {
         $results = $db->prepare("SELECT brand_name, description FROM Brands WHERE brand_id = ?");
@@ -92,6 +113,26 @@ function get_single_brand($id) {
     return $product;
 }
 
+
+function get_brand_cat($id) {
+
+    require (ROOT_PATH . "INC/DB/db-connection.php");
+
+    try {
+        $results = $db->prepare("SELECT * FROM Products WHERE brand_id = ?");
+        $results->bindParam(1,$id);
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $product = $results->fetch(PDO::FETCH_ASSOC);
+
+    return $product;
+}
+
+
 /*
  * Returns products from the DB depending on the term that may have been searched.
  * In hero-half-search module, the search tearm is appended to the url 
@@ -104,7 +145,7 @@ function get_single_brand($id) {
 
 function get_products_search($s) {
 
-    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+    require (ROOT_PATH . "INC/DB/db-connection.php");
 
     // Try catch block to create a query to collect all of the products
     try {
@@ -136,7 +177,7 @@ function get_all_products() {
 
 // Request DB connection
 
-    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+    require (ROOT_PATH . "INC/DB/db-connection.php");
 
     // Try catch block to create a query to collect all of the products
     try {
@@ -170,7 +211,7 @@ function get_all_products() {
 function get_recent_products($amount) {
 
     // Connect to the database
-    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+    require (ROOT_PATH . "INC/DB/db-connection.php");
 
     // Try catch block to create a query to the products table
     try {
@@ -201,7 +242,7 @@ function get_recent_products($amount) {
 
 function get_single_product($id) {
 
-    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+    require (ROOT_PATH . "INC/DB/db-connection.php");
 
     try {
         $results = $db->prepare("
@@ -305,6 +346,7 @@ function get_single_product($id) {
  * Call this function after the model.php has been included.
  * $recent = get_products_recent(4); 
  */
+//SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry ASC"); 
 
 function get_default_souvenirs() {
 
@@ -314,9 +356,9 @@ function get_default_souvenirs() {
     // Try catch block to create a query to the products table
     try {
         $results = $db->query("
-            SELECT name, price, img, sku, paypal 
-            FROM products 
-            ORDER BY sku ASC 
+            SELECT product_name, product_id, image, alt, brand_name
+            FROM Products 
+            ORDER BY entry ASC 
             LIMIT 4"); 
         error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit

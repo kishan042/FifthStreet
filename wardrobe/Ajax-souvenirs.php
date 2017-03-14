@@ -29,11 +29,11 @@ else { // if connected
 				$product = $key['item'];
 			
 			
-				    $results = $db->query("SELECT * FROM products WHERE sku = '$product';"); 
+				    $results = $db->query("SELECT * FROM Products WHERE product_id = '$product';"); 
 			    	$customer_row = mysqli_fetch_assoc($results);
-			    	$id = $customer_row["sku"];
-			    	$name = $customer_row["name"];
-			    	$image = $customer_row["img"];
+			    	$id = $customer_row["product_id"];
+			    	$name = $customer_row["product_name"];
+			    	$image = $customer_row["image"];
 			    	$price = $customer_row["price"];
 			    	$productData = array('id' => $id, 'name' => $name, 'image' => $image, 'price' => $price );
 			    	array_push($object, $productData);
