@@ -64,8 +64,6 @@
         include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
-
-
 <div class="container">
     <ul class="products block">
         <?php
@@ -75,8 +73,6 @@
         ?>
     </ul>
 </div>
-
-
 <?php
 
 // Spacing  

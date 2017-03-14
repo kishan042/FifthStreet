@@ -1,0 +1,1 @@
+<h1>get all products with the id that maths the one in the url else redirect</h1>

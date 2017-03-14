@@ -1,14 +1,35 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(~0);
+
+        // a $product will only be set if an ID is specified in the query
+        // string and it corresponds to a real product. If no product is
+        // set, then redirect to the shirts listing page; otherwise, continue
+        // on and display the Shirt Details page for that $product
+        if (empty($_GET["Branid"])) {
+            header("Location: http://localhost:8888/_Github/FifthStreet/brands.php" );
+            exit();
+        }
+
 // Config file
-include_once 'INC/DB/Config.php';
+		include_once '../INC/DB/Config.php';
+
+
+// DB - Model
+	    require_once(ROOT_PATH . "INC/DB/model.php");
+
+
+        //if an ID is specified in the query string, use it
+        if (isset($_GET["Branid"])) {
+            $brand_id = intval($_GET["Branid"]);
+            $brand = get_single_brand($brand_id);
+        }
 
 // Header
 		// Title tag
-		$Title = "Men ";
+		$Title = $brand["name"];
 		// Meta description
-		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
+		$Description = $brand["description"];
 
 		// CSS path
 		$CSSPath = BASE_URL . "CSS/Styles.css";
@@ -20,16 +41,16 @@ include_once 'INC/DB/Config.php';
 
 // Navbar
 		// Links to other pages	
-		$men = "#"; 
-		$women = WOMEN; 
-		$brands = BRANDS; 
-		$about = ABOUT; 
-		$trending = TRENDING; 
-		$offers = OFFERS; 
-		$wardrobe = WARDROBE; 
-		$search = SEARCH; 
-		$profile = PROFILE; 
-		$basket = BASKET; 
+        $men = BASE_URL . MEN; 
+        $women = BASE_URL . WOMEN; 
+        $brands = BASE_URL . BRANDS; 
+        $about = BASE_URL . ABOUT; 
+        $trending = BASE_URL . TRENDING; 
+        $offers = BASE_URL . OFFERS; 
+        $wardrobe = BASE_URL . WARDROBE; 
+        $search = BASE_URL . SEARCH; 
+        $profile = BASE_URL . PROFILE; 
+        $basket = BASE_URL . BASKET;  
 
 		include (ROOT_PATH . 'INC/Navbar.php'); 
 
@@ -48,13 +69,13 @@ include_once 'INC/DB/Config.php';
 		// Background colour class for text
 		$BlockBG = "bg-white";
 		// Title
-		$BlockTitle = "FOR MEN";
+		$BlockTitle = $brand["name"];
 		// Copy
-		$BlockText = "Wander across a range of brand collections and save any product which inspires you. Why stop there, you can even go to any physical store.";
+		$BlockText = $brand["description"];
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = "wardrobe.php";
+		$BlockLink = BASE_URL . "wardrobe.php";
 		// CTA copy
 		$BlockCTA = "View all items";
 		// Image 1 URL 
@@ -76,7 +97,7 @@ include_once 'INC/DB/Config.php';
 
 // Blocks grid
 		// Title
-		$Block_Grid_Title = "Latest Clothing";
+		$Block_Grid_Title = "Latest Clothing From " . $brand["name"];
 
 	// Image 1 URL 
 		$Block_Grid_IMG_1 = $img . "men/Men-hat-white.jpg";
@@ -164,7 +185,7 @@ include_once 'INC/DB/Config.php';
 
 // Blocks-three grid
 		// Title
-		$Blocks_3_Title = "Latest Footwear";
+		$Blocks_3_Title = "Latest Footwear From " . $brand["name"];
 
 	// Image 1 URL 
 		$Blocks_3_IMG_1 = $img . "men/Men-hat-grey.jpg";
@@ -203,7 +224,7 @@ include_once 'INC/DB/Config.php';
 
 // Blocks-four grid
 		// Title
-		$Blocks_4_Title = "Latest Accessories";
+		$Blocks_4_Title = "Latest Accessories From " . $brand["name"];
 
 	// Image 1 URL 
 		$Blocks_4_IMG_1 = $img . "men/Men-hat-grey.jpg";
@@ -242,13 +263,13 @@ include (ROOT_PATH . 'INC/Blocks-four.php');
 // Footer
 
 		// If current pages does not exist then add the 
-		$hide = "hidden-xs-up";
+		$hide = " ";
 
 		// Bread crunb for the previous page 
-		$PreviousPage = "";
+		$PreviousPage = "Brands";
 
 		// Bread crumbs for the current page
-		$CurrentPage = "Men";
+		$CurrentPage = $brand["name"];
 
 		// JS path
 		$JSPath = BASE_URL . "JS/jquery.js";

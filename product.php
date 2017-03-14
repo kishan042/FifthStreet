@@ -12,10 +12,10 @@ error_reporting(~0);
         }
 
 // Config file
-    require_once("INC/Config.php");
+        require_once("INC/Config.php");
 
 // DB - Model
-    require_once(ROOT_PATH . "INC/DB/model.php");
+        require_once(ROOT_PATH . "INC/DB/model.php");
 
 
         // if an ID is specified in the query string, use it
@@ -69,9 +69,6 @@ error_reporting(~0);
         
         include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-        $img_1 = "/_Github/FifthStreet/img/shirts/shirt-115.jpg";
-        $img_2 = "/_Github/FifthStreet/img/shirts/shirt-125.jpg";
-        $img_3 = "/_Github/FifthStreet/img/shirts/shirt-116.jpg";
 ?>
 
 <div class="row mt-30 simpleCart_shelfItem">

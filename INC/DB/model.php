@@ -2,6 +2,75 @@
 ini_set('display_errors', 1);
 error_reporting(~0);
 
+function get_all_offers() {
+
+    // Connect to the database
+    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+
+    // Try catch block to create a query to the products table
+    try {
+        $results = $db->query("
+            SELECT name, id, image, alt
+            FROM Offers 
+            ORDER BY ord ASC"); 
+    } catch (Exception $e) { // catch exception if query fails and then exit
+        echo "Data could not be retrived from new database.";
+        exit;
+    }
+
+    // Fetch the data in a PDO object
+    $recent = $results->fetchAll(PDO::FETCH_ASSOC);
+
+    // returns the items from the database
+    return $recent;
+}
+
+
+function get_all_brands() {
+
+    // Connect to the database
+    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+
+    // Try catch block to create a query to the products table
+    try {
+        $results = $db->query("
+            SELECT *
+            FROM Brands 
+            ORDER BY id ASC"); 
+    } catch (Exception $e) { // catch exception if query fails and then exit
+        echo "Data could not be retrived from new database.";
+        exit;
+    }
+
+    // Fetch the data in a PDO object
+    $recent = $results->fetchAll(PDO::FETCH_ASSOC);
+
+    // returns the items from the database
+    return $recent;
+}
+
+
+function get_single_brand($id) {
+
+    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+
+    try {
+        $results = $db->prepare("SELECT name, description FROM Brands WHERE id = ?");
+        $results->bindParam(1,$id);
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $product = $results->fetch(PDO::FETCH_ASSOC);
+
+    return $product;
+}
+
+
+
+
 /*
  * Returns products from the DB depending on the term that may have been searched.
  * In hero-half-search module, the search tearm is appended to the url 
