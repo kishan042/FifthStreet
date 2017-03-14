@@ -8,8 +8,8 @@
  */
 
 ?><li>
-	<a href="<?php echo BASE_URL; ?>brands/?id=101&Branid=<?php echo $brand["id"]; ?>">
+	<a href="<?php echo BASE_URL; ?>brands/?Branid=<?php echo $brand["brand_id"]; ?>">
 	    <img class="img-fluid" src="<?php echo BASE_URL . $brand["image"] ?>" alt="<?php echo $brand["alt"]; ?>">
-	    <h2 class="product-title"><?php echo $brand["name"]; ?></h2>
+	    <h2 class="product-title"><?php echo $brand["brand_name"]; ?></h2>
 	</a>
 </li>

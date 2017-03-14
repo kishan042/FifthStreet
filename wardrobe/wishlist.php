@@ -65,6 +65,7 @@ include_once '../INC/DB/Config.php';
 
     </ul>
 </div>
+
 <?php 
 // Spacing  
         // Add a class to hide the seperation when the wishlist
@@ -79,7 +80,7 @@ include_once '../INC/DB/Config.php';
     <ul class="products block">
         <?php
             foreach($recent as $product) {
-                include(ROOT_PATH . "INC/DB/product-block.php");
+                include(ROOT_PATH . "INC/DB/products-block.php");
             }
         ?>
     </ul>

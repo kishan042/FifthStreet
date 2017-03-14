@@ -4902,12 +4902,6 @@ ul.size-flex-center li:hover,
   font-weight: 400; }
 
 @media (min-width: 768px) {
-  .primary-colour-set {
-    display: none !important; }
-
-  .secondary-colour-set {
-    display: block !important; }
-
   ul.size-flex-center {
     justify-content: flex-start; }
 
@@ -4923,12 +4917,6 @@ ul.size-flex-center li:hover,
     justify-content: center;
     flex-direction: column; } }
 @media (min-width: 1200px) {
-  .primary-colour-set {
-    display: block !important; }
-
-  .secondary-colour-set {
-    display: none !important; }
-
   ul.colours-flex-center {
     display: flex;
     justify-content: flex-start; }

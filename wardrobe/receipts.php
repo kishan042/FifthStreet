@@ -61,10 +61,10 @@ $recent = get_all_products();
         //include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 ?>
 <div class="container">
-    <ul class="products">
+    <ul class="products block">
         <?php
             foreach(array_reverse($recent) as $product) {
-                include(ROOT_PATH . "INC/DB/product-block.php");
+                include(ROOT_PATH . "INC/DB/products-block.php");
             }
         ?>
     </ul>

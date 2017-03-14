@@ -27,7 +27,7 @@ error_reporting(~0);
 
 // Header
 		// Title tag
-		$Title = $brand["name"];
+		$Title = $brand["brand_name"];
 		// Meta description
 		$Description = $brand["description"];
 
@@ -69,7 +69,7 @@ error_reporting(~0);
 		// Background colour class for text
 		$BlockBG = "bg-white";
 		// Title
-		$BlockTitle = $brand["name"];
+		$BlockTitle = $brand["brand_name"];
 		// Copy
 		$BlockText = $brand["description"];
 		// type 'hide' to remove the button
@@ -97,7 +97,7 @@ error_reporting(~0);
 
 // Blocks grid
 		// Title
-		$Block_Grid_Title = "Latest Clothing From " . $brand["name"];
+		$Block_Grid_Title = "Latest Clothing From " . $brand["brand_name"];
 
 	// Image 1 URL 
 		$Block_Grid_IMG_1 = $img . "men/Men-hat-white.jpg";
@@ -185,7 +185,7 @@ error_reporting(~0);
 
 // Blocks-three grid
 		// Title
-		$Blocks_3_Title = "Latest Footwear From " . $brand["name"];
+		$Blocks_3_Title = "Latest Footwear From " . $brand["brand_name"];
 
 	// Image 1 URL 
 		$Blocks_3_IMG_1 = $img . "men/Men-hat-grey.jpg";
@@ -224,7 +224,7 @@ error_reporting(~0);
 
 // Blocks-four grid
 		// Title
-		$Blocks_4_Title = "Latest Accessories From " . $brand["name"];
+		$Blocks_4_Title = "Latest Accessories From " . $brand["brand_name"];
 
 	// Image 1 URL 
 		$Blocks_4_IMG_1 = $img . "men/Men-hat-grey.jpg";
@@ -269,7 +269,7 @@ include (ROOT_PATH . 'INC/Blocks-four.php');
 		$PreviousPage = "Brands";
 
 		// Bread crumbs for the current page
-		$CurrentPage = $brand["name"];
+		$CurrentPage = $brand["brand_name"];
 
 		// JS path
 		$JSPath = BASE_URL . "JS/jquery.js";

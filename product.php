@@ -16,8 +16,6 @@ error_reporting(~0);
 
 // DB - Model
         require_once(ROOT_PATH . "INC/DB/model.php");
-
-
         // if an ID is specified in the query string, use it
         if (isset($_GET["id"])) {
             $product_id = intval($_GET["id"]);
@@ -27,7 +25,7 @@ error_reporting(~0);
 
 // Header
         // Title tag
-        $Title = $product["name"];
+        $Title = $product["product_name"];
         
         // Meta description
         $Description = "Fill text";
@@ -75,17 +73,17 @@ error_reporting(~0);
         <!-- Product image block -->
         <div class="product-img-block col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6 mr-2">
                 <div class="p-2 bg-gray-lightest">
-                    <img id="<?php echo $product["sku"] ?>" 
+                    <img id="<?php echo $product["product_id"] ?>" 
                         class="img-fluid img-center item_image" 
-                        src="<?php echo BASE_URL . $product["img"] ?>" 
-                        alt="<?php echo $product["name"] ?>">
+                        src="<?php echo BASE_URL . $product["image"] ?>" 
+                        alt="<?php echo $product["alt"] ?>">
                 </div>
 
-                <div class="mt-30 secondary-colour-set hide">
+                <div class="mt-30 hidden-xl-up">
                         <ul class="colours-flex-center">
-                                <li value="115" class="product-colour colour-active " style="background-color: purple;"></li>
-                                <li value="103" class="product-colour" style="background-color: deepskyblue;"></li>
-                                <li value="104" class="product-colour" style="background-color: darkcyan;"></li>
+                                <li value="red" class="product-colour colour-active " style="background-color: purple;"></li>
+                                <li value="blue" class="product-colour" style="background-color: deepskyblue;"></li>
+                                <li value="purple" class="product-colour" style="background-color: darkcyan;"></li>
                         </ul>
                 </div>
         </div>
@@ -93,7 +91,7 @@ error_reporting(~0);
         <div class="col-xs-12 col-md-5 col-lg-4 offset-lg-1 offset-xl-0 col-xl-3 desk-product-details">
                 <!-- Product title -->
                 <h1 class="h2-alt txt-xs-center txt-md-left txt-black mt-20 item_name">
-                        <?php echo $product["name"] ?>
+                        <?php echo $product["product_name"] ?>
                 </h1>  
                 <!-- Price & Brand name -->
                 <div class="row mt-10">
@@ -104,22 +102,23 @@ error_reporting(~0);
                                 <h3 class="txt-xs-center txt-md-left">|</h3>
                         </div>
                         <div class="col-xs-4 px-0">
-                                <a href="#"><h2 class="h3-alt txt-xs-center txt-md-left">By Brand</h2></a>
+                                <a href="#"><h2 class="h3-alt txt-xs-center txt-md-left">by <?php echo $product["brand_name"] ?></h2></a>
                         </div>      
                 </div>
                 <div class="hidden-md-up mt-30">
                         <h2 class="h3">Stock</h2>
                         <ul class="mt-20">
-                                <h2 class="h3-alt txt-gem">5 available in-store</h2>
-                                <h2 class="h4">10 available online</h2>
+                                <h2 class="h3-alt txt-gem"><?php echo $product["stock"] ?> available in-store</h2>
+                                <h2 class="h4"><?php echo $product["stock"] ?> available online</h2>
                         </ul>
                 </div>
-                <div class="mt-30 primary-colour-set">
+                <div class="mt-30 primary-colour-set hidden-lg-down">
                         <h2 class="h3 hidden-lg-up">Colours</h2>
                         <ul class="colours-flex-center">
-                                <li value="115" class="product-colour colour-active " style="background-color: purple;"></li>
-                                <li value="103" class="product-colour" style="background-color: deepskyblue;"></li>
-                                <li value="104" class="product-colour" style="background-color: darkcyan;"></li>
+                                <li value="red" class="product-colour colour-active " style="background-color: purple;"></li>
+                                <li value="blue" class="product-colour" style="background-color: deepskyblue;"></li>
+                                <li value="purple" class="product-colour" style="background-color: darkcyan;"></li>
+                          
                         </ul>
                 </div>
 
@@ -199,13 +198,13 @@ error_reporting(~0);
                         <div class="col-xs-12 col-md-6">
                                 <hr class="mt-40 hidden-md-up">
                                 <h2 class="mt-40 txt-xs-center">Product description</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum rem officiis quod. Non laborum aliquam officiis qui adipisci harum, nulla, optio amet aperiam, esse eligendi fugit, itaque ea repellendus eos.</p>
+                                <p><?php echo $product["product_description"] ?></p>
 
                         </div>
                         <div class="col-xs-12 col-md-6">
                                 <hr class="mt-40 hidden-md-up">
                                 <h2 class="mt-50 txt-xs-center">Ratings</h2>
-                                <h3 class="h1 txt-gem txt-xs-center">4 / 5</h3>
+                                <h3 class="h1 txt-gem txt-xs-center"><?php echo $product["rating"] ?> / 5</h3>
                                 <hr class="mt-40 hidden-md-up">
                         </div>
                 </div>
@@ -258,7 +257,7 @@ error_reporting(~0);
         $PreviousPage = "";
 
         // Bread crumbs for the current page
-        $CurrentPage = $product["name"];
+        $CurrentPage = $product["product_name"];
         
 
         // JS path
@@ -304,7 +303,7 @@ error_reporting(~0);
     // as it is dependent on the product id prodived in the url
     var disqus_config = function () {
     this.page.url = 'http://thefifthstreet.com/';  
-    this.page.identifier = <?php echo $product["sku"] ?>;
+    this.page.identifier = <?php echo $product["product_id"] ?>;
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE

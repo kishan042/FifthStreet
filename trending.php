@@ -68,7 +68,7 @@
     <ul class="products block">
         <?php
             foreach($all_products as $product) {
-                include(ROOT_PATH . "INC/DB/product-block.php");
+                include(ROOT_PATH . "INC/DB/products-block.php");
             }
         ?>
     </ul>

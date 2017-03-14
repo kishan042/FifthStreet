@@ -10,7 +10,7 @@ function get_all_offers() {
     // Try catch block to create a query to the products table
     try {
         $results = $db->query("
-            SELECT name, id, image, alt
+            SELECT offer_name, offer_id, image, alt
             FROM Offers 
             ORDER BY ord ASC"); 
     } catch (Exception $e) { // catch exception if query fails and then exit
@@ -25,6 +25,24 @@ function get_all_offers() {
     return $recent;
 }
 
+function get_single_offer($id) {
+
+    require (ROOT_PATH . "INC/DB/db-connection-2.php");
+ 
+    try {
+        $results = $db->prepare("SELECT product_name, product_id, image, alt, brand_name FROM Products WHERE offer_id = ?");
+        $results->bindParam(1,$id);
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $product = $results->fetch(PDO::FETCH_ASSOC);
+
+    return $product;
+}
+
 
 function get_all_brands() {
 
@@ -36,7 +54,7 @@ function get_all_brands() {
         $results = $db->query("
             SELECT *
             FROM Brands 
-            ORDER BY id ASC"); 
+            ORDER BY brand_id ASC"); 
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from new database.";
         exit;
@@ -55,7 +73,7 @@ function get_single_brand($id) {
     require (ROOT_PATH . "INC/DB/db-connection-2.php");
 
     try {
-        $results = $db->prepare("SELECT name, description FROM Brands WHERE id = ?");
+        $results = $db->prepare("SELECT brand_name, description FROM Brands WHERE brand_id = ?");
         $results->bindParam(1,$id);
         $results->execute();
     } catch (Exception $e) {
@@ -67,9 +85,6 @@ function get_single_brand($id) {
 
     return $product;
 }
-
-
-
 
 /*
  * Returns products from the DB depending on the term that may have been searched.
@@ -83,15 +98,15 @@ function get_single_brand($id) {
 
 function get_products_search($s) {
 
-    require (ROOT_PATH . "INC/DB/db-connection.php");
+    require (ROOT_PATH . "INC/DB/db-connection-2.php");
 
     // Try catch block to create a query to collect all of the products
     try {
         $results = $db->prepare("
-            SELECT name, price, img, sku, paypal 
-            FROM products 
-            WHERE name LIKE ?
-            ORDER BY sku ASC");
+            SELECT *
+            FROM Products 
+            WHERE product_description LIKE ?
+            ORDER BY entry ASC");
         $results->bindValue(1, "%" . $s . "%"); 
         $results->execute();
     } catch (Exception $e) { // catch exception if query fails and then exit
@@ -104,7 +119,6 @@ function get_products_search($s) {
     return $search_match;
 }
 
-
 /*
  * Returns the all products from the DB.
  * Call this function after the model.php has been included.
@@ -116,11 +130,11 @@ function get_all_products() {
 
 // Request DB connection
 
-    require (ROOT_PATH . "INC/DB/db-connection.php");
+    require (ROOT_PATH . "INC/DB/db-connection-2.php");
 
     // Try catch block to create a query to collect all of the products
     try {
-        $results = $db->query("SELECT name, price, img, sku, paypal From products ORDER BY sku ASC"); 
+        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry ASC"); 
 
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from database.";
@@ -150,15 +164,11 @@ function get_all_products() {
 function get_recent_products($amount) {
 
     // Connect to the database
-    require (ROOT_PATH . "INC/DB/db-connection.php");
+    require (ROOT_PATH . "INC/DB/db-connection-2.php");
 
     // Try catch block to create a query to the products table
     try {
-        $results = $db->query("
-            SELECT name, price, img, sku, paypal 
-            FROM products 
-            ORDER BY sku DESC 
-            LIMIT $amount"); 
+        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry DESC LIMIT $amount"); 
         error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from database.";
@@ -185,10 +195,13 @@ function get_recent_products($amount) {
 
 function get_single_product($id) {
 
-    require (ROOT_PATH . "INC/DB/db-connection.php");
+    require (ROOT_PATH . "INC/DB/db-connection-2.php");
 
     try {
-        $results = $db->prepare("SELECT name, price, img, sku, paypal FROM products WHERE sku = ?");
+        $results = $db->prepare("
+            SELECT *
+            FROM Products 
+            WHERE product_id = ?");
         $results->bindParam(1,$id);
         $results->execute();
     } catch (Exception $e) {
@@ -198,31 +211,84 @@ function get_single_product($id) {
 
     $product = $results->fetch(PDO::FETCH_ASSOC);
 
-    // Use inner join to get the sizes of individual products    
-    if ($product === false) return $product;
+    // // // // Use inner join to get the sizes of individual products    
+    // if ($product === false) return $product;
 
-    $product["sizes"] = array();
+    // $product["colours"] = array();
 
-    try {
-        $results = $db->prepare("
-            SELECT size
-            FROM   products_sizes ps
-            INNER JOIN sizes s ON ps.size_id = s.id
-            WHERE product_sku = ?
-            ORDER BY `order`");
-        $results->bindParam(1,$id);
-        $results->execute();
-    } catch (Exception $e) {
-        echo "Data could not be retrieved from the database.";
-        exit;
-    }
+    // try {
+    //     $results = $db->prepare("
+    //         SELECT hex, id
+    //         FROM   colours cs
+    //         INNER JOIN colourVal cv ON cs.colour_id = cv.id
+    //         WHERE product_id = ?
+    //         ORDER BY `colour_ord`");
+    //     $results->bindParam(1,$id);
+    //     $results->execute();
+    // } catch (Exception $e) {
+    //     echo "Data could not be retrieved from the database.";
+    //     exit;
+    // }
 
-    while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
-        $product["sizes"][] = $row["size"];
-    }
+    // while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
+    //     $product["colours"][] = $row["hex"];
+    // }
 
     return $product;
 }
+
+
+
+/*
+ * Returns all information about a particular product from the DB 
+ * All products have an id appended at the end of the url
+ * /?id=101 
+ * The id is then stripped and the function is called as follows
+ * $product = get_single_product($product_id);
+ * $product is then passed as $id below and if queried to the database
+ * $products is then used in a foreach statement to append the results
+ */
+
+// function get_single_product($id) {
+
+//     require (ROOT_PATH . "INC/DB/db-connection.php");
+
+//     try {
+//         $results = $db->prepare("SELECT name, price, img, sku, paypal FROM products WHERE sku = ?");
+//         $results->bindParam(1,$id);
+//         $results->execute();
+//     } catch (Exception $e) {
+//         echo "Data could not be retrieved from the database.";
+//         exit;
+//     }
+
+//     $product = $results->fetch(PDO::FETCH_ASSOC);
+
+//     // Use inner join to get the sizes of individual products    
+//     if ($product === false) return $product;
+
+//     $product["sizes"] = array();
+
+//     try {
+//         $results = $db->prepare("
+//             SELECT size
+//             FROM   products_sizes ps
+//             INNER JOIN sizes s ON ps.size_id = s.id
+//             WHERE product_sku = ?
+//             ORDER BY `order`");
+//         $results->bindParam(1,$id);
+//         $results->execute();
+//     } catch (Exception $e) {
+//         echo "Data could not be retrieved from the database.";
+//         exit;
+//     }
+
+//     while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
+//         $product["sizes"][] = $row["size"];
+//     }
+
+//     return $product;
+// }
 
 
 

@@ -8,8 +8,8 @@
  */
 
 ?><li>
-	<a href="<?php echo BASE_URL; ?>offers/?Offid=<?php echo $offer["id"]; ?>">
+	<a href="<?php echo BASE_URL; ?>offers/?Offid=<?php echo $offer["offer_id"]; ?>">
 	    <img class="img-fluid" src="<?php echo BASE_URL . $offer["image"] ?>" alt="<?php echo $offer["alt"]; ?>">
-	    <h2 class="product-title"><?php echo $offer["name"]; ?></h2>
+	    <h2 class="product-title"><?php echo $offer["offer_name"]; ?></h2>
 	</a>
 </li>

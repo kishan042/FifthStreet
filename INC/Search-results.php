@@ -22,7 +22,7 @@
 
               <ul class="products block"><?php                   
                     foreach ($products as $product) {
-                        include(ROOT_PATH . "INC/DB/product-block.php");
+                        include(ROOT_PATH . "INC/DB/products-block.php");
                     }
             ?></ul><?php
            
@@ -47,7 +47,7 @@
                 <ul class="products block">
                     <?php
                         foreach($recent as $product) {
-                            include(ROOT_PATH . "INC/DB/product-block.php");
+                            include(ROOT_PATH . "INC/DB/products-block.php");
                         }
                     ?>
                 </ul>

@@ -2,7 +2,7 @@
 		// Title
 		$BlockTitle = "REMOVED FROM WISHLIST";
 		// Copy
-		$BlockText = $product["name"] . "<br> has been removed from your wishlist!";
+		$BlockText = $product["product_name"] . "<br> has been removed from your wishlist!";
 ?>
 <div class="container-fluid notif-block notif-removed-from-wishlist">
 	<div class="container notif-message">
@@ -13,10 +13,10 @@
 			</div>
 			<div class="col-md-4 col-lg-3 col-xl-3 notif-img ">
 				 <div class="notif-img-block">
-					 <img id="<?php echo $product["sku"] ?>" 
+					 <img id="<?php echo $product["product_id"] ?>" 
 	                      class="img-fluid item_image" 
-	                      src="<?php echo BASE_URL . $product["img"] ?>" 
-	                      alt="<?php echo $product["name"] ?>">
+	                      src="<?php echo BASE_URL . $product["image"] ?>" 
+	                      alt="<?php echo $product["product_name"] ?>">
                  </div>
 			</div>
 			<div class="col-md-4 col-lg-3 col-xl-3 notif-cta-block">

@@ -72,7 +72,7 @@ include_once 'INC/DB/Config.php';
     <ul class="products block">
         <?php
             foreach($recent as $product) {
-                include(ROOT_PATH . "INC/DB/product-block.php");
+                include(ROOT_PATH . "INC/DB/products-block.php");
             }
         ?>
     </ul>

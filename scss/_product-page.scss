@@ -191,9 +191,6 @@
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) {
 
-	.primary-colour-set { display: none!important}
-	.secondary-colour-set { display: block!important}
-
 	ul.size-flex-center{  justify-content: flex-start; }
 
 	ul.size-flex-center li{
@@ -218,9 +215,6 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
-
-	.primary-colour-set { display: block!important}
-	.secondary-colour-set { display: none!important}
 
 	ul.colours-flex-center {
 
