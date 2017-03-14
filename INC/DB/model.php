@@ -25,22 +25,28 @@ function get_all_offers() {
     return $recent;
 }
 
-function get_single_offer($id) {
+function get_single_offers($amount){
 
+    // Connect to the database
     require (ROOT_PATH . "INC/DB/db-connection-2.php");
- 
+
+    // Try catch block to create a query to the products table
     try {
-        $results = $db->prepare("SELECT product_name, product_id, image, alt, brand_name FROM Products WHERE offer_id = ?");
-        $results->bindParam(1,$id);
+        $results = $db->prepare("SELECT product_name, product_id, image, alt, brand_name From Products WHERE offer_id = ?
+ "); 
+        $results->bindParam(1,$amount);
         $results->execute();
-    } catch (Exception $e) {
-        echo "Data could not be retrieved from the database.";
+        error_log("not working", true);
+    } catch (Exception $e) { // catch exception if query fails and then exit
+        echo "Data could not be retrived from database.";
         exit;
     }
 
-    $product = $results->fetch(PDO::FETCH_ASSOC);
+    // Fetch the data in a PDO object
+    $recent = $results->fetchAll(PDO::FETCH_ASSOC);
 
-    return $product;
+    // returns the items from the database
+    return $recent;
 }
 
 

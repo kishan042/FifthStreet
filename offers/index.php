@@ -4,17 +4,15 @@
 
 // DB - Model
     include(ROOT_PATH . "INC/DB/model.php");
-        // Call function to get the latest / trending products
-    //$all_products = get_all_products();
-    // if an ID is specified in the query string, use it
-    if (isset($_GET["Offid"])) {
+    // Call function to get the latest / trending products
+     if (isset($_GET["Offid"])) {
         $offer_id = intval($_GET["Offid"]);
-        $all_products = get_single_offer($offer_id);
+        $Offer_ID = get_single_offers($offer_id);
     } 
-    
+
 // Header
         // Title tag
-        $Title = "Offers ";
+        $Title = "Trending ";
         
         // Meta description
         $Description = "Fill text";
@@ -30,22 +28,22 @@
 
 // Navbar
         // Links to other pages 
-        $men = MEN; 
-        $women = WOMEN; 
-        $brands = BRANDS; 
-        $about = ABOUT; 
-        $trending = "#"; 
-        $offers = OFFERS; 
-        $wardrobe = WARDROBE; 
-        $search = SEARCH; 
-        $profile = PROFILE; 
-        $basket = BASKET; 
+        $men =  BASE_URL . MEN;
+		$women = BASE_URL . WOMEN;
+		$brands = BASE_URL . BRANDS;
+		$about = BASE_URL . ABOUT;
+		$trending = BASE_URL . TRENDING;
+		$offers = BASE_URL . OFFERS;
+		$wardrobe = BASE_URL . WARDROBE;
+		$search = BASE_URL . SEARCH;
+		$profile = BASE_URL . PROFILE;
+		$basket = BASE_URL . BASKET;
 
 
         // Type "option-active" inside, to make option active
-        $ActiveTrending = "option-active";
-        $ActiveOffers = "";
-        $ActiveWardrobe = "";       
+        $ActiveTrending = " ";
+        $ActiveOffers = "option-active";
+        $ActiveWardrobe = " ";       
 
         include (ROOT_PATH . 'INC/Navbar.php');
 
@@ -72,7 +70,7 @@
 <div class="container">
     <ul class="products block">
         <?php
-            foreach($all_products as $product) {
+            foreach($Offer_ID as $product) {
                 include(ROOT_PATH . "INC/DB/products-block.php");
             }
         ?>
