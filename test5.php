@@ -91,7 +91,7 @@ $query = http_build_query($data, 'id');
 		    $test = $_GET["id".$i];
 			//echo "<script>console.log('it works')</script>";
 			echo "<script>console.log('" .$test. "')</script>";
-			echo "<script>validate_Product_Id('".$test."')</script>";
+			echo "<script>validate_Souvenir_Id('".$test."')</script>";
 
 	    }
 	}

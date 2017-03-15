@@ -116,20 +116,27 @@ function get_single_brand($id) {
 
 function get_brand_cat($id) {
 
+    // Connect to the database
     require (ROOT_PATH . "INC/DB/db-connection.php");
 
+    // Try catch block to create a query to the products table
     try {
-        $results = $db->prepare("SELECT * FROM Products WHERE brand_id = ?");
+        $results = $db->prepare("
+            SELECT *
+            FROM Products 
+            WHERE brand_id = ?"); 
         $results->bindParam(1,$id);
         $results->execute();
-    } catch (Exception $e) {
-        echo "Data could not be retrieved from the database.";
+    } catch (Exception $e) { // catch exception if query fails and then exit
+        echo "Data could not be retrived from new database.";
         exit;
     }
 
-    $product = $results->fetch(PDO::FETCH_ASSOC);
+    // Fetch the data in a PDO object
+    $recent = $results->fetchAll(PDO::FETCH_ASSOC);
 
-    return $product;
+    // returns the items from the database
+    return $recent;
 }
 
 

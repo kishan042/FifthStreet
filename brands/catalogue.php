@@ -18,18 +18,18 @@ error_reporting(~0);
 // DB - Model
 	    require_once(ROOT_PATH . "INC/DB/model.php");
 
-
         //if an ID is specified in the query string, use it
         if (isset($_GET["Branid"])) {
             $brand_id = intval($_GET["Branid"]);
-            $cata = get_brand_cat($brand_id);
+            $all_products = get_brand_cat($brand_id);
+            $brand = get_single_brand($brand_id);
         }
-
+        
 // Header
 		// Title tag
-		$Title = "test";
+		$Title = $brand["brand_name"];
 		// Meta description
-		$Description = "description";
+		$Description = $brand["description"];
 
 		// CSS path
 		$CSSPath = BASE_URL . "CSS/Styles.css";
@@ -68,8 +68,8 @@ error_reporting(~0);
 <div class="container">
     <ul class="products block">
             <?php 
-                foreach($cata as $product) {
-                    include(ROOT_PATH . "INC/DB/products-block.php");
+                foreach($all_products as $catalogue) {
+                    include(ROOT_PATH . "INC/DB/catalogue-block.php");
                 }
             ?>
     </ul>
@@ -85,7 +85,7 @@ error_reporting(~0);
 		$PreviousPage = "Brands";
 
 		// Bread crumbs for the current page
-		$CurrentPage = "brandname";
+		$CurrentPage = $brand["brand_name"];
 
 		// JS path
 		$JSPath = BASE_URL . "JS/jquery.js";
