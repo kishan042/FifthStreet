@@ -1,26 +1,36 @@
 <?php
+// Turn on output buffering on for header's
+ob_start();
+// debugging PHP
 ini_set('display_errors', 1);
 error_reporting(~0);
 
-        // a $product will only be set if an ID is specified in the query
-        // string and it corresponds to a real product. If no product is
-        // set, then redirect to the shirts listing page; otherwise, continue
-        // on and display the Shirt Details page for that $product
-        if (empty($_GET["id"])) {
-            header("Location: http://localhost:8888/_Github/FifthStreet/trending.php" );
-            exit();
-        }
 
 // Config file
         require_once ("INC/DB/Config.php");
 
 // DB - Model
         require_once (ROOT_PATH . "INC/DB/model.php");
-        // if an ID is specified in the query string, use it
-        if (isset($_GET["id"])) {
+
+
+        if (empty($_GET["id"])) {
+            header("Location: http://localhost:8888/_Github/FifthStreet/trending.php" );
+            exit();
+
+        } else if (isset($_GET["id"])) {
             $product_id = intval($_GET["id"]);
-            $product = get_single_product($product_id);
-        } 
+            $check = check_product_exists($product_id);
+            $test = count($check);
+
+            if($test == 0){
+               // Product ID not found in DB
+               header( "location:" . BASE_URL . TRENDING );
+            } else {
+               // Product ID found in DB
+               $product = get_single_product($product_id);
+               $product_colors = get_single_product_colours($product_id);
+            }
+        }
 
 
 // Header
@@ -73,17 +83,19 @@ error_reporting(~0);
         <!-- Product image block -->
         <div class="product-img-block col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6 mr-2">
                 <div class="p-2 bg-gray-lightest">
-                    <img id="<?php echo $product["product_id"] ?>" 
+                    <img id="<?php echo $product["colour_int"]?>"
                         class="img-fluid img-center item_image" 
                         src="<?php echo BASE_URL . $product["image"] ?>" 
-                        alt="<?php echo $product["alt"] ?>">
+                        alt="<?php echo $product["alt"] ?>"/>
                 </div>
 
                 <div class="mt-30 hidden-xl-up">
                         <ul class="colours-flex-center">
-                                <li value="red" class="product-colour colour-active " style="background-color: purple;"></li>
-                                <li value="blue" class="product-colour" style="background-color: deepskyblue;"></li>
-                                <li value="purple" class="product-colour" style="background-color: darkcyan;"></li>
+                            <?php
+                                foreach($product_colors as $color) {
+                                    include(ROOT_PATH . "INC/DB/color-list.php");
+                                }
+                            ?>
                         </ul>
                 </div>
         </div>
@@ -102,7 +114,10 @@ error_reporting(~0);
                                 <h3 class="txt-xs-center txt-md-left">|</h3>
                         </div>
                         <div class="col-xs-4 px-0">
-                                <a href="#"><h2 class="h3-alt txt-xs-center txt-md-left">by <?php echo $product["brand_name"] ?></h2></a>
+                                <a href="<?php echo BASE_URL . 'brands/?Branid=' . $product["brand_id"] ?>">
+                                    <h2 class="h3-alt txt-xs-center txt-md-left">by <?php echo $product["brand_name"] ?>
+                                    </h2>
+                                </a>
                         </div>      
                 </div>
                 <div class="hidden-md-up mt-30">
@@ -115,64 +130,74 @@ error_reporting(~0);
                 <div class="mt-30 primary-colour-set hidden-lg-down">
                         <h2 class="h3 hidden-lg-up">Colours</h2>
                         <ul class="colours-flex-center">
-                                <li value="red" class="product-colour colour-active " style="background-color: purple;"></li>
-                                <li value="blue" class="product-colour" style="background-color: deepskyblue;"></li>
-                                <li value="purple" class="product-colour" style="background-color: darkcyan;"></li>
-                          
+                            <?php
+                                foreach($product_colors as $color) {
+                                    include(ROOT_PATH . "INC/DB/color-list.php");
+                                }
+                            ?>
                         </ul>
                 </div>
+                
+                <?php if ($product["size_type"] == 'footwear') {
+                            ?>
+                                <div class="mt-10">
+                                        <h2 class="h3 hidden-md-up">Sizes</h2>
+                                        <div class="row mt-20">
+                                                <div class="col-xs-6 txt-xs-center gender-selection">
+                                                        <h3 id="men-shoes" class="gender-option gender-selected">Men</h3>
+                                                </div>
+                                                <div class="col-xs-6 txt-xs-center gender-selection">
+                                                        <h3 id="women-shoes" class="gender-option">Women</h3>  
+                                                </div>
+                                        </div>
+                                        <ul class="men-shoe-sizes size-flex-center">
+                                                <li class="product-size">6</li>
+                                                <li class="product-size">7</li>
+                                                <li class="product-size">8</li>
+                                                <li class="product-size">9</li>
+                                                <li class="product-size">10</li>
+                                                <li class="product-size">12</li>
+                                                <li class="product-size">13</li>
+                                                <li class="product-size">14</li>
+                                                <li class="product-size">15</li>
+                                        </ul>
+                                        <ul class="women-shoe-sizes hide size-flex-center">
+                                                <li class="product-size">2</li>
+                                                <li class="product-size">3</li>
+                                                <li class="product-size">4</li>
+                                                <li class="product-size">5</li>
+                                                <li class="product-size">6</li>
+                                                <li class="product-size">7</li>
+                                                <li class="product-size">8</li>
+                                                <li class="product-size">9</li>
+                                                <li class="product-size">10</li>
+                                        </ul>
+                                </div>
+                            <?php 
 
-                <div class="mt-10 hide">
-                        <h2 class="h3 hidden-md-up">Sizes</h2>
-                        <div class="row mt-20">
-                                <div class="col-xs-6 txt-xs-center gender-selection">
-                                        <h3 id="men-shoes" class="gender-option gender-selected">Men</h3>
+                }  else  {
+                            ?>
+                                <div class="mt-10">
+                                        <h2 class="h3 hidden-md-up">Sizes</h2>
+                                        <div class="row mt-20">
+                                                <div class="col-xs-6 txt-xs-center gender-selection">
+                                                        <h3 class="gender-option gender-selected">Men</h3>
+                                                </div>
+                                                <div class="col-xs-6 txt-xs-center gender-selection">
+                                                        <h3 class="gender-option">Women</h3>  
+                                                </div>
+                                        </div>
+                                        <ul class="size-flex-center">
+                                                <li class="product-size">XS</li>
+                                                <li class="product-size">SM</li>
+                                                <li class="product-size">MD</li>
+                                                <li class="product-size">LG</li>
+                                        </ul>
                                 </div>
-                                <div class="col-xs-6 txt-xs-center gender-selection">
-                                        <h3 id="women-shoes" class="gender-option">Women</h3>  
-                                </div>
-                        </div>
-                        <ul class="men-shoe-sizes size-flex-center">
-                                <li class="product-size">6</li>
-                                <li class="product-size">7</li>
-                                <li class="product-size">8</li>
-                                <li class="product-size">9</li>
-                                <li class="product-size">10</li>
-                                <li class="product-size">12</li>
-                                <li class="product-size">13</li>
-                                <li class="product-size">14</li>
-                                <li class="product-size">15</li>
-                        </ul>
-                        <ul class="women-shoe-sizes hide size-flex-center">
-                                <li class="product-size">2</li>
-                                <li class="product-size">3</li>
-                                <li class="product-size">4</li>
-                                <li class="product-size">5</li>
-                                <li class="product-size">6</li>
-                                <li class="product-size">7</li>
-                                <li class="product-size">8</li>
-                                <li class="product-size">9</li>
-                                <li class="product-size">10</li>
-                        </ul>
-                </div>
-                <div class="mt-10">
-                        <h2 class="h3 hidden-md-up">Sizes</h2>
-                        <div class="row mt-20">
-                                <div class="col-xs-6 txt-xs-center gender-selection">
-                                        <h3 class="gender-option gender-selected">Men</h3>
-                                </div>
-                                <div class="col-xs-6 txt-xs-center gender-selection">
-                                        <h3 class="gender-option">Women</h3>  
-                                </div>
-                        </div>
-                        <ul class="size-flex-center">
-                                <li class="product-size">XS</li>
-                                <li class="product-size">SM</li>
-                                <li class="product-size">MD</li>
-                                <li class="product-size">LG</li>
-                        </ul>
-                </div>
-
+                            <?php
+                } ?>
+                
+                
                 <!-- Set of 3 CTA's -->
                 <div class="row mt-50">
                         <div class="col-xs-2 px-0">
@@ -183,7 +208,11 @@ error_reporting(~0);
                                 class="remove-from-wishlist circle-btn-remove hide"></div>
                         </div>
                         <div class="col-xs-8 px-0">
-                               <a class="tertiary-btn-flex-center" href="#"><button class="h3-alt tertiary-btn-small btn-brand-cta">Buy from brand</button></a>
+                               <a class="tertiary-btn-flex-center" href="<?php echo BASE_URL . 'brands/?Branid=' . $product["brand_id"] ?>">
+                                   <button class="h3-alt tertiary-btn-small btn-brand-cta">
+                                       Buy from brand
+                                   </button>
+                               </a>
                         </div>
                         <div class="col-xs-2 px-0">
                              <div class="circle-btn-basket item_add" href="javascript:;"></div> 
@@ -214,28 +243,6 @@ error_reporting(~0);
 
 <?php include (ROOT_PATH . 'INC/Spacing-mt-50.php'); ?>
 
-
-<!-- <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="<?php echo $product["paypal"]; ?>">
-    <input type="hidden" name="item_name" value="<?php echo $product["name"]; ?>">
-    <table>
-    <tr>
-        <th>
-            <input type="hidden" name="on0" value="Size">
-            <label for="os0">Size</label>
-        </th>
-        <td>
-            <select name="os0" id="os0">
-                <?php foreach($product["sizes"] as $size) { ?>
-                <option value="<?php echo $size; ?>"><?php echo $size; ?> </option>
-                <?php } ?>
-            </select>
-        </td>
-    </tr>
-    </table>
-    <input type="submit" value="Add to Cart" name="submit">
-</form> -->
 
 <div class="container">
         <div id="disqus_thread"></div>
@@ -280,20 +287,23 @@ error_reporting(~0);
                 var id = product_id;
                 var index = -1;
                 var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from local storage
-                //console.log(obj);
-                for (var i = -1; i < obj.length; i++) { //loop over the collection
-                //console.log(obj.length);
-                    if (obj[i] == id) { //see if ids match
-                        //console.log("true");
-                        $(".circle-btn-add").addClass("hide");
-                        $(".circle-btn-remove").removeClass("hide");
-                        break; //exit loop
-                    } else {
-                        //console.log("false");
-                        $(".circle-btn-add").removeClass("hide");
-                        $(".circle-btn-remove").addClass("hide");
-                    }
-                }// End of for loop
+
+                if (!obj == null) { //see no products have been added to the wishlist
+                    //console.log(obj);
+                    for (var i = -1; i < obj.length; i++) { //loop over the collection
+                    //console.log(obj.length);
+                        if (obj[i] == id) { //see if ids match
+                            //console.log("true");
+                            $(".circle-btn-add").addClass("hide");
+                            $(".circle-btn-remove").removeClass("hide");
+                            break; //exit loop
+                        } else {
+                            //console.log("false");
+                            $(".circle-btn-add").removeClass("hide");
+                            $(".circle-btn-remove").addClass("hide");
+                        }
+                    }// End of for loop
+                }
 
     }); // End of onLoad function
 

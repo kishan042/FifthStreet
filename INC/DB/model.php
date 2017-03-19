@@ -2,6 +2,28 @@
 ini_set('display_errors', 1);
 error_reporting(~0);
 
+function check_product_exists($id) {
+
+    require (ROOT_PATH . "INC/DB/db-connection.php");
+
+    try {
+        $results = $db->prepare("SELECT product_id FROM Products WHERE product_id = ?");
+        $results->bindParam(1,$id);
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $product = $results->fetchAll();
+
+    return $product;
+}
+
+
+
+
+
 function get_all_offers() {
 
     // Connect to the database
@@ -265,33 +287,8 @@ function get_single_product($id) {
 
     $product = $results->fetch(PDO::FETCH_ASSOC);
 
-    // // // // Use inner join to get the sizes of individual products    
-    // if ($product === false) return $product;
-
-    // $product["colours"] = array();
-
-    // try {
-    //     $results = $db->prepare("
-    //         SELECT hex, id
-    //         FROM   colours cs
-    //         INNER JOIN colourVal cv ON cs.colour_id = cv.id
-    //         WHERE product_id = ?
-    //         ORDER BY `colour_ord`");
-    //     $results->bindParam(1,$id);
-    //     $results->execute();
-    // } catch (Exception $e) {
-    //     echo "Data could not be retrieved from the database.";
-    //     exit;
-    // }
-
-    // while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
-    //     $product["colours"][] = $row["hex"];
-    // }
-
     return $product;
 }
-
-
 
 /*
  * Returns all information about a particular product from the DB 
@@ -303,48 +300,30 @@ function get_single_product($id) {
  * $products is then used in a foreach statement to append the results
  */
 
-// function get_single_product($id) {
-
-//     require (ROOT_PATH . "INC/DB/db-connection.php");
-
-//     try {
-//         $results = $db->prepare("SELECT name, price, img, sku, paypal FROM products WHERE sku = ?");
-//         $results->bindParam(1,$id);
-//         $results->execute();
-//     } catch (Exception $e) {
-//         echo "Data could not be retrieved from the database.";
-//         exit;
-//     }
-
-//     $product = $results->fetch(PDO::FETCH_ASSOC);
-
-//     // Use inner join to get the sizes of individual products    
-//     if ($product === false) return $product;
-
-//     $product["sizes"] = array();
-
-//     try {
-//         $results = $db->prepare("
-//             SELECT size
-//             FROM   products_sizes ps
-//             INNER JOIN sizes s ON ps.size_id = s.id
-//             WHERE product_sku = ?
-//             ORDER BY `order`");
-//         $results->bindParam(1,$id);
-//         $results->execute();
-//     } catch (Exception $e) {
-//         echo "Data could not be retrieved from the database.";
-//         exit;
-//     }
-
-//     while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
-//         $product["sizes"][] = $row["size"];
-//     }
-
-//     return $product;
-// }
+function get_single_product_colours($id) {
 
 
+    require (ROOT_PATH . "INC/DB/db-connection.php");
+
+    try {
+        $results = $db->prepare("
+            SELECT colour_name, hex
+            FROM   colours
+            INNER JOIN colourVal
+            ON colours.colour_id=colourVal.colour_id
+            WHERE product_id = ?
+            ORDER BY `colour_entry`");
+        $results->bindParam(1,$id);
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $colour = $results->fetchAll(PDO::FETCH_ASSOC);
+
+    return $colour;
+}
 
 /*
  * Returns the recent products from the DB.

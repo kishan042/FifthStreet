@@ -103,10 +103,10 @@ $(document).ready(function(){
 			$(this).addClass("colour-active");
 
 			//get the value of the colour clicked on
-			var new_Color = $(this).attr("value");
+			var new_Color = $(this).attr("id");
 			// get the current image id value
 			// set as the id
-			var current_Img_Id = $(".item_image").attr('id')
+			var current_Img_Id = $(".item_image").attr('id');
 			// target the image source
 			// replace the current image id part of the image - shirt-111
 			// with the new color value, and store it
@@ -115,7 +115,7 @@ $(document).ready(function(){
 			// change the image source with new id
 			$(".item_image").attr('src', new_Img);
 			// update the image tags id value
-			$(".item_image").attr("id",new_Color);
+			$(".item_image").attr("id", new_Color);
 
 		});
 

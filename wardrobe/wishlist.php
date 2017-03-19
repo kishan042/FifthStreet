@@ -52,7 +52,7 @@ include_once '../INC/DB/Config.php';
         $h1 = "MY WISHLIST";
 
         //Copy for description
-        $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+        $description = "View and save products you like in-store or online, to buy later, without even signing up.";
 
         include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
@@ -70,13 +70,13 @@ include_once '../INC/DB/Config.php';
 // Spacing  
         // Add a class to hide the seperation when the wishlist
         // is empty
-        $hide = "rid";
+        $hide = "personalise";
         
         include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 ?>
 
 <div class="container">     
-    <h2 class="txt-xs-center my-3 rid">Latest product&rsquo;s</h2>
+    <h2 class="txt-xs-center my-3 personalise">Latest product&rsquo;s</h2>
     <ul class="products block">
         <?php
             foreach($recent as $product) {
@@ -168,15 +168,15 @@ include_once '../INC/DB/Config.php';
         if (!data.length > 0) {
             // If NO data is from the database then do the following:
 
-            // Those with the .rid classs will only show if product ids have not been added to the wishist
-            $('.rid').hide();
+            // Those with the .personalise classs will only show if product ids have not been added to the wishist
+            $('.personalise').hide();
 
         } else {
             // If data IS from the database then do the following:
 
-            // Add the class .rid to those elements to hide
+            // Add the class .personalise to those elements to hide
             // if data is successfully retrieved and outputed
-            $('.rid').show();
+            $('.personalise').show();
 
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){

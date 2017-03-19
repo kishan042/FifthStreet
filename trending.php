@@ -45,23 +45,16 @@
         include (ROOT_PATH . 'INC/Navbar.php');
 
 
-// Hero-half
-        //IMG URL
-        $url = $img . "lifestyle/trending-hero-shirt-shoes.jpg"; 
-        // Amount of tint on image
-        $tint = "tint-5";
+// Hero-half-plain
         // copy for H1
         $h1 = "TRENDING";
 
-        include (ROOT_PATH . 'INC/Hero-half.php');
 
+        //Copy for description
+        $description = "Check out the latest fashion line up, from a vast collection of brands, trending right now.";
 
+        include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
-// Spacing  
-        // Add a class to hide the seperation
-        $hide = "";
-        
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
 <div class="container">

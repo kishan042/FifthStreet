@@ -44,11 +44,11 @@ include_once 'INC/DB/Config.php';
 // Hero-half-plain
 		// copy for H1
 		$h1 = "MY WARDROBE";
-		$test = "<br class='hidden-sm-down'>";
+		$br = "<br class='hidden-sm-down'>";
 
 
 		//Copy for description
-		$description = "Access your wardrobe below to see your wishlist,". $test ." utilise your souvenirs and exchange or return products,". $test ." without signing up.";
+		$description = "Access your wardrobe below to see your wishlist,". $br ." utilise your souvenirs and exchange or return products,". $br ." without signing up.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
