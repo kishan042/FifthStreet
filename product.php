@@ -288,22 +288,19 @@ error_reporting(~0);
                 var index = -1;
                 var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from local storage
 
-                if (!obj == null) { //see no products have been added to the wishlist
-                    //console.log(obj);
-                    for (var i = -1; i < obj.length; i++) { //loop over the collection
-                    //console.log(obj.length);
-                        if (obj[i] == id) { //see if ids match
-                            //console.log("true");
-                            $(".circle-btn-add").addClass("hide");
-                            $(".circle-btn-remove").removeClass("hide");
-                            break; //exit loop
-                        } else {
-                            //console.log("false");
-                            $(".circle-btn-add").removeClass("hide");
-                            $(".circle-btn-remove").addClass("hide");
-                        }
-                    }// End of for loop
-                }
+                for (var i = -1; i < obj.length; i++) { //loop over the collection
+                //console.log(obj.length);
+                    if (obj[i] == id) { //see if ids match
+                        //console.log("true");
+                        $(".circle-btn-add").addClass("hide");
+                        $(".circle-btn-remove").removeClass("hide");
+                        break; //exit loop
+                    } else {
+                        //console.log("false");
+                        $(".circle-btn-add").removeClass("hide");
+                        $(".circle-btn-remove").addClass("hide");
+                    }
+                }// End of for loop
 
     }); // End of onLoad function
 
