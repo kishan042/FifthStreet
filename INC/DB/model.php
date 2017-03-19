@@ -342,9 +342,9 @@ function get_default_souvenirs() {
     // Try catch block to create a query to the products table
     try {
         $results = $db->query("
-            SELECT product_name, product_id, image, alt, brand_name
-            FROM Products 
-            ORDER BY entry ASC 
+            SELECT *
+            FROM Souvenirs 
+            ORDER BY souvenir_id ASC 
             LIMIT 4"); 
         error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit

@@ -52,7 +52,7 @@ include_once '../INC/DB/Config.php';
         $h1 = "MY WISHLIST";
 
         //Copy for description
-        $description = "View and save products you like in-store or online, to buy later, without even signing up.";
+        $description = "View and save products you like in-store or online, without even signing up.";
 
         include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 

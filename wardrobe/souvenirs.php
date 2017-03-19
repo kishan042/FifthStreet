@@ -48,7 +48,7 @@
 		$h1 = "MY SOUVENIRS";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products.";
+		$description = "Collect exclusive souvenir as you explore and experience diverse brands.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
@@ -57,19 +57,29 @@
 
 <div class="container">
     <ul id="output" class="products block">
-        <?php
+
+    </ul>
+</div>
+
+<?php 
+// Spacing  
+        // Add a class to hide the seperation when the wishlist
+        // is empty
+        $hide = "personalise";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+?>
+
+<div class="container">     
+    <h2 class="txt-xs-center my-3 personalise">Popular souvenirs</h2>
+    <ul class="products block">
+          <?php
             foreach($default_souvenirs as $souvenir) {
                 include(ROOT_PATH . "INC/DB/souvenirs-block.php");
             }
         ?>
     </ul>
 </div>
-
-<!-- <div class="container">
-    <ul id="output" class="products block">
-
-    </ul>
-</div> -->
 
 <?php
 
@@ -151,14 +161,14 @@
             // If NO data is from the database then do the following:
 
             // Those with the .rid classs will only show if product ids have not been added to the wishist
-           // $('.rid').hide();
+           $('.personalise').hide();
 
         } else {
             // If data IS from the database then do the following:
 
             // Add the class .rid to those elements to hide
             // if data is successfully retrieved and outputed
-           // $('.rid').show();
+           $('.personalise').show();
 
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){
