@@ -14,43 +14,43 @@
 		<div class="feature">
 		  <div class="feature-product-block">
 		  	  <img src="http://placehold.it/200x300" alt="">
-  			  <h3 class="pt-10 txt-gray">Product Title</h3>
-			  <h4 class="txt-gray">Brand Title</h4>	
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class="txt-gray">Brand Title</h3>	
 		  </div>
 		  <div class="feature-product-block">
 				<img src="http://placehold.it/200x200" alt="">
-  			  <h3 class="pt-10 txt-gray">Product Title</h3>
-			  <h4 class="txt-gray">Brand Title</h4>
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		  <div class="feature-product-block">
 				<img src="http://placehold.it/200x200" alt="">
-  			  <h3 class="pt-10 txt-gray">Product Title</h3>
-			  <h4 class="txt-gray">Brand Title</h4>
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		  <div class="feature-product-block h-200">
 				<img src="http://placehold.it/200x300" alt="">
-  			  <h3 class="pt-10 txt-gray">Product Title</h3>
-			  <h4 class="txt-gray">Brand Title</h4>
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		  <div class="feature-product-block h-300">
 				<img src="http://placehold.it/200x300" alt="">
-  			  <h3 class="pt-10 txt-gray">Product Title</h3>
-			  <h4 class="txt-gray">Brand Title</h4>
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		  <div class="feature-product-block h-250">
 				<img src="http://placehold.it/200x250" alt="">
-  			  <h3 class="pt-10 txt-gray">Product Title</h3>
-			  <h4 class="txt-gray">Brand Title</h4>
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		  <div class="feature-product-block h-250">
 				<img src="http://placehold.it/200x250" alt="">
-  			  <h3 class="pt-10 txt-gray">Product Title</h3>
-			  <h4 class="txt-gray">Brand Title</h4>
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		  <div class="feature-product-block">
 				<img src="http://placehold.it/200x200" alt="">
-  			  <h3 class="pt-10 txt-gray">Product Title</h3>
-			  <h4 class="txt-gray">Brand Title</h4>
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		</div>
 	</div>

@@ -4517,10 +4517,16 @@ button:focus {
   display: block;
   margin: 0 auto; }
 
-.feature-product-block h3,
-.feature-product-block h4 {
+.feature-product-block h2,
+.feature-product-block h3 {
   text-align: center;
-  margin-bottom: 0; }
+  padding: 10px 0; }
+
+.feature-product-block h2 {
+  font-size: 1.125rem; }
+
+.feature-product-block h3 {
+  font-size: 1rem; }
 
 @media (min-width: 576px) {
   .feature {
@@ -4576,10 +4582,14 @@ button:focus {
     padding: 10px;
     width: 100%; }
 
-  .feature-product-block h3,
-  .feature-product-block h4 {
-    margin-bottom: 0;
-    line-height: 1.5rem; } }
+  .feature-product-block h2,
+  .feature-product-block h3 {
+    padding: 0;
+    line-height: 1.5rem; }
+
+  .feature-product-block h2,
+  .feature-product-block h3 {
+    font-size: 0.9rem; } }
 @media (min-width: 1200px) {
   .feature-txt-block {
     height: 100vh; }
