@@ -58,11 +58,14 @@ include_once 'INC/DB/Config.php';
 					<h3>Sub total : <span class="simpleCart_grandTotal"></span></h3>
 				</div>
 				<div class="col-md-1">
-					<button class="tertiary-btn-small simpleCart_checkout checkout-btn" 
+					<!-- Add 't' at the end of checkout -->
+					<a href="thank-you.php">
+					<button class="tertiary-btn-small simpleCart_checkou checkout-btn" 
 							type="button"  
 							href="javascript:;" 
 							value="Checkout">
 					CHECKOUT</button>
+					</a>
 				</div>
 			</div>
 </div>

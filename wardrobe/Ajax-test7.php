@@ -41,7 +41,7 @@ $email = $_POST['email'];
 $message = '<html><body>';
 $message .= '<h1 style="color:#f40;">Hi Jane!</h1>';
 $message .= '<p style="color:#080;font-size:18px;">click on the link below</p>';
-$message .= '<a href="http://localhost:8888/_Github/FifthStreet/test5.php' . $limit . $user_link .'">click me to cliam</a>';
+$message .= '<a href="http://localhost:8888/_Github/FifthStreet/test5.php' . $limit . $user_link .'">click me to claim</a>';
 $message .= '</body></html>';
 
 $to = "kishankoriya7@gmail.com";

@@ -576,12 +576,13 @@
 					return "<a href='" + item.get(column.attr) + "'>" + column.text + "</a>";
 				},
 
+
 				decrement: function (item, column) {
-					return "<a href='javascript:;' class='" + namespace + "_decrement'>" + (column.text || "-") + "</a>";
+					return "<a href='javascript:;' id='" + item.get('id') + "' class='" + namespace + "_decrement'>" + (column.text || "-") + "</a>";
 				},
 
 				increment: function (item, column) {
-					return "<a href='javascript:;' class='" + namespace + "_increment'>" + (column.text || "+") + "</a>";
+					return "<a href='javascript:;' id='" + item.get('id') + "' class='" + namespace + "_increment'>" + (column.text || "+") + "</a>";
 				},
 
 				image: function (item, column) {
@@ -1741,14 +1742,34 @@
 						, callback: function () {
 							simpleCart.find(simpleCart.$(this).closest('.itemRow').attr('id').split("_")[1]).increment();
 							simpleCart.update();
+
+							var addBasket = $(this).attr('id');
+							var ID = $.trim(addBasket);
+							console.log(ID);
+			    			validate_basket_Id(ID);
 						}
 					}
 					, {	  selector: 'decrement'
 						, event: 'click'
 						, callback: function () {
+							var removeBasket = $(this).attr('id');
+							var id = $.trim(removeBasket);
+
+					        var obj = JSON.parse(localStorage.getItem('basket')); //fetch cart from storage
+
+					          for (var i = -1; i < obj.length; i++) { //loop over the collection
+
+					            if (obj[i] === id) { //see if ids match
+					              obj.splice(i, 1); //remove item from array
+					              break; //exit loop
+					            }
+					          }
+					          localStorage.setItem('basket', JSON.stringify(obj)); //set item back into storage
+
 							simpleCart.find(simpleCart.$(this).closest('.itemRow').attr('id').split("_")[1]).decrement();
 							simpleCart.update();
-						}
+
+						} // End of callback function
 					}
 					/* remove from cart */
 					, {	  selector: 'remove'
@@ -1955,4 +1976,8 @@ simpleCart.bind('update', function(){
     $(".items-added").removeClass("hide"); 
   }
 });
+
+//
+// Receipts - removing individual id's, has been added on line 1755
+//
 </script>
