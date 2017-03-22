@@ -38,16 +38,41 @@ include_once 'INC/DB/Config.php';
 		$h1 = "MY PROFILE";
 
 		//Copy for description
-		$description = "No need to sign-up for accessing our three ultimate experiences.";
+		$description = "No need to sign-up for accessing our three ultimate experiences below.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
 
-// Blocks-three
-		// Image URL
-		$BlockIMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+// Blocks-three-plain grid
+		// Background colour class for block container
+		$BlockBG = " ";
 
-		include (ROOT_PATH . 'INC/Blocks-three.php');
+
+	// Image 1 URL 
+		$Blocks_3_IMG_1 = $img . "men/Men-hat-grey.jpg";
+		// Image 1 product title
+		$Blocks_3_Product_Title_1 = "Add to your wishlist";
+		// Image 1 product description
+		$Blocks_3_Description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+	// Image 2 URL 
+		$Blocks_3_IMG_2 = $img . "men/Men-hat-grey.jpg";
+		// Image 1 product title
+		$Blocks_3_Product_Title_2 = "Collect souvenirs";
+		// Image 1 product description
+		$Blocks_3_Description_2 = "Gather souvenirs as you enage and experience different brands.";
+
+
+	// Image 3 URL 
+		$Blocks_3_IMG_3 = $img . "men/Men-hat-grey.jpg";
+		// Image 1 product title
+		$Blocks_3_Product_Title_3 = "Return or exchange";
+		// Image 1 product description
+		$Blocks_3_Description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+
+
+		include (ROOT_PATH . 'INC/Blocks-three-plain.php');
 
 // Spacing	
 		// Add a class to hide the seperation
@@ -82,8 +107,28 @@ include_once 'INC/DB/Config.php';
 
 
 
-// Contact form
-		include (ROOT_PATH . 'INC/Form-contact-compact.php'); 
+?>
+<!-- <div class="container-smal">
+    <div class="row form-flex-center">
+        <form method="post" class="form-flex-center" action="wardrobe/Ajax-test7.php">
+
+                <div class="col-xs-12 col-sm-8 col-lg-5 form-group">
+                    <input type="text" name="first-name" id="inputName" placeholder="FIRST NAME" pattern="([A-z0-9À-ž]){2,}" required>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-lg-5 mt-50 form-group">
+                    <input type="text" name="second-name" id="inputName" placeholder="SECOND NAME" pattern="([A-z0-9À-ž]){2,}" required>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-lg-5 mt-50 form-group">
+                    <input type="email" name="email" id="inputEmail" placeholder="EMAIL ADDRESS" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                </div>
+                <div class="col-xs-12 mt-50">
+                    <button type="submit" class="tertiary-btn-small">SEND</button>
+                </div>
+
+        </form>
+    </div>
+</div> -->
+<?php 
 
 
 // Spacing	

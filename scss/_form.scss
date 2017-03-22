@@ -10,56 +10,63 @@
 
     .form-group input,
     .form-group textarea{     
-	
-	background-color: $white;
-	box-shadow: none;
-	border-top: none ;
-	border-left: none ;
-	border-right: none ;
-	border-bottom: 2px solid $gray-darkest;
-	width: 100%;
+  	background-color: $white;
+  	box-shadow: none;
+  	border-top: none ;
+  	border-left: none ;
+  	border-right: none ;
+  	border-bottom: 2px solid $gray-darkest;
+  	width: 100%;
     padding: 5px 30px;
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto; 
+  }
 
 
     .form-group textarea{     
-	border: 2px solid $gray-darkest;
+  	border: 2px solid $gray-darkest;
     border-radius: 5px;
  }
 
-input:focus, 
-textarea:focus, 
-button:focus {
-    outline:0 !important; 
-}
+  input:focus, 
+  textarea:focus, 
+  button:focus {
+      outline:0 !important; 
+  }
 
-.form-control:focus { border: none!important; }
+  .form-control:focus { border: none!important; }
 
 
 
-// help taken from below to center the placeholder text
-// http://stackoverflow.com/questions/7381446/center-html-input-text-field-placeholder
-.form-group input::-webkit-input-placeholder,
-.form-group textarea::-webkit-input-placeholder {
-   text-align: center;
-   padding-top: 80px;
-}
+  // help taken from below to center the placeholder text
+  // http://stackoverflow.com/questions/7381446/center-html-input-text-field-placeholder
+  .form-group input::-webkit-input-placeholder,
+  .form-group textarea::-webkit-input-placeholder {
+     text-align: center;
+     padding-top: 80px;
+  }
 
-.form-group input:-moz-placeholder,
-.form-group textarea:-moz-placeholder { /* Firefox 18- */
-   text-align: center;  
-}
+  .form-group input:-moz-placeholder,
+  .form-group textarea:-moz-placeholder { /* Firefox 18- */
+     text-align: center;  
+  }
 
-.form-group input::-moz-placeholder,
-.form-group textarea::-moz-placeholder {  /* Firefox 19+ */
-   text-align: center;  
-}
+  .form-group input::-moz-placeholder,
+  .form-group textarea::-moz-placeholder {  /* Firefox 19+ */
+     text-align: center;  
+  }
 
-.form-group input:-ms-input-placeholder,
-.form-group textarea::-ms-input-placeholder {  
-   text-align: center; 
-}
+  .form-group input:-ms-input-placeholder,
+  .form-group textarea::-ms-input-placeholder {  
+     text-align: center; 
+  }
+
+  // Admin email form
+  .form-flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 }//End of media query
 

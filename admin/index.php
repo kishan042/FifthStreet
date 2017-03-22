@@ -148,7 +148,7 @@ include_once 'INC/DB/Config.php';
     //-----------------------------------------------------------------------
 
     $.ajax({                                      
-      url: 'wardrobe/Ajax-test7.php',
+      url: 'Ajax-admin.php',
       type: 'post',                     
       data: {'key': data}, // get data array and send through Ajax
       dataType: 'json',                    

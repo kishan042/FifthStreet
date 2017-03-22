@@ -37,7 +37,7 @@
 				$h1 = "THANK YOU!";
 
 				//Copy for description
-		 		$description = "Your message has been sent to us successfully, and we will be in touch as soon as possible.";
+		 		$description = "Your payment has gone through, and your products will arrive the next day. Claim a free souvenir for you to enjoy below.";
 
 				include 'INC/Hero-half-plain.php';  
 
@@ -48,12 +48,11 @@
 				// Title
 				$BlockTitle = "COLLECT SOUVENIR";
 				// Copy
-				$BlockText = "Congratulations! As a reward please claim a free souvenir by clicking on the claim button below 
-";
+				$BlockText = "Congratulations! As a reward please claim a free souvenir by clicking on the claim button below";
 				// type 'hide' to remove the button
 				$hideCTA = "";
 				// Link for CTA
-				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=101";
+				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1128";
 				// CTA copy
 				$BlockCTA = "View Souvenir";
 				// Image URL
@@ -66,13 +65,12 @@
 				include 'INC/Spacing-mt-100.php';
 
 
-
 		// Footer
 				// If current pages does not exist then add the 
 				$hide = " ";
 
 				// Bread crunb for the previous page 
-				$PreviousPage = "About us";
+				$PreviousPage = "Thank you";
 
 				// Bread crumbs for the current page
 				$CurrentPage = " ";
@@ -81,3 +79,15 @@
 				$JSPath = BASE_URL . "JS/jquery.js";
 
 				include (ROOT_PATH . 'INC/Footer.php');
+
+		
+		// Admin receipt
+		$length = $_GET["limit"];
+		for ($i = 0; $i <= $length; $i++) {
+		    if (isset($_GET["id".$i])) {
+			    $email_id = $_GET["id".$i];
+				// echo "<script>console.log('" . $email_id . "')</script>";
+				echo "<script>validate_Receipt_Id('". $email_id ."')</script>";
+
+		    }
+		}

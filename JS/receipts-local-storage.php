@@ -77,19 +77,32 @@
     			validate_basket_Id(ID);
       		});
 
-           $(".checkout-btn").click(function(){
-            var obj = JSON.parse(localStorage.getItem('basket')); //fetch cart from storage
+          $(".checkout-btn").click(function(){
+          var obj = JSON.parse(localStorage.getItem('basket')); //fetch cart from storage
 
-                   for (var i = -1; i < obj.length; i++) { //loop over the collection
-                     var id = obj[i]  //see if ids match
-                     validate_Receipt_Id(id);      
-                    }
+             for (var i = -1; i < obj.length; i++) { //loop over the collection
+               var id = obj[i]  //see if ids match
+               validate_Receipt_Id(id);      
+              }
+
           localStorage.removeItem('basket');
           localStorage.removeItem('simpleCart_items');
 
           });
 
+           var basket_check = JSON.parse(localStorage.getItem('basket')); //fetch cart from storage
+           var basket = basket_check.length;
+           // console.log(basket_check);
+           // console.log(basket);
 
+           //if basket array has more then one item
+           // hide elements with the class .personlise
+           if (basket > 0) {
+              $('.personalise').show();
+           } else {
+              $('.personalise').hide();
+           }
+           
       } // End of supports local storage function
 
 </script>

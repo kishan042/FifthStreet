@@ -21,9 +21,6 @@ function check_product_exists($id) {
 }
 
 
-
-
-
 function get_all_offers() {
 
     // Connect to the database
@@ -46,6 +43,7 @@ function get_all_offers() {
     // returns the items from the database
     return $recent;
 }
+
 
 function get_single_offer($id){
 

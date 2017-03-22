@@ -165,6 +165,8 @@ include_once 'INC/DB/Config.php';
 // Blocks-three grid
 		// Title
 		$Blocks_3_Title = "Latest Footwear";
+		// Background colour class for block container
+		$BlockBG = "bg-gray-lightest";
 
 	// Image 1 URL 
 		$Blocks_3_IMG_1 = $img . "men/Men-hat-grey.jpg";

@@ -43,7 +43,7 @@ include_once 'INC/DB/Config.php';
 		$h1 = "MY BASKET";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$description = "All orders come with a free next day delivery. And as always, returns are free.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 ?>
@@ -70,8 +70,8 @@ include_once 'INC/DB/Config.php';
 			</div>
 </div>
 
-<div class="container">     
-    <h2 class="txt-xs-center my-3 rid">Latest product&rsquo;s</h2>
+<div class="container mt-100">     
+    <h2 class="txt-xs-center my-3 personalise">Latest product&rsquo;s</h2>
     <ul class="products block">
         <?php
             foreach($recent as $product) {

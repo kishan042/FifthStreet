@@ -68,7 +68,7 @@
 
 // If the user is using a device larger then tablet
 // show the product name column
-if ($(window).width() > 767) {
+if ($(window).width() > 766) {
 
 
   simpleCart({  

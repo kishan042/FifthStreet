@@ -114,18 +114,14 @@ include_once '../INC/DB/Config.php';
 
         include (ROOT_PATH . 'INC/Footer.php');
 
-?> 
 
-<?php
 
 // The following script tag focuses on collecting the product ids collected
 // in local storage.
-//The 
 
     //-----------------------------------------------------------------------
     //  AJAX request 
     //-----------------------------------------------------------------------
-
 ?>
 
 <script>

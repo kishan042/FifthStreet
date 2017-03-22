@@ -4365,6 +4365,11 @@ button:focus {
 .form-group textarea::-ms-input-placeholder {
   text-align: center; }
 
+.form-flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 /* --------------------------------------------------------
    Home page modules
    -------------------------------------------------------- */
@@ -5104,7 +5109,7 @@ ul.size-flex-center li:hover,
 .simpleCart_grandTotal {
   font-weight: 400; }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .headerRow {
     display: block;
     display: flex;
