@@ -59,23 +59,14 @@
         include (ROOT_PATH . 'INC/Navbar.php');
 
 
-// Hero-half
-        //IMG URL
-        $url = $img . "lifestyle/trending-hero-shirt-shoes.jpg"; 
-        // Amount of tint on image
-        $tint = "tint-5";
+// Hero-half-plain
         // copy for H1
         $h1 = $Offer_info["offer_name"];
+        // description
+        $description = "Take full advantage of this offer while it lasts.";
 
-        include (ROOT_PATH . 'INC/Hero-half.php');
+        include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
-
-
-// Spacing  
-        // Add a class to hide the seperation
-        $hide = "";
-        
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
 <div class="container">

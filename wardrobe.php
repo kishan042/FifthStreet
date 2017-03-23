@@ -48,7 +48,7 @@ include_once 'INC/DB/Config.php';
 
 
 		//Copy for description
-		$description = "Access your wardrobe below to see your wishlist,". $br ." utilise your souvenirs and exchange or return products,". $br ." without signing up.";
+		$description = "Build your wishlist, while collecting souvenirs from memorable experiences with different brands. Exchange or return products at will, without the need of signing up.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 

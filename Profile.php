@@ -49,7 +49,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 1 URL 
-		$Blocks_3_IMG_1 = $img . "men/Men-hat-grey.jpg";
+		$Blocks_3_IMG_1 = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
 		// Image 1 product title
 		$Blocks_3_Product_Title_1 = "Add to your wishlist";
 		// Image 1 product description
@@ -57,7 +57,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 2 URL 
-		$Blocks_3_IMG_2 = $img . "men/Men-hat-grey.jpg";
+		$Blocks_3_IMG_2 = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
 		// Image 1 product title
 		$Blocks_3_Product_Title_2 = "Collect souvenirs";
 		// Image 1 product description
@@ -65,7 +65,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 3 URL 
-		$Blocks_3_IMG_3 = $img . "men/Men-hat-grey.jpg";
+		$Blocks_3_IMG_3 = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
 		// Image 1 product title
 		$Blocks_3_Product_Title_3 = "Return or exchange";
 		// Image 1 product description

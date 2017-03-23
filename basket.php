@@ -71,7 +71,8 @@ include_once 'INC/DB/Config.php';
 </div>
 
 <div class="container mt-100">     
-    <h2 class="txt-xs-center my-3 personalise">Latest product&rsquo;s</h2>
+    <h2 class="txt-xs-center my-3 personalise-l2">Basket is empty</h2>
+    <h2 class="txt-xs-center my-3 personalise-l2 hide">Latest product&rsquo;s</h2>
     <ul class="products block">
         <?php
             foreach($recent as $product) {
