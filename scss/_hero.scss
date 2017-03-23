@@ -19,6 +19,20 @@
 	text-align: center;
 }
 
+.hero-content-left{
+	width: 60%;
+	height: 100%;
+
+	text-align: left!important;
+	margin-left: 15%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	text-align: center;
+}
+
 // Fullbleed Hero
 .hero-full {
 	height: 144vmin;
@@ -116,6 +130,10 @@
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) { 
 
+	.hero-content-left{
+		width: 40%;
+	}
+
 	.hero-full { height: 116vmin; }
 
 	.hero-half, 
@@ -174,6 +192,10 @@
 
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) { 
+
+	.hero-content-left{
+		width: 30%;
+	}
 
 	.hero-full { height: 92vmin; }
 

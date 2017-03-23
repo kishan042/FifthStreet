@@ -45,7 +45,7 @@ include_once 'INC/DB/Config.php';
 		// copy for button (CTA)
 		$ButtonCopy = "FIND OUT MORE";
 
-		include (ROOT_PATH . 'INC/Hero-full.php');  
+		include (ROOT_PATH . 'INC/Hero-full-left.php');  
 
 
 // Product-finder

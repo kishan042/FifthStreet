@@ -3913,7 +3913,8 @@ h1, .h1 {
   margin: 0; }
 
 .primary-btn-medium {
-  height: 50px; }
+  height: 45px;
+  padding: 0px 20px; }
 
 .secondary-btn-small, .secondary-btn-medium {
   border: 2px solid #1a1a1a; }
@@ -3936,6 +3937,14 @@ button:active:focus {
   background-color: #48d8d8 !important;
   color: #fff;
   border: #48d8d8 1px solid;
+  cursor: pointer; }
+
+button.primary-btn-medium:hover,
+button.primary-btn-medium:active:hover,
+button.primary-btn-medium:active:focus {
+  background-color: #48d8d8 !important;
+  color: #fff;
+  border: none;
   cursor: pointer; }
 
 @media (max-width: 575px) {
@@ -4193,6 +4202,17 @@ nav {
   align-items: center;
   text-align: center; }
 
+.hero-content-left {
+  width: 60%;
+  height: 100%;
+  text-align: left !important;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center; }
+
 .hero-full {
   height: 144vmin; }
 
@@ -4251,6 +4271,9 @@ nav {
   border-right: none !important; }
 
 @media (min-width: 768px) {
+  .hero-content-left {
+    width: 40%; }
+
   .hero-full {
     height: 116vmin; }
 
@@ -4297,6 +4320,9 @@ nav {
     background-origin: content-box;
     padding: 10px; } }
 @media (min-width: 992px) {
+  .hero-content-left {
+    width: 30%; }
+
   .hero-full {
     height: 92vmin; }
 
