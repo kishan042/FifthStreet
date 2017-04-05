@@ -34,8 +34,8 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 // Hero-half
-        //IMG URL
-        $url = "https://images.unsplash.com/photo-1476147578954-fffd6bf00ab0?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="; 
+        //IMG URL 
+        $url = $img . "men/Hero-man-with-shirt-and-hat.jpeg"; 
         // Amount of tint on image
         $tint = "tint-0";
         // copy for H1
@@ -58,11 +58,13 @@ include_once 'INC/DB/Config.php';
 		// CTA copy
 		$BlockCTA = "View all items";
 		// Image 1 URL 
-		$BlockIMG_1 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+		$BlockIMG_1 = $img . "men/Featured-3.jpg"; 
 		// Image 2 URL 
-		$BlockIMG_2 = "https://images.unsplash.com/photo-1467320424268-f91a16cf7c77?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		$BlockIMG_2 = $img . "men/Featured-5.jpg"; 
+		$BlockIMG_3 = $img . "men/Featured-4.jpg"; 
 		// Image 3 URL 
-		$BlockIMG_3 = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+		// $BlockIMG_3 = "https://images.pexels.com/photos/26939/pexels-photo-26939.jpg?w=940&h=650&auto=compress&cs=tinysrgb"; 
+
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 
@@ -76,10 +78,10 @@ include_once 'INC/DB/Config.php';
 
 // Blocks grid
 		// Title
-		$Block_Grid_Title = "Latest Clothing";
+		$Block_Grid_Title = "Latest Collection";
 
 	// Image 1 URL 
-		$Block_Grid_IMG_1 = $img . "men/Men-hat-white.jpg";
+		$Block_Grid_IMG_1 = $img . "men/shirt.jpg";
 		// Image 1 product title
 		$product_Title_1 = "Product Title";
 		// Image 1 product description
@@ -87,7 +89,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 2 URL 
-		$Block_Grid_IMG_2 = $img . "men/Men-shirt-3.png";
+		$Block_Grid_IMG_2 = $img . "men/trouser.jpg";
 		// Image 1 product title
 		$product_Title_2 = "Product Title";
 		// Image 1 product description
@@ -95,6 +97,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 3 URL 
+		$Block_Grid_IMG_3 = $img . "men/product-shot.jpg";;
 		$Block_Grid_IMG_3 = "https://images.pexels.com/photos/3572/fashion-man-wristwatch-model.jpg?w=940&h=650&auto=compress&cs=tinysrgb";
 		// Image 1 product title
 		$product_Title_3 = "Product Title";
@@ -103,7 +106,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 4 URL 
-		$Block_Grid_IMG_4 = $img . "men/Men-blue-tie.jpeg";
+		$Block_Grid_IMG_4 = $img . "men/glasses.jpg";
 		// Image 1 product title
 		$product_Title_4 = "Product Title";
 		// Image 1 product description
@@ -111,7 +114,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 5 URL 
-		$Block_Grid_IMG_5 = $img . "men/test.jpg";
+		$Block_Grid_IMG_5 = $img . "men/belt.jpg";
 		// Image 1 product title
 		$product_Title_5 = "Product Title";
 		// Image 1 product description
@@ -119,7 +122,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 6 URL 
-		$Block_Grid_IMG_6 = $img . "men/Men-glasses-2.jpeg";
+		$Block_Grid_IMG_6 = $img . "men/boots.jpg";
 		// Image 1 product title
 		$product_Title_6 = "Product Title";
 		// Image 1 product description
@@ -127,7 +130,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 7 URL 
-		$Block_Grid_IMG_7 = $img . "men/Men-shirt-1.png";
+		$Block_Grid_IMG_7 = $img . "men/phone-case.jpg";
 		// Image 1 product title
 		$product_Title_7 = "Product Title";
 		// Image 1 product description
@@ -135,7 +138,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 8 URL 
-		$Block_Grid_IMG_8 = $img . "men/Men-shirt-2.png";
+		$Block_Grid_IMG_8 = $img . "men/wallet.jpg";
 		// Image 1 product title
 		$product_Title_8 = "Product Title";
 		// Image 1 product description
@@ -143,7 +146,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 9 URL 
-		$Block_Grid_IMG_9 = $img . "men/Men-bag.jpeg";
+		$Block_Grid_IMG_9 = $img . "men/watch.jpg";
 		// Image 1 product title
 		$product_Title_9 = "Product Title";
 		// Image 1 product description
@@ -169,7 +172,7 @@ include_once 'INC/DB/Config.php';
 		$BlockBG = "bg-gray-lightest";
 
 	// Image 1 URL 
-		$Blocks_3_IMG_1 = $img . "men/Men-hat-grey.jpg";
+		$Blocks_3_IMG_1 = $img . "men/shoe-2.png";
 		// Image 1 product title
 		$Blocks_3_Product_Title_1 = "Product Title";
 		// Image 1 product description
@@ -177,7 +180,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 2 URL 
-		$Blocks_3_IMG_2 = $img . "men/Men-hat-grey.jpg";
+		$Blocks_3_IMG_2 = $img . "men/shoe-1.png";
 		// Image 1 product title
 		$Blocks_3_Product_Title_2 = "Product Title";
 		// Image 1 product description
@@ -185,7 +188,7 @@ include_once 'INC/DB/Config.php';
 
 
 	// Image 3 URL 
-		$Blocks_3_IMG_3 = $img . "men/Men-hat-grey.jpg";
+		$Blocks_3_IMG_3 = $img . "men/shoe-3.png";
 		// Image 1 product title
 		$Blocks_3_Product_Title_3 = "Product Title";
 		// Image 1 product description
@@ -197,9 +200,9 @@ include_once 'INC/DB/Config.php';
 
 // Spacing	
 		// Add a class to hide the seperation
-		$hide = "hidden-sm-down";
+		// $hide = "hidden-sm-down";
 		
-		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+		// include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
 
