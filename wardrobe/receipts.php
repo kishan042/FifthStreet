@@ -4,7 +4,7 @@ include_once '../INC/DB/Config.php';
 
 // DB - Model
 include(ROOT_PATH . "INC/DB/model.php");
-$recent = get_recent_products(4);
+$recent = get_recent_products(8);
 
 // Header
 		// Title tag

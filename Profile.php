@@ -47,29 +47,26 @@ include_once 'INC/DB/Config.php';
 		// Background colour class for block container
 		$BlockBG = " ";
 
-
-	// Image 1 URL 
-		$Blocks_3_IMG_1 = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
+		// Image 1 URL 
+		$Blocks_3_IMG_1 = $img . "lifestyle/wardrobe-wishlist-heart-with-hands.jpg";
 		// Image 1 product title
 		$Blocks_3_Product_Title_1 = "Add to your wishlist";
 		// Image 1 product description
-		$Blocks_3_Description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_3_Description_1 = "Add products to your wishlist in-store or online, while being inspired.";
 
-
-	// Image 2 URL 
-		$Blocks_3_IMG_2 = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
+		// Image 2 URL 
+		$Blocks_3_IMG_2 = $img . "lifestyle/wardrobe-souvenirs-sun-flower-2.jpg";
 		// Image 1 product title
 		$Blocks_3_Product_Title_2 = "Collect souvenirs";
 		// Image 1 product description
-		$Blocks_3_Description_2 = "Gather souvenirs as you enage and experience different brands.";
+		$Blocks_3_Description_2 = "Gather souvenirs as you engage and experience different brands.";
 
-
-	// Image 3 URL 
-		$Blocks_3_IMG_3 = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
+		// Image 3 URL 
+		$Blocks_3_IMG_3 = $img . "lifestyle/wardrobe-receipts-cloths-on-hanger.jpg";
 		// Image 1 product title
 		$Blocks_3_Product_Title_3 = "Return or exchange";
 		// Image 1 product description
-		$Blocks_3_Description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_3_Description_3 = "View products bought and exchange them at your will.";
 
 
 		include (ROOT_PATH . 'INC/Blocks-three-plain.php');
@@ -81,20 +78,38 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
+// // Blocks-two-left-compact
+// 		$BlockBG = "bg-gray-lightest";
+// 		// Title
+// 		$BlockTitle = "COMING SOON";
+// 		// Copy
+// 		$BlockText = "Request early access to sync your different devices, so you never lose your wishlist & souvenirs, across mobile, tablet and desktop.";
+// 		// type 'hide' to remove the button
+// 		$hideCTA = " ";
+// 		// Link for CTA
+// 		$BlockLink = "#";
+// 		// CTA copy
+// 		$BlockCTA = "PRE-REGISTER";
+// 		// Image URL
+// 		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
+
+// 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
+
+
 // Blocks-two-left-compact
 		$BlockBG = "bg-gray-lightest";
 		// Title
 		$BlockTitle = "COMING SOON";
 		// Copy
-		$BlockText = "Request early access to sync your different devices, so you never lose your wishlist & souvenirs, across mobile, tablet and desktop.";
+		$BlockText = "Get access to sync your different devices, so you never lose your wishlist & souvenirs, across mobile, tablet and desktop.";
 		// type 'hide' to remove the button
-		$hideCTA = " ";
+		$hideCTA = "hide";
 		// Link for CTA
 		$BlockLink = "#";
 		// CTA copy
 		$BlockCTA = "PRE-REGISTER";
 		// Image URL
-		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
+		$BlockIMG = $img . "lifestyle/coming-soon.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 

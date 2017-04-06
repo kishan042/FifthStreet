@@ -208,7 +208,7 @@ function get_all_products() {
 
     // Try catch block to create a query to collect all of the products
     try {
-        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry ASC"); 
+        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry DESC LIMIT 28"); 
 
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from database.";
@@ -242,7 +242,7 @@ function get_recent_products($amount) {
 
     // Try catch block to create a query to the products table
     try {
-        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry DESC LIMIT $amount"); 
+        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry ASC LIMIT $amount"); 
         error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from database.";
@@ -342,7 +342,7 @@ function get_default_souvenirs() {
         $results = $db->query("
             SELECT *
             FROM Souvenirs 
-            ORDER BY souvenir_id ASC 
+            ORDER BY souvenir_state ASC 
             LIMIT 4"); 
         error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit

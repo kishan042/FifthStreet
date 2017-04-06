@@ -7,7 +7,7 @@
 	<div class="container overflow-hidden">
 		<div class="row flex-no-wrap-4 py-3">
 			<div class="col-md-3 flex-col-4-center">
-			    <a href="#">
+			    <a href="<?php echo $Blocks_4_IMG_Link_1 ?>">
 					<div class="product-img-2" style="background-image: url(<?php echo  $Blocks_4_IMG_1 ?>)">
 					</div>
 					<h2 class="h3-alt"><?php echo $Blocks_4_Product_Title_1 ?></h2>
@@ -15,7 +15,7 @@
 			    </a>
 			</div>
 			<div class="col-md-3 flex-col-4-center">
-			    <a href="#">
+			    <a href="<?php echo $Blocks_4_IMG_Link_2 ?>">
 					<div class="product-img-2" style="background-image: url(<?php echo  $Blocks_4_IMG_2 ?>)">
 					</div>
 					<h2 class="h3-alt"><?php echo $Blocks_4_Product_Title_2 ?></h2>
@@ -23,7 +23,7 @@
 			    </a>
 			</div>
 			<div class="col-md-3 flex-col-4-center">
-			    <a href="#">
+			    <a href="<?php echo $Blocks_4_IMG_Link_3 ?>">
 					<div class="product-img-2" style="background-image: url(<?php echo  $Blocks_4_IMG_3 ?>)">
 					</div>
 					<h2 class="h3-alt"><?php echo $Blocks_4_Product_Title_3 ?></h2>
@@ -31,7 +31,7 @@
 			    </a>
 			</div>
 			<div class="col-md-3 flex-col-4-center">
-			    <a href="#">
+			    <a href="<?php echo $Blocks_4_IMG_Link_4 ?>">
 					<div class="product-img-2" style="background-image: url(<?php echo  $Blocks_4_IMG_4 ?>)">
 					</div>
 					<h2 class="h3-alt"><?php echo $Blocks_4_Product_Title_4 ?></h2>

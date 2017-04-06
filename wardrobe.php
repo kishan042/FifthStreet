@@ -96,7 +96,7 @@ include_once 'INC/DB/Config.php';
 		// CTA copy
 		$BlockCTA = "See Souvenirs";
 		// Image URL
-		$BlockIMG = $img . "lifestyle/wardrobe-souvenirs-sun-flower.jpg";
+		$BlockIMG = $img . "lifestyle/wardrobe-souvenirs-sun-flower-2.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 

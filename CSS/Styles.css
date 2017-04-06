@@ -4904,8 +4904,9 @@ ul.colours-flex-center li {
   flex-direction: row;
   flex-wrap: wrap; }
 
+ul.colours-flex-center li:first-child,
 .colour-active {
-  border: 5px solid #D9DBDC; }
+  border: 4px solid #D9DBDC; }
 
 ul.size-flex-center {
   display: flex;

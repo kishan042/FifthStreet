@@ -82,7 +82,7 @@ error_reporting(~0);
     <div class="row mt-30">
             <!-- Product image block -->
             <div class="product-img-block col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6 mr-2">
-                    <div class="p-2 bg-gray-lightest">
+                    <div>
                         <img id="<?php echo $product["colour_int"]?>"
                             class="img-fluid img-center item_image" 
                             src="<?php echo BASE_URL . $product["image"] ?>" 
@@ -138,7 +138,7 @@ error_reporting(~0);
                             </ul>
                     </div>
                     
-                    <?php if ($product["size_type"] == 'footwear') {
+                    <?php if ($product["size_type"] == 'specific') {
                                 ?>
                                     <div class="mt-10">
                                             <h2 class="h3 hidden-md-up">Sizes</h2>
@@ -175,7 +175,7 @@ error_reporting(~0);
                                     </div>
                                 <?php 
 
-                    }  else  {
+                    }  else if ($product["size_type"] == 'general') {
                                 ?>
                                     <div class="mt-10">
                                             <h2 class="h3 hidden-md-up">Sizes</h2>
