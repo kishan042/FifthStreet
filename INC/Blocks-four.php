@@ -2,7 +2,7 @@
 
 <!-- Blocks-four -->
 
-<div class="container-fluid">
+<div id="<?php echo $Blocks_4_ID ?>" class="container-fluid">
 	<h2 class="txt-xs-center pt-40"><?php echo $Blocks_4_Title ?></h2>
 	<div class="container overflow-hidden">
 		<div class="row flex-no-wrap-4 py-3">

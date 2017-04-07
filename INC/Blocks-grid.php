@@ -86,7 +86,7 @@
 <?php 
 // Desktop module
 ?>
-<div class="hidden-sm-down">
+<div id="<?php echo $Block_Grid_ID ?>" class="hidden-sm-down">
 	<div class="container-fluid">
 		<h2 class="txt-xs-center"><?php echo $Block_Grid_Title ?></h2>
 		<div class="container px-0 mt-50">

@@ -5,7 +5,8 @@
 
 <div class="product-finder">
 	
-		<div id="section-men" class="column" style="background-image: url(https://images.unsplash.com/photo-1481740586420-804cc4418700?dpr=2&auto=format&fit=crop&w=1500&h=1340&q=80&cs=tinysrgb&crop=);">
+
+		<div id="section-men" class="column" style="background-image: url(<?php echo $img ."home/test1.jpg"; ?>);">
 		<a class="block-link" href="<?php echo $men ?>">
 			<div class="content">
 				<div class="box tint-5">
@@ -15,16 +16,16 @@
 					<div class="hide sub">
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
 						
-						<a href="#">
+						<a href="<?php echo $men ?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
 						</a>
-						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Clothing</h3>
+						<a href="<?php echo $men . '#collection' ?>">
+							<h3 class="mt-2 h4 txt-white pr-1">Collection</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo $men . '#footwear' ?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Footwear</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo $men . '#accessories' ?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Accessories</h3>	
 						</a>
 					</div>
@@ -32,7 +33,8 @@
 			</div>
 		</a>
 	</div>
-	<div id="section-women" class="column"style="background-image: url(https://images.unsplash.com/photo-1445404590072-16ef9c18bd83?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);">
+
+	<div id="section-women" class="column" style="background-image: url(<?php echo $img ."home/test2.jpg"; ?>);">
 		<a class="block-link" href="<?php echo $women ?>">
 			<div class="content">
 				<div class="box tint-5">
@@ -42,16 +44,16 @@
 					<div class="hide sub">
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Grab your necessities in an instant.</p>
 						
-						<a href="#">
+						<a href="<?php echo $women ?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Featured</h3>
 						</a>
-						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Clothing</h3>
+						<a href="<?php echo $women . '#collection' ?>">
+							<h3 class="mt-2 h4 txt-white pr-1">Collection</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo $women . '#footwear' ?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Footwear</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo $women . '#accessories' ?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Accessories</h3>	
 						</a>
 					</div>
@@ -59,7 +61,8 @@
 			</div>
 		</a>
 	</div>
-	<div id="section-brands" class="column"style="background-image: url(https://images.unsplash.com/photo-1459173422306-0ce3fb37f832?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);">
+
+	<div id="section-brands" class="column" style="background-image: url(<?php echo $img ."home/test3.jpg"; ?>);">
 		<a class="block-link" href="<?php echo $brands ?>">
 			<div class="content">
 				<div class="box tint-5">
@@ -67,18 +70,18 @@
 					<img src="IMG/icons/arrow-right-white.svg">
 					
 					<div class="hide sub">
-						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Discover brands tailored to your needs.</p>
+						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Discover new brands tailored to your needs.</p>
 						
-						<a href="#">
+						<a href="<?php echo BASE_URL . 'brands/?Branid=19409'?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Pure</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo BASE_URL . 'brands/?Branid=16376'?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Rose</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo BASE_URL . 'brands/?Branid=18398'?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Aztec</h3>
 						</a>
-						<a href="#">	
+						<a href="<?php echo BASE_URL . 'brands/?Branid=13343'?>">	
 							<h3 class="mt-2 h4 txt-white pr-1">Essential</h3>
 						</a>
 					</div>
@@ -86,8 +89,9 @@
 			</div>
 		</a>
 	</div>
-	<div id="section-lo" class="column"style="background-image: url(https://images.unsplash.com/photo-1445384763658-0400939829cd?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);">
-	<a class="block-link" href="<?php echo $offers ?>">
+
+	<div id="section-offers" class="column" style="background-image: url(<?php echo $img ."home/test4.jpg"; ?>);">
+		<a class="block-link" href="<?php echo $offers ?>">
 			<div class="content">
 				<div class="box tint-5">
 					<h3 class="h3-alt txt-white pr-1">OFFERS</h3>
@@ -96,17 +100,17 @@
 					<div class="hide sub">
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Take your pick anytime.</p>
 						
-						<a href="#">
+						<a href="<?php echo BASE_URL . 'offers/?Offid=475688'?>">
 							<h3 class="mt-2 h4 txt-white pr-1">50% off
 							</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo BASE_URL . 'offers/?Offid=485699'?>">
 							<h3 class="mt-2 h4 txt-white pr-1">25% off</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo BASE_URL . 'offers/?Offid=525012'?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Clearance</h3>
 						</a>
-						<a href="#">
+						<a href="<?php echo BASE_URL . 'offers/?Offid=465677'?>">
 							<h3 class="mt-2 h4 txt-white pr-1">Student Discount</h3>	
 						</a>
 					</div>

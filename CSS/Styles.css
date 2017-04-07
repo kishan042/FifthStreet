@@ -4554,10 +4554,12 @@ button:focus {
   padding: 10px 0; }
 
 .feature-product-block h2 {
-  font-size: 1.125rem; }
+  font-size: 1.125rem;
+  padding: 0px; }
 
 .feature-product-block h3 {
-  font-size: 1rem; }
+  font-size: 1rem;
+  padding: 0px; }
 
 @media (min-width: 576px) {
   .feature {

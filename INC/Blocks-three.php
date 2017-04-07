@@ -2,7 +2,7 @@
 
 <!-- Blocks-three-->
 
-<div class="container-fluid <?php echo $BlockBG; ?>">
+<div id="<?php echo $Blocks_3_ID ?>" class="container-fluid <?php echo $BlockBG; ?>">
 	<h2 class="txt-xs-center pt-50"><?php echo $Blocks_3_Title ?></h2>
 	<div class="container pb-1">
 		<div class="row py-1">

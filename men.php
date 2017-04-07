@@ -75,7 +75,8 @@ include_once 'INC/DB/Config.php';
 // Blocks grid
 		// Title
 		$Block_Grid_Title = "Latest Collection";
-
+		// ID for the container
+		$Block_Grid_ID = "collection";
 	    // Image 1 Link 
 		$Block_Grid_1_Link = BASE_URL . "product.php?id=1201";
 		// Image 9 URL
@@ -181,6 +182,8 @@ include_once 'INC/DB/Config.php';
 // Blocks-three grid
 		// Title
 		$Blocks_3_Title = "Latest Footwear";
+		// ID for the container
+		$Blocks_3_ID = "footwear";
 		// Background colour class for block container
 		$BlockBG = "bg-gray-lightest";
 
@@ -220,6 +223,8 @@ include_once 'INC/DB/Config.php';
 // Blocks-four grid
 		// Title
 		$Blocks_4_Title = "Latest Accessories";
+		// ID for the container
+		$Blocks_4_ID = "accessories";
 
 		// Image 1 Link
 		$Blocks_4_IMG_Link_1 = BASE_URL . "product.php?id=1209";

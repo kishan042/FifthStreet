@@ -13,42 +13,42 @@
 	<div class="col-xs-12 col-lg-8 image-container">
 		<div class="feature">
 		  <div class="feature-product-block">
-		  	  <img src="http://placehold.it/200x300" alt="">
+			  <img class="img-fluid" src="<?php echo $img . "home/collection-shirt.jpg" ?>" alt="fill text">
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
+		  </div>
+		  <div class="feature-product-block">
+			  <img class="img-fluid" src="<?php echo $img . "home/collection-trouser.jpg" ?>" alt="fill text">
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
+		  </div>
+		  <div class="feature-product-block">
+			  <img class="img-fluid" src="<?php echo $img . "home/collection-glasses.jpg" ?>" alt="fill text">
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
+		  </div>
+		  <div class="feature-product-block">
+			  <img class="img-fluid" src="<?php echo $img . "home/collection-phone-case.jpg" ?>" alt="fill text">
+  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+			  <h3 class=" txt-gray">Brand Title</h3>
+		  </div>
+		  <div class="feature-product-block">
+		  	  <img class="img-fluid" src="<?php echo $img . "home/collection-belt.jpg" ?>" alt="fill text">
   			  <h2 class="pt-10 txt-gray">Product Title</h2>
 			  <h3 class="txt-gray">Brand Title</h3>	
 		  </div>
 		  <div class="feature-product-block">
-				<img src="http://placehold.it/200x200" alt="">
+			  <img class="img-fluid" src="<?php echo $img . "home/collection-boots.jpg" ?>" alt="fill text">
   			  <h2 class="pt-10 txt-gray">Product Title</h2>
 			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		  <div class="feature-product-block">
-				<img src="http://placehold.it/200x200" alt="">
-  			  <h2 class="pt-10 txt-gray">Product Title</h2>
-			  <h3 class=" txt-gray">Brand Title</h3>
-		  </div>
-		  <div class="feature-product-block h-200">
-				<img src="http://placehold.it/200x300" alt="">
-  			  <h2 class="pt-10 txt-gray">Product Title</h2>
-			  <h3 class=" txt-gray">Brand Title</h3>
-		  </div>
-		  <div class="feature-product-block h-300">
-				<img src="http://placehold.it/200x300" alt="">
-  			  <h2 class="pt-10 txt-gray">Product Title</h2>
-			  <h3 class=" txt-gray">Brand Title</h3>
-		  </div>
-		  <div class="feature-product-block h-250">
-				<img src="http://placehold.it/200x250" alt="">
-  			  <h2 class="pt-10 txt-gray">Product Title</h2>
-			  <h3 class=" txt-gray">Brand Title</h3>
-		  </div>
-		  <div class="feature-product-block h-250">
-				<img src="http://placehold.it/200x250" alt="">
+			  <img class="img-fluid" src="<?php echo $img . "home/collection-wallet.jpg" ?>" alt="fill text">
   			  <h2 class="pt-10 txt-gray">Product Title</h2>
 			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
 		  <div class="feature-product-block">
-				<img src="http://placehold.it/200x200" alt="">
+			  <img class="img-fluid" src="<?php echo $img . "home/collection-phone-case.jpg" ?>" alt="fill text">
   			  <h2 class="pt-10 txt-gray">Product Title</h2>
 			  <h3 class=" txt-gray">Brand Title</h3>
 		  </div>
