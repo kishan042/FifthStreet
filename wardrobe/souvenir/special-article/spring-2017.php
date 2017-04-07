@@ -4,7 +4,7 @@
 
 // Header
 		// Title tag
-		$Title = "Fitness Training ";
+		$Title = "Spring 2017 ";
 		
 		// Meta description
 		$Description = "Fill text";
@@ -39,7 +39,7 @@
 		// Amount of tint on image
 		$tint = "tint-10";
 		// copy for H1
-		$h1 = "FITNESS TRAINING";
+		$h1 = "Spring 2017";
 
 		include (ROOT_PATH . 'INC/Hero-half.php');
 
@@ -50,7 +50,7 @@
 
 // Article heading
 		// 
-		$heading = "Health Always First";
+		$heading = "New Trends";
 
 		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
 
@@ -95,7 +95,7 @@
 
 // Article heading
 		// 
-		$heading = "Build the Mind-set";
+		$heading = "New Brands";
 
 		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
 
@@ -120,26 +120,21 @@
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
-
-// Article heading
-		// 
-		$heading = "Five a Day";
-
-		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
-
-		include (ROOT_PATH . 'INC/Article-heading.php');
+// Hero-compact
+		//IMG URL
+		$url = $img . "lifestyle/about-Fifth-Street-story.jpg"; 
+		
+		include (ROOT_PATH . 'INC/Hero-compact.php');
 
 
-// Article paragraph
-		// 
-		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
+// Spacing Mobile
+		$hide = "hidden-md-up";
 
-		include (ROOT_PATH . 'INC/Article-paragraph.php');
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-
-// Spacing	
-		$hide = " ";
-
+// Spacing Desktop
+		$hide = "hidden-sm-down";
+		
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
@@ -151,7 +146,7 @@
         $PreviousPage = "My Souvenirs";
 
 		// Bread crumbs for the current page
-		$CurrentPage = "Fitness Training";
+		$CurrentPage = "Spring 2017";
 
 
 		// JS path

@@ -4702,7 +4702,6 @@ button:focus {
 .flex-col-3-center, .flex-col-4-center {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 0px;

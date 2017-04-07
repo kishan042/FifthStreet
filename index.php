@@ -37,11 +37,11 @@ include_once 'INC/DB/Config.php';
 		// Amount of tint on image
 		$tint = "tint-0";
 		// copy for H1
-		$h1 = "FULL ACCESS";
+		$h1 = "MY WARDROBE";
 		// copy for h2
 		$description = "No sign-up required";
 		//url for button (CTA)
-		$ButtonUrl = BASE_URL . "profile.php";
+		$ButtonUrl = BASE_URL . $wardrobe;
 		// copy for button (CTA)
 		$ButtonCopy = "FIND OUT MORE";
 
@@ -62,7 +62,7 @@ include_once 'INC/DB/Config.php';
 // Blocks-two-left-compact
 		$BlockBG = "bg-gray-lightest";
 		// Title
-		$BlockTitle = "NFC compatibility";
+		$BlockTitle = "NFC";
 		// Copy
 		$BlockText = "No barriers between the physical and digital world anymore. For Android usevrs, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
 		// type 'hide' to remove the button
@@ -81,7 +81,7 @@ include_once 'INC/DB/Config.php';
 		// Background colour class for text
 		$BlockBG = "bg-gray-lightest";
 		// Title
-		$BlockTitle = "EXCLUSIVE CONTENT";
+		$BlockTitle = "ENJOY NEW BRANDS";
 		// Copy
 		$BlockText = "Collect souvenirs as you purchase products in-store or online. You could earn a prize, a unique fitness video or vouchers. Anything is possible.";
 		// CTA copy
@@ -106,15 +106,15 @@ include_once 'INC/DB/Config.php';
 // Blocks-two-left
 		$BlockBG = "bg-gray-lightest";
 		// Title
-		$BlockTitle = "NFC compatibility";
+		$BlockTitle = "FREE SOUVENIR";
 		// Copy
 		$BlockText = "No barriers between the physical and digital world anymore. For Android usevrs, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
 		// type 'hide' to remove the button
-		$hideCTA = "hide";
+		$hideCTA = " ";
 		// Link for CTA
 		$BlockLink = "#";
 		// CTA copy
-		$BlockCTA = "View Items";
+		$BlockCTA = "Collect Souvenir";
 		// Image URL
 		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
 
@@ -125,7 +125,7 @@ include_once 'INC/DB/Config.php';
 		// Background colour class for text
 		$BlockBG = "";
 		// Title
-		$BlockTitle = "EXCLUSIVE CONTENT";
+		$BlockTitle = "RETURN & EXCHANGE";
 		// Copy
 		$BlockText = "Collect souvenirs as you purchase products in-store or online. You could earn a prize, a unique fitness video or vouchers. Anything is possible.";
 		// type 'hide' to remove the button

@@ -1,6 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(~0);
 // Config file
 include_once 'INC/DB/Config.php';
 
@@ -48,9 +46,6 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 ?>
 
-
-
-
 <div class="container items-added">
 	        <div class="simpleCart_items"></div> 
         	<div class="row checkout bg-gray-lightest">
@@ -70,8 +65,8 @@ include_once 'INC/DB/Config.php';
 			</div>
 </div>
 
+	<h2 class="txt-xs-center mb-3 personalise-l2">Basket is empty</h2>
 <div class="container mt-100">     
-    <h2 class="txt-xs-center my-3 personalise-l2">Basket is empty</h2>
     <h2 class="txt-xs-center my-3 personalise-l2 hide">Latest product&rsquo;s</h2>
     <ul class="products block">
         <?php

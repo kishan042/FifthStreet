@@ -70,18 +70,16 @@
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Discover brands tailored to your needs.</p>
 						
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">
-								Top Brands
-							</h3>
-						</a>
-					<!-- 	<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Clothing</h3>
+							<h3 class="mt-2 h4 txt-white pr-1">Pure</h3>
 						</a>
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Footwear</h3>
+							<h3 class="mt-2 h4 txt-white pr-1">Rose</h3>
 						</a>
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Accessories</h3>	 -->
+							<h3 class="mt-2 h4 txt-white pr-1">Aztec</h3>
+						</a>
+						<a href="#">	
+							<h3 class="mt-2 h4 txt-white pr-1">Essential</h3>
 						</a>
 					</div>
 				</div>
@@ -99,20 +97,18 @@
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Take your pick anytime.</p>
 						
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Top offers
+							<h3 class="mt-2 h4 txt-white pr-1">50% off
 							</h3>
 						</a>
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">25% of all top
-							</h3>
+							<h3 class="mt-2 h4 txt-white pr-1">25% off</h3>
 						</a>
 						<a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Exclusive
-							</h3>
+							<h3 class="mt-2 h4 txt-white pr-1">Clearance</h3>
 						</a>
-						<!-- <a href="#">
-							<h3 class="mt-2 h4 txt-white pr-1">Accessories</h3>	
-						</a> -->
+						<a href="#">
+							<h3 class="mt-2 h4 txt-white pr-1">Student Discount</h3>	
+						</a>
 					</div>
 				</div>
 			</div>

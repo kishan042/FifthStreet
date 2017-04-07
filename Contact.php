@@ -68,7 +68,7 @@ if (mail($to, $subject, $message, $headers)) {
 				// type 'hide' to remove the button
 				$hideCTA = "";
 				// Link for CTA
-				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=101";
+				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1235";
 				// CTA copy
 				$BlockCTA = "View Souvenir";
 				// Image URL

@@ -70,17 +70,17 @@
 		// Copy
 		$BlockText = $brand["description"];
 		// type 'hide' to remove the button
-		$hideCTA = "";
+		$hideCTA = "hide";
 		// Link for CTA
 		$BlockLink = BASE_URL . "brands/catalogue.php?Branid=" . $brand_id;
 		// CTA copy
 		$BlockCTA = "View all items";
 		// Image 1 URL 
-		$BlockIMG_1 = $img . "men/Featured-3.jpg"; 
+		$BlockIMG_1 = $img . "men/Featured-1.jpg"; 
 		// Image 2 URL 
-		$BlockIMG_2 = $img . "men/Featured-5.jpg"; 
+		$BlockIMG_2 = $img . "men/Featured-2.jpg"; 
 		// Image 3 URL 
-		$BlockIMG_3 = $img . "men/Featured-4.jpg"; 
+		$BlockIMG_3 = $img . "men/Featured-3.jpg"; 
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 

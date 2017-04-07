@@ -1,12 +1,10 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(~0);
 // Config file
 include_once '../../../INC/DB/Config.php';
 
 // Header
 		// Title tag
-		$Title = "Men ";
+		$Title = "Horizon ";
 		// Meta description
 		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
 
@@ -34,8 +32,8 @@ include_once '../../../INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Navbar.php'); 
 
 // Hero-half
-        //IMG URL
-        $url = "https://images.unsplash.com/photo-1476147578954-fffd6bf00ab0?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="; 
+        //IMG URL 
+        $url = $img . "men/Hero-man-with-shirt-and-hat.jpeg"; 
         // Amount of tint on image
         $tint = "tint-0";
         // copy for H1
@@ -48,21 +46,21 @@ include_once '../../../INC/DB/Config.php';
 		// Background colour class for text
 		$BlockBG = "bg-white";
 		// Title
-		$BlockTitle = "FOR MEN";
+		$BlockTitle = "HORIZON <br> COLLECTION";
 		// Copy
 		$BlockText = "Wander across a range of brand collections and save any product which inspires you. Why stop there, you can even go to any physical store.";
 		// type 'hide' to remove the button
-		$hideCTA = "";
+		$hideCTA = "hide";
 		// Link for CTA
 		$BlockLink = "wardrobe.php";
 		// CTA copy
 		$BlockCTA = "View all items";
 		// Image 1 URL 
-		$BlockIMG_1 = $img . "men/Featured-3.jpg"; 
+		$BlockIMG_1 = $img . "men/Featured-1.jpg"; 
 		// Image 2 URL 
-		$BlockIMG_2 = $img . "men/Featured-5.jpg"; 
+		$BlockIMG_2 = $img . "men/Featured-2.jpg"; 
 		// Image 3 URL 
-		$BlockIMG_3 = $img . "men/Featured-4.jpg"; 
+		$BlockIMG_3 = $img . "men/Featured-3.jpg"; 
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 
@@ -76,7 +74,7 @@ include_once '../../../INC/DB/Config.php';
 
 // Blocks grid
 		// Title
-		$Block_Grid_Title = "Latest Collection";
+		$Block_Grid_Title = "New Clothing";
 
 	    // Image 1 Link 
 		$Block_Grid_1_Link = BASE_URL . "product.php?id=1201";
@@ -182,7 +180,7 @@ include_once '../../../INC/DB/Config.php';
 
 // Blocks-three grid
 		// Title
-		$Blocks_3_Title = "Latest Footwear";
+		$Blocks_3_Title = "New Footwear";
 		// Background colour class for block container
 		$BlockBG = "bg-gray-lightest";
 
@@ -221,7 +219,7 @@ include_once '../../../INC/DB/Config.php';
 
 // Blocks-four grid
 		// Title
-		$Blocks_4_Title = "Latest Accessories";
+		$Blocks_4_Title = "New Accessories";
 
 		// Image 1 Link
 		$Blocks_4_IMG_Link_1 = BASE_URL . "product.php?id=1209";
@@ -266,19 +264,16 @@ include_once '../../../INC/DB/Config.php';
 
 
 // Footer
+        // If current pages does not exist then add the 
+        $hide = " ";
 
-		// If current pages does not exist then add the 
-		$hide = " ";
+        // Bread crunb for the previous page 
+        $PreviousPage = "My Souvenirs";
 
-		// Bread crunb for the previous page 
-		$PreviousPage = "Brands";
+        // Bread crumbs for the current page
+        $CurrentPage = "Horizon";
 
-		// Bread crumbs for the current page
-		$CurrentPage = " ";
+        // JS path
+        $JSPath = BASE_URL . "JS/jquery.js";
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
-		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 
+        include (ROOT_PATH . 'INC/Footer.php'); 

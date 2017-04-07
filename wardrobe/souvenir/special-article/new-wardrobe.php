@@ -4,7 +4,7 @@
 
 // Header
 		// Title tag
-		$Title = "Sports ";
+		$Title = "New Wardrobe ";
 		
 		// Meta description
 		$Description = "Fill text";
@@ -39,7 +39,7 @@
 		// Amount of tint on image
 		$tint = "tint-10";
 		// copy for H1
-		$h1 = "SPORTS";
+		$h1 = "NEW WARDROBE";
 
 		include (ROOT_PATH . 'INC/Hero-half.php');
 
@@ -50,7 +50,7 @@
 
 // Article heading
 		// 
-		$heading = "Our Story";
+		$heading = "Change of Brands";
 
 		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
 
@@ -95,7 +95,7 @@
 
 // Article heading
 		// 
-		$heading = "Our Aim";
+		$heading = "New Trends";
 
 		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
 
@@ -120,39 +120,33 @@
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
-
-// Article heading
-		// 
-		$heading = "How we help retailers";
-
-		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
-
-		include (ROOT_PATH . 'INC/Article-heading.php');
+// Hero-compact
+		//IMG URL
+		$url = $img . "lifestyle/about-Fifth-Street-story.jpg"; 
+		
+		include (ROOT_PATH . 'INC/Hero-compact.php');
 
 
-// Article paragraph
-		// 
-		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
+// Spacing Mobile
+		$hide = "hidden-md-up";
 
-		include (ROOT_PATH . 'INC/Article-paragraph.php');
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-
-// Spacing	
-		$hide = " ";
-
+// Spacing Desktop
+		$hide = "hidden-sm-down";
+		
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Footer
+        // If current pages does not exist then add the 
+        $hide = " ";
 
-		// If current pages does not exist then add the 
-		$hide = "hidden-xs-up";
-
-		// Bread crunb for the previous page 
-		$PreviousPage = "";
+        // Bread crunb for the previous page 
+        $PreviousPage = "My Souvenirs";
 
 		// Bread crumbs for the current page
-		$CurrentPage = "Sports";
+		$CurrentPage = "New Wardrobe";
 
 
 		// JS path

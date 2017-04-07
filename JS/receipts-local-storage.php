@@ -100,7 +100,7 @@
            if (basket > 0) {
               $('.personalise-l2').toggleClass("hide");
             } else {
-              $('.personalise-l2').parent().toggleClass("mt-100");
+             // $('.personalise-l2').parent().toggleClass("mt-100");
             }
            
       } // End of supports local storage function
