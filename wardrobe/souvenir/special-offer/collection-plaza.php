@@ -33,7 +33,7 @@ include_once '../../../INC/DB/Config.php';
 
 // Hero-half
         //IMG URL 
-        $url = $img . "men/Hero-man-with-shirt-and-hat.jpeg"; 
+        $url = $img . "souvenirs/collection/2.jpg"; 
         // Amount of tint on image
         $tint = "tint-0";
         // copy for H1
@@ -56,11 +56,11 @@ include_once '../../../INC/DB/Config.php';
 		// CTA copy
 		$BlockCTA = "View all items";
 		// Image 1 URL 
-		$BlockIMG_1 = $img . "men/Featured-1.jpg"; 
+		$BlockIMG_1 = $img . "women/Featured-1.jpg"; 
 		// Image 2 URL 
-		$BlockIMG_2 = $img . "men/Featured-2.jpg"; 
+		$BlockIMG_2 = $img . "women/Featured-3.jpg"; 
 		// Image 3 URL 
-		$BlockIMG_3 = $img . "men/Featured-3.jpg"; 
+		$BlockIMG_3 = $img . "women/Featured-2.jpg";  
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 

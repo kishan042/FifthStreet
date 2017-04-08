@@ -35,9 +35,9 @@
 
 // Hero-half
 		//IMG URL
-		//$url = $img . "lifestyle/about-Fifth-Street-hero.jpeg"; 
+		$url = $img . "souvenirs/article/3.jpg"; 
 		// Amount of tint on image
-		$tint = "tint-10";
+		$tint = "tint-3";
 		// copy for H1
 		$h1 = "NEW WARDROBE";
 
@@ -77,7 +77,7 @@
 
 // Hero-compact
 		//IMG URL
-		$url = $img . "lifestyle/about-Fifth-Street-story.jpg"; 
+		$url = $img . "souvenirs/article/4.jpg"; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 
@@ -122,7 +122,7 @@
 
 // Hero-compact
 		//IMG URL
-		$url = $img . "lifestyle/about-Fifth-Street-story.jpg"; 
+		$url = $img . "souvenirs/article/5.jpg"; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 

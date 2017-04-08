@@ -35,11 +35,11 @@
 
 // Hero-half
 		//IMG URL
-		//$url = $img . "lifestyle/about-Fifth-Street-hero.jpeg"; 
+		$url = $img . "souvenirs/article/1.jpg"; 
 		// Amount of tint on image
-		$tint = "tint-10";
+		$tint = "tint-4";
 		// copy for H1
-		$h1 = "FITNESS TRAINING";
+		$h1 = "FITNESS";
 
 		include (ROOT_PATH . 'INC/Hero-half.php');
 
@@ -77,7 +77,7 @@
 
 // Hero-compact
 		//IMG URL
-		$url = $img . "lifestyle/about-Fifth-Street-story.jpg"; 
+		$url = $img . "souvenirs/article/2.jpg"; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 
@@ -95,7 +95,7 @@
 
 // Article heading
 		// 
-		$heading = "Build the Mind-set";
+		$heading = "Build the Mind-Set";
 
 		$copy = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias facere, asperiores provident earum perferendis. Temporibus natus magnam laborum nisi sed adipisci, commodi provident, rerum aspernatur molestias aperiam. Adipisci quas distinctio quidem voluptate iure earum, voluptatibus ex consequuntur sed odio magni molestiae, at a mollitia, saepe fugit molestias!";
 

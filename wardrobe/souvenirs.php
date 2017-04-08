@@ -87,7 +87,7 @@
 		// Add a class to hide the seperation
 		$hide = "";
 		
-		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
 // Footer
@@ -173,9 +173,12 @@
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){
                 var item = data[index];
-                var productId = item['id'];
+                var sou_Id = item['id'];
+                var sou_name = item['souvenir_name'];
+                var brand_name = item['brand_name'];
+                var link = item['link'];
                 var image = item['image'];
-                var name = item['name'];
+                var alt = item['alt'];
                 //console.log([productId, image, name]);
 
 
@@ -188,17 +191,17 @@
 
                 $('#output').prepend(li);
                 li.append(a);
-                a.href = "<?php echo BASE_URL; ?>product.php/?id=" + productId;
+                a.href = "<?php echo BASE_URL; ?>" + link;
                 a.append(img);
                 img.setAttribute("class", "img-fluid");
                 img.setAttribute("src", "<?php echo BASE_URL ?>" + image);
-                img.setAttribute("alt", name );
+                img.setAttribute("alt", alt );
                 a.append(h2);
                 h2.setAttribute("class", "product-title");
-                h2.innerHTML = name;
+                h2.innerHTML = sou_name;
                 a.append(h3);
                 h3.setAttribute("class", "brand-title");
-                h3.innerHTML = "Brand title";
+                h3.innerHTML = brand_name;
 
             } // End of FOR loop
 

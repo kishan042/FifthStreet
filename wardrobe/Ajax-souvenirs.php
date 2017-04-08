@@ -26,23 +26,25 @@ else { // if connected
 		foreach ($data as $value) {
 			// iterates over layer 2 of object to get the actual product ids
 			foreach ($value as $key) {
-				$product = $key['item'];
+				$souvenir = $key['item'];
 			
 			
-				    $results = $db->query("SELECT * FROM Products WHERE product_id = '$product';"); 
+				    $results = $db->query("SELECT * FROM Souvenirs WHERE souvenir_id = '$souvenir';"); 
 			    	$customer_row = mysqli_fetch_assoc($results);
-			    	$id = $customer_row["product_id"];
-			    	$name = $customer_row["product_name"];
+			    	$id = $customer_row["souvenir_id"];
+			    	$souvenir_name = $customer_row["souvenir_name"];
+			    	$brand_name = $customer_row["brand_name"];
+			    	$link = $customer_row["souvenir_link"];
 			    	$image = $customer_row["image"];
-			    	$price = $customer_row["price"];
-			    	$productData = array('id' => $id, 'name' => $name, 'image' => $image, 'price' => $price );
-			    	array_push($object, $productData);
+			    	$alt = $customer_row["alt"];
+			    	$souvenirData = array('id' => $id, 'souvenir_name' => $souvenir_name, 'brand_name' => $brand_name, 'link' => $link,   'image' => $image, 'alt' => $alt );
+			    	array_push($object, $souvenirData);
 			}
 		}
 
 	 } // End of the isset function 
 
-	 // echo json_encode($productData);
+	 // echo json_encode($souvenirData);
 	 error_log(print_r($object, true));
 	 echo json_encode($object);
 }
