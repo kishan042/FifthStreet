@@ -33,9 +33,10 @@ else { // if connected
 			    	$customer_row = mysqli_fetch_assoc($results);
 			    	$id = $customer_row["product_id"];
 			    	$name = $customer_row["product_name"];
+			    	$brand_name = $customer_row["brand_name"];
 			    	$image = $customer_row["image"];
 			    	$price = $customer_row["price"];
-			    	$productData = array('id' => $id, 'name' => $name, 'image' => $image, 'price' => $price );
+			    	$productData = array('id' => $id, 'name' => $name, 'brand_name' => $brand_name, 'image' => $image, 'price' => $price );
 			    	array_push($object, $productData);
 			}
 		}

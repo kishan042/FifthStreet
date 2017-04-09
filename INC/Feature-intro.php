@@ -5,10 +5,8 @@
 <div class="row mx-0">
 	<div class="col-xs-12 col-lg-4 feature-txt-block">
 		<h2 class="txt-medium">WARDROBE</h2>
-		<p>Wonder across a range of brand collections and save any product which inspires you.
+		<p>Build your wishlist, while collecting souvenirs from memorable experiences with different brands. Exchange or return products at will, without the need of signing up.
 		</p> 
-		<p>Save E-receipts for any purchase you make in the future with any retailer, whether in-store or online.
-		</p>
 	</div>
 	<div class="col-xs-12 col-lg-8 image-container">
 		<div class="feature">

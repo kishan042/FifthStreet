@@ -1,10 +1,10 @@
 <?php
 // Config file
-include_once '../INC/DB/Config.php';
+        include_once '../INC/DB/Config.php';
 
 // DB - Model
-include(ROOT_PATH . "INC/DB/model.php");
-$recent = get_recent_products(8);
+        include(ROOT_PATH . "INC/DB/model.php");
+        $recent = get_recent_products(8);
 
 // Header
 		// Title tag
@@ -53,8 +53,6 @@ $recent = get_recent_products(8);
 		include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
 ?>
-
-
 <div class="container">
     <ul id="output" class="products block">
 
@@ -80,8 +78,6 @@ $recent = get_recent_products(8);
         ?>
     </ul>
 </div>
-
-
 <?php
 
 // Spacing	
@@ -106,7 +102,15 @@ $recent = get_recent_products(8);
 
 		include (ROOT_PATH . 'INC/Footer.php');
 
-
+        if (isset($_GET["limit"])) {
+            $length = $_GET["limit"];
+            for ($i = 0; $i <= $length; $i++) {
+                if (isset($_GET["id".$i])) {
+                    $productID = $_GET["id".$i];
+                    echo "<script>validate_Receipt_Id('".$productID."')</script>";
+                }
+            }
+        }
 
 // The following script tag focuses on collecting the product ids collected
 // in local storage.
@@ -172,7 +176,7 @@ $recent = get_recent_products(8);
                 var productId = item['id'];
                 var image = item['image'];
                 var name = item['name'];
-                //console.log([productId, image, name]);
+                var brand_name = item['brand_name'];
 
 
                  li = document.createElement('li');
@@ -194,7 +198,7 @@ $recent = get_recent_products(8);
                 h2.innerHTML = name;
                 a.append(h3);
                 h3.setAttribute("class", "brand-title");
-                h3.innerHTML = "Brand title";
+                h3.innerHTML = brand_name;
 
             } // End of FOR loop
 

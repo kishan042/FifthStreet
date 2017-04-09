@@ -180,7 +180,7 @@ include_once '../INC/DB/Config.php';
                 var productId = item['id'];
                 var image = item['image'];
                 var name = item['name'];
-                //console.log([productId, image, name]);
+                var brand_name = item['brand_name'];
 
 
                  li = document.createElement('li');
@@ -202,7 +202,7 @@ include_once '../INC/DB/Config.php';
                 h2.innerHTML = name;
                 a.append(h3);
                 h3.setAttribute("class", "brand-title");
-                h3.innerHTML = "Brand title";
+                h3.innerHTML = brand_name;
 
             } // End of FOR loop
 

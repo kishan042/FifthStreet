@@ -91,13 +91,10 @@
           });
 
            var basket_check = JSON.parse(localStorage.getItem('basket')); //fetch cart from storage
-           var basket = basket_check.length;
-           console.log(basket_check);
-           console.log(basket);
 
            //if basket array has more then one item
            // hide elements with the class .personlise
-           if (basket > 0) {
+           if (basket_check.length > 0) {
               $('.personalise-l2').toggleClass("hide");
             } else {
              // $('.personalise-l2').parent().toggleClass("mt-100");

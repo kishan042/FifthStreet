@@ -64,7 +64,7 @@ include_once 'INC/DB/Config.php';
 		// Title
 		$BlockTitle = "NEW BRANDS";
 		// Copy
-		$BlockText = "No barriers between the physical and digital world anymore. For Android usevrs, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$BlockText = "Discover new brands every day to find new styles and products that inspire you.";
 		// type 'hide' to remove the button
 		$hideCTA = "hide";
 		// Link for CTA
@@ -83,7 +83,7 @@ include_once 'INC/DB/Config.php';
 		// Title
 		$BlockTitle = "NFC";
 		// Copy
-		$BlockText = "Collect souvenirs as you purchase products in-store or online. You could earn a prize, a unique fitness video or vouchers. Anything is possible.";
+		$BlockText = "No barriers between the physical and digital world anymore. Especially Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
@@ -108,11 +108,11 @@ include_once 'INC/DB/Config.php';
 		// Title
 		$BlockTitle = "FREE SOUVENIR";
 		// Copy
-		$BlockText = "No barriers between the physical and digital world anymore. For Android usevrs, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$BlockText = "Collect souvenirs as you interact with brands in-store or online. You could earn a prize, vouchers or exclusive fashion collection. Anything is possible.";
 		// type 'hide' to remove the button
 		$hideCTA = " ";
 		// Link for CTA
-		$BlockLink = "#";
+		$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1235";
 		// CTA copy
 		$BlockCTA = "Collect Souvenir";
 		// Image URL
@@ -127,7 +127,7 @@ include_once 'INC/DB/Config.php';
 		// Title
 		$BlockTitle = "RETURN & EXCHANGE";
 		// Copy
-		$BlockText = "Collect souvenirs as you purchase products in-store or online. You could earn a prize, a unique fitness video or vouchers. Anything is possible.";
+		$BlockText = "E-receipts will be saved here, for any purchase you make in-store or online, so you can return or exchange products at will.";
 		// type 'hide' to remove the button
 		$hideCTA = "hide";
 		// Link for CTA

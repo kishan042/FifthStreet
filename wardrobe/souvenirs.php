@@ -112,6 +112,15 @@
       // use PHP variable in a Javascript function
       echo "<script>validate_Souvenir_Id('".$souvenir_id."')</script>";
     } 
+    if (isset($_GET["limit"])) {
+        $length = $_GET["limit"];
+        for ($i = 0; $i <= $length; $i++) {
+            if (isset($_GET["id".$i])) {
+                $souvenir = $_GET["id".$i];
+                echo "<script>validate_Souvenir_Id('".$souvenir."')</script>";
+            }
+        }
+    }
 
 ?>
 <script>
