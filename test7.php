@@ -142,6 +142,7 @@ include_once 'INC/DB/Config.php';
         
         // Prevent the submission
         e.preventDefault(e);
+        alert("prevented submission");
 
         // Grab every field ID
         var Validation_input_first_name = document.getElementById('input_first_name');
