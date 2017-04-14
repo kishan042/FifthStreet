@@ -1,6 +1,6 @@
 <?php
 // Config file
-    include_once 'INC/Config.php';
+    include_once 'INC/DB/Config.php';
 
 // DB - Model
     include(ROOT_PATH . "INC/DB/model.php");
@@ -45,38 +45,27 @@
         include (ROOT_PATH . 'INC/Navbar.php');
 
 
-// Hero-half
-        //IMG URL
-        //$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
-        // Amount of tint on image
-        $tint = "tint-10";
+// Hero-half-plain
         // copy for H1
         $h1 = "TRENDING";
 
-        include (ROOT_PATH . 'INC/Hero-half.php');
 
+        //Copy for description
+        $description = "Check out the latest fashion line up, from a vast collection of brands, trending right now.";
 
+        include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
-// Spacing  
-        // Add a class to hide the seperation
-        $hide = "";
-        
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 ?>
-
-
 <div class="container">
     <ul class="products block">
         <?php
             foreach($all_products as $product) {
-                include(ROOT_PATH . "INC/DB/product-block.php");
+                include(ROOT_PATH . "INC/DB/products-block.php");
             }
         ?>
     </ul>
 </div>
-
-
 <?php
 
 // Spacing  

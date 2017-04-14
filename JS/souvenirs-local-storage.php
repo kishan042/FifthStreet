@@ -46,10 +46,10 @@
     //---------------------------------------------------------------------------------------
     //  Executation of the two events
     //
-    //  1) .add-to-wishlist: On click of adding a product to the wishlist, 
-    //  the id of the product will be collected and be sent to the validate_Product_Id       //  function.
+    //  1) .add-souvenir: On click of event, of any kind of CTA 
+    //  the id of the product will be collected and be sent to the validate_Product_Id function.
     //
-    //  2) .remove-from-wishlist: On click, the product id will be collected and be removed  //      from local storage.
+    //  2) .remove-souvenir: On click, the product id will be collected and be removed from local storage.
     //
     //---------------------------------------------------------------------------------------
 

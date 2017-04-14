@@ -1,8 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(~0);
 // Config file
-include_once 'INC/Config.php';
+include_once 'INC/DB/Config.php';
 
 // DB - Model
     include(ROOT_PATH . "INC/DB/model.php");
@@ -43,13 +41,10 @@ include_once 'INC/Config.php';
 		$h1 = "MY BASKET";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$description = "All orders come with a free next day delivery. And as always, returns are free.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 ?>
-
-
-
 
 <div class="container items-added">
 	        <div class="simpleCart_items"></div> 
@@ -58,21 +53,25 @@ include_once 'INC/Config.php';
 					<h3>Sub total : <span class="simpleCart_grandTotal"></span></h3>
 				</div>
 				<div class="col-md-1">
-					<button class="tertiary-btn-small simpleCart_checkout checkout-btn" 
+					<!-- Add 't' at the end of checkout -->
+					<a href="thank-you.php">
+					<button class="tertiary-btn-small simpleCart_checkou checkout-btn" 
 							type="button"  
 							href="javascript:;" 
 							value="Checkout">
 					CHECKOUT</button>
+					</a>
 				</div>
 			</div>
 </div>
 
-<div class="container">     
-    <h2 class="txt-xs-center my-3 rid">Latest product&rsquo;s</h2>
+	<h2 class="txt-xs-center mb-3 personalise-l2">Basket is empty</h2>
+<div class="container mt-100">     
+    <h2 class="txt-xs-center my-3 personalise-l2 hide">Latest product&rsquo;s</h2>
     <ul class="products block">
         <?php
             foreach($recent as $product) {
-                include(ROOT_PATH . "INC/DB/product-block.php");
+                include(ROOT_PATH . "INC/DB/products-block.php");
             }
         ?>
     </ul>

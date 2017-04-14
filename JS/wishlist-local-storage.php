@@ -1,4 +1,3 @@
-
 <script>
 
     // Go into strict mode to prevent any bugs
@@ -44,9 +43,9 @@
     //  Executation of the two events
     //
     //  1) .add-to-wishlist: On click of adding a product to the wishlist, 
-    //  the id of the product will be collected and be sent to the validate_Product_Id       //  function.
+    //  the id of the product will be collected and be sent to the validate_Product_Id function.
     //
-    //  2) .remove-from-wishlist: On click, the product id will be collected and be removed  //      from local storage.
+    //  2) .remove-from-wishlist: On click, the product id will be collected and be removed from local storage.
     //
     //---------------------------------------------------------------------------------------
 

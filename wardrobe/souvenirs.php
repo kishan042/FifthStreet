@@ -1,39 +1,10 @@
 <?php
 // Config file
-		include_once '../INC/Config.php';
+		include_once '../INC/DB/Config.php';
 
 // DB - Model
 		include(ROOT_PATH . "INC/DB/model.php");
 		$default_souvenirs = get_default_souvenirs();
-?>
-<script>
-    // Retrieve searches from Local Storage, return an array
-    function get_souvenirs_LS() {
-      var searches = localStorage.getItem('souvenirs');
-      if (searches) {
-        return JSON.parse(searches);
-      }
-      return [];
-    }
-
-    // Validate and save strings to store of past searches
-    function validate_Souvenir_Id(str) {
-      var searches = get_souvenirs_LS();
-      if (searches.indexOf(str) > -1 || !str) {
-        return false;
-      }
-      searches.push(str);
-      localStorage.setItem('souvenirs', JSON.stringify(searches));
-      return true;
-    }
-</script>
-<?php
-        // if an ID is specified in the query string, use it
-        if (isset($_GET["sou"])) {
-        	$souvenir_id = intval($_GET["sou"]);
-        	echo "<script>validate_Souvenir_Id('".$souvenir_id."')</script>";
-        } 
-
 
 // Header
 		// Title tag
@@ -77,7 +48,7 @@
 		$h1 = "MY SOUVENIRS";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products.";
+		$description = "Collect exclusive souvenir as you explore and experience diverse brands.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
@@ -86,19 +57,29 @@
 
 <div class="container">
     <ul id="output" class="products block">
-        <?php
-            foreach($default_souvenirs as $default) {
+
+    </ul>
+</div>
+
+<?php 
+// Spacing  
+        // Add a class to hide the seperation when the wishlist
+        // is empty
+        $hide = "personalise";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+?>
+
+<div class="container">     
+    <h2 class="txt-xs-center my-3 personalise">Popular souvenirs</h2>
+    <ul class="products block">
+          <?php
+            foreach($default_souvenirs as $souvenir) {
                 include(ROOT_PATH . "INC/DB/souvenirs-block.php");
             }
         ?>
     </ul>
 </div>
-
-<!-- <div class="container">
-    <ul id="output" class="products block">
-
-    </ul>
-</div> -->
 
 <?php
 
@@ -106,7 +87,7 @@
 		// Add a class to hide the seperation
 		$hide = "";
 		
-		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
 // Footer
@@ -124,22 +105,30 @@
 
 		include (ROOT_PATH . 'INC/Footer.php');
 
-?> 
 
-
-<?php
-
-// The following script tag focuses on collecting the product ids collected
-// in local storage.
-//The 
-
-    //-----------------------------------------------------------------------
-    //  AJAX request 
-    //-----------------------------------------------------------------------
+    // if an ID is specified in the query string, use it
+    if (isset($_GET["sou"])) {
+      $souvenir_id = intval($_GET["sou"]);
+      // use PHP variable in a Javascript function
+      echo "<script>validate_Souvenir_Id('".$souvenir_id."')</script>";
+    } 
+    if (isset($_GET["limit"])) {
+        $length = $_GET["limit"];
+        for ($i = 0; $i <= $length; $i++) {
+            if (isset($_GET["id".$i])) {
+                $souvenir = $_GET["id".$i];
+                echo "<script>validate_Souvenir_Id('".$souvenir."')</script>";
+            }
+        }
+    }
 
 ?>
-
 <script>
+// The following script tag focuses on collecting the product ids 
+// collected in local storage and sending it to the database 
+// through AJAX
+
+
    // define an empty array 
     var data = [];
     // collect ids from local storage
@@ -181,21 +170,24 @@
             // If NO data is from the database then do the following:
 
             // Those with the .rid classs will only show if product ids have not been added to the wishist
-           // $('.rid').hide();
+           $('.personalise').hide();
 
         } else {
             // If data IS from the database then do the following:
 
             // Add the class .rid to those elements to hide
             // if data is successfully retrieved and outputed
-           // $('.rid').show();
+           $('.personalise').show();
 
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){
                 var item = data[index];
-                var productId = item['id'];
+                var sou_Id = item['id'];
+                var sou_name = item['souvenir_name'];
+                var brand_name = item['brand_name'];
+                var link = item['link'];
                 var image = item['image'];
-                var name = item['name'];
+                var alt = item['alt'];
                 //console.log([productId, image, name]);
 
 
@@ -208,17 +200,17 @@
 
                 $('#output').prepend(li);
                 li.append(a);
-                a.href = "<?php echo BASE_URL; ?>product.php/?id=" + productId;
+                a.href = "<?php echo BASE_URL; ?>" + link;
                 a.append(img);
                 img.setAttribute("class", "img-fluid");
                 img.setAttribute("src", "<?php echo BASE_URL ?>" + image);
-                img.setAttribute("alt", name );
+                img.setAttribute("alt", alt );
                 a.append(h2);
                 h2.setAttribute("class", "product-title");
-                h2.innerHTML = name;
+                h2.innerHTML = sou_name;
                 a.append(h3);
                 h3.setAttribute("class", "brand-title");
-                h3.innerHTML = "Brand title";
+                h3.innerHTML = brand_name;
 
             } // End of FOR loop
 

@@ -1,6 +1,13 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(~0);
 // Config file
-include_once 'INC/Config.php';
+include_once 'INC/DB/Config.php';
+
+// DB - Model
+    include(ROOT_PATH . "INC/DB/model.php");
+    // Call function to get the latest / trending products
+    $all_offers = get_all_offers();
 
 // Header
 		// Title tag
@@ -50,68 +57,19 @@ include_once 'INC/Config.php';
 		$h1 = "TODAY'S OFFERS";
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$description = "Explore our selection of top offers for Men and Women in one location, from over 20 brands alone.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
-// Spacing  
-        // Add a class to hide the seperation
-        $hide = "hidden-md-up";
-        
-        include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-?>
-
+?> 
 <div class="container">
     <ul class="products block">
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=format&fit=crop&w=250&h=250&q=80&cs=tinysrgb&crop=" alt="">
-                <h2 class="product-title">Offer title</h2>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=format&fit=crop&w=250&h=250&q=80&cs=tinysrgb&crop=" alt="">
-                <h2 class="product-title">Offer title</h2>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=format&fit=crop&w=250&h=250&q=80&cs=tinysrgb&crop=" alt="">
-                <h2 class="product-title">Offer title</h2>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=format&fit=crop&w=250&h=250&q=80&cs=tinysrgb&crop=" alt="">
-                <h2 class="product-title">Offer title</h2>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=format&fit=crop&w=250&h=250&q=80&cs=tinysrgb&crop=" alt="">
-                <h2 class="product-title">Offer title</h2>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=format&fit=crop&w=250&h=250&q=80&cs=tinysrgb&crop=" alt="">
-                <h2 class="product-title">Offer title</h2>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=format&fit=crop&w=250&h=250&q=80&cs=tinysrgb&crop=" alt="">
-                <h2 class="product-title">Offer title</h2>
-            </a>
-        </li>
-                <li>
-            <a href="#">
-                <img class="img-fluid" src="https://images.unsplash.com/photo-1466853817435-05b43fe45b39?dpr=2&auto=format&fit=crop&w=250&h=250&q=80&cs=tinysrgb&crop=" alt="">
-                <h2 class="product-title">Offer title</h2>
-            </a>
-        </li>
+            <?php 
+                foreach($all_offers as $offer) {
+                    include(ROOT_PATH . "INC/DB/offers-block.php");
+                }
+            ?>
     </ul>
 </div>
 <?php

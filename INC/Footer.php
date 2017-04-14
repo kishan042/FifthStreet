@@ -61,13 +61,16 @@
 <script type="text/javascript" src="<?php echo $JSPath ?>"></script>
 <?php include (ROOT_PATH . 'JS/wishlist-local-storage.php'); ?>
 <?php include (ROOT_PATH . 'JS/souvenirs-local-storage.php'); ?>
-<!-- <?php //include (ROOT_PATH . 'JS/simpleCart.min.php'); ?> -->
+<?php include (ROOT_PATH . 'JS/receipts-local-storage.php'); ?>
 <?php include (ROOT_PATH . 'JS/simpleCart.php'); ?>
+<!-- <?php //include (ROOT_PATH . 'JS/simpleCart.min.php'); ?> -->
 <script>
 
 // If the user is using a device larger then tablet
 // show the product name column
-if ($(window).width() > 767) {
+if ($(window).width() > 766) {
+
+
   simpleCart({  
                 // chechout method
                 checkout: {
@@ -81,9 +84,10 @@ if ($(window).width() > 767) {
                 // Cart columns 
                 cartColumns: [
 
-                     //{view:'image' , attr:'thumb', label: false},
                     { view: function(item, column){
-                      return"<img class='img-fluid' src='"+item.get('image')+"'>";
+                      var itemID = item.get('id');
+                      var id = $.trim(itemID); 
+                      return"<a href='<?php echo BASE_URL . "product.php?id=" ?>"+id+"'><img class='img-fluid' src='"+item.get('image')+"'></a>";
                     },
                      attr: 'image' },
                     {attr: "name",         label: "Product"},
@@ -109,9 +113,11 @@ if ($(window).width() > 767) {
                 // Cart columns 
                 cartColumns: [
 
-                     //{view:'image' , attr:'thumb', label: false},
+
                     { view: function(item, column){
-                      return"<img class='img-fluid' src='"+item.get('image')+"'>";
+                      var itemID = item.get('id');
+                      var id = $.trim(itemID);  
+                      return"<a href='<?php echo BASE_URL . "product.php?id=" ?>"+id+"'><img class='img-fluid' src='"+item.get('image')+"'></a>";
                     },
                      attr: 'image' },
                     {attr: "name",         label: "Product"},

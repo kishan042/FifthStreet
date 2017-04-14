@@ -1,6 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(~0);
 // Config file
-include_once 'INC/Config.php';
+include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
@@ -42,9 +44,11 @@ include_once 'INC/Config.php';
 // Hero-half-plain
 		// copy for H1
 		$h1 = "MY WARDROBE";
+		$br = "<br class='hidden-sm-down'>";
+
 
 		//Copy for description
-		$description = "No barriers between the physical and digital world anymore. For Android users, you can use your phone to tap on products to save them.";
+		$description = "Build your wishlist, while collecting souvenirs from memorable experiences with different brands. Exchange or return products at will, without the need of signing up.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
@@ -63,15 +67,16 @@ include_once 'INC/Config.php';
 		// Title
 		$BlockTitle = "MY WISHLIST";
 		// Copy
-		$BlockText = "Wander across a range of brand collections and save any product which inspires you. Why stop there, you can even go to any physical store.";
+		$BlockText = "Add products to your wishlist in-store or online, as you wander across a range of brand collections and products that inspires you.";
 		// type 'hide' to remove the button
-		$hideCTA = "";
+		$hideCTA = " ";
 		// Link for CTA
-		$BlockLink = "wardrobe/wishlist.php";
+		$BlockLink = BASE_URL . "wardrobe/wishlist.php";
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+		$BlockIMG = $img . "lifestyle/wardrobe-wishlist-heart-with-hands.jpg";
+
 
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
@@ -79,19 +84,19 @@ include_once 'INC/Config.php';
 
 // Blocks-two-right-compact
 		// Background colour class for text
-		$BlockBG = "bg-gray-lightest";
+		$BlockBG = " ";
 		// Title
 		$BlockTitle = "MY SOUVENIRS";
 		// Copy
-		$BlockText = "Collect souvenirs as you purchase products in-store or online. You could earn a prize, a unique fitness video or vouchers. Anything is possible.";
+		$BlockText = "Gather a collection of souvenirs, ranging from exclusive offers to unique prizes. Anything is possible.";
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = "wardrobe/souvenirs.php";
+		$BlockLink = BASE_URL . "wardrobe/souvenirs.php";
 		// CTA copy
 		$BlockCTA = "See Souvenirs";
 		// Image URL
-		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
+		$BlockIMG = $img . "lifestyle/wardrobe-souvenirs-sun-flower-2.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
@@ -102,15 +107,15 @@ include_once 'INC/Config.php';
 		// Title
 		$BlockTitle = "MY RECEIPTS";
 		// Copy
-		$BlockText = "View all of the products you have bought and save E-receipts for any purchase you make in-store or online. Return or exchange products at will.";
+		$BlockText = "View all of the products you have bought in-store or online, so you can return or exchange products at will.";
 		// type 'hide' to remove the button
 		$hideCTA = "";
 		// Link for CTA
-		$BlockLink = "wardrobe/receipts.php";
+		$BlockLink = BASE_URL . "wardrobe/receipts.php";
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+		$BlockIMG = $img . "lifestyle/wardrobe-receipts-cloths-on-hanger.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 

@@ -1,6 +1,6 @@
 <?php
 // Config file
-include_once 'INC/Config.php';
+include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
@@ -33,19 +33,19 @@ include_once 'INC/Config.php';
 
 // Hero-full
 		// IMG URL
-		 $HeroUrl = "https://images.unsplash.com/photo-1475403614135-5f1aa0eb5015?dpr=2&auto=format&fit=crop&w=767&h=511&q=80&cs=tinysrgb&crop=";
+		$HeroUrl = $img . "home/fifth-street-male-portrait-black-and-white-hero.jpg";
 		// Amount of tint on image
 		$tint = "tint-0";
 		// copy for H1
-		$h1 = "FULL ACCESS";
+		$h1 = "MY WARDROBE";
 		// copy for h2
-		$description = "Fifth Street is all about bridging online and offline";
+		$description = "No sign-up required";
 		//url for button (CTA)
-		$ButtonUrl = "about-us.php";
+		$ButtonUrl = BASE_URL . $wardrobe;
 		// copy for button (CTA)
 		$ButtonCopy = "FIND OUT MORE";
 
-		include (ROOT_PATH . 'INC/Hero-full.php');  
+		include (ROOT_PATH . 'INC/Hero-full-left.php');  
 
 
 // Product-finder
@@ -56,15 +56,15 @@ include_once 'INC/Config.php';
 		// Add a class to hide the seperation
 		$hide = " ";
 		
-		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
 // Blocks-two-left-compact
-		$BlockBG = "bg-gray-lightest";
+		$BlockBG = "bg-white";
 		// Title
-		$BlockTitle = "NFC compatibility";
+		$BlockTitle = "NEW BRANDS";
 		// Copy
-		$BlockText = "No barriers between the physical and digital world anymore. For Android usevrs, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$BlockText = "Discover new brands every day to find new styles and products that inspire you.";
 		// type 'hide' to remove the button
 		$hideCTA = "hide";
 		// Link for CTA
@@ -72,7 +72,7 @@ include_once 'INC/Config.php';
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
+		$BlockIMG = $img ."home/product-shot2.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
@@ -81,13 +81,13 @@ include_once 'INC/Config.php';
 		// Background colour class for text
 		$BlockBG = "bg-gray-lightest";
 		// Title
-		$BlockTitle = "EXCLUSIVE CONTENT";
+		$BlockTitle = "NFC";
 		// Copy
-		$BlockText = "Collect souvenirs as you purchase products in-store or online. You could earn a prize, a unique fitness video or vouchers. Anything is possible.";
+		$BlockText = "No barriers between the physical and digital world anymore. Especially Android users, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+		$BlockIMG = $img ."home/6.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
@@ -106,17 +106,17 @@ include_once 'INC/Config.php';
 // Blocks-two-left
 		$BlockBG = "bg-gray-lightest";
 		// Title
-		$BlockTitle = "NFC compatibility";
+		$BlockTitle = "FREE SOUVENIR";
 		// Copy
-		$BlockText = "No barriers between the physical and digital world anymore. For Android usevrs, you can use your phone to tap on products to save them to your wardrobe or find out more information.";
+		$BlockText = "Collect souvenirs as you interact with brands in-store or online. You could earn a prize, vouchers or exclusive fashion collection. Anything is possible.";
 		// type 'hide' to remove the button
-		$hideCTA = "hide";
+		$hideCTA = " ";
 		// Link for CTA
-		$BlockLink = "#";
+		$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1235";
 		// CTA copy
-		$BlockCTA = "View Items";
+		$BlockCTA = "Collect Souvenir";
 		// Image URL
-		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
+		$BlockIMG = $img ."home/4.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left.php');
 
@@ -125,9 +125,9 @@ include_once 'INC/Config.php';
 		// Background colour class for text
 		$BlockBG = "";
 		// Title
-		$BlockTitle = "EXCLUSIVE CONTENT";
+		$BlockTitle = "RETURN & EXCHANGE";
 		// Copy
-		$BlockText = "Collect souvenirs as you purchase products in-store or online. You could earn a prize, a unique fitness video or vouchers. Anything is possible.";
+		$BlockText = "E-receipts will be saved here, for any purchase you make in-store or online, so you can return or exchange products at will.";
 		// type 'hide' to remove the button
 		$hideCTA = "hide";
 		// Link for CTA
@@ -135,7 +135,7 @@ include_once 'INC/Config.php';
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+		$BlockIMG = $img ."home/3.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right.php');
 

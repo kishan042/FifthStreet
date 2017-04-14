@@ -115,7 +115,7 @@
 	    flex-wrap: wrap;
 	}
 
-	ul.colours-flex-center  li{
+	ul.colours-flex-center li{
 	        width: 30px;
 	        height: 30px;
 	        border-radius: 25px;
@@ -128,7 +128,8 @@
 			flex-wrap: wrap;
 	}
 
-	.colour-active { border: 5px solid #D9DBDC }
+	ul.colours-flex-center li:first-child,
+	.colour-active { border: 4px solid #D9DBDC; }
 
 
 	//
@@ -191,9 +192,6 @@
 // Medium devices (tablets, 768px and up)
 @include media-breakpoint-up(md) {
 
-	.primary-colour-set { display: none!important}
-	.secondary-colour-set { display: block!important}
-
 	ul.size-flex-center{  justify-content: flex-start; }
 
 	ul.size-flex-center li{
@@ -218,9 +216,6 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @include media-breakpoint-up(xl) { 
-
-	.primary-colour-set { display: block!important}
-	.secondary-colour-set { display: none!important}
 
 	ul.colours-flex-center {
 

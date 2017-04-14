@@ -2,7 +2,7 @@
 		// Title
 		$BlockTitle = "ADDED TO BASKET";
 		// Copy
-		$BlockText = $product["name"] . "<br> has been added to your basket!";
+		$BlockText = $product["product_name"] . "<br> has been added to your basket!";
 ?>
 <div class="container-fluid notif-block notif-added-to-basket">
 	<div class="container notif-message">
@@ -13,10 +13,10 @@
 			</div>
 			<div class="col-md-4 col-lg-3 col-xl-3 notif-img ">
 				 <div class="notif-img-block">
-					 <img id="<?php echo $product["sku"] ?>" 
+					 <img id="<?php echo $product["colour_int"]?>"
 	                      class="img-fluid item_image" 
-	                      src="<?php echo BASE_URL . $product["img"] ?>" 
-	                      alt="<?php echo $product["name"] ?>">
+	                      src="<?php echo BASE_URL . $product["image"] ?>" 
+	                      alt="<?php echo $product["product_alt"] ?>">
                  </div>
 			</div>
 			<div class="col-md-4 col-lg-3 col-xl-3 notif-cta-block">

@@ -2,7 +2,7 @@
 		// Title
 		$BlockTitle = "ADDED TO WISHLIST";
 		// Copy
-		$BlockText = $product["name"] . "<br> has been added to your wishlist!";
+		$BlockText = $product["product_name"] . "<br> has been added to your wishlist!";
 ?>
 <div class="container-fluid notif-block notif-added-to-wishlist">
 	<div class="container notif-message">
@@ -13,15 +13,15 @@
 			</div>
 			<div class="col-md-4 col-lg-3 col-xl-3 notif-img ">
 				 <div class="notif-img-block">
-					 <img id="<?php echo $product["sku"] ?>" 
+					 <img id="<?php echo $product["colour_int"]?>"
 	                      class="img-fluid item_image" 
-	                      src="<?php echo BASE_URL . $product["img"] ?>" 
-	                      alt="<?php echo $product["name"] ?>">
+	                      src="<?php echo BASE_URL . $product["image"] ?>" 
+	                      alt="<?php echo $product["product_alt"] ?>">
                  </div>
 			</div>
 			<div class="col-md-4 col-lg-3 col-xl-3 notif-cta-block">
-				<a class="tertiary-btn-flex-center" href="<?php echo $wardrobe ?>">
-					<button class="h4 tertiary-btn-small btn-brand-cta txt-gold-light">View wardrobe</button>
+				<a class="tertiary-btn-flex-center" href="<?php echo BASE_URL; ?>wardrobe/wishlist.php">
+					<button class="h4 tertiary-btn-small btn-brand-cta txt-gold-light">View Wishlist</button>
 				</a>
 			</div>
 		</div>

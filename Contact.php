@@ -14,148 +14,172 @@ $headers = "From:" . $from . "\r\n";
 $headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n";
 
 if (mail($to, $subject, $message, $headers)) {
+
+		// Config file
+				include_once 'INC/DB/Config.php';	
     
-// Header
-		// Title tag
-		$Title = "Contact form ";
-		// Meta description
-		$Description = "Fill text";
-		// CSS path
-		$CSSPath = "CSS/Styles.css";
-		// Image source
-		$img = "IMG/";
+		
+		// Header
+				// Title tag
+				$Title = "Contact form ";
+				// Meta description
+				$Description = "Fill text";
+				// CSS path
+				$CSSPath = "CSS/Styles.css";
+				// Image source
+				$img = "IMG/";
 
-		include 'INC/Header.php';
-
-
-// Navbar
-		// Links to other pages		
-		$men = MEN; 
-		$women = WOMEN; 
-		$brands = BRANDS; 
-		$about = ABOUT; 
-		$trending = TRENDING; 
-		$offers = OFFERS; 
-		$wardrobe = WARDROBE; 
-		$search = SEARCH; 
-		$profile = PROFILE; 
-		$basket = BASKET; 
-		include 'INC/Navbar.php'; 
+				include 'INC/Header.php';
 
 
-// Hero-plain
-		// copy for H1
-		$h1 = "Thank you !";
-
-		include 'INC/Hero-half-plain.php';  
-
-
-// Article paragraph
-		// 
-		$copy = "Your message has been sent to us successfully, and we will be in touch as soon as possible.";
-
-		include 'INC/Article-paragraph.php';
-
-
-// Spacing	
-		include 'INC/Spacing-hr-compact.php';
+		// Navbar
+				// Links to other pages		
+				$men = MEN; 
+				$women = WOMEN; 
+				$brands = BRANDS; 
+				$about = ABOUT; 
+				$trending = TRENDING; 
+				$offers = OFFERS; 
+				$wardrobe = WARDROBE; 
+				$search = SEARCH; 
+				$profile = PROFILE; 
+				$basket = BASKET; 
+				include 'INC/Navbar.php'; 
 
 
+		// Hero-plain
+				// copy for H1
+				$h1 = "THANK YOU!";
 
-// Contact form
-		include 'INC/Form-contact-compact.php'; 
+				//Copy for description
+		 		$description = "Your message has been sent to us successfully, and we will be in touch as soon as possible.";
+
+				include 'INC/Hero-half-plain.php';  
+
+
+		// Blocks-two-left-compact
+						// Background colour class for text
+				$BlockBG = "bg-gray-lightest";
+				// Title
+				$BlockTitle = "COLLECT SOUVENIR";
+				// Copy
+				$BlockText = "Congratulations! As a reward please claim a free souvenir by clicking on the claim button below 
+";
+				// type 'hide' to remove the button
+				$hideCTA = "";
+				// Link for CTA
+				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1235";
+				// CTA copy
+				$BlockCTA = "View Souvenir";
+				// Image URL
+				$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+
+				include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
+
+
+		// Spacing	
+				include 'INC/Spacing-mt-100.php';
 
 
 
-// Spacing	
-		include 'INC/Spacing-mt-100.php';
+		// Footer
+				// If current pages does not exist then add the 
+				$hide = " ";
 
+				// Bread crunb for the previous page 
+				$PreviousPage = "About us";
 
+				// Bread crumbs for the current page
+				$CurrentPage = " ";
 
-// Footer
-		// page tag
-		$page = "Contact form";
+				// JS path
+				$JSPath = BASE_URL . "JS/jquery.js";
 
-		include 'INC/Footer.php'; 
-   
-
+				include (ROOT_PATH . 'INC/Footer.php');
 
 } else {
-    
-// Header
-		// Title tag
-		$Title = "Contact Form ";
-		// Meta description
-		$Description = "Fill text";
-		// CSS path
-		$CSSPath = "CSS/Styles.css";
-		// Image source
-		$img = "IMG/";
 
-		include 'INC/Header.php';
+		// Config file
+		include_once 'INC/DB/Config.php';	
 
+		// Header
+				// Title tag
+				$Title = "Contact Form ";
+				// Meta description
+				$Description = "Fill text";
+				// CSS path
+				$CSSPath = "CSS/Styles.css";
+				// Image source
+				$img = "IMG/";
 
-// Navbar
-		// Links to other pages
-		$home = "index.php";		
-		$men = "#";
-		$women = "#";
-		$brands = "#";
-		$about = "about-us.php";
-		$trending = "#";
-		$offers = "#";
-		$wardrobe = "wardrobe.php";
-		$search = "#";
-		$profile = "#";
-		$basket = "#";
-		include 'INC/Navbar.php'; 
+				include 'INC/Header.php';
 
 
-// Hero-plain
-		// copy for H1
-		$h1 = "Sorry !";
-
-		include 'INC/Hero-half-plain.php';  
-
-
-// Article paragraph
-		// 
-		$copy = "Unfortunately, an error occurred while sending your message. Please try again through the contact form below or try again later on. We apologies for the inconvenience.";
-
-		include 'INC/Article-paragraph.php';
-
-
-// Spacing	
-		include 'INC/Spacing-hr-compact.php';
+		// Navbar
+				// Links to other pages
+				$home = "index.php";		
+				$men = "#";
+				$women = "#";
+				$brands = "#";
+				$about = "about-us.php";
+				$trending = "#";
+				$offers = "#";
+				$wardrobe = "wardrobe.php";
+				$search = "#";
+				$profile = "#";
+				$basket = "#";
+				include 'INC/Navbar.php'; 
 
 
+		// Hero-plain
+				// copy for H1
+				$h1 = "SORRY !";
 
-// Contact form
-		include 'INC/Form-contact-compact.php'; 
+				//Copy for description
+		 		$description = "Unfortunately, an error occurred while sending your message. <br> We apologies for the inconvenience, and would like to offer a free souvenir for you to enjoy while we fix this issue.";
+
+				include 'INC/Hero-half-plain.php'; 
+
+		// Blocks-two-left-compact
+				// Background colour class for text
+				$BlockBG = "bg-gray-lightest";
+				// Title
+				$BlockTitle = "COLLECT SOUVENIR";
+				// Copy
+				$BlockText = "Please claim a free souvenir by clicking on the claim button below 
+";
+				// type 'hide' to remove the button
+				$hideCTA = "";
+				// Link for CTA
+				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=101";
+				// CTA copy
+				$BlockCTA = "View Souvenir";
+				// Image URL
+				$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+
+				include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');  
 
 
 
-// Spacing	
-		include 'INC/Spacing-mt-100.php';
+		// Contact form
+				include 'INC/Form-contact-compact.php'; 
 
 
 
-// Footer
-		// page tag
-		$page = "Contact form";
+		// Spacing	
+				include 'INC/Spacing-mt-100.php';
 
-		// JS path
-		$JSPath = "JS/jquery.js";
 
-		include 'INC/Footer.php'; 
+
+		// Footer
+				// page tag
+				$page = "Contact form";
+
+				// JS path
+				$JSPath = "JS/jquery.js";
+
+				include 'INC/Footer.php'; 
 
     
 }
 ?> 
-
-
-
-
-
-
-

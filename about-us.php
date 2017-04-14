@@ -1,6 +1,6 @@
 <?php
 // Config file
-include_once 'INC/Config.php';
+		include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
@@ -35,9 +35,9 @@ include_once 'INC/Config.php';
 
 // Hero-half
 		//IMG URL
-		$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+		$url = $img . "lifestyle/about-Fifth-Street-hero.jpeg"; 
 		// Amount of tint on image
-		$tint = "tint-5";
+		$tint = "tint-1";
 		// copy for H1
 		$h1 = "ABOUT US";
 
@@ -45,7 +45,7 @@ include_once 'INC/Config.php';
 
 
 // Spacing	
-include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Article heading
@@ -64,19 +64,33 @@ include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 		include (ROOT_PATH . 'INC/Article-paragraph.php');
 
 
-// Spacing	
-include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+// Spacing Mobile
+		$hide = "hidden-md-up";
+
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+// Spacing Desktop
+		$hide = "hidden-sm-down";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Hero-compact
 		//IMG URL
-		$url = "https://unsplash.imgix.net/photo-1414490929659-9a12b7e31907"; 
+		$url = $img . "lifestyle/about-Fifth-Street-story.jpg"; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 
 
-// Spacing	
-include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+// Spacing Mobile
+		$hide = "hidden-md-up";
+
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+// Spacing Desktop
+		$hide = "hidden-sm-down";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Article heading
@@ -95,8 +109,15 @@ include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 		include (ROOT_PATH . 'INC/Article-paragraph.php');
 
 
-// Spacing	
-include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+// Spacing Mobile
+		$hide = "hidden-md-up";
+
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+// Spacing Desktop
+		$hide = "hidden-sm-down";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 
@@ -117,7 +138,7 @@ include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Spacing	
-include (ROOT_PATH . 'INC/Spacing-hr-compact.php');
+		include (ROOT_PATH . 'INC/Spacing-hr-compact.php');
 
 
 // Contact form
@@ -125,7 +146,9 @@ include (ROOT_PATH . 'INC/Spacing-hr-compact.php');
 
 
 // Spacing	
-include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		$hide = " ";
+
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Footer

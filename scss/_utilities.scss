@@ -91,7 +91,8 @@
 
     .primary-btn-medium {
     	@extend .primary-btn-small;
-    	height: 50px;
+    	height: 45px;
+         padding: 0px 20px;
     }
 
 	.secondary-btn-small {     
@@ -128,10 +129,19 @@
     cursor: pointer;
     }
 
+    button.primary-btn-medium:hover, 
+    button.primary-btn-medium:active:hover, 
+    button.primary-btn-medium:active:focus {
+    background-color: $gem !important;
+    color: $white; 
+    border: none;
+    cursor: pointer;
+    }
+
 // Extra small devices (portrait phones, less than 544px)
     @include media-breakpoint-down(xs) { 
 
-    button.primary-btn-medium{ 
+    button.primary-btn-medium { 
         font-size: 14px;
         height: 40px;
     }

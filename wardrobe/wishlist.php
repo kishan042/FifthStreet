@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(~0);
 // Config file
-include_once '../INC/Config.php';
+include_once '../INC/DB/Config.php';
 
 // DB - Model
     include(ROOT_PATH . "INC/DB/model.php");
@@ -52,7 +52,7 @@ include_once '../INC/Config.php';
         $h1 = "MY WISHLIST";
 
         //Copy for description
-        $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+        $description = "View and save products you like in-store or online, without even signing up.";
 
         include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
@@ -65,21 +65,22 @@ include_once '../INC/Config.php';
 
     </ul>
 </div>
+
 <?php 
 // Spacing  
         // Add a class to hide the seperation when the wishlist
         // is empty
-        $hide = "rid";
+        $hide = "personalise";
         
         include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 ?>
 
 <div class="container">     
-    <h2 class="txt-xs-center my-3 rid">Latest product&rsquo;s</h2>
+    <h2 class="txt-xs-center my-3 personalise">Latest product&rsquo;s</h2>
     <ul class="products block">
         <?php
             foreach($recent as $product) {
-                include(ROOT_PATH . "INC/DB/product-block.php");
+                include(ROOT_PATH . "INC/DB/products-block.php");
             }
         ?>
     </ul>
@@ -113,18 +114,14 @@ include_once '../INC/Config.php';
 
         include (ROOT_PATH . 'INC/Footer.php');
 
-?> 
 
-<?php
 
 // The following script tag focuses on collecting the product ids collected
 // in local storage.
-//The 
 
     //-----------------------------------------------------------------------
     //  AJAX request 
     //-----------------------------------------------------------------------
-
 ?>
 
 <script>
@@ -132,8 +129,8 @@ include_once '../INC/Config.php';
     var data = [];
     // collect ids from local storage
     var searches = localStorage.getItem('wishlist');
-     // If searches exists iterate results
-      if (searches) {
+    // If searches exists iterate results
+    if (searches) {
         // format ids collected into json array 
         searches = JSON.parse(searches);
         // Pushes each id into the data array 
@@ -142,7 +139,6 @@ include_once '../INC/Config.php';
             data.push({ item : searches[item]});
         } 
     }
-
     
     //-----------------------------------------------------------------------
     //  AJAX request  
@@ -168,15 +164,15 @@ include_once '../INC/Config.php';
         if (!data.length > 0) {
             // If NO data is from the database then do the following:
 
-            // Those with the .rid classs will only show if product ids have not been added to the wishist
-            $('.rid').hide();
+            // Those with the .personalise classs will only show if product ids have not been added to the wishist
+            $('.personalise').hide();
 
         } else {
             // If data IS from the database then do the following:
 
-            // Add the class .rid to those elements to hide
+            // Add the class .personalise to those elements to hide
             // if data is successfully retrieved and outputed
-            $('.rid').show();
+            $('.personalise').show();
 
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){
@@ -184,7 +180,7 @@ include_once '../INC/Config.php';
                 var productId = item['id'];
                 var image = item['image'];
                 var name = item['name'];
-                //console.log([productId, image, name]);
+                var brand_name = item['brand_name'];
 
 
                  li = document.createElement('li');
@@ -206,7 +202,7 @@ include_once '../INC/Config.php';
                 h2.innerHTML = name;
                 a.append(h3);
                 h3.setAttribute("class", "brand-title");
-                h3.innerHTML = "Brand title";
+                h3.innerHTML = brand_name;
 
             } // End of FOR loop
 

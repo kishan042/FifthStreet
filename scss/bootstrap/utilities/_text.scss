@@ -4,9 +4,9 @@
 
 // Alignment
 
-.text-justify        { text-align: justify !important; }
-.text-nowrap         { white-space: nowrap !important; }
-.text-truncate       { @include text-truncate; }
+.txt-justify        { text-align: justify !important; }
+.txt-nowrap         { white-space: nowrap !important; }
+.txt-truncate       { @include text-truncate; }
 
 // Responsive alignment
 
@@ -20,9 +20,9 @@
 
 // Transformation
 
-.text-lowercase      { text-transform: lowercase !important; }
-.text-uppercase      { text-transform: uppercase !important; }
-.text-capitalize     { text-transform: capitalize !important; }
+.txt-lowercase      { text-transform: lowercase !important; }
+.txt-uppercase      { text-transform: uppercase !important; }
+.txt-capitalize     { text-transform: capitalize !important; }
 
 // Weight and italics
 
