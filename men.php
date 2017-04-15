@@ -74,7 +74,7 @@ include_once 'INC/DB/Config.php';
 
 // Blocks grid
 		// Title
-		$Block_Grid_Title = "Latest Collection";
+		$Block_Grid_Title = "Horizon Collection";
 		// ID for the container
 		$Block_Grid_ID = "collection";
 	    // Image 1 Link 

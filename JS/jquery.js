@@ -169,7 +169,7 @@ $(document).ready(function(){
 		});
 
 		// If user clicks on add to basket CTA
-		$(".circle-btn-basket").click(function(){
+		$(".item_add").click(function(){
 			// Capture the added to basket notification 
 			var notif = $(".notif-added-to-basket");
 			// Fade in then wait 3 seconds then fade out

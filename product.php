@@ -38,7 +38,7 @@ error_reporting(~0);
         $Title = $product["product_name"];
         
         // Meta description
-        $Description = "Fill text";
+        $Description = $product["product_description"];
 
         // CSS path
         $CSSPath = BASE_URL . "CSS/Styles.css";
@@ -156,6 +156,7 @@ error_reporting(~0);
                                                     <li class="product-size">8</li>
                                                     <li class="product-size">9</li>
                                                     <li class="product-size">10</li>
+                                                    <li class="product-size">11</li>
                                                     <li class="product-size">12</li>
                                                     <li class="product-size">13</li>
                                                     <li class="product-size">14</li>
@@ -207,11 +208,9 @@ error_reporting(~0);
                                     class="remove-from-wishlist circle-btn-remove hide"></div>
                             </div>
                             <div class="col-xs-8 px-0">
-                                   <a class="tertiary-btn-flex-center" href="<?php echo BASE_URL . 'brands/?Branid=' . $product["brand_id"] ?>">
-                                       <button class="h3-alt tertiary-btn-small btn-brand-cta">
-                                           Buy from brand
+                                       <button id="<?php echo $product["product_id"]; ?>" class="h3-alt tertiary-btn-small btn-brand-cta item_add" href="javascript:;">
+                                           Buy From Brand
                                        </button>
-                                   </a>
                             </div>
                             <div class="col-xs-2 px-0">
                                  <div id="<?php echo $product["product_id"]; ?>" class="circle-btn-basket item_add" href="javascript:;"></div> 
@@ -236,7 +235,7 @@ error_reporting(~0);
                             <div class="col-xs-12 col-md-6">
                                     <hr class="mt-40 hidden-md-up">
                                     <h2 class="mt-50 txt-xs-center">Ratings</h2>
-                                    <h3 class="h1 txt-gem txt-xs-center"><?php echo $product["rating"] ?> / 5</h3>
+                                    <h3 class="mt-50 h1 txt-gem txt-xs-center"><?php echo $product["rating"] ?> / 5</h3>
                                     <hr class="mt-40 hidden-md-up">
                             </div>
                     </div>

@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(~0);
-
 function check_product_exists($id) {
 
     require (ROOT_PATH . "INC/DB/db-connection.php");
@@ -208,7 +205,7 @@ function get_all_products() {
 
     // Try catch block to create a query to collect all of the products
     try {
-        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry DESC LIMIT 28"); 
+        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry DESC LIMIT 44"); 
 
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from database.";

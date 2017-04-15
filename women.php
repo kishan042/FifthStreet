@@ -74,13 +74,13 @@ include_once 'INC/DB/Config.php';
 
 // Blocks grid
 		// Title
-		$Block_Grid_Title = "Latest Collection";
+		$Block_Grid_Title = "Plaza Collection";
 		// ID for the container
 		$Block_Grid_ID = "collection";
 	    // Image 1 Link 
-		$Block_Grid_1_Link = BASE_URL . "product.php?id=1201";
+		$Block_Grid_1_Link = BASE_URL . "product.php?id=1242";
 		// Image 9 URL
-		$Block_Grid_IMG_1 = $img . "men/collection-shirt.jpg";
+		$Block_Grid_IMG_1 = $img . "women/collection-long-dress.jpg";
 		// Image 1 product title
 		$product_Title_1 = "White T-Shirt";
 		// Image 1 product description
@@ -88,9 +88,9 @@ include_once 'INC/DB/Config.php';
 
 
 	    // Image 2 Link 
-		$Block_Grid_2_Link = BASE_URL . "product.php?id=1202";
+		$Block_Grid_2_Link = BASE_URL . "product.php?id=1245";
 		// Image 9 URL
-		$Block_Grid_IMG_2 = $img . "men/collection-trouser.jpg";
+		$Block_Grid_IMG_2 = $img . "women/collection-shorts.jpg";
 		// Image 1 product title
 		$product_Title_2 = "Straight Trousers";
 		// Image 1 product description
@@ -100,7 +100,7 @@ include_once 'INC/DB/Config.php';
 	    // Image 3 Link 
 		$Block_Grid_3_Link = BASE_URL . "product.php?id=1203";
 		// Image 9 URL
-		$Block_Grid_IMG_3 = $img . "men/collection-pack-lifestyle.jpg";;
+		$Block_Grid_IMG_3 = $img . "women/collection-pack-lifestyle.jpg";;
 		// Image 1 product title
 		$product_Title_3 = "Collection Pack";
 		// Image 1 product description
@@ -108,9 +108,9 @@ include_once 'INC/DB/Config.php';
 
 
 	    // Image 4 Link 
-		$Block_Grid_4_Link = BASE_URL . "product.php?id=1203";
+		$Block_Grid_4_Link = BASE_URL . "product.php?id=1237";
 		// Image 9 URL
-		$Block_Grid_IMG_4 = $img . "men/collection-glasses.jpg";
+		$Block_Grid_IMG_4 = $img . "women/collection-hat.jpg";
 		// Image 1 product title
 		$product_Title_4 = "Sunglasses";
 		// Image 1 product description
@@ -118,9 +118,9 @@ include_once 'INC/DB/Config.php';
 
 
 	    // Image 5 Link 
-		$Block_Grid_5_Link = BASE_URL . "product.php?id=1204";
+		$Block_Grid_5_Link = BASE_URL . "product.php?id=1239";
 		// Image 9 URL
-		$Block_Grid_IMG_5 = $img . "men/collection-belt.jpg";
+		$Block_Grid_IMG_5 = $img . "women/collection-scarf.jpg";
 		// Image 1 product title
 		$product_Title_5 = "Leather Belt";
 		// Image 1 product description
@@ -128,9 +128,9 @@ include_once 'INC/DB/Config.php';
 
 
 	    // Image 6 Link 
-		$Block_Grid_6_Link = BASE_URL . "product.php?id=1205";
+		$Block_Grid_6_Link = BASE_URL . "product.php?id=1241";
 		// Image 9 URL
-		$Block_Grid_IMG_6 = $img . "men/collection-boots.jpg";
+		$Block_Grid_IMG_6 = $img . "women/collection-heels.jpg";
 		// Image 1 product title
 		$product_Title_6 = "Brown Boots";
 		// Image 1 product description
@@ -138,9 +138,9 @@ include_once 'INC/DB/Config.php';
 
 
 	    // Image 7 Link 
-		$Block_Grid_7_Link = BASE_URL . "product.php?id=1206";
+		$Block_Grid_7_Link = BASE_URL . "product.php?id=1232";
 		// Image 9 URL
-		$Block_Grid_IMG_7 = $img . "men/collection-phone-case.jpg";
+		$Block_Grid_IMG_7 = $img . "women/collection-purse.jpg";
 		// Image 1 product title
 		$product_Title_7 = "iPhone 6 case";
 		// Image 1 product description
@@ -148,9 +148,9 @@ include_once 'INC/DB/Config.php';
 
 
 	    // Image 8 Link 
-		$Block_Grid_8_Link = BASE_URL . "product.php?id=1207";
+		$Block_Grid_8_Link = BASE_URL . "product.php?id=1233";
 		// Image 9 URL
-		$Block_Grid_IMG_8 = $img . "men/collection-wallet.jpg";
+		$Block_Grid_IMG_8 = $img . "women/collection-braclet.jpg";
 		// Image 1 product title
 		$product_Title_8 = "Leather Wallet";
 		// Image 1 product description
@@ -158,9 +158,9 @@ include_once 'INC/DB/Config.php';
 
 
 	    // Image 9 Link 
-		$Block_Grid_9_Link = BASE_URL . "product.php?id=1208";
+		$Block_Grid_9_Link = BASE_URL . "product.php?id=1231";
 		// Image 9 URL
-		$Block_Grid_IMG_9 = $img . "men/collection-watch.jpg";
+		$Block_Grid_IMG_9 = $img . "women/collection-belt.jpg";
 		// Image 1 product title
 		$product_Title_9 = "Leather Watch";
 		// Image 1 product description
@@ -208,7 +208,7 @@ include_once 'INC/DB/Config.php';
 
 
 		// Image 1 Link
-		$Blocks_3_IMG_Link_3 = BASE_URL . "product.php?id=1213";
+		$Blocks_3_IMG_Link_3 = BASE_URL . "product.php?id=1230";
 		// Image 3 URL 
 		$Blocks_3_IMG_3 = $img . "women/footwear-shoe-3.jpg";
 		// Image 1 product title
@@ -238,9 +238,9 @@ include_once 'INC/DB/Config.php';
 
 
 		// Image 1 Link
-		$Blocks_4_IMG_Link_2 = BASE_URL . "product.php?id=1211";
+		$Blocks_4_IMG_Link_2 = BASE_URL . "product.php?id=1239";
 		// Image 2 URL 
-		$Blocks_4_IMG_2 = $img . "women/accessories-glasses.jpg";
+		$Blocks_4_IMG_2 = $img . "women/accessories-scarf.jpg";
 		// Image 1 product title
 		$Blocks_4_Product_Title_2 = "Blackwood Glasses";
 		// Image 1 product description
@@ -248,9 +248,9 @@ include_once 'INC/DB/Config.php';
 
 
 		// Image 1 Link
-		$Blocks_4_IMG_Link_3 = BASE_URL . "product.php?id=1212";
+		$Blocks_4_IMG_Link_3 = BASE_URL . "product.php?id=1233";
 		// Image 3 URL 
-		$Blocks_4_IMG_3 = $img . "women/accessories-gloves.jpg";
+		$Blocks_4_IMG_3 = $img . "women/accessories-bracelet.jpg";
 		// Image 1 product title
 		$Blocks_4_Product_Title_3 = "Leather Gloves";
 		// Image 1 product description
@@ -258,9 +258,9 @@ include_once 'INC/DB/Config.php';
 
 
 		// Image 1 Link
-		$Blocks_4_IMG_Link_4 = BASE_URL . "product.php?id=1214";
+		$Blocks_4_IMG_Link_4 = BASE_URL . "product.php?id=1243";
 		// Image 4 URL 
-		$Blocks_4_IMG_4 = $img . "women/accessories-bag.jpg";
+		$Blocks_4_IMG_4 = $img . "women/accessories-purse.jpg";
 		// Image 1 product title
 		$Blocks_4_Product_Title_4 = "Leather Bag";
 		// Image 1 product description
