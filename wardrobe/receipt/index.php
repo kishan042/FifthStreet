@@ -1,10 +1,6 @@
 <?php
 // Turn on output buffering on for header's
 ob_start();
-// debugging PHP
-ini_set('display_errors', 1);
-error_reporting(~0);
-
 
 // Config file
         require_once ("../../INC/DB/Config.php");
@@ -12,17 +8,17 @@ error_reporting(~0);
 // DB - Model
         require_once (ROOT_PATH . "INC/DB/model.php");
 
-
+        // Prevent URL manipulation
         if (empty($_GET["id"])) {
-            header("Location: http://localhost:8888/_Github/FifthStreet/trending.php" );
+            header("Location: http://thefifthstreet.com/trending.php" );
             exit();
 
         } else if (isset($_GET["id"])) {
             $product_id = intval($_GET["id"]);
             $check = check_product_exists($product_id);
-            $test = count($check);
+            $count = count($check);
 
-            if($test == 0){
+            if($count == 0){
                // Product ID not found in DB
                header( "location:" . BASE_URL . TRENDING );
             } else {
@@ -77,7 +73,7 @@ error_reporting(~0);
         $h1 = "Exchange";
 
         //Copy for description
-        $description = "View products purchased online and in-store in one place. Go one step further and exchange products according to your convenience.";
+        $description = "Select a new size or colour below, and we will deliver it to you the next day.";
 
         include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
@@ -86,7 +82,7 @@ error_reporting(~0);
     <div class="row mt-30">
             <!-- Product image block -->
             <div class="product-img-block col-xs-12 offset-md-1 col-md-5 offset-xl-1 col-xl-6 mr-2">
-                    <div class="p-2 bg-gray-lightest">
+                    <div>
                         <img id="<?php echo $product["colour_int"]?>"
                             class="img-fluid img-center item_image" 
                             src="<?php echo BASE_URL . $product["image"] ?>" 
@@ -142,8 +138,7 @@ error_reporting(~0);
                             </ul>
                     </div>
                     
-                    <?php if ($product["size_type"] == 'footwear') {
-                                ?>
+                    <?php if ($product["size_type"] == 'specific-M') { ?>
                                     <div class="mt-10">
                                             <h2 class="h3 hidden-md-up">Sizes</h2>
                                             <div class="row mt-20">
@@ -160,6 +155,7 @@ error_reporting(~0);
                                                     <li class="product-size">8</li>
                                                     <li class="product-size">9</li>
                                                     <li class="product-size">10</li>
+                                                    <li class="product-size">11</li>
                                                     <li class="product-size">12</li>
                                                     <li class="product-size">13</li>
                                                     <li class="product-size">14</li>
@@ -177,10 +173,55 @@ error_reporting(~0);
                                                     <li class="product-size">10</li>
                                             </ul>
                                     </div>
-                                <?php 
+                    
+                    <?php }  else if ($product["size_type"] == 'specific-F') { ?>
+                                    <div class="mt-10">
+                                            <h2 class="h3 hidden-md-up">Sizes</h2>
+                                            <div class="row mt-20">
+                                                    <div class="col-xs-6 txt-xs-center gender-selection">
+                                                            <h3 id="men-shoes" class="gender-option">Men</h3>
+                                                    </div>
+                                                    <div class="col-xs-6 txt-xs-center gender-selection">
+                                                            <h3 id="women-shoes" class="gender-option gender-selected">Women</h3>  
+                                                    </div>
+                                            </div>
+                                            <ul class="men-shoe-sizes size-flex-center">
+                                                    <li class="product-size">6</li>
+                                                    <li class="product-size">7</li>
+                                                    <li class="product-size">8</li>
+                                                    <li class="product-size">9</li>
+                                                    <li class="product-size">10</li>
+                                                    <li class="product-size">11</li>
+                                                    <li class="product-size">12</li>
+                                                    <li class="product-size">13</li>
+                                                    <li class="product-size">14</li>
+                                                    <li class="product-size">15</li>
+                                            </ul>
+                                            <ul class="women-shoe-sizes hide size-flex-center">
+                                                    <li class="product-size">2</li>
+                                                    <li class="product-size">3</li>
+                                                    <li class="product-size">4</li>
+                                                    <li class="product-size">5</li>
+                                                    <li class="product-size">6</li>
+                                                    <li class="product-size">7</li>
+                                                    <li class="product-size">8</li>
+                                                    <li class="product-size">9</li>
+                                                    <li class="product-size">10</li>
+                                            </ul>
+                                    </div>
 
-                    }  else  {
-                                ?>
+                     <?php }  else if ($product["size_type"] == 'general') { ?>
+                                    <div class="mt-10">
+                                            <h2 class="h3 hidden-md-up">Sizes</h2>
+                                            <ul class="mt-20 size-flex-center">
+                                                    <li class="product-size">XS</li>
+                                                    <li class="product-size">SM</li>
+                                                    <li class="product-size">MD</li>
+                                                    <li class="product-size">LG</li>
+                                            </ul>
+                                    </div>
+
+                     <?php }  else if ($product["size_type"] == 'general-M') { ?>
                                     <div class="mt-10">
                                             <h2 class="h3 hidden-md-up">Sizes</h2>
                                             <div class="row mt-20">
@@ -198,8 +239,26 @@ error_reporting(~0);
                                                     <li class="product-size">LG</li>
                                             </ul>
                                     </div>
-                                <?php
-                    } ?>
+
+                     <?php }  else if ($product["size_type"] == 'general-F') { ?>
+                                    <div class="mt-10">
+                                            <h2 class="h3 hidden-md-up">Sizes</h2>
+                                            <div class="row mt-20">
+                                                    <div class="col-xs-6 txt-xs-center gender-selection">
+                                                            <h3 class="gender-option">Men</h3>
+                                                    </div>
+                                                    <div class="col-xs-6 txt-xs-center gender-selection">
+                                                            <h3 class="gender-option gender-selected">Women</h3>  
+                                                    </div>
+                                            </div>
+                                            <ul class="size-flex-center">
+                                                    <li class="product-size">XS</li>
+                                                    <li class="product-size">SM</li>
+                                                    <li class="product-size">MD</li>
+                                                    <li class="product-size">LG</li>
+                                            </ul>
+                                    </div>
+                     <?php } ?>
                     
                     <!-- Set of 3 CTA's -->
                     <div class="row mt-50">
@@ -211,11 +270,8 @@ error_reporting(~0);
                                     class="remove-from-wishlist circle-btn-remove hide"></div>
                             </div>
                             <div class="col-xs-8 px-0">
-                                   <a class="tertiary-btn-flex-center" href="<?php echo BASE_URL . 'brands/?Branid=' . $product["brand_id"] ?>">
-                                       <button class="h3-alt tertiary-btn-small btn-brand-cta">
-                                           Exchange
+                                       <button id="<?php echo $product["product_id"]; ?>" class="h3-alt tertiary-btn-small btn-brand-cta">Exchange
                                        </button>
-                                   </a>
                             </div>
                             <div class="col-xs-2 px-0">
                                  <div id="<?php echo $product["product_id"]; ?>" class="circle-btn-basket item_add" href="javascript:;"></div> 
@@ -240,7 +296,7 @@ error_reporting(~0);
                             <div class="col-xs-12 col-md-6">
                                     <hr class="mt-40 hidden-md-up">
                                     <h2 class="mt-50 txt-xs-center">Ratings</h2>
-                                    <h3 class="h1 txt-gem txt-xs-center"><?php echo $product["rating"] ?> / 5</h3>
+                                    <h3 class="mt-50 h1 txt-gem txt-xs-center"><?php echo $product["rating"] ?> / 5</h3>
                                     <hr class="mt-40 hidden-md-up">
                             </div>
                     </div>

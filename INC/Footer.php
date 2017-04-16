@@ -91,9 +91,9 @@ if ($(window).width() > 766) {
                     },
                      attr: 'image' },
                     {attr: "name",         label: "Product"},
-                    {view: "increment",    label: "Inc", text: "+ 1"},
+                    {view: "increment",    label: "Inc", text: "+ Qty"},
                     {attr: "quantity",     label: "Qty"},
-                    {view: "decrement",    label: "Dec", text: "-  1"},
+                    {view: "decrement",    label: "Dec", text: "-  Qty"},
                     {view: "currency",     attr: "total", label: "Price"},
                 ]
             });
@@ -122,9 +122,9 @@ if ($(window).width() > 766) {
                      attr: 'image' },
                     {attr: "name",         label: "Product"},
                     {view: "currency", attr: "total", label: "Price"},
-                    {view: "increment",    label: "Inc", text: "+ 1"},
+                    {view: "increment",    label: "Inc", text: "+ Qty"},
                     {attr: "quantity",     label: "false", text:"Qty"},
-                    {view: "decrement",    label: "Dec", text: "- 1"},
+                    {view: "decrement",    label: "Dec", text: "- Qty"},
                 ]
       });
 }

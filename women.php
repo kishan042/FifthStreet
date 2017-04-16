@@ -84,9 +84,7 @@ include_once 'INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_1 = "Side Cut Maxi Dress";
 		// Image 1 product description
-		$product_description_1 = "light aqua side cute maxi dress, perfect for any professional or casual use.
-
-";
+		$product_description_1 = "light aqua side cute maxi dress, perfect for any professional or casual use.";
 
 
 	    // Image 2 Link 
@@ -96,8 +94,7 @@ include_once 'INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_2 = "Waist Shorts";
 		// Image 1 product description
-		$product_description_2 = "Cream waist shorts perfect addition to any wardrobe.
-";
+		$product_description_2 = "Cream waist shorts perfect addition to any wardrobe.";
 
 
 		// Image 3 URL
