@@ -35,7 +35,7 @@
       return true;
     }
 
-        // Retrieve searches from Local Storage, return an array
+    // Retrieve searches from Local Storage, return an array
     function get_Receipt_LS() {
       var searches = localStorage.getItem('Receipt');
       if (searches) {

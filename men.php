@@ -82,9 +82,9 @@ include_once 'INC/DB/Config.php';
 		// Image 9 URL
 		$Block_Grid_IMG_1 = $img . "men/collection-shirt.jpg";
 		// Image 1 product title
-		$product_Title_1 = "White T-Shirt";
+		$product_Title_1 = "Basics T-Shirt";
 		// Image 1 product description
-		$product_description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_1 = "White short-sleeved basics T-shirt, made of high-quality cotton.";
 
 
 	    // Image 2 Link 
@@ -92,19 +92,13 @@ include_once 'INC/DB/Config.php';
 		// Image 9 URL
 		$Block_Grid_IMG_2 = $img . "men/collection-trouser.jpg";
 		// Image 1 product title
-		$product_Title_2 = "Straight Trousers";
+		$product_Title_2 = "Khaki Trousers";
 		// Image 1 product description
-		$product_description_2 = "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_2 = "Brown khaki trousers, made of high-quality cotton.";
 
 
-	    // Image 3 Link 
-		$Block_Grid_3_Link = BASE_URL . "product.php?id=1203";
-		// Image 9 URL
+		// Image 3 URL
 		$Block_Grid_IMG_3 = $img . "men/collection-pack-lifestyle.jpg";;
-		// Image 1 product title
-		$product_Title_3 = "Collection Pack";
-		// Image 1 product description
-		$product_description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
 
 
 	    // Image 4 Link 
@@ -112,9 +106,9 @@ include_once 'INC/DB/Config.php';
 		// Image 9 URL
 		$Block_Grid_IMG_4 = $img . "men/collection-glasses.jpg";
 		// Image 1 product title
-		$product_Title_4 = "Sunglasses";
+		$product_Title_4 = "Horizon Sunglasses";
 		// Image 1 product description
-		$product_description_4 = "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_4 = "Comfortable and easy to wear sunglasses for all occasions.";
 
 
 	    // Image 5 Link 
@@ -124,7 +118,7 @@ include_once 'INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_5 = "Leather Belt";
 		// Image 1 product description
-		$product_description_5 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_5 = "Brand new brown belt which is made of 100% pure leather.";
 
 
 	    // Image 6 Link 
@@ -134,7 +128,7 @@ include_once 'INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_6 = "Brown Boots";
 		// Image 1 product description
-		$product_description_6 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_6 = "Leather brown boots, made for every occasion.";
 
 
 	    // Image 7 Link 
@@ -144,7 +138,7 @@ include_once 'INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_7 = "iPhone 6 case";
 		// Image 1 product description
-		$product_description_7 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_7 = "Brand new brown iPhone 6 case. Only 500 were handcrafted.";
 
 
 	    // Image 8 Link 
@@ -152,9 +146,9 @@ include_once 'INC/DB/Config.php';
 		// Image 9 URL
 		$Block_Grid_IMG_8 = $img . "men/collection-wallet.jpg";
 		// Image 1 product title
-		$product_Title_8 = "Leather Wallet";
+		$product_Title_8 = "Horizon Wallet";
 		// Image 1 product description
-		$product_description_8 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_8 = "Dark brown leather wallet. Only 500 were handcrafted.";
 
 
 	    // Image 9 Link 
@@ -162,9 +156,9 @@ include_once 'INC/DB/Config.php';
 		// Image 9 URL
 		$Block_Grid_IMG_9 = $img . "men/collection-watch.jpg";
 		// Image 1 product title
-		$product_Title_9 = "Leather Watch";
+		$product_Title_9 = "Horizon Watch";
 		// Image 1 product description
-		$product_description_9 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_9 = "Dark brown leather watch. Only 500 were handcrafted.";
 
 
 		include (ROOT_PATH . 'INC/Blocks-grid.php');
@@ -194,7 +188,7 @@ include_once 'INC/DB/Config.php';
 		// Image 1 product title
 		$Blocks_3_Product_Title_1 = "Brown Boots";
 		// Image 1 product description
-		$Blocks_3_Description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_3_Description_1 = "Leather brown lace-up boots, <br> made for every occasion.";
 
 
 		// Image 1 Link
@@ -202,9 +196,9 @@ include_once 'INC/DB/Config.php';
 		// Image 2 URL 
 		$Blocks_3_IMG_2 = $img . "men/footwear-shoe-1.jpg";
 		// Image 1 product title
-		$Blocks_3_Product_Title_2 = "Leather Shoes";
+		$Blocks_3_Product_Title_2 = "Aztec lace-ups";
 		// Image 1 product description
-		$Blocks_3_Description_2 = "Lorem ipsum dolor sit amet, consectetur adipisicinag elit. Cupiditate, numquam.";
+		$Blocks_3_Description_2 = "New Brown lace-up shoes, <br> made of 100% high-quality leather.";
 
 
 		// Image 1 Link
@@ -212,9 +206,9 @@ include_once 'INC/DB/Config.php';
 		// Image 3 URL 
 		$Blocks_3_IMG_3 = $img . "men/footwear-shoe-3.jpg";
 		// Image 1 product title
-		$Blocks_3_Product_Title_3 = "Black Converse";
+		$Blocks_3_Product_Title_3 = "Converse";
 		// Image 1 product description
-		$Blocks_3_Description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_3_Description_3 = "Converses with laces, <br> perfect for while working hard and playing hard.";
 
 
 		include (ROOT_PATH . 'INC/Blocks-three.php');
@@ -231,9 +225,9 @@ include_once 'INC/DB/Config.php';
 		// Image 1 URL 
 		$Blocks_4_IMG_1 = $img . "men/accessories-hat.jpg";
 		// Image 1 product title
-		$Blocks_4_Product_Title_1 = "White Hat";
+		$Blocks_4_Product_Title_1 = "Godfather Hat";
 		// Image 1 product description
-		$Blocks_4_Description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_4_Description_1 = "Brand new off-white Godfather crown hat, made of 100% high-quality wool.";
 
 
 		// Image 1 Link
@@ -243,7 +237,7 @@ include_once 'INC/DB/Config.php';
 		// Image 1 product title
 		$Blocks_4_Product_Title_2 = "Blackwood Glasses";
 		// Image 1 product description
-		$Blocks_4_Description_2 = "Lorem ipsum dolor sit amet, consectetur adipisicinag elit. Cupiditate, numquam.";
+		$Blocks_4_Description_2 = "Blackwood glasses, made of high-quality wood, to look great for every occasion.";
 
 
 		// Image 1 Link
@@ -253,7 +247,7 @@ include_once 'INC/DB/Config.php';
 		// Image 1 product title
 		$Blocks_4_Product_Title_3 = "Leather Gloves";
 		// Image 1 product description
-		$Blocks_4_Description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_4_Description_3 = "Dark red leather gloves, made of 100% pure leather, to keep your hands warm.";
 
 
 		// Image 1 Link
@@ -261,9 +255,9 @@ include_once 'INC/DB/Config.php';
 		// Image 4 URL 
 		$Blocks_4_IMG_4 = $img . "men/accessories-bag.jpg";
 		// Image 1 product title
-		$Blocks_4_Product_Title_4 = "Leather Bag";
+		$Blocks_4_Product_Title_4 = "Leather Shoulder Bag";
 		// Image 1 product description
-		$Blocks_4_Description_4 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_4_Description_4 = "Shoulder bag, made of high-quality leather, perfect for any professional use.";
 
 		include (ROOT_PATH . 'INC/Blocks-four.php');
 

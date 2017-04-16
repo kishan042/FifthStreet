@@ -6,7 +6,7 @@ include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
-		$Title = "My Basket ";
+		$Title = "Test 3 ";
 		// Meta description
 		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
 
@@ -71,7 +71,34 @@ include_once 'INC/DB/Config.php';
 <button class="remove-souvenir" id="118">- Souvenir -</button>
 </li>
 
+
+
+
+
 <?php
+
+$limit = 2;
+$link = "&id0=1234&id1=1233";
+
+$message = " Name: Kishan <br>" . 
+		   "\r\n Email: test@test.com <br>" . 
+		   "\r\n <br>" . 
+		   "\r\n Hi Kishan, <br>" .
+		   "\r\n Thank you for shopping with us today. Click on the link below to view your E-receipt. <br>" .
+		   "\r\n Remember you can also return and exchange any of the products purchased from the link below as well ! <br>" .
+		   "\r\n <br>" .
+		   '<a style="color:#48d8d8;" href="http://thefifthstreet.com/wardrobe/receipts.php' . $limit . $link . '">' . "Collect E-receipt" . '</a><br>' .
+		   "\r\n <br>" .
+		   "\r\n Have a great day, <br>" .
+		   "\r\n The Fifth Street Team. <br>";
+
+
+
+$test ='<a class="txt-gem" href="http://thefifthstreet.com/wardrobe/receipts.php">' . "Collect E-receipt" . '</a>';
+echo $test;
+echo "<br>";
+echo "<br>";
+echo $message;
 
 // Spacing  
         // Add a class to hide the seperation

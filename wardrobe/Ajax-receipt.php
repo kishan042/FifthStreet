@@ -47,6 +47,4 @@ else { // if connected
 	 error_log(print_r($object, true));
 	 echo json_encode($object);
 }
-
-
 ?>

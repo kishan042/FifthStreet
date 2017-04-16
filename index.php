@@ -112,7 +112,7 @@ include_once 'INC/DB/Config.php';
 		// type 'hide' to remove the button
 		$hideCTA = " ";
 		// Link for CTA
-		$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1235";
+		$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1236";
 		// CTA copy
 		$BlockCTA = "Collect Souvenir";
 		// Image URL

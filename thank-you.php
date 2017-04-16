@@ -52,13 +52,32 @@
 				// type 'hide' to remove the button
 				$hideCTA = "";
 				// Link for CTA
-				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1235";
+				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1437";
 				// CTA copy
 				$BlockCTA = "View Souvenir";
 				// Image URL
-				$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+				$BlockIMG = $img ."souvenirs/collection/2.jpg";
 
 				include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
+
+
+		// Blocks-two-right-compact
+						// Background colour class for text
+				$BlockBG = "bg-gray-lightest";
+				// Title
+				$BlockTitle = "VIEW E-RECEIPT";
+				// Copy
+				$BlockText = "Returns are always free, so take full advantage of returning products through your e-receipts. ";
+				// type 'hide' to remove the button
+				$hideCTA = "";
+				// Link for CTA
+				$BlockLink = BASE_URL . "wardrobe/receipts.php";
+				// CTA copy
+				$BlockCTA = "View E-Receipt";
+				// Image URL
+				$BlockIMG = $img ."home/3.jpg";
+
+				include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
 
 		// Spacing	
@@ -67,13 +86,13 @@
 
 		// Footer
 				// If current pages does not exist then add the 
-				$hide = " ";
+		        $hide = "hidden-xs-up";
 
-				// Bread crunb for the previous page 
-				$PreviousPage = "Thank you";
+		        // Bread crunb for the previous page 
+		        $PreviousPage = "";
 
-				// Bread crumbs for the current page
-				$CurrentPage = " ";
+		        // Bread crumbs for the current page
+		        $CurrentPage = "Thank You";
 
 				// JS path
 				$JSPath = BASE_URL . "JS/jquery.js";

@@ -1,56 +1,58 @@
 <?php
+//Buffer the script to run the header location command on line 119
+ob_start();
 // Config file
         include_once '../INC/DB/Config.php';
 
 // DB - Model
         include(ROOT_PATH . "INC/DB/model.php");
-        $recent = get_recent_products(8);
+        $recent = get_recent_products(4);
 
 // Header
-		// Title tag
-		$Title = "My Receipts";
+        // Title tag
+        $Title = "My Receipts";
 
-		// Meta description
-		$Description = "Fill text";
+        // Meta description
+        $Description = "Fill text";
 
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
+        // CSS path
+        $CSSPath = BASE_URL . "CSS/Styles.css";
 
-		// Image source
-		$img = BASE_URL . "IMG/";
+        // Image source
+        $img = BASE_URL . "IMG/";
 
-		include (ROOT_PATH . 'INC/Header.php');
+        include (ROOT_PATH . 'INC/Header.php');
 
 
 // Navbar
-		// Links to other pages
-		$men =  BASE_URL . MEN;
-		$women = BASE_URL . WOMEN;
-		$brands = BASE_URL . BRANDS;
-		$about = BASE_URL . ABOUT;
-		$trending = BASE_URL . TRENDING;
-		$offers = BASE_URL . OFFERS;
-		$wardrobe = BASE_URL . WARDROBE;
-		$search = BASE_URL . SEARCH;
-		$profile = BASE_URL . PROFILE;
-		$basket = BASE_URL . BASKET;
+        // Links to other pages
+        $men =  BASE_URL . MEN;
+        $women = BASE_URL . WOMEN;
+        $brands = BASE_URL . BRANDS;
+        $about = BASE_URL . ABOUT;
+        $trending = BASE_URL . TRENDING;
+        $offers = BASE_URL . OFFERS;
+        $wardrobe = BASE_URL . WARDROBE;
+        $search = BASE_URL . SEARCH;
+        $profile = BASE_URL . PROFILE;
+        $basket = BASE_URL . BASKET;
 
-		// Type "option-active" inside, to make option active
-		$ActiveTrending = "";
-		$ActiveOffers = "";
-		$ActiveWardrobe = "option-active";
+        // Type "option-active" inside, to make option active
+        $ActiveTrending = "";
+        $ActiveOffers = "";
+        $ActiveWardrobe = "option-active";
 
-		include (ROOT_PATH . 'INC/Navbar.php');
+        include (ROOT_PATH . 'INC/Navbar.php');
 
 
 // Hero-half-plain
-		// copy for H1
-		$h1 = "MY RECIEPTS";
+        // copy for H1
+        $h1 = "MY RECIEPTS";
 
-		//Copy for description
-		$description = "View products purchased online and in-store in one place. Go one step further and exchange products as well according to your convenience.";
+        //Copy for description
+        $description = "View products purchased online and in-store in one place. Go one step further and exchange products as well according to your convenience.";
 
-		include (ROOT_PATH . 'INC/Hero-half-plain.php');
+        include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
 ?>
 <div class="container">
@@ -59,17 +61,7 @@
     </ul>
 </div>
 
-<?php 
-// Spacing  
-        // Add a class to hide the seperation when the wishlist
-        // is empty
-        $hide = "personalise";
-        
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
-?>
-
-<div class="container">     
-    <h2 class="txt-xs-center my-3 personalise">Latest product&rsquo;s</h2>
+<div class="container personalise">     
     <ul class="products block">
         <?php
             foreach($recent as $product) {
@@ -80,36 +72,44 @@
 </div>
 <?php
 
-// Spacing	
-		// Add a class to hide the seperation
-		$hide = "";
-		
-		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+// Spacing  
+        // Add a class to hide the seperation
+        $hide = "";
+        
+        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Footer
-		// If current pages does not exist then add the 
-		$hide = " ";
+        // If current pages does not exist then add the 
+        $hide = " ";
 
-		// Bread crunb for the previous page 
-		$PreviousPage = "Wardrobe";
+        // Bread crunb for the previous page 
+        $PreviousPage = "Wardrobe";
 
-		// Bread crumbs for the current page
-		$CurrentPage = "My Reciepts";		
+        // Bread crumbs for the current page
+        $CurrentPage = "My Reciepts";       
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
+        // JS path
+        $JSPath = BASE_URL . "JS/jquery.js";
 
-		include (ROOT_PATH . 'INC/Footer.php');
+        include (ROOT_PATH . 'INC/Footer.php');
 
+        
+        // The following code is based on the email e-receipt 
+        // url, to insert all product ids in local storage and 
+        // reload the page post for loop, to prevent anyone from 
+        // manipulating the url.
         if (isset($_GET["limit"])) {
             $length = $_GET["limit"];
-            for ($i = 0; $i <= $length; $i++) {
-                if (isset($_GET["id".$i])) {
-                    $productID = $_GET["id".$i];
-                    echo "<script>validate_Receipt_Id('".$productID."')</script>";
-                }
-            }
+            $i = 0;
+
+            do {
+                 $productID = $_GET["id".$i];
+                 echo "<script>validate_Receipt_Id('". $productID ."');</script>";
+                 $i++;
+            } while ($i <= $length);
+
+            ?><script>window.location = window.location.href.split("?")[0];</script><?php
         }
 
 // The following script tag focuses on collecting the product ids collected
@@ -161,14 +161,14 @@
             // If NO data is from the database then do the following:
 
             // Those with the .personalise classs will only show if product ids have not been added to the wishist
-            $('.personalise').hide();
+            $('.personalise').show();
 
         } else {
             // If data IS from the database then do the following:
 
             // Add the class .personalise to those elements to hide
             // if data is successfully retrieved and outputed
-            $('.personalise').show();
+            $('.personalise').hide();
 
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){

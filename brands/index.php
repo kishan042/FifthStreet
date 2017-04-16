@@ -1,26 +1,33 @@
 <?php
-        // a $product will only be set if an ID is specified in the query
-        // string and it corresponds to a real product. If no product is
-        // set, then redirect to the shirts listing page; otherwise, continue
-        // on and display the Shirt Details page for that $product
-        if (empty($_GET["Branid"])) {
-            header("Location: http://localhost:8888/_Github/FifthStreet/brands.php" );
-            exit();
-        }
+// Turn on output buffering on for header's
+ob_start();
 
 // Config file
 		include_once '../INC/DB/Config.php';
 
-
 // DB - Model
-	    require_once(ROOT_PATH . "INC/DB/model.php");
+	    include(ROOT_PATH . "INC/DB/model.php");
 
+	    // Prevent URL manipulation
+	     if (empty($_GET["Branid"])) {
+	     	$id = $_GET["Branid"];
+	     	echo $id;
+	        header("Location: http://thefifthstreet.com/brands.php" );
+	        exit();
 
-        //if an ID is specified in the query string, use it
-        if (isset($_GET["Branid"])) {
-            $brand_id = intval($_GET["Branid"]);
-            $brand = get_single_brand($brand_id);
-        }
+	    } else if (isset($_GET["Branid"])) {
+	        $Brand_id = intval($_GET["Branid"]);
+	        $check = check_brand_exists($Brand_id);
+	        $count = count($check);
+
+	        if($count == 0){
+	           // Product ID not found in DB
+	           header("Location: http://thefifthstreet.com/brands.php" );
+	        } else {
+	           // Product ID found in DB
+	           $brand = get_single_brand($Brand_id);
+	        }
+	    }
 
 // Header
 		// Title tag
@@ -72,7 +79,7 @@
 		// type 'hide' to remove the button
 		$hideCTA = "hide";
 		// Link for CTA
-		$BlockLink = BASE_URL . "brands/catalogue.php?Branid=" . $brand_id;
+		$BlockLink = BASE_URL . "brands/catalogue.php?Branid=" . $Brand_id;
 		// CTA copy
 		$BlockCTA = "View all items";
 		// Image 1 URL 
