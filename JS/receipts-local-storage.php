@@ -55,6 +55,18 @@
       return true;
     }
 
+    // Validate the purchase of theproduct
+    // prevent URL manipluation in E-receipts
+    function validate_e_receipt(str) {
+      var searches = get_Receipt_LS();
+      if (searches.indexOf(str) > -1 || !str) {
+        // console.log("true");
+      } else {
+        console.log("false");
+        location.replace("http://localhost:8888/_Github/FifthStreet/wardrobe/receipts.php");
+      }
+    }
+
 
     //---------------------------------------------------------------------------------------
     //  Executation of the two events

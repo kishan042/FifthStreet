@@ -150,9 +150,10 @@
 	.mob-search { display: none;}
 	.desk-search { display: block;}
 
-
-
-    #search-bar { height: 50px; }
+    #search-bar { 
+    	height: 50px; 
+    	z-index: 0;
+    }
 
     #search-bar:focus { 
     	height: 48px;
@@ -176,6 +177,7 @@
 		border: none;
 		border-left: 1px rgba(0,0,0,0.3) solid;
 		margin-top: 1px;
+		z-index: 0;
     }
 
     #search-icon:hover {

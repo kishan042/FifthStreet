@@ -8,9 +8,12 @@ ob_start();
 // DB - Model
         require_once (ROOT_PATH . "INC/DB/model.php");
 
-        // Prevent URL manipulation
+        //Prevent URL manipulation
+        // This is the first part of preventing URL manipulation
+        // the following code focuses on redirecting if the 
+        // id in the url is empty or the id is not found in the url
         if (empty($_GET["id"])) {
-            header("Location: http://thefifthstreet.com/trending.php" );
+            header("location: http://thefifthstreet.com/wardrobe/receipts.php");
             exit();
 
         } else if (isset($_GET["id"])) {
@@ -20,14 +23,13 @@ ob_start();
 
             if($count == 0){
                // Product ID not found in DB
-               header( "location:" . BASE_URL . TRENDING );
+               header("location: http://thefifthstreet.com/wardrobe/receipts.php");
             } else {
                // Product ID found in DB
                $product = get_single_product($product_id);
                $product_colors = get_single_product_colours($product_id);
             }
         }
-
 
 // Header
         // Title tag
@@ -128,8 +130,8 @@ ob_start();
                             </ul>
                     </div>
                     <div class="mt-30 primary-colour-set hidden-lg-down">
-                            <h2 class="h3 hidden-lg-up">Colours</h2>
-                            <ul class="colours-flex-center">
+                            <h2 class="h3">Colours</h2>
+                            <ul class="mt-20 colours-flex-center">
                                 <?php
                                     foreach($product_colors as $color) {
                                         include(ROOT_PATH . "INC/DB/color-list.php");
@@ -140,7 +142,7 @@ ob_start();
                     
                     <?php if ($product["size_type"] == 'specific-M') { ?>
                                     <div class="mt-10">
-                                            <h2 class="h3 hidden-md-up">Sizes</h2>
+                                            <h2 class="h3">Sizes</h2>
                                             <div class="row mt-20">
                                                     <div class="col-xs-6 txt-xs-center gender-selection">
                                                             <h3 id="men-shoes" class="gender-option gender-selected">Men</h3>
@@ -176,7 +178,7 @@ ob_start();
                     
                     <?php }  else if ($product["size_type"] == 'specific-F') { ?>
                                     <div class="mt-10">
-                                            <h2 class="h3 hidden-md-up">Sizes</h2>
+                                            <h2 class="h3">Sizes</h2>
                                             <div class="row mt-20">
                                                     <div class="col-xs-6 txt-xs-center gender-selection">
                                                             <h3 id="men-shoes" class="gender-option">Men</h3>
@@ -212,7 +214,7 @@ ob_start();
 
                      <?php }  else if ($product["size_type"] == 'general') { ?>
                                     <div class="mt-10">
-                                            <h2 class="h3 hidden-md-up">Sizes</h2>
+                                            <h2 class="h3">Sizes</h2>
                                             <ul class="mt-20 size-flex-center">
                                                     <li class="product-size">XS</li>
                                                     <li class="product-size">SM</li>
@@ -223,7 +225,7 @@ ob_start();
 
                      <?php }  else if ($product["size_type"] == 'general-M') { ?>
                                     <div class="mt-10">
-                                            <h2 class="h3 hidden-md-up">Sizes</h2>
+                                            <h2 class="h3">Sizes</h2>
                                             <div class="row mt-20">
                                                     <div class="col-xs-6 txt-xs-center gender-selection">
                                                             <h3 class="gender-option gender-selected">Men</h3>
@@ -242,7 +244,7 @@ ob_start();
 
                      <?php }  else if ($product["size_type"] == 'general-F') { ?>
                                     <div class="mt-10">
-                                            <h2 class="h3 hidden-md-up">Sizes</h2>
+                                            <h2 class="h3">Sizes</h2>
                                             <div class="row mt-20">
                                                     <div class="col-xs-6 txt-xs-center gender-selection">
                                                             <h3 class="gender-option">Men</h3>
@@ -259,22 +261,32 @@ ob_start();
                                             </ul>
                                     </div>
                      <?php } ?>
-                    
+  
                     <!-- Set of 3 CTA's -->
                     <div class="row mt-50">
                             <div class="col-xs-2 px-0">
-                                    <div id="<?php echo $product["product_id"] ?>" 
-                                    class="add-to-wishlist circle-btn-add"></div>
+                                    <div id="<?php echo $product["product_id"] ?>" class="add-to-wishlist circle-btn-add tooltip">
+                                        <span class="tooltiptext">Add to Wishlist</span>
+                                        <div class="arrow-down"></div>
+                                    </div>
 
-                                    <div id="<?php echo $product["product_id"] ?>" 
-                                    class="remove-from-wishlist circle-btn-remove hide"></div>
+                                    <div id="<?php echo $product["product_id"] ?>" class="remove-from-wishlist circle-btn-remove hide tooltip">
+                                        <span class="tooltiptext">Remove</span>
+                                        <div class="arrow-down"></div>
+                                    </div>
                             </div>
                             <div class="col-xs-8 px-0">
-                                       <button id="<?php echo $product["product_id"]; ?>" class="h3-alt tertiary-btn-small btn-brand-cta">Exchange
+                                       <button id="<?php echo $product["product_id"]; ?>" class="h3-alt tertiary-btn-small btn-brand-cta">
+                                           Exchange or Return
                                        </button>
                             </div>
                             <div class="col-xs-2 px-0">
-                                 <div id="<?php echo $product["product_id"]; ?>" class="circle-btn-basket item_add" href="javascript:;"></div> 
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=">
+                                     <div id="<?php echo $product["product_id"]; ?>" class="circle-btn-share product-share tooltip">
+                                         <span class="tooltiptext">Share</span>
+                                         <div class="arrow-down"></div> 
+                                     </div> 
+                                </a>
                             </div>
                     </div>
             </div> 
@@ -335,7 +347,24 @@ ob_start();
 
         include (ROOT_PATH . 'INC/Footer.php');
 
-        // ID from the php get function - $product_id 
+
+        //Prevent URL manipulation
+        // This is the second part of preventing URL manipulation
+        // the following code focuses on redirecting if the 
+        // id in the url does not exist in the local storage
+        if (empty($_GET["id"])) {
+            header("location: http://thefifthstreet.com/wardrobe/receipts.php");
+            exit();
+
+        } else if (isset($_GET["id"])) {
+          $product_id = intval($_GET["id"]);
+          // validate the id with local storage
+          // if the id does not match the id in local storage
+          // Javascript will redirct the user.
+          echo "<script> validate_e_receipt('".$product_id."'); </script>";
+
+        }
+
 ?> 
 <script>
     $(window).load(function() {

@@ -4293,7 +4293,8 @@ nav {
     display: block; }
 
   #search-bar {
-    height: 50px; }
+    height: 50px;
+    z-index: 0; }
 
   #search-bar:focus {
     height: 48px;
@@ -4310,7 +4311,8 @@ nav {
     background-color: #fff !important;
     border: none;
     border-left: 1px rgba(0, 0, 0, 0.3) solid;
-    margin-top: 1px; }
+    margin-top: 1px;
+    z-index: 0; }
 
   #search-icon:hover {
     background-color: #48d8d8 !important;
