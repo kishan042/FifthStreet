@@ -30,6 +30,12 @@
 		$search = BASE_URL . SEARCH;
 		$profile = BASE_URL . PROFILE;
 		$basket = BASE_URL . BASKET;
+		
+		// Type "option-active" inside, to make option active
+		$ActiveTrending = "";
+		$ActiveOffers = "";
+		$ActiveWardrobe = "option-active";
+		
 		include (ROOT_PATH . 'INC/Navbar.php');
 
 

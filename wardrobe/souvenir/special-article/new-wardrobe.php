@@ -30,14 +30,20 @@
 		$search = BASE_URL . SEARCH;
 		$profile = BASE_URL . PROFILE;
 		$basket = BASE_URL . BASKET;
+
+		// Type "option-active" inside, to make option active
+		$ActiveTrending = "";
+		$ActiveOffers = "";
+		$ActiveWardrobe = "option-active";
+
 		include (ROOT_PATH . 'INC/Navbar.php');
 
 
 // Hero-half
 		//IMG URL
-		$url = $img . "souvenirs/article/3.jpg"; 
+		$url = $img . "souvenirs/article/girl-choosing-shoes-in-her-wardrobe.jpg"; 
 		// Amount of tint on image
-		$tint = "tint-3";
+		$tint = "tint-1";
 		// copy for H1
 		$h1 = "NEW WARDROBE";
 
@@ -77,7 +83,7 @@
 
 // Hero-compact
 		//IMG URL
-		$url = $img . "souvenirs/article/4.jpg"; 
+		$url = $img . "souvenirs/article/woman-searching-for-clothing-in-a-closet.jpg"; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 
@@ -122,7 +128,7 @@
 
 // Hero-compact
 		//IMG URL
-		$url = $img . "souvenirs/article/5.jpg"; 
+		$url = $img . "souvenirs/article/young-woman-searching-what-to-wear-in-a-wardrobe.jpg"; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 

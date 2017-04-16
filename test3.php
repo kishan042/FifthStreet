@@ -71,11 +71,17 @@ include_once 'INC/DB/Config.php';
 <button class="remove-souvenir" id="118">- Souvenir -</button>
 </li>
 
+<?php 
+$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+?> 
 
-
-
+<a href="https://www.facebook.com/sharer/sharer.php?u=">Share on Facebook</a>
+<!-- http://www.facebook.com/sharer/sharer.php?u=https://kyusuf.com/post/completely-css-tabs&title=Completely CSS: Tabs -->
+<a href="https://twitter.com/home?status=">Share on Twitter</a>
 
 <?php
+
+
 
 $limit = 2;
 $link = "&id0=1234&id1=1233";

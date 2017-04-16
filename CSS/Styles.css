@@ -4840,6 +4840,20 @@ ul.block li:first-child {
   border-radius: 25px;
   cursor: pointer; }
 
+.circle-btn-add:hover {
+  padding: 11px;
+  padding-top: 16px;
+  width: 50px;
+  height: 50px;
+  background: url(../IMG/icons/heart-add-white.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-origin: content-box;
+  border: 1px solid #48d8d8;
+  background-color: #48d8d8 !important;
+  border-radius: 25px;
+  cursor: pointer; }
+
 .circle-btn-remove {
   padding: 13px;
   padding-top: 16px;
@@ -4855,11 +4869,11 @@ ul.block li:first-child {
   border-radius: 25px;
   cursor: pointer; }
 
-.circle-btn-basket {
+.circle-btn-share {
   padding: 11px;
   width: 50px;
   height: 50px;
-  background: url(../IMG/icons/basket-black.svg) no-repeat;
+  background: url(../IMG/icons/share-black.svg) no-repeat;
   background-size: cover;
   background-position: center;
   background-origin: content-box;
@@ -4867,15 +4881,15 @@ ul.block li:first-child {
   border-radius: 25px;
   cursor: pointer; }
 
-.circle-btn-basket:hover {
-  padding: 11px;
+.circle-btn-share:hover {
+  padding: 9px;
   width: 50px;
   height: 50px;
-  background: url(../IMG/icons/basket-white.svg) no-repeat;
+  background: url(../IMG/icons/share-white.svg) no-repeat;
   background-size: cover;
   background-position: center;
   background-origin: content-box;
-  border: 1px solid #48d8d8;
+  border: 2px solid #48d8d8;
   background-color: #48d8d8 !important;
   border-radius: 25px;
   cursor: pointer; }
@@ -4944,6 +4958,9 @@ ul.size-flex-center li:hover,
   cursor: pointer;
   font-weight: 400; }
 
+.tooltiptext {
+  visibility: hidden; }
+
 @media (min-width: 768px) {
   ul.size-flex-center {
     justify-content: flex-start; }
@@ -4959,6 +4976,44 @@ ul.size-flex-center li:hover,
     display: flex;
     justify-content: center;
     flex-direction: column; } }
+@media (min-width: 992px) {
+  .tooltip {
+    position: relative;
+    display: inline-block; }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 135px;
+    background-color: #4c4c4c;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0px;
+    font-size: 1rem;
+    font-weight: 200;
+    /* Position the tooltip */
+    position: absolute;
+    top: -50px;
+    left: -45px;
+    z-index: 2; }
+
+  .tooltip:hover .tooltiptext,
+  .tooltip:hover .arrow-down {
+    visibility: visible; }
+
+  .arrow-down {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    /*colour of border-top*/
+    border-top: 20px solid #4c4c4c;
+    /* Position the arrow of the tooltip */
+    position: absolute;
+    top: -25px;
+    left: 4px;
+    z-index: 1; } }
 @media (min-width: 1200px) {
   ul.colours-flex-center {
     display: flex;
