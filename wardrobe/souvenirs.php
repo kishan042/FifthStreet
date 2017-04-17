@@ -11,13 +11,12 @@
 		$Title = "My Souvenirs";
 
 		// Meta description
-		$Description = "Fill text";
+		$Description = "Collect exclusive souvenirs as you explore and experience brands </br> by purchasing products. Get started below.";
 
 		// Image source
 		$img = BASE_URL . "IMG/";
 
 		include (ROOT_PATH . 'INC/Header.php');
-
 
 // Navbar
 		// Links to other pages
@@ -51,23 +50,21 @@
 
 
 ?>
+        <div class="container">
+            <ul id="output" class="products block">
 
-<div class="container">
-    <ul id="output" class="products block">
+            </ul>
+        </div>
 
-    </ul>
-</div>
-
-<div class="container personalise">     
-    <ul class="products block">
-        <?php
-            foreach($recent as $product) {
-                include(ROOT_PATH . "INC/DB/products-block.php");
-            }
-        ?>
-    </ul>
-</div>
-
+        <div class="container personalise">     
+            <ul class="products block">
+                <?php
+                    foreach($recent as $product) {
+                        include(ROOT_PATH . "INC/DB/products-block.php");
+                    }
+                ?>
+            </ul>
+        </div>
 <?php
 
 // Spacing	
@@ -88,9 +85,6 @@
 
 		// Bread crumbs for the current page
 		$CurrentPage = "My Souvenirs";
-
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
 
 		include (ROOT_PATH . 'INC/Footer.php');
 

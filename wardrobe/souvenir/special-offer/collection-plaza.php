@@ -30,7 +30,7 @@ include_once '../../../INC/DB/Config.php';
 
 // Hero-half
         //IMG URL 
-        $url = $img . "souvenirs/collection/2.jpg"; 
+        $url = $img . "souvenirs/collection/plaza-collection.jpg"; 
         // Amount of tint on image
         $tint = "tint-0";
         // copy for H1

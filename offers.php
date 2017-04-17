@@ -1,18 +1,18 @@
 <?php
 // Config file
-include_once 'INC/DB/Config.php';
+		include_once 'INC/DB/Config.php';
 
 // DB - Model
-    include(ROOT_PATH . "INC/DB/model.php");
-    // Call function to get the latest / trending products
-    $all_offers = get_all_offers();
+	    include(ROOT_PATH . "INC/DB/model.php");
+	    // Call function to get the latest / trending products
+	    $all_offers = get_all_offers();
 
 // Header
 		// Title tag
 		$Title = "Offers ";
 		
 		// Meta description
-		$Description = "Fill text";
+		$Description = "Explore our selection of top offers for Men and Women in one location, from over 20 brands alone.";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -56,17 +56,16 @@ include_once 'INC/DB/Config.php';
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
-
 ?> 
-<div class="container">
-    <ul class="products block">
-            <?php 
-                foreach($all_offers as $offer) {
-                    include(ROOT_PATH . "INC/DB/offers-block.php");
-                }
-            ?>
-    </ul>
-</div>
+		<div class="container">
+		    <ul class="products block">
+		            <?php 
+		                foreach($all_offers as $offer) {
+		                    include(ROOT_PATH . "INC/DB/offers-block.php");
+		                }
+		            ?>
+		    </ul>
+		</div>
 <?php
 
 // Spacing	
@@ -74,7 +73,6 @@ include_once 'INC/DB/Config.php';
 		$hide = "";
 		
 		include (ROOT_PATH .'INC/Spacing-mt-100.php');
-
 
 // Footer
 		// If current pages does not exist then add the 
@@ -86,9 +84,4 @@ include_once 'INC/DB/Config.php';
 		// Bread crumbs for the current page
 		$CurrentPage = "Offers";		
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
-		include (ROOT_PATH .'INC/Footer.php'); 
-
-?> 
+		include (ROOT_PATH .'INC/Footer.php');

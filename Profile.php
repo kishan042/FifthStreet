@@ -1,12 +1,12 @@
 <?php
 // Config file
-include_once 'INC/DB/Config.php';
+		include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
 		$Title = "My Profile ";
 		// Meta description
-		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
+		$Description = "No need to sign-up for accessing our three ultimate experiences, add products to your wishlist, collect rewards and return and exchange products through your e-receipt";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -75,24 +75,6 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
-// // Blocks-two-left-compact
-// 		$BlockBG = "bg-gray-lightest";
-// 		// Title
-// 		$BlockTitle = "COMING SOON";
-// 		// Copy
-// 		$BlockText = "Request early access to sync your different devices, so you never lose your wishlist & souvenirs, across mobile, tablet and desktop.";
-// 		// type 'hide' to remove the button
-// 		$hideCTA = " ";
-// 		// Link for CTA
-// 		$BlockLink = "#";
-// 		// CTA copy
-// 		$BlockCTA = "PRE-REGISTER";
-// 		// Image URL
-// 		$BlockIMG = "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?dpr=2&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop=";
-
-// 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
-
-
 // Blocks-two-left-compact
 		$BlockBG = "bg-gray-lightest";
 		// Title
@@ -118,31 +100,6 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
-
-?>
-<!-- <div class="container-smal">
-    <div class="row form-flex-center">
-        <form method="post" class="form-flex-center" action="wardrobe/Ajax-test7.php">
-
-                <div class="col-xs-12 col-sm-8 col-lg-5 form-group">
-                    <input type="text" name="first-name" id="inputName" placeholder="FIRST NAME" pattern="([A-z0-9À-ž]){2,}" required>
-                </div>
-                <div class="col-xs-12 col-sm-8 col-lg-5 mt-50 form-group">
-                    <input type="text" name="second-name" id="inputName" placeholder="SECOND NAME" pattern="([A-z0-9À-ž]){2,}" required>
-                </div>
-                <div class="col-xs-12 col-sm-8 col-lg-5 mt-50 form-group">
-                    <input type="email" name="email" id="inputEmail" placeholder="EMAIL ADDRESS" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-                </div>
-                <div class="col-xs-12 mt-50">
-                    <button type="submit" class="tertiary-btn-small">SEND</button>
-                </div>
-
-        </form>
-    </div>
-</div> -->
-<?php 
-
-
 // Spacing	
 		// Add a class to hide the seperation
 		$hide = "hidden-xs-down";
@@ -161,9 +118,4 @@ include_once 'INC/DB/Config.php';
 		// Bread crumbs for the current page
 		$CurrentPage = "My Profile";
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
 		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 

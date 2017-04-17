@@ -1,25 +1,23 @@
 <?php
 // Config file
-include_once '../INC/DB/Config.php';
+        include_once '../INC/DB/Config.php';
 
 // DB - Model
-    include(ROOT_PATH . "INC/DB/model.php");
-    // Function to get the 8 recent products in the database
-    $recent = get_recent_products(4);
-
+        include(ROOT_PATH . "INC/DB/model.php");
+        // Function to get the 8 recent products in the database
+        $recent = get_recent_products(4);
 
 // Header
 		// Title tag
 		$Title = "My Wishlist";
 
 		// Meta description
-		$Description = "Fill text";
+		$Description = "View and save products you like in-store or online, without even signing up.";
 
 		// Image source
 		$img = BASE_URL . "IMG/";
 
 		include (ROOT_PATH . 'INC/Header.php');
-
 
 // Navbar
 		// Links to other pages	
@@ -53,38 +51,31 @@ include_once '../INC/DB/Config.php';
 
 
 ?>
+        <div class="container">
+            <ul id="output" class="products block">
 
-
-<div class="container">
-    <ul id="output" class="products block">
-
-    </ul>
-</div>
-
+            </ul>
+        </div>
 <?php 
+
 // Spacing  
         // Add a class to hide the seperation when the wishlist
         // is empty
         $hide = "personalise";
         
         include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+
 ?>
-
-<div class="container">     
-    <h2 class="txt-xs-center my-3 personalise">Latest product&rsquo;s</h2>
-    <ul class="products block">
-        <?php
-            foreach($recent as $product) {
-                include(ROOT_PATH . "INC/DB/products-block.php");
-            }
-        ?>
-    </ul>
-</div>
-
-
-
-
-
+        <div class="container">     
+            <h2 class="txt-xs-center my-3 personalise">Latest product&rsquo;s</h2>
+            <ul class="products block">
+                <?php
+                    foreach($recent as $product) {
+                        include(ROOT_PATH . "INC/DB/products-block.php");
+                    }
+                ?>
+            </ul>
+        </div>
 <?php
 
 // Spacing  
@@ -106,9 +97,6 @@ include_once '../INC/DB/Config.php';
 
         // Bread crumbs for the current page
         $CurrentPage = "My Wishlist";
-
-        // JS path
-        $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
 

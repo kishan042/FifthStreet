@@ -300,9 +300,4 @@ ob_start();
 		// Bread crumbs for the current page
 		$CurrentPage = $brand["brand_name"];
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
-		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 
+		include (ROOT_PATH . 'INC/Footer.php');

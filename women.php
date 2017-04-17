@@ -6,7 +6,7 @@ include_once 'INC/DB/Config.php';
 		// Title tag
 		$Title = "Women ";
 		// Meta description
-		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
+		$Description = "Wander across a range of brand collections and save any product which inspires you. Why stop there, you can even go to any physical store.";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -30,7 +30,7 @@ include_once 'INC/DB/Config.php';
 
 // Hero-half
         //IMG URL
-        $url = "https://images.unsplash.com/photo-1483181957632-8bda974cbc91?dpr=2&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="; 
+        $url = $img . "women/Hero-woman-with-shopping-bags.jpg";  
         // Amount of tint on image
         $tint = "tint-1";
         // copy for H1
@@ -169,7 +169,6 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
-
 // Blocks-three grid
 		// Title
 		$Blocks_3_Title = "Latest Footwear";
@@ -270,8 +269,5 @@ include_once 'INC/DB/Config.php';
 
 		// Bread crumbs for the current page
 		$CurrentPage = "Women";
-
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
 
 		include (ROOT_PATH . 'INC/Footer.php'); 

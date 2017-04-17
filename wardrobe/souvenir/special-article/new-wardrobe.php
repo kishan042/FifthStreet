@@ -7,7 +7,7 @@
 		$Title = "New Wardrobe ";
 		
 		// Meta description
-		$Description = "Fill text";
+		$Description = "New wardrobe article for spring";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -154,10 +154,4 @@
 		// Bread crumbs for the current page
 		$CurrentPage = "New Wardrobe";
 
-
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
-		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 
+		include (ROOT_PATH . 'INC/Footer.php');

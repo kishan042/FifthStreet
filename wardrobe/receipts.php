@@ -13,7 +13,7 @@ ob_start();
         $Title = "My Receipts";
 
         // Meta description
-        $Description = "Fill text";
+        $Description = "View products purchased online and in-store in one place. Go one step further and exchange products as well according to your convenience.";
 
         // Image source
         $img = BASE_URL . "IMG/";
@@ -52,21 +52,21 @@ ob_start();
         include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
 ?>
-<div class="container">
-    <ul id="output" class="products block">
+        <div class="container">
+            <ul id="output" class="products block">
 
-    </ul>
-</div>
+            </ul>
+        </div>
 
-<div class="container personalise">     
-    <ul class="products block">
-        <?php
-            foreach($recent as $product) {
-                include(ROOT_PATH . "INC/DB/products-block.php");
-            }
-        ?>
-    </ul>
-</div>
+        <div class="container personalise">     
+            <ul class="products block">
+                <?php
+                    foreach($recent as $product) {
+                        include(ROOT_PATH . "INC/DB/products-block.php");
+                    }
+                ?>
+            </ul>
+        </div>
 <?php
 
 // Spacing  
@@ -88,9 +88,6 @@ ob_start();
 
         // Bread crumbs for the current page
         $CurrentPage = "My Reciepts";       
-
-        // JS path
-        $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
 
@@ -119,7 +116,6 @@ ob_start();
     //  AJAX request 
     //-----------------------------------------------------------------------
 ?>
-
 <script>
    // define an empty array 
     var data = [];

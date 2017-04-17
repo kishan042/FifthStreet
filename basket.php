@@ -1,11 +1,11 @@
 <?php
 // Config file
-include_once 'INC/DB/Config.php';
+		include_once 'INC/DB/Config.php';
 
 // DB - Model
-    include(ROOT_PATH . "INC/DB/model.php");
-    // Function to get the 4 recent products in the database
-    $recent = get_recent_products(4);
+	    include(ROOT_PATH . "INC/DB/model.php");
+	    // Function to get the 4 recent products in the database
+	    $recent = get_recent_products(4);
 
 // Header
 		// Title tag
@@ -42,38 +42,37 @@ include_once 'INC/DB/Config.php';
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 ?>
-
-<div class="container items-added">
-	        <div class="simpleCart_items"></div> 
-        	<div class="row checkout bg-gray-lightest">
+		<div class="container items-added">
+			<div class="simpleCart_items"></div> 
+			<div class="row checkout bg-gray-lightest">
 				<div class="sub-total col-md-9 col-lg-10 txt-xs-center txt-md-left">
 					<h3>Sub total : <span class="simpleCart_grandTotal"></span></h3>
 				</div>
 				<div class="col-md-1">
 					<!-- Add 't' at the end of checkout -->
 					<a href="thank-you.php">
-					<button class="tertiary-btn-small simpleCart_checkou checkout-btn" 
-							type="button"  
-							href="javascript:;" 
-							value="Checkout">
-					CHECKOUT</button>
+						<button class="tertiary-btn-small simpleCart_checkou checkout-btn" 
+								type="button"  
+								href="javascript:;" 
+								value="Checkout">
+								CHECKOUT
+						</button>
 					</a>
 				</div>
 			</div>
-</div>
+		</div>
 
-	<h2 class="txt-xs-center mb-3 personalise-l2">Basket is empty</h2>
-<div class="container mt-100">     
-    <h2 class="txt-xs-center my-3 personalise-l2 hide">Latest product&rsquo;s</h2>
-    <ul class="products block">
-        <?php
-            foreach($recent as $product) {
-                include(ROOT_PATH . "INC/DB/products-block.php");
-            }
-        ?>
-    </ul>
-</div>
-
+		<h2 class="txt-xs-center mb-3 personalise-l2">Basket is empty</h2>
+		<div class="container mt-100">     
+		    <h2 class="txt-xs-center my-3 personalise-l2 hide">Latest product&rsquo;s</h2>
+		    <ul class="products block">
+		        <?php
+		            foreach($recent as $product) {
+		                include(ROOT_PATH . "INC/DB/products-block.php");
+		            }
+		        ?>
+		    </ul>
+		</div>
 <?php
 
 // Spacing  
@@ -92,10 +91,5 @@ include_once 'INC/DB/Config.php';
 
         // Bread crumbs for the current page
         $CurrentPage = "My basket";
-        
-
-        // JS path
-        $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
-?>

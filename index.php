@@ -1,6 +1,6 @@
 <?php
 // Config file
-include_once 'INC/DB/Config.php';
+		include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
@@ -148,9 +148,4 @@ include_once 'INC/DB/Config.php';
 		// Bread crumbs for the current page
 		$CurrentPage = "Home";
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
 		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 

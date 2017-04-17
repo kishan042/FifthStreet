@@ -72,17 +72,17 @@ ob_start();
         include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
 
- ?>
- <div class="container">
-     <ul class="products block">
-         <?php
-            foreach($Offer_ID as $product) {
-                include(ROOT_PATH . "INC/DB/products-block.php");
-            }
-        ?>
-     </ul>
- </div>
-<?php
+         ?>
+         <div class="container">
+             <ul class="products block">
+                 <?php
+                    foreach($Offer_ID as $product) {
+                        include(ROOT_PATH . "INC/DB/products-block.php");
+                    }
+                ?>
+             </ul>
+         </div>
+        <?php
 
 // Spacing  
         // Add a class to hide the seperation
@@ -103,10 +103,6 @@ ob_start();
 
         // Bread crumbs for the current page
         $CurrentPage = $Offer_info["offer_name"];
-        
-
-        // JS path
-        $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
 ?> 

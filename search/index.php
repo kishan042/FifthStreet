@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(~0);
-
 // Config file
 	include_once '../INC/DB/Config.php';
 
@@ -17,7 +14,7 @@ error_reporting(~0);
         $Title = "Search ";
         
         // Meta description
-        $Description = "Fill text";
+        $Description = "Search for products in an instant, save them for a friend and buy them for a special occassion";
         
         // Image source
         $img = BASE_URL . "IMG/";
@@ -85,11 +82,5 @@ error_reporting(~0);
 
         // Bread crumbs for the current page
         $CurrentPage = "Search";
-        
-
-        // JS path
-        $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
-
-?> 

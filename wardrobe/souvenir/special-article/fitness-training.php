@@ -7,7 +7,7 @@
 		$Title = "Fitness Training ";
 		
 		// Meta description
-		$Description = "Fill text";
+		$Description = "Fitness Training article";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -38,7 +38,7 @@
 
 // Hero-half
 		//IMG URL
-		$url = $img . "souvenirs/article/1.jpg"; 
+		$url = $img . "souvenirs/article/personal-trainer-tying-his-trainers.jpg"; 
 		// Amount of tint on image
 		$tint = "tint-4";
 		// copy for H1
@@ -80,7 +80,7 @@
 
 // Hero-compact
 		//IMG URL
-		$url = $img . "souvenirs/article/2.jpg"; 
+		$url = $img . "souvenirs/article/girl-doing-box-jumps-with-weights.jpg"; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 
@@ -117,12 +117,11 @@
 
 		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
+
 // Spacing Desktop
 		$hide = "hidden-sm-down";
 		
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
-
-
 
 // Article heading
 		// 
@@ -159,10 +158,4 @@
 		// Bread crumbs for the current page
 		$CurrentPage = "Fitness Training";
 
-
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
-		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 
+		include (ROOT_PATH . 'INC/Footer.php');
