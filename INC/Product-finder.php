@@ -1,12 +1,9 @@
-<!-- Sass file = _product-finder.scss -->
-
-
-<!-- Product finder -->
-
+<?php
+// Sass file = _product-finder.scss 
+// Product finder 
+?>
 <div class="product-finder">
-	
-
-		<div id="section-men" class="column" style="background-image: url(<?php echo $img ."home/test1.jpg"; ?>);">
+	<div id="section-men" class="column" style="background-image: url(<?php echo $img ."home/product-finder-men.jpg"; ?>);">
 		<a class="block-link" href="<?php echo $men ?>">
 			<div class="content">
 				<div class="box tint-5">
@@ -33,8 +30,7 @@
 			</div>
 		</a>
 	</div>
-
-	<div id="section-women" class="column" style="background-image: url(<?php echo $img ."home/test2.jpg"; ?>);">
+	<div id="section-women" class="column" style="background-image: url(<?php echo $img ."home/product-finder-women.jpg"; ?>);">
 		<a class="block-link" href="<?php echo $women ?>">
 			<div class="content">
 				<div class="box tint-5">
@@ -61,8 +57,7 @@
 			</div>
 		</a>
 	</div>
-
-	<div id="section-brands" class="column" style="background-image: url(<?php echo $img ."home/test3.jpg"; ?>);">
+	<div id="section-brands" class="column" style="background-image: url(<?php echo $img ."home/product-finder-brands.jpg"; ?>);">
 		<a class="block-link" href="<?php echo $brands ?>">
 			<div class="content">
 				<div class="box tint-5">
@@ -89,8 +84,7 @@
 			</div>
 		</a>
 	</div>
-
-	<div id="section-offers" class="column" style="background-image: url(<?php echo $img ."home/test4.jpg"; ?>);">
+	<div id="section-offers" class="column" style="background-image: url(<?php echo $img ."home/product-finder-offers.jpg"; ?>);">
 		<a class="block-link" href="<?php echo $offers ?>">
 			<div class="content">
 				<div class="box tint-5">

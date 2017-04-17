@@ -37,7 +37,7 @@ $message = '
   <p>Thank you for shopping with us today. <br> Click on the link below to collect your E-receipt in the form of products. <br> Remember you can also return and exchange any of the products purchased from the link below as well, just click on the product item.
   </p>
   <br><br>
-  <a style="color:#48d8d8;" href="http://thefifthstreet.com/wardrobe/receipt.php' . $limit . $user_link . '">Collect E-receipt</a>
+  <a style="color:#48d8d8;" href="http://thefifthstreet.com/wardrobe/receipts.php' . $limit . $user_link . '">Collect E-receipt</a>
   <br><br>
   <p>As a reward for being a great customer, click on the link below to claim your free souvenir.
   </p>

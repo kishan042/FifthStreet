@@ -52,7 +52,7 @@
 		// CTA copy
 		$BlockCTA = "View Souvenir";
 		// Image URL
-		$BlockIMG = $img ."souvenirs/collection/2.jpg";
+		$BlockIMG = $img ."souvenirs/collection/plaza-collection.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
@@ -71,7 +71,7 @@
 		// CTA copy
 		$BlockCTA = "View E-Receipt";
 		// Image URL
-		$BlockIMG = $img ."home/3.jpg";
+		$BlockIMG = $img ."home/returning-and-exchanging-products.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 

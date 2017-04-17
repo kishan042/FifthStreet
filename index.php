@@ -69,7 +69,7 @@
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = $img ."home/product-shot2.jpg";
+		$BlockIMG = $img ."home/product-shot.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
@@ -84,7 +84,7 @@
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = $img ."home/6.jpg";
+		$BlockIMG = $img ."home/add-to-wishlist-in-store.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
@@ -113,7 +113,7 @@
 		// CTA copy
 		$BlockCTA = "Collect Souvenir";
 		// Image URL
-		$BlockIMG = $img ."home/4.jpg";
+		$BlockIMG = $img ."home/collection-souvenirs.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left.php');
 
@@ -132,7 +132,7 @@
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = $img ."home/3.jpg";
+		$BlockIMG = $img ."home/returning-and-exchanging-products.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right.php');
 
