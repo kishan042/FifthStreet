@@ -13,9 +13,6 @@ include_once 'INC/DB/Config.php';
 		
 		// Meta description
 		$Description = "Fill text";
-
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";

@@ -4179,13 +4179,19 @@ nav {
   right: 20px;
   margin-top: -45px; }
 
+.breadcrumb-pl {
+  padding-left: 0.6rem; }
+
 @media (min-width: 768px) {
   .footer-list ul li::after {
     display: none; }
 
   .footer-list ul li {
     display: inline-block;
-    padding: 0 20px !important; } }
+    padding: 0 20px !important; }
+
+  .breadcrumb-pl {
+    padding-left: 1rem; } }
 /* --------------------------------------------------------
    <-- Individual Modules -->
    -------------------------------------------------------- */

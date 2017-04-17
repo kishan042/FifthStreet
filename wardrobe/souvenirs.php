@@ -13,9 +13,6 @@
 		// Meta description
 		$Description = "Fill text";
 
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
-
 		// Image source
 		$img = BASE_URL . "IMG/";
 
@@ -79,13 +76,15 @@
 		
 		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-
 // Footer
-		// If current pages does not exist then add the 
-		$hide = " ";
+        // If current pages does not exist then add the 
+        $hide = " ";
 
-		// Bread crunb for the previous page 
-		$PreviousPage = "Wardrobe";
+        // Link for previous page
+        $PreviousPage_Link = BASE_URL . WARDROBE;
+
+        // Bread crunb for the previous page 
+        $PreviousPage = "Wardrobe";
 
 		// Bread crumbs for the current page
 		$CurrentPage = "My Souvenirs";

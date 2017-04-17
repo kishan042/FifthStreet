@@ -37,9 +37,6 @@ ob_start();
         
         // Meta description
         $Description = "Fill text";
-
-        // CSS path
-        $CSSPath = BASE_URL . "CSS/Styles.css";
         
         // Image source
         $img = BASE_URL . "IMG/";
@@ -138,8 +135,7 @@ ob_start();
                                     }
                                 ?>
                             </ul>
-                    </div>
-                    
+                    </div>  
                     <?php if ($product["size_type"] == 'specific-M') { ?>
                                     <div class="mt-10">
                                             <h2 class="h3">Sizes</h2>
@@ -318,7 +314,6 @@ ob_start();
 
 <?php include (ROOT_PATH . 'INC/Spacing-mt-50.php'); ?>
 
-
 <div class="container">
         <div id="disqus_thread"></div>
 </div>
@@ -330,13 +325,15 @@ ob_start();
         
         include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-
 // Footer
         // If current pages does not exist then add the 
-        $hide = "hidden-xs-up";
+        $hide = " ";
+
+        // Link for previous page
+        $PreviousPage_Link = "http://thefifthstreet.com/wardrobe/receipts.php";
 
         // Bread crunb for the previous page 
-        $PreviousPage = "";
+        $PreviousPage = "My Receipts";
 
         // Bread crumbs for the current page
         $CurrentPage = $product["product_name"];
@@ -347,24 +344,17 @@ ob_start();
 
         include (ROOT_PATH . 'INC/Footer.php');
 
-
         //Prevent URL manipulation
         // This is the second part of preventing URL manipulation
         // the following code focuses on redirecting if the 
         // id in the url does not exist in the local storage
-        if (empty($_GET["id"])) {
-            header("location: http://thefifthstreet.com/wardrobe/receipts.php");
-            exit();
-
-        } else if (isset($_GET["id"])) {
+        if (isset($_GET["id"])) {
           $product_id = intval($_GET["id"]);
           // validate the id with local storage
           // if the id does not match the id in local storage
           // Javascript will redirct the user.
           echo "<script> validate_e_receipt('".$product_id."'); </script>";
-
         }
-
 ?> 
 <script>
     $(window).load(function() {
@@ -376,23 +366,23 @@ ob_start();
         // loop is exited.
         // Else, by default the add to wishlist is displayed
 
-                var id = product_id;
-                var index = -1;
-                var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from local storage
+        var id = product_id;
+        var index = -1;
+        var obj = JSON.parse(localStorage.getItem('wishlist')); //fetch cart from local storage
 
-                for (var i = -1; i < obj.length; i++) { //loop over the collection
-                //console.log(obj.length);
-                    if (obj[i] == id) { //see if ids match
-                        //console.log("true");
-                        $(".circle-btn-add").addClass("hide");
-                        $(".circle-btn-remove").removeClass("hide");
-                        break; //exit loop
-                    } else {
-                        //console.log("false");
-                        $(".circle-btn-add").removeClass("hide");
-                        $(".circle-btn-remove").addClass("hide");
-                    }
-                }// End of for loop
+        for (var i = -1; i < obj.length; i++) { //loop over the collection
+        //console.log(obj.length);
+            if (obj[i] == id) { //see if ids match
+                //console.log("true");
+                $(".circle-btn-add").addClass("hide");
+                $(".circle-btn-remove").removeClass("hide");
+                break; //exit loop
+            } else {
+                //console.log("false");
+                $(".circle-btn-add").removeClass("hide");
+                $(".circle-btn-remove").addClass("hide");
+            }
+        }// End of for loop
 
     }); // End of onLoad function
 

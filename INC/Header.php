@@ -8,7 +8,7 @@
         <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <!-- My style CSS -->
-        <link rel="stylesheet" href="<?php echo $CSSPath ?>">
+        <link rel="stylesheet" href="<?php echo BASE_URL . "CSS/Styles.min.css"; ?>">
         <!-- Favicon -->
         <link rel="shortcut icon" href="<?php echo $img . "fav-icon.png" ?>" type="image/png">
         <!-- Font -->

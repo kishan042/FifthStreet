@@ -15,9 +15,6 @@ include_once '../INC/DB/Config.php';
 		// Meta description
 		$Description = "Fill text";
 
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
-
 		// Image source
 		$img = BASE_URL . "IMG/";
 
@@ -100,6 +97,9 @@ include_once '../INC/DB/Config.php';
 // Footer
         // If current pages does not exist then add the 
         $hide = " ";
+
+        // Link for previous page
+        $PreviousPage_Link = BASE_URL . WARDROBE;
 
         // Bread crunb for the previous page 
         $PreviousPage = "Wardrobe";

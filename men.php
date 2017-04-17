@@ -7,9 +7,6 @@ include_once 'INC/DB/Config.php';
 		$Title = "Men ";
 		// Meta description
 		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
-
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";

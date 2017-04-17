@@ -9,8 +9,6 @@
 				$Title = "Thank you ";
 				// Meta description
 				$Description = "Fill text";
-				// CSS path
-				$CSSPath = "CSS/Styles.css";
 				// Image source
 				$img = "IMG/";
 

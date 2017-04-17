@@ -153,7 +153,7 @@ function get_single_brand($id) {
     require (ROOT_PATH . "INC/DB/db-connection.php");
 
     try {
-        $results = $db->prepare("SELECT brand_name, description FROM Brands WHERE brand_id = ?");
+        $results = $db->prepare("SELECT * FROM Brands WHERE brand_id = ?");
         $results->bindParam(1,$id);
         $results->execute();
     } catch (Exception $e) {

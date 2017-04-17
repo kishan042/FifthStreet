@@ -34,9 +34,6 @@ ob_start();
         
         // Meta description
         $Description = $Offer_info["offer_name"];
-
-        // CSS path
-        $CSSPath = BASE_URL . "CSS/Styles.css";
         
         // Image source
         $img = BASE_URL . "IMG/";
@@ -98,6 +95,9 @@ ob_start();
         // If current pages does not exist then add the 
         $hide = " ";
 
+        // Link for previous page
+        $PreviousPage_Link = "http://thefifthstreet.com/offers.php";
+
         // Bread crunb for the previous page 
         $PreviousPage = " Offers";
 
@@ -109,5 +109,4 @@ ob_start();
         $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
-
 ?> 

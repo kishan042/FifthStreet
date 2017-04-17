@@ -24,8 +24,6 @@ if (mail($to, $subject, $message, $headers)) {
 				$Title = "Contact form ";
 				// Meta description
 				$Description = "Fill text";
-				// CSS path
-				$CSSPath = "CSS/Styles.css";
 				// Image source
 				$img = "IMG/";
 
