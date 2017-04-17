@@ -10,12 +10,10 @@
         -webkit-overflow-scrolling:touch; 
         -moz-overflow-scrolling:touch;  
         padding-left: 20px;
-        //background-color: $gray-lightest;
-        //margin-top: 20px;
 }
 
 .feature-txt-block {
-	height: 100vmin;
+	height: 70vmin;
 
 	display: flex;
 	flex-direction: column;
@@ -32,7 +30,7 @@
  /* Width  = amount of image blocks minus 1 * 100
   This is to allow the next image block to display in a row*/
   width: 2100px;
-  height: 125vmin;
+  height: 400px;
 }
 
 // .feature-txt-block { overflow: hidden;}
@@ -72,21 +70,12 @@
 
 .feature {
   width: 2160px;
-
+  height: 500px;
 }
 
-.feature:first-child {
-  margin-left: 10vw;
-
-}
-
-}//End of media query
-
-// Medium devices (tablets, 768px and up)
-@include media-breakpoint-up(md) { 
+.feature:first-child { margin-left: 10vw; }
 
 .feature-txt-block { height: 40vmin;}
-.feature { height: 50vh;}
 
 .feature-txt-block h2,
 .feature-txt-block p { width: 60%; }
@@ -94,14 +83,15 @@
 
 }//End of media query
 
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) { 
+
+}//End of media query
+
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) { 
 
-.image-container{
-
-		overflow: hidden;
-         background-color: $white;
-}
+.image-container{ background-color: $white; }
 
 .feature-txt-block {
 	height: 80vmin;
@@ -109,12 +99,7 @@
 
 .feature-txt-block h2 { padding-bottom: 48px;}
 
-.width{ width:60%;}
-
-.feature:first-child {
-  margin-left: 0;
-
-}
+.feature:first-child { margin-left: 0; }
 
 .feature {
   display: flex;

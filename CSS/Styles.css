@@ -4531,7 +4531,7 @@ button:focus {
   padding-left: 20px; }
 
 .feature-txt-block {
-  height: 100vmin;
+  height: 70vmin;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4545,7 +4545,7 @@ button:focus {
   /* Width  = amount of image blocks minus 1 * 100
    This is to allow the next image block to display in a row*/
   width: 2100px;
-  height: 125vmin; }
+  height: 400px; }
 
 .feature-product-block {
   width: 270px;
@@ -4571,16 +4571,14 @@ button:focus {
 
 @media (min-width: 576px) {
   .feature {
-    width: 2160px; }
+    width: 2160px;
+    height: 500px; }
 
   .feature:first-child {
-    margin-left: 10vw; } }
-@media (min-width: 768px) {
+    margin-left: 10vw; }
+
   .feature-txt-block {
     height: 40vmin; }
-
-  .feature {
-    height: 50vh; }
 
   .feature-txt-block h2,
   .feature-txt-block p {
@@ -4590,7 +4588,6 @@ button:focus {
     margin-bottom: 0; } }
 @media (min-width: 992px) {
   .image-container {
-    overflow: hidden;
     background-color: #fff; }
 
   .feature-txt-block {
@@ -4598,9 +4595,6 @@ button:focus {
 
   .feature-txt-block h2 {
     padding-bottom: 48px; }
-
-  .width {
-    width: 60%; }
 
   .feature:first-child {
     margin-left: 0; }

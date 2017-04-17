@@ -49,11 +49,17 @@
 		include (ROOT_PATH . 'INC/Product-finder.php');
 
 
-// Spacing	
+// Spacing	- mobile
 		// Add a class to hide the seperation
-		$hide = " ";
+		$hide = "hidden-md-up";
 		
 		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
+// Spacing	- desktop
+		// Add a class to hide the seperation
+		$hide = "hidden-md-down";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
 // Blocks-two-left-compact
@@ -89,6 +95,12 @@
 		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
 
+// Spacing	
+		// Add a class to hide the seperation
+		$hide = "hidden-lg-up";
+		
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
+
 // Feature-intro
 		include (ROOT_PATH . 'INC/Feature-intro.php');
 
@@ -97,7 +109,7 @@
 		// Add a class to hide the seperation
 		$hide = "hidden-md-up";
 		
-		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
+		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
 // Blocks-two-left

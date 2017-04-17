@@ -10,7 +10,7 @@
 					<h3 class="h3-alt txt-white pr-1">MEN</h3>
 					<img src="IMG/icons/arrow-right-white.svg">
 										
-					<div class="hide sub">
+					<div class="hide sub hidden-md-down">
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Find everything at your finger tips.</p>
 						
 						<a href="<?php echo $men ?>">
@@ -37,7 +37,7 @@
 					<h3 class="h3-alt txt-white pr-1">WOMEN</h3>
 					<img src="IMG/icons/arrow-right-white.svg">
 					
-					<div class="hide sub">
+					<div class="hide sub hidden-md-down">
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Grab your necessities in an instant.</p>
 						
 						<a href="<?php echo $women ?>">
@@ -64,7 +64,7 @@
 				<h3 class="h3-alt txt-white pr-1">BRANDS</h3>
 					<img src="IMG/icons/arrow-right-white.svg">
 					
-					<div class="hide sub">
+					<div class="hide sub hidden-md-down">
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Discover new brands tailored to your needs.</p>
 						
 						<a href="<?php echo BASE_URL . 'brands/?Branid=19409'?>">
@@ -91,7 +91,7 @@
 					<h3 class="h3-alt txt-white pr-1">OFFERS</h3>
 					<img src="IMG/icons/arrow-right-white.svg">
 					
-					<div class="hide sub">
+					<div class="hide sub hidden-md-down">
 						<p class="mt-2 column-description txt-white txt-xs-center pr-1">Take your pick anytime.</p>
 						
 						<a href="<?php echo BASE_URL . 'offers/?Offid=475688'?>">

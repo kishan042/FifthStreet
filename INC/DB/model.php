@@ -26,7 +26,7 @@ function check_offer_exists($id) {
         $results->bindParam(1,$id);
         $results->execute();
     } catch (Exception $e) {
-        echo "Data could not be retrieved from the database.";
+        echo "check_offer_exists - Data could not be retrieved from the database.";
         exit;
     }
 
@@ -85,12 +85,12 @@ function get_single_offer($id){
 
     // Try catch block to create a query to the products table
     try {
-        $results = $db->prepare("SELECT product_name, product_id, image, alt, brand_name From Products WHERE offer_id = ? "); 
+        $results = $db->prepare("SELECT * From Products WHERE offer_id = ? "); 
         $results->bindParam(1,$id);
         $results->execute();
         error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit
-        echo "Data could not be retrived from database.";
+        echo "get_single_offer - Data could not be retrived from database.";
         exit;
     }
 

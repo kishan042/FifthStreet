@@ -26,7 +26,7 @@
 		  <div class="feature-product-block">
 			  <a href="<?php echo BASE_URL . "product.php?id=1203";?>">
 				  <img class="img-fluid" src="<?php echo $img . "home/collection-glasses.jpg" ?>" alt="fill text">
-	  			  <h2 class="pt-10 txt-gray">Product Title</h2>
+	  			  <h2 class="pt-10 txt-gray">Horizon Sunglasses</h2>
 				  <h3 class=" txt-gray">by Heritage</h3>
 			  </a>
 		  </div>
