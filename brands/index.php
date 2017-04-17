@@ -1,35 +1,39 @@
 <?php
-        // a $product will only be set if an ID is specified in the query
-        // string and it corresponds to a real product. If no product is
-        // set, then redirect to the shirts listing page; otherwise, continue
-        // on and display the Shirt Details page for that $product
-        if (empty($_GET["Branid"])) {
-            header("Location: http://localhost:8888/_Github/FifthStreet/brands.php" );
-            exit();
-        }
+// Turn on output buffering on for header's
+ob_start();
 
 // Config file
 		include_once '../INC/DB/Config.php';
 
-
 // DB - Model
-	    require_once(ROOT_PATH . "INC/DB/model.php");
+	    include(ROOT_PATH . "INC/DB/model.php");
 
+	    // Prevent URL manipulation
+	     if (empty($_GET["Branid"])) {
+	     	$id = $_GET["Branid"];
+	     	echo $id;
+	        header("Location: http://thefifthstreet.com/brands.php" );
+	        exit();
 
-        //if an ID is specified in the query string, use it
-        if (isset($_GET["Branid"])) {
-            $brand_id = intval($_GET["Branid"]);
-            $brand = get_single_brand($brand_id);
-        }
+	    } else if (isset($_GET["Branid"])) {
+	        $Brand_id = intval($_GET["Branid"]);
+	        $check = check_brand_exists($Brand_id);
+	        $count = count($check);
+
+	        if($count == 0){
+	           // Product ID not found in DB
+	           header("Location: http://thefifthstreet.com/brands.php" );
+	        } else {
+	           // Product ID found in DB
+	           $brand = get_single_brand($Brand_id);
+	        }
+	    }
 
 // Header
 		// Title tag
 		$Title = $brand["brand_name"];
 		// Meta description
 		$Description = $brand["description"];
-
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -53,7 +57,7 @@
 
 // Hero-half
         //IMG URL
-        $url = "https://images.unsplash.com/photo-1476147578954-fffd6bf00ab0?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="; 
+        $url = BASE_URL . $brand["image"]; 
         // Amount of tint on image
         $tint = "tint-0";
         // copy for H1
@@ -72,15 +76,15 @@
 		// type 'hide' to remove the button
 		$hideCTA = "hide";
 		// Link for CTA
-		$BlockLink = BASE_URL . "brands/catalogue.php?Branid=" . $brand_id;
+		$BlockLink = BASE_URL . "brands/catalogue.php?Branid=" . $Brand_id;
 		// CTA copy
 		$BlockCTA = "View all items";
 		// Image 1 URL 
-		$BlockIMG_1 = $img . "men/Featured-1.jpg"; 
+		$BlockIMG_1 = $img . "women/Featured-1.jpg"; 
 		// Image 2 URL 
 		$BlockIMG_2 = $img . "men/Featured-2.jpg"; 
 		// Image 3 URL 
-		$BlockIMG_3 = $img . "men/Featured-3.jpg"; 
+		$BlockIMG_3 = $img . "women/Featured-2.jpg"; 
 
 		include (ROOT_PATH . 'INC/Blocks-two-compact-extend.php');
 
@@ -94,16 +98,17 @@
 
 // Blocks grid
 		// Title
-		$Block_Grid_Title = "Latest Collection";
-
+		$Block_Grid_Title = "Horizon Collection";
+		// ID for the container
+		$Block_Grid_ID = "collection";
 	    // Image 1 Link 
 		$Block_Grid_1_Link = BASE_URL . "product.php?id=1201";
 		// Image 9 URL
 		$Block_Grid_IMG_1 = $img . "men/collection-shirt.jpg";
 		// Image 1 product title
-		$product_Title_1 = "White T-Shirt";
+		$product_Title_1 = "Basics T-Shirt";
 		// Image 1 product description
-		$product_description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_1 = "White short-sleeved basics T-shirt, made of high-quality cotton.";
 
 
 	    // Image 2 Link 
@@ -111,19 +116,13 @@
 		// Image 9 URL
 		$Block_Grid_IMG_2 = $img . "men/collection-trouser.jpg";
 		// Image 1 product title
-		$product_Title_2 = "Straight Trousers";
+		$product_Title_2 = "Khaki Trousers";
 		// Image 1 product description
-		$product_description_2 = "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_2 = "Brown khaki trousers, made of high-quality cotton.";
 
 
-	    // Image 3 Link 
-		$Block_Grid_3_Link = BASE_URL . "product.php?id=1203";
-		// Image 9 URL
+		// Image 3 URL
 		$Block_Grid_IMG_3 = $img . "men/collection-pack-lifestyle.jpg";;
-		// Image 1 product title
-		$product_Title_3 = "Collection Pack";
-		// Image 1 product description
-		$product_description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
 
 
 	    // Image 4 Link 
@@ -131,9 +130,9 @@
 		// Image 9 URL
 		$Block_Grid_IMG_4 = $img . "men/collection-glasses.jpg";
 		// Image 1 product title
-		$product_Title_4 = "Sunglasses";
+		$product_Title_4 = "Horizon Sunglasses";
 		// Image 1 product description
-		$product_description_4 = "lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_4 = "Comfortable and easy to wear sunglasses for all occasions.";
 
 
 	    // Image 5 Link 
@@ -143,7 +142,7 @@
 		// Image 1 product title
 		$product_Title_5 = "Leather Belt";
 		// Image 1 product description
-		$product_description_5 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_5 = "Brand new brown belt which is made of 100% pure leather.";
 
 
 	    // Image 6 Link 
@@ -153,7 +152,7 @@
 		// Image 1 product title
 		$product_Title_6 = "Brown Boots";
 		// Image 1 product description
-		$product_description_6 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_6 = "Leather brown boots, made for every occasion.";
 
 
 	    // Image 7 Link 
@@ -163,7 +162,7 @@
 		// Image 1 product title
 		$product_Title_7 = "iPhone 6 case";
 		// Image 1 product description
-		$product_description_7 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_7 = "Brand new brown iPhone 6 case. Only 500 were handcrafted.";
 
 
 	    // Image 8 Link 
@@ -171,9 +170,9 @@
 		// Image 9 URL
 		$Block_Grid_IMG_8 = $img . "men/collection-wallet.jpg";
 		// Image 1 product title
-		$product_Title_8 = "Leather Wallet";
+		$product_Title_8 = "Horizon Wallet";
 		// Image 1 product description
-		$product_description_8 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_8 = "Dark brown leather wallet. Only 500 were handcrafted.";
 
 
 	    // Image 9 Link 
@@ -181,9 +180,9 @@
 		// Image 9 URL
 		$Block_Grid_IMG_9 = $img . "men/collection-watch.jpg";
 		// Image 1 product title
-		$product_Title_9 = "Leather Watch";
+		$product_Title_9 = "Horizon Watch";
 		// Image 1 product description
-		$product_description_9 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$product_description_9 = "Dark brown leather watch. Only 500 were handcrafted.";
 
 
 		include (ROOT_PATH . 'INC/Blocks-grid.php');
@@ -201,37 +200,39 @@
 // Blocks-three grid
 		// Title
 		$Blocks_3_Title = "Latest Footwear";
+		// ID for the container
+		$Blocks_3_ID = "footwear";
 		// Background colour class for block container
 		$BlockBG = "bg-gray-lightest";
 
 		// Image 1 Link
-		$Blocks_3_IMG_Link_1 = BASE_URL . "product.php?id=1205";
+		$Blocks_3_IMG_Link_1 = BASE_URL . "product.php?id=1217";
 		// Image 1 URL 
-		$Blocks_3_IMG_1 = $img . "men/footwear-shoe-2.jpg";
+		$Blocks_3_IMG_1 = $img . "women/footwear-shoe-2.jpg";
 		// Image 1 product title
-		$Blocks_3_Product_Title_1 = "Brown Boots";
+		$Blocks_3_Product_Title_1 = "Peep Toe";
 		// Image 1 product description
-		$Blocks_3_Description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_3_Description_1 = "Pink and black peep-toe heels, <br> perfect for any professional or casual use";
 
 
 		// Image 1 Link
-		$Blocks_3_IMG_Link_2 = BASE_URL . "product.php?id=1210";
+		$Blocks_3_IMG_Link_2 = BASE_URL . "product.php?id=1216";
 		// Image 2 URL 
-		$Blocks_3_IMG_2 = $img . "men/footwear-shoe-1.jpg";
+		$Blocks_3_IMG_2 = $img . "women/footwear-shoe-1.jpg";
 		// Image 1 product title
-		$Blocks_3_Product_Title_2 = "Leather Shoes";
+		$Blocks_3_Product_Title_2 = "Platform";
 		// Image 1 product description
-		$Blocks_3_Description_2 = "Lorem ipsum dolor sit amet, consectetur adipisicinag elit. Cupiditate, numquam.";
+		$Blocks_3_Description_2 = "Dark blue platform heels, <br> made of high-quality fabric, just for you.";
 
 
 		// Image 1 Link
-		$Blocks_3_IMG_Link_3 = BASE_URL . "product.php?id=1213";
+		$Blocks_3_IMG_Link_3 = BASE_URL . "product.php?id=1230";
 		// Image 3 URL 
-		$Blocks_3_IMG_3 = $img . "men/footwear-shoe-3.jpg";
+		$Blocks_3_IMG_3 = $img . "women/footwear-shoe-3.jpg";
 		// Image 1 product title
-		$Blocks_3_Product_Title_3 = "Black Converse";
+		$Blocks_3_Product_Title_3 = "Orange Heels";
 		// Image 1 product description
-		$Blocks_3_Description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_3_Description_3 = "light orange round-toe heels, <br> great every occasion while stock lasts.";
 
 
 		include (ROOT_PATH . 'INC/Blocks-three.php');
@@ -240,15 +241,17 @@
 // Blocks-four grid
 		// Title
 		$Blocks_4_Title = "Latest Accessories";
+		// ID for the container
+		$Blocks_4_ID = "accessories";
 
 		// Image 1 Link
 		$Blocks_4_IMG_Link_1 = BASE_URL . "product.php?id=1209";
 		// Image 1 URL 
 		$Blocks_4_IMG_1 = $img . "men/accessories-hat.jpg";
 		// Image 1 product title
-		$Blocks_4_Product_Title_1 = "White Hat";
+		$Blocks_4_Product_Title_1 = "Godfather Hat";
 		// Image 1 product description
-		$Blocks_4_Description_1 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_4_Description_1 = "Brand new off-white Godfather crown hat, made of 100% high-quality wool.";
 
 
 		// Image 1 Link
@@ -258,7 +261,7 @@
 		// Image 1 product title
 		$Blocks_4_Product_Title_2 = "Blackwood Glasses";
 		// Image 1 product description
-		$Blocks_4_Description_2 = "Lorem ipsum dolor sit amet, consectetur adipisicinag elit. Cupiditate, numquam.";
+		$Blocks_4_Description_2 = "Blackwood glasses, made of high-quality wood, to look great for every occasion.";
 
 
 		// Image 1 Link
@@ -268,7 +271,7 @@
 		// Image 1 product title
 		$Blocks_4_Product_Title_3 = "Leather Gloves";
 		// Image 1 product description
-		$Blocks_4_Description_3 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_4_Description_3 = "Dark red leather gloves, made of 100% pure leather, to keep your hands warm.";
 
 
 		// Image 1 Link
@@ -276,9 +279,9 @@
 		// Image 4 URL 
 		$Blocks_4_IMG_4 = $img . "men/accessories-bag.jpg";
 		// Image 1 product title
-		$Blocks_4_Product_Title_4 = "Leather Bag";
+		$Blocks_4_Product_Title_4 = "Leather Shoulder Bag";
 		// Image 1 product description
-		$Blocks_4_Description_4 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, numquam.";
+		$Blocks_4_Description_4 = "Shoulder bag, made of high-quality leather, perfect for any professional use.";
 
 		include (ROOT_PATH . 'INC/Blocks-four.php');
 
@@ -288,15 +291,13 @@
 		// If current pages does not exist then add the 
 		$hide = " ";
 
+        // Link for previous page
+        $PreviousPage_Link = "http://thefifthstreet.com/brands.php";
+
 		// Bread crunb for the previous page 
 		$PreviousPage = "Brands";
 
 		// Bread crumbs for the current page
 		$CurrentPage = $brand["brand_name"];
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
-		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 
+		include (ROOT_PATH . 'INC/Footer.php');

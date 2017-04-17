@@ -16,7 +16,7 @@
 					 <img id="<?php echo $product["colour_int"]?>"
 	                      class="img-fluid item_image" 
 	                      src="<?php echo BASE_URL . $product["image"] ?>" 
-	                      alt="<?php echo $product["product_alt"] ?>">
+	                      alt="<?php echo $product["alt"] ?>">
                  </div>
 			</div>
 			<div class="col-md-4 col-lg-3 col-xl-3 notif-cta-block">

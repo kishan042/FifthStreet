@@ -25,14 +25,6 @@
 			    </a>
 			</div>
 			<div class="col-xs-3 flex-col-4-center">
-			    <a href="<?php echo $Block_Grid_3_Link ?>">
-					<div class="product-img-2" style="background-image: url(<?php echo $Block_Grid_IMG_3 ?>)">
-					</div>
-					<h2 class="h3-alt"><?php echo $product_Title_3; ?></h2>
-					<p><?php echo $product_description_3 ?></p>
-			    </a>
-			</div>
-			<div class="col-xs-3 flex-col-4-center">
 			    <a href="<?php echo $Block_Grid_4_Link ?>">
 					<div class="product-img-2" style="background-image: url(<?php echo $Block_Grid_IMG_4 ?>)">
 					</div>
@@ -107,10 +99,8 @@
 				</div>
 				<div class="col-md-6 px-0">
 					<div class="col-md-12 px-0">
-					   <a href="<?php echo $Block_Grid_3_Link ?>">
 							<div class="grid-img grid-center-img" style="background-image: url(<?php echo $Block_Grid_IMG_3 ?>)">
 							</div>
-					    </a>
 					</div>
 				</div>
 				<div class="col-md-3">

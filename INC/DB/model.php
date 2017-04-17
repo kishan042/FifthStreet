@@ -1,6 +1,39 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(~0);
+function check_brand_exists($id) {
+
+    require (ROOT_PATH . "INC/DB/db-connection.php");
+
+    try {
+        $results = $db->prepare("SELECT brand_id FROM Brands WHERE brand_id = ?");
+        $results->bindParam(1,$id);
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $product = $results->fetchAll();
+
+    return $product;
+}
+
+function check_offer_exists($id) {
+
+    require (ROOT_PATH . "INC/DB/db-connection.php");
+
+    try {
+        $results = $db->prepare("SELECT offer_id FROM Offers WHERE offer_id = ?");
+        $results->bindParam(1,$id);
+        $results->execute();
+    } catch (Exception $e) {
+        echo "Data could not be retrieved from the database.";
+        exit;
+    }
+
+    $product = $results->fetchAll();
+
+    return $product;
+}
 
 function check_product_exists($id) {
 
@@ -120,7 +153,7 @@ function get_single_brand($id) {
     require (ROOT_PATH . "INC/DB/db-connection.php");
 
     try {
-        $results = $db->prepare("SELECT brand_name, description FROM Brands WHERE brand_id = ?");
+        $results = $db->prepare("SELECT * FROM Brands WHERE brand_id = ?");
         $results->bindParam(1,$id);
         $results->execute();
     } catch (Exception $e) {
@@ -208,7 +241,7 @@ function get_all_products() {
 
     // Try catch block to create a query to collect all of the products
     try {
-        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry DESC LIMIT 28"); 
+        $results = $db->query("SELECT * From Products ORDER BY entry ASC LIMIT 44"); 
 
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from database.";
@@ -242,7 +275,7 @@ function get_recent_products($amount) {
 
     // Try catch block to create a query to the products table
     try {
-        $results = $db->query("SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry ASC LIMIT $amount"); 
+        $results = $db->query("SELECT product_name, product_id, image, brand_name From Products ORDER BY entry ASC LIMIT $amount"); 
         error_log("not working", true);
     } catch (Exception $e) { // catch exception if query fails and then exit
         echo "Data could not be retrived from database.";
@@ -330,7 +363,6 @@ function get_single_product_colours($id) {
  * Call this function after the model.php has been included.
  * $recent = get_products_recent(4); 
  */
-//SELECT product_name, product_id, image, alt, brand_name From Products ORDER BY entry ASC"); 
 
 function get_default_souvenirs() {
 

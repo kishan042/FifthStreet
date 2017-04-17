@@ -7,16 +7,12 @@
 		$Title = "About us ";
 		
 		// Meta description
-		$Description = "Fill text";
-
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
+		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
 
 		include (ROOT_PATH . 'INC/Header.php');
-
 
 // Navbar
 		// Links to other pages		
@@ -120,7 +116,6 @@
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
 
 
-
 // Article heading
 		// 
 		$heading = "How we help retailers";
@@ -162,10 +157,4 @@
 		// Bread crumbs for the current page
 		$CurrentPage = "About us";
 
-
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
 		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 

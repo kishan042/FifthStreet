@@ -11,14 +11,17 @@
                         <a href="<?php echo BASE_URL ?>">
                             <img src="<?php echo $img ?>icons/logo.svg" style="width:70px">
                         </a>
-                        <span class="pl-1 <?php echo $hide ?>"> / </span>
-                            <a class="<?php echo $hide ?>" href="../wardrobe.php">
-                                <span class="pl-1"><?php echo 
+                        <span class="breadcrumb-pl <?php echo $hide ?>"> / </span>
+                            <a class="<?php echo $hide ?>" href="<?php echo $PreviousPage_Link ?>">
+                                <span class="breadcrumb-pl hidden-xs-down"><?php echo 
                                     $PreviousPage ?>
                                 </span>
+                                <span class="breadcrumb-pl hidden-sm-up">
+                                ...
+                                </span>
                             </a>
-                        <span class="pl-1"> / </span>
-                        <a href="#"><span class="pl-1"><?php echo $CurrentPage ?></span></a>
+                        <span class="breadcrumb-pl"> / </span>
+                        <a href="#"><span class="breadcrumb-pl"><?php echo $CurrentPage ?></span></a>
                     </p>
                 </div>
             </div> 
@@ -58,18 +61,12 @@
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="<?php echo $JSPath ?>"></script>
-<?php include (ROOT_PATH . 'JS/wishlist-local-storage.php'); ?>
-<?php include (ROOT_PATH . 'JS/souvenirs-local-storage.php'); ?>
-<?php include (ROOT_PATH . 'JS/receipts-local-storage.php'); ?>
-<?php include (ROOT_PATH . 'JS/simpleCart.php'); ?>
-<!-- <?php //include (ROOT_PATH . 'JS/simpleCart.min.php'); ?> -->
+    <?php include (ROOT_PATH . 'JS/jquery-model-controller.min.php'); ?>
+    <?php include (ROOT_PATH . 'JS/simpleCart.min.php'); ?> 
 <script>
-
 // If the user is using a device larger then tablet
 // show the product name column
 if ($(window).width() > 766) {
-
 
   simpleCart({  
                 // chechout method
@@ -91,9 +88,9 @@ if ($(window).width() > 766) {
                     },
                      attr: 'image' },
                     {attr: "name",         label: "Product"},
-                    {view: "increment",    label: "Inc", text: "+ 1"},
+                    {view: "increment",    label: "Inc", text: "+ Qty"},
                     {attr: "quantity",     label: "Qty"},
-                    {view: "decrement",    label: "Dec", text: "-  1"},
+                    {view: "decrement",    label: "Dec", text: "-  Qty"},
                     {view: "currency",     attr: "total", label: "Price"},
                 ]
             });
@@ -122,9 +119,9 @@ if ($(window).width() > 766) {
                      attr: 'image' },
                     {attr: "name",         label: "Product"},
                     {view: "currency", attr: "total", label: "Price"},
-                    {view: "increment",    label: "Inc", text: "+ 1"},
+                    {view: "increment",    label: "Inc", text: "+ Qty"},
                     {attr: "quantity",     label: "false", text:"Qty"},
-                    {view: "decrement",    label: "Dec", text: "- 1"},
+                    {view: "decrement",    label: "Dec", text: "- Qty"},
                 ]
       });
 }

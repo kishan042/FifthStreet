@@ -4,7 +4,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 
-$to = "kishankoriya7@gmail.com";
+$to = "thefifthstreet01@gmail.com";
 $subject = "Contact Form - Fifth Street";
 $message = " Name: " . $name . "\r\n Email: " . $email . "\r\n Message: " . $message;
 
@@ -24,8 +24,6 @@ if (mail($to, $subject, $message, $headers)) {
 				$Title = "Contact form ";
 				// Meta description
 				$Description = "Fill text";
-				// CSS path
-				$CSSPath = "CSS/Styles.css";
 				// Image source
 				$img = "IMG/";
 
@@ -68,11 +66,11 @@ if (mail($to, $subject, $message, $headers)) {
 				// type 'hide' to remove the button
 				$hideCTA = "";
 				// Link for CTA
-				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1235";
+				$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1234";
 				// CTA copy
 				$BlockCTA = "View Souvenir";
 				// Image URL
-				$BlockIMG = "https://images.unsplash.com/photo-1483140900273-56364d20ddc5?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=";
+				$BlockIMG = $img ."souvenirs/article/personal-trainer-tying-his-trainers.jpg";
 
 				include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 

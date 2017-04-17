@@ -1,18 +1,13 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(~0);
 // Config file
-include_once 'INC/DB/Config.php';
+		include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
 		$Title = "My Wardrobe ";
 		
 		// Meta description
-		$Description = "Fill Text";
-
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
+		$Description = "Build your wishlist, while collecting souvenirs from memorable experiences with different brands. Exchange or return products at will, without the need of signing up.";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -44,14 +39,11 @@ include_once 'INC/DB/Config.php';
 // Hero-half-plain
 		// copy for H1
 		$h1 = "MY WARDROBE";
-		$br = "<br class='hidden-sm-down'>";
-
 
 		//Copy for description
 		$description = "Build your wishlist, while collecting souvenirs from memorable experiences with different brands. Exchange or return products at will, without the need of signing up.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
-
 
 // Spacing	
 		// Add a class to hide the seperation
@@ -60,9 +52,8 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
 
-
 // Blocks-two-left-compact
-				// Background colour class for text
+		// Background colour class for text
 		$BlockBG = "bg-gray-lightest";
 		// Title
 		$BlockTitle = "MY WISHLIST";
@@ -81,7 +72,6 @@ include_once 'INC/DB/Config.php';
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
 
-
 // Blocks-two-right-compact
 		// Background colour class for text
 		$BlockBG = " ";
@@ -90,7 +80,7 @@ include_once 'INC/DB/Config.php';
 		// Copy
 		$BlockText = "Gather a collection of souvenirs, ranging from exclusive offers to unique prizes. Anything is possible.";
 		// type 'hide' to remove the button
-		$hideCTA = "";
+		$hideCTA = " ";
 		// Link for CTA
 		$BlockLink = BASE_URL . "wardrobe/souvenirs.php";
 		// CTA copy
@@ -109,7 +99,7 @@ include_once 'INC/DB/Config.php';
 		// Copy
 		$BlockText = "View all of the products you have bought in-store or online, so you can return or exchange products at will.";
 		// type 'hide' to remove the button
-		$hideCTA = "";
+		$hideCTA = " ";
 		// Link for CTA
 		$BlockLink = BASE_URL . "wardrobe/receipts.php";
 		// CTA copy
@@ -143,9 +133,4 @@ include_once 'INC/DB/Config.php';
 		// Bread crumbs for the current page
 		$CurrentPage = "Wardrobe";
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
 		include (ROOT_PATH . 'INC/Footer.php');
-
-?> 

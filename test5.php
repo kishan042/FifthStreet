@@ -56,6 +56,7 @@ $query = http_build_query($data, 'id');
 	<!-- <p><?php echo parse_url($data); ?></p> -->
 </a> 
 
+<script>window.location = window.location.href.split("?")[0];</script>
 
 <?php
 	

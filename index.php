@@ -1,15 +1,12 @@
 <?php
 // Config file
-include_once 'INC/DB/Config.php';
+		include_once 'INC/DB/Config.php';
 
 // Header
 		// Title tag
 		$Title = "Home ";
 		// Meta description
 		$Description = "Experience a true seamless experience in-store or online by discovering the latest footwear, clothing collections and brands with Fifth Street.";
-
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -72,7 +69,7 @@ include_once 'INC/DB/Config.php';
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = $img ."home/product-shot2.jpg";
+		$BlockIMG = $img ."home/product-shot.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left-compact.php');
 
@@ -87,7 +84,7 @@ include_once 'INC/DB/Config.php';
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = $img ."home/6.jpg";
+		$BlockIMG = $img ."home/add-to-wishlist-in-store.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
@@ -112,11 +109,11 @@ include_once 'INC/DB/Config.php';
 		// type 'hide' to remove the button
 		$hideCTA = " ";
 		// Link for CTA
-		$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1235";
+		$BlockLink = BASE_URL . "wardrobe/souvenirs.php?sou=1236";
 		// CTA copy
 		$BlockCTA = "Collect Souvenir";
 		// Image URL
-		$BlockIMG = $img ."home/4.jpg";
+		$BlockIMG = $img ."home/collection-souvenirs.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-left.php');
 
@@ -135,7 +132,7 @@ include_once 'INC/DB/Config.php';
 		// CTA copy
 		$BlockCTA = "View Items";
 		// Image URL
-		$BlockIMG = $img ."home/3.jpg";
+		$BlockIMG = $img ."home/returning-and-exchanging-products.jpg";
 
 		include (ROOT_PATH . 'INC/Blocks-two-right.php');
 
@@ -151,9 +148,4 @@ include_once 'INC/DB/Config.php';
 		// Bread crumbs for the current page
 		$CurrentPage = "Home";
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
 		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 

@@ -4,23 +4,19 @@
 
 // DB - Model
 		include(ROOT_PATH . "INC/DB/model.php");
-		$default_souvenirs = get_default_souvenirs();
+        $recent = get_recent_products(4);
 
 // Header
 		// Title tag
 		$Title = "My Souvenirs";
 
 		// Meta description
-		$Description = "Fill text";
-
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
+		$Description = "Collect exclusive souvenirs as you explore and experience brands </br> by purchasing products. Get started below.";
 
 		// Image source
 		$img = BASE_URL . "IMG/";
 
 		include (ROOT_PATH . 'INC/Header.php');
-
 
 // Navbar
 		// Links to other pages
@@ -48,79 +44,60 @@
 		$h1 = "MY SOUVENIRS";
 
 		//Copy for description
-		$description = "Collect exclusive souvenir as you explore and experience diverse brands.";
+		$description = "Collect exclusive souvenirs as you explore and experience brands </br> by purchasing products. Get started below.";
 
 		include (ROOT_PATH . 'INC/Hero-half-plain.php');
 
 
 ?>
+        <div class="container">
+            <ul id="output" class="products block">
 
-<div class="container">
-    <ul id="output" class="products block">
+            </ul>
+        </div>
 
-    </ul>
-</div>
-
-<?php 
-// Spacing  
-        // Add a class to hide the seperation when the wishlist
-        // is empty
-        $hide = "personalise";
-        
-        include (ROOT_PATH . 'INC/Spacing-mt-100.php');
-?>
-
-<div class="container">     
-    <h2 class="txt-xs-center my-3 personalise">Popular souvenirs</h2>
-    <ul class="products block">
-          <?php
-            foreach($default_souvenirs as $souvenir) {
-                include(ROOT_PATH . "INC/DB/souvenirs-block.php");
-            }
-        ?>
-    </ul>
-</div>
-
+        <div class="container personalise">     
+            <ul class="products block">
+                <?php
+                    foreach($recent as $product) {
+                        include(ROOT_PATH . "INC/DB/products-block.php");
+                    }
+                ?>
+            </ul>
+        </div>
 <?php
 
 // Spacing	
 		// Add a class to hide the seperation
-		$hide = "";
+		$hide = " ";
 		
 		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
-
 // Footer
-		// If current pages does not exist then add the 
-		$hide = " ";
+        // If current pages does not exist then add the 
+        $hide = " ";
 
-		// Bread crunb for the previous page 
-		$PreviousPage = "Wardrobe";
+        // Link for previous page
+        $PreviousPage_Link = BASE_URL . WARDROBE;
+
+        // Bread crunb for the previous page 
+        $PreviousPage = "Wardrobe";
 
 		// Bread crumbs for the current page
 		$CurrentPage = "My Souvenirs";
 
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
 		include (ROOT_PATH . 'INC/Footer.php');
 
 
-    // if an ID is specified in the query string, use it
+    // if an ID is specified in the query string, 
+    // the id is used, but the page is reloaded
+    //to prevent url manipulation
     if (isset($_GET["sou"])) {
       $souvenir_id = intval($_GET["sou"]);
       // use PHP variable in a Javascript function
       echo "<script>validate_Souvenir_Id('".$souvenir_id."')</script>";
+      ?><script>window.location = window.location.href.split("?")[0];</script><?php
     } 
-    if (isset($_GET["limit"])) {
-        $length = $_GET["limit"];
-        for ($i = 0; $i <= $length; $i++) {
-            if (isset($_GET["id".$i])) {
-                $souvenir = $_GET["id".$i];
-                echo "<script>validate_Souvenir_Id('".$souvenir."')</script>";
-            }
-        }
-    }
 
 ?>
 <script>
@@ -170,14 +147,14 @@
             // If NO data is from the database then do the following:
 
             // Those with the .rid classs will only show if product ids have not been added to the wishist
-           $('.personalise').hide();
+           $('.personalise').show();
 
         } else {
             // If data IS from the database then do the following:
 
             // Add the class .rid to those elements to hide
             // if data is successfully retrieved and outputed
-           $('.personalise').show();
+           $('.personalise').hide();
 
             // Loop over each row in the JSON data sent back
             for(var index = 0; index != data.length; index++){

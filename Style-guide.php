@@ -6,8 +6,6 @@ $Title = "Style guide ";
 // Meta description
 $Description = "Fifth Street style guide";
 
-// CSS path
-$CSSPath = "CSS/Styles.css";
 // Image source
 $img = "IMG/";
 // Variables - End

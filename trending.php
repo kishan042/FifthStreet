@@ -1,27 +1,23 @@
 <?php
 // Config file
-    include_once 'INC/DB/Config.php';
+        include_once 'INC/DB/Config.php';
 
 // DB - Model
-    include(ROOT_PATH . "INC/DB/model.php");
-    // Call function to get the latest / trending products
-    $all_products = get_all_products();
+        include(ROOT_PATH . "INC/DB/model.php");
+        // Call function to get the latest / trending products
+        $all_products = get_all_products();
 
 // Header
         // Title tag
         $Title = "Trending ";
         
         // Meta description
-        $Description = "Fill text";
-
-        // CSS path
-        $CSSPath = BASE_URL . "CSS/Styles.css";
+        $Description = "Check out the latest fashion line up, from a vast collection of brands, trending right now.";
         
         // Image source
         $img = BASE_URL . "IMG/";
 
         include (ROOT_PATH . 'INC/Header.php');
-
 
 // Navbar
         // Links to other pages 
@@ -49,23 +45,21 @@
         // copy for H1
         $h1 = "TRENDING";
 
-
         //Copy for description
         $description = "Check out the latest fashion line up, from a vast collection of brands, trending right now.";
 
         include (ROOT_PATH . 'INC/Hero-half-plain.php'); 
 
-
 ?>
-<div class="container">
-    <ul class="products block">
-        <?php
-            foreach($all_products as $product) {
-                include(ROOT_PATH . "INC/DB/products-block.php");
-            }
-        ?>
-    </ul>
-</div>
+        <div class="container">
+            <ul class="products block">
+                <?php
+                    foreach($all_products as $product) {
+                        include(ROOT_PATH . "INC/DB/products-block.php");
+                    }
+                ?>
+            </ul>
+        </div>
 <?php
 
 // Spacing  
@@ -84,11 +78,5 @@
 
         // Bread crumbs for the current page
         $CurrentPage = "Trending";
-        
-
-        // JS path
-        $JSPath = BASE_URL . "JS/jquery.js";
 
         include (ROOT_PATH . 'INC/Footer.php');
-
-?> 

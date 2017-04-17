@@ -7,10 +7,7 @@
 		$Title = "Fitness Training ";
 		
 		// Meta description
-		$Description = "Fill text";
-
-		// CSS path
-		$CSSPath = BASE_URL . "CSS/Styles.css";
+		$Description = "Fitness Training article";
 		
 		// Image source
 		$img = BASE_URL . "IMG/";
@@ -30,12 +27,18 @@
 		$search = BASE_URL . SEARCH;
 		$profile = BASE_URL . PROFILE;
 		$basket = BASE_URL . BASKET;
+		
+		// Type "option-active" inside, to make option active
+		$ActiveTrending = "";
+		$ActiveOffers = "";
+		$ActiveWardrobe = "option-active";
+		
 		include (ROOT_PATH . 'INC/Navbar.php');
 
 
 // Hero-half
 		//IMG URL
-		$url = $img . "souvenirs/article/1.jpg"; 
+		$url = $img . "souvenirs/article/personal-trainer-tying-his-trainers.jpg"; 
 		// Amount of tint on image
 		$tint = "tint-4";
 		// copy for H1
@@ -77,7 +80,7 @@
 
 // Hero-compact
 		//IMG URL
-		$url = $img . "souvenirs/article/2.jpg"; 
+		$url = $img . "souvenirs/article/girl-doing-box-jumps-with-weights.jpg"; 
 		
 		include (ROOT_PATH . 'INC/Hero-compact.php');
 
@@ -114,12 +117,11 @@
 
 		include (ROOT_PATH . 'INC/Spacing-mt-50.php');
 
+
 // Spacing Desktop
 		$hide = "hidden-sm-down";
 		
 		include (ROOT_PATH . 'INC/Spacing-mt-100.php');
-
-
 
 // Article heading
 		// 
@@ -147,16 +149,13 @@
         // If current pages does not exist then add the 
         $hide = " ";
 
+        // Link for previous page
+        $PreviousPage_Link = "http://thefifthstreet.com/wardrobe/souvenirs.php";
+
         // Bread crunb for the previous page 
         $PreviousPage = "My Souvenirs";
 
 		// Bread crumbs for the current page
 		$CurrentPage = "Fitness Training";
 
-
-		// JS path
-		$JSPath = BASE_URL . "JS/jquery.js";
-
-		include (ROOT_PATH . 'INC/Footer.php'); 
-
-?> 
+		include (ROOT_PATH . 'INC/Footer.php');
