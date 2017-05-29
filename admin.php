@@ -62,7 +62,7 @@
 <div class="mt-50"> <!--Spacing --> </div>
 
 
-<div class="container-smal">
+<div class="container-small">
     <div class="row form-flex-center">
         <form id="form" name="form" method="post" class="form-flex-center">
 

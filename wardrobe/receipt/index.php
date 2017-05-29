@@ -87,8 +87,12 @@ ob_start();
         include (ROOT_PATH . 'INC/Spacing-mt-50.php'); 
 
 
-// Product-exchange module
-        include (ROOT_PATH . 'INC/Product-comments.php');
+?>  <!-- The code below is modulised, however caused issues
+    when included through php, due to API -->
+    <div class="container">
+            <div id="disqus_thread"></div>
+    </div>
+<?php 
 
 
 // Spacing  

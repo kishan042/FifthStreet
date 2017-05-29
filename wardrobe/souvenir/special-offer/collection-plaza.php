@@ -81,7 +81,7 @@ include_once '../../../INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_1 = "Side Cut Maxi Dress";
 		// Image 1 product description
-		$product_description_1 = "light aqua side cute maxi dress, perfect for any professional or casual use.";
+		$product_description_1 = "light aqua side cute maxi dress, perfect for any use.";
 
 
 	    // Image 2 Link 
@@ -105,7 +105,7 @@ include_once '../../../INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_4 = "Peach Bucket Hat";
 		// Image 1 product description
-		$product_description_4 = "Peach bucket hat, which compliment you at every special occasion.";
+		$product_description_4 = "Peach bucket hat, made to compliment you.";
 
 
 	    // Image 5 Link 
@@ -115,7 +115,7 @@ include_once '../../../INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_5 = "Cashmere Scarf";
 		// Image 1 product description
-		$product_description_5 = "Brand new multi-coloured cashmere scarf will have you looking great.";
+		$product_description_5 = "Brand new multi-coloured cashmere scarf.";
 
 
 	    // Image 6 Link 
@@ -125,7 +125,7 @@ include_once '../../../INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_6 = "Plaza Pumps";
 		// Image 1 product description
-		$product_description_6 = "Dark aqua round-toe pump heels, great for any professional or casual use.";
+		$product_description_6 = "Dark aqua round-toe pump heels, great for any use.";
 
 
 	    // Image 7 Link 
@@ -155,7 +155,7 @@ include_once '../../../INC/DB/Config.php';
 		// Image 1 product title
 		$product_Title_9 = "Peach Belt";
 		// Image 1 product description
-		$product_description_9 = "Peach belt, perfect for any professional or casual use.";
+		$product_description_9 = "Peach belt, perfect for professional use.";
 
 
 		include (ROOT_PATH . 'INC/Blocks-grid.php');

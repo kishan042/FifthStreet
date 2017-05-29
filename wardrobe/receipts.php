@@ -97,7 +97,7 @@ ob_start();
         // reload the page post for loop, to prevent anyone from 
         // manipulating the url.
         if (isset($_GET["limit"])) {
-            $length = $_GET["limit"];
+            $length = intval($_GET["limit"]);
             $i = 0;
 
             do {

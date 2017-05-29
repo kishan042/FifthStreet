@@ -326,7 +326,7 @@ if (supports_Local_Storage) {
 		  $(".add-to-wishlist").click(function(){
 				var ID = $(this).attr('id');
 				validate_Product_Id(ID);
-				});
+		   });
 
 		  // Reference to how I removed individual product Ids from the
 		  // local storage array

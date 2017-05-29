@@ -33,7 +33,7 @@
 		$h1 = "THANK YOU!";
 
 		//Copy for description
- 		$description = "Your payment has gone through, and your products will arrive the next day. Claim a free souvenir for you to enjoy below.";
+ 		$description = "Your payment has gone through, and your products will arrive the next day. Please find links below to view your e-receipt and free souvenirs to enjoy.";
 
 		include 'INC/Hero-half-plain.php';  
 
@@ -76,7 +76,13 @@
 		include (ROOT_PATH . 'INC/Blocks-two-right-compact.php');
 
 
-// Spacing	
+// Mobile Spacing	
+		$hide = "hidden-md-up";
+		include 'INC/Spacing-mt-50.php';
+
+
+// Desktop Spacing	
+		$hide = "hidden-sm-down";
 		include 'INC/Spacing-mt-100.php';
 
 
